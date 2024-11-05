@@ -1,0 +1,51 @@
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 14:13:31 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:43 2024/11/05 14:13:31 logger.go:39: server is running on localhost::8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:35 2024/11/05 14:15:40 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:45 2024/11/05 14:15:41 logger.go:39: server is running on localhost::8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:35 2024/11/05 14:16:51 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:45 2024/11/05 14:16:51 logger.go:39: server is running on localhost::8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:34 2024/11/05 14:17:29 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:44 2024/11/05 14:17:29 logger.go:39: server is running on localhost::8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:34 2024/11/05 14:19:13 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:44 2024/11/05 14:19:13 logger.go:39: server is running on localhost:8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:34 2024/11/05 14:21:22 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:44 2024/11/05 14:21:22 logger.go:39: server is running on localhost:8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:34 2024/11/05 14:22:05 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:44 2024/11/05 14:22:05 logger.go:39: server is running on localhost:8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:34 2024/11/05 14:22:32 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:45 2024/11/05 14:22:32 logger.go:39: server is running on localhost:8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:34 2024/11/05 14:24:05 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:45 2024/11/05 14:24:05 logger.go:39: server is running on localhost:8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:34 2024/11/05 14:25:36 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:44 2024/11/05 14:25:36 logger.go:39: server is running on localhost:8080
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 14:34:01 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 14:34:01 logger.go:39: starting server at http://localhost:8080
+
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 14:38:12 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 14:38:12 logger.go:39: starting server at http://localhost:8080
+
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 14:39:04 logger.go:39: connected to db
+FATAL: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:39 2024/11/05 14:39:04 logger.go:39: parse html: open ./templates/header.html: The system cannot find the path specified.
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 15:53:11 logger.go:39: connected to db
+FATAL: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:39 2024/11/05 15:53:11 logger.go:39: parse html: open ./templates/header.html: The system cannot find the path specified.
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 15:54:09 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 15:54:09 logger.go:39: starting server at http://localhost:8080
+
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 15:59:13 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 15:59:13 logger.go:39: starting server at http://localhost:8080
+
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 16:00:08 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 16:00:08 logger.go:39: starting server at http://localhost:8080
+
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 16:01:24 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 16:01:24 logger.go:39: starting server at http://localhost:8080
+
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 16:04:05 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 16:04:05 logger.go:39: starting server at http://localhost:8080
+
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 16:05:06 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 16:05:07 logger.go:39: starting server at http://localhost:8080
+
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 16:06:32 logger.go:39: connected to db
+INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 16:06:32 logger.go:39: starting server at http://localhost:8080
+

@@ -1,0 +1,69 @@
+{{define "header"}}
+<header class="header">
+    <div class="offset">
+        <div class="header_wrapper">
+            <a class="logo" href="/">
+                <h2>FORUM</h2>
+            </a>
+                <form class="pagesList" action="/user/posts/" method="GET">
+                    <input type="hidden" name="filter" id="filter" value="all">
+                    {{if .IsAuth}}
+                    <button class="py-2 px-2 pages {{if eq .CurrentPage "all"}} active{{end}}" id="allPost" type="submit" onclick="document.getElementById('filter').value='all'">All Posts</button>
+                    <button class="pages {{if eq .CurrentPage "my"}} active{{end}}" id="myPosts" type="submit" onclick="document.getElementById('filter').value='my'">My Posts</button>
+                    <button class="pages {{if eq .CurrentPage "liked"}} active{{end}}" id="likedPosts" type="submit" onclick="document.getElementById('filter').value='liked'">Liked</button>
+                    <button class="pages {{if eq .CurrentPage "disliked"}} active{{end}}" id="dislikedPosts" type="submit" onclick="document.getElementById('filter').value='disliked'">DisLiked</button>
+                    
+                    {{end}}
+                </form>
+                
+            {{ if .IsAuth }}
+            <div class="flex sign-out">
+                <form method="POST" action="/log-out" class="flex items-center justify-center ml-2">
+                    <button class="flex items-center justify-center text-2xl hover:text-red-600  transition duration-300" type="submit">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </button>
+                </form>
+            </div>
+            {{else}}
+            <div class="auth_bnts">
+                <a class="btn_auth" style="margin-right: 1.5rem; background-color: #994413" href="/sign-in">
+                sign-in
+                </a>
+                <a class="btn_auth btn_signup" href="/user/signup">sign-up</a>
+            </div>
+            {{end}}     
+        </div>
+    </div>
+    <div class="header_burger" onclick="toggleMenu()">
+        <span></span>
+    </div>     
+    <nav class="mobile_menu">
+        {{if .IsAuth}}
+        <div class="flex w-full items-center" style="padding: 10px;">
+            <span style="font-weight: 500; font-size: 1.25rem;">{{ .Username}}</span>
+        </div>
+        {{end}}
+        <ul>
+            {{ if .IsAuth}}
+                <li><a href="/user/posts?filter=all">All Posts</a></li>
+                <li><a href="/user/posts?filter=my">My Posts</a></li>
+                <li><a href="/user/posts?filter=liked">Liked</a></li>
+                <li><a href="/user/posts?filter=disliked">DisLiked</a></li>
+                <li><a href="/create-post">Create Post</a></li>
+            {{end}}
+            {{if not .IsAuth}}
+            <li><a href="/sign-in">Sign In</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+            {{end}}
+
+            {{ if .IsAuth}}
+            <form method="POST" action="/log-out" class="flex items-center justify-start" style="padding: 10px;">
+                <button class="flex items-center justify-center" type="submit">
+                   Sign-out
+                </button>
+            </form>
+            {{end}}
+        </ul>
+    </nav>
+</header>
+{{end}}

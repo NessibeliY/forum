@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>SignUp</title>
+</head>
+<body>
+    {{ template "header" .}}
+    <div class="main_container">
+        <div class="sign offset">
+            <div class="form_wrappper">
+                <form class="form" action="/sign-up" method="POST">
+                    <h2 class="text-2xl mb-8">Signup</h2>
+                    <div class="mt-3">
+                        <label for="email" class="block text-base mb-2">Username</label>
+                        <input 
+                            id="email"
+                            type="text"
+                            placeholder="&#128100; username" 
+                            class="py-4 px-4 border border-neutral-500 my-2 rounded-md w-full"
+                            name="username"
+                            value="{{.Username}}"
+                            />
+                        <label class="text-red-600 my-2"> {{ .ErrorMessages.Username}}</label>
+                    </div>
+                    <div class="mt-3">
+                        <label for="email" class="block text-base mb-2">Email</label>
+                        <input 
+                            id="email"
+                            type="email"
+                            placeholder="&#128231; email" 
+                            class="input_email"
+                            name="email"
+                            value="{{.Email}}"
+                            />
+                        <label class="text-red-600 my-2"> {{ .ErrorMessages.Email}}</label>
+                    </div>
+                    <div class="mt-3">
+                        <label for="password" class="block text-base mb-2">Password</label>
+                        <input 
+                            id="password"
+                            type="password"
+                            placeholder="&#128274; password" 
+                            class="input_email"
+                            name="password"
+                            value="{{.Password}}"
+                            />
+                        <label class="text-red-600 my-2"> {{ .ErrorMessages.Password}}</label>    
+                    </div>
+                    <button
+                    type="submit" 
+                    class="btn_login">Signup</button>
+                    <hr class="mt-5"/>
+                    <div class="haveAcc">
+                        <span class="text-base">Already have an account?<a href="/sign-in" style="color: rgb(12, 112, 199);">Login</a></span>
+                    </div>
+                </form>
+                <div class="flex w-full text-center items-center justify-center my-2">
+                    <a href="/" style="font-size: larger; color: white;">HOME</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

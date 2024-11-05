@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../static/images/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js"></script>
+    <title>FORUM</title>
+</head>
+<body>
+    {{ template "header" .}}
+    <main class="main_container">
+        <div class="offset" style="justify-content: space-between;">
+                <!--LIST OF TAGS  -->
+                   <!--LIST OF TAGS  -->
+               
+                <div class="tags card">
+                    <h3 class="font-semibold">Tags</h3>
+                    {{range .Categories}}
+                    <form action="/user/posts/" method="GET" class="flex">
+                        <input type="hidden" name="filter" value="{{.CategoryName}}">
+                        <button class="categories" type="submit">#{{.CategoryName}}</button>
+                    </form>
+                    {{end}}
+                </div>
+                <div class="create_container w-6/12	">     
+                        <div class="flex w-full flex-col">
+                                <div class="flex items-center justify-between w-full">
+                                    <span class="text-bold text-2xl">CREATE POST</span>
+                                </div>
+                                <form class="create_form" action="/create-post" method="POST" id="postForm">
+                                    <div class="mt-2 w-full flex flex-col">
+                                        <label for="" class="block text-base mb-2">TITLE</label>
+                                        <input 
+                                            id="title"
+                                            type="text"
+                                            class="px-2 py-2 border border-neutral-500 my-2 rounded" 
+                                            placeholder="title"
+                                            name="title"
+                                            value="{{.Post.Title}}"
+                                            />
+                                        <label class="text-red-600 my-2"> {{ .ErrorMessages.Title}}</label>
+                                    </div>
+                                    <div class="w-full flex flex-col">
+                                        <p class="my-2 text text-base">TAGS</p>
+                                        {{range .Categories}} 
+                                        <div class="flex mr-2">
+                                            <input 
+                                                type="checkbox" 
+                                                class="rounded-lg cursor-pointer mr-2" 
+                                                name="tags" 
+                                                value="{{.CategoryName}}" 
+                                                id="{{.CategoryName}}"
+                                            />
+                                            <label for="{{.CategoryName}}" class="cursor-pointer">{{.CategoryName}}</label>
+                                        </div>
+                                        {{end}}
+                                        <label class="text-red-600 my-2"> {{ .ErrorMessages.Tags}}</label>
+                                    </div>
+                                    <div class="mt-2 w-full flex flex-col">
+                                        <label for="description" class="block text-base mb-2">DESCRIPTION</label>
+                                        <textarea  
+                                            class="border border-neutral-500 my-2 rounded py-2 px-2" 
+                                            placeholder="description"
+                                            id="description"
+                                            name="description">{{ .Post.Description }}</textarea>
+                                        <label class="text-red-600 my-2"> {{ .ErrorMessages.Description }}</label>
+                                    </div>
+                                    <div style="display: flex; justify-content: start;">
+                                        <a href="/" class="btn_create btn_auth ">cancel</a>
+                                        <button class="btn_create btn_auth" type="submit">create</button>
+                                    </div>
+                                </form>
+                       
+                        </div>                      
+                </div>
+                {{if .IsAuth}}
+                <div class="rSide">
+                    <div class="userInfo card">
+                        {{ template "user_info" .}}
+                    </div>
+                </div>
+                {{end}} 
+                    
+        </div>
+    </main>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const descriptionField = document.getElementById("description");
+        if (descriptionField) {
+            descriptionField.focus();
+            descriptionField.setSelectionRange(0, 0); // Set cursor to the start
+        }
+    });
+</script>
+</html>

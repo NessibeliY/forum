@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../static/images/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>FORUM</title>
+</head>
+<body> 
+    {{ template "header" .}}
+    <main class="main_container">
+           <div class="offset">
+                <!--LIST OF TAGS  -->
+                <div class="tags card">
+                    <h3 class="font-semibold">Tags</h3>
+                    {{range .Categories}}
+                        <form action="/user/posts/" method="GET" class="flex">
+                            <input type="hidden" name="filter" value="{{.CategoryName}}">
+                            <button class="categories" type="submit">#{{.CategoryName}}</button>
+                        </form>
+                    {{end}}
+                </div>
+                <!-- IF USER AUTH SHOW THIS BLOCK -->
+                <div class="middleContainer">
+                    <div class="flex_full_col">
+                        {{ template "posts" .}}
+                    </div>
+                </div>
+                {{if .IsAuth}}
+                <div class="rSide">
+                    <div class="welcome card">
+                        <div>
+                            <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, mmmm</h2>
+                            <span style="font-size: larger;">Glad to see you!</span>                        </div>
+                        <a href="/create-post" class="createButton" id="openModalBtn">
+                            <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
+                        </a>
+                    </div>
+                    <div class="userInfo card">
+                        {{ template "user_info" .}}
+                    </div>
+                </div>
+
+            {{end}}
+        </div>
+    </main>
+</body>
+<script src="/static/js/script.js"></script>
+</html>

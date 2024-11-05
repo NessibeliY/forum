@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../static/images/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>FORUM</title>
+</head>
+<body> 
+    {{ template "header" .}}
+    <main class="main_container">
+        <div class="offset">
+            <!--LIST OF TAGS-->
+            <div class="tags card">
+                <h3 class="font-semibold">Tags</h3>
+                {{range .Categories}}
+                    <form action="/user/posts/" method="GET" class="flex">
+                        <input type="hidden" name="filter" value="{{.CategoryName}}">
+                        <button class="categories" type="submit">#{{.CategoryName}}</button>
+                    </form>
+                {{end}}
+            </div>
+
+
+            
+            <!-- IF USER AUTH SHOW THIS BLOCK -->
+            <div class="middleContainer">
+                <div class="flex w-full flex-col break-words">
+                    <h2 class="postName">{{.Post.Title}}</h2>
+                    <span class="postDescription">{{.Post.Description}}</span>
+                </div>
+                <div class="flex w-full items-center">
+                    <form action="/like" method="POST" class="flex my-2 mb-2">   
+                        <input type="hidden" name="PostID" value="{{.Post.PostID}}">
+                        {{if .Post.IsLike}}
+                        <button class="btn_like btn_like_active text-2xl" type="submit">
+                            <i class="fa-regular fa-thumbs-up mx-1"></i> Liked({{ .Post.LikesCount }})
+                        </button>
+                        {{else}}
+                        <button class="btn_like text-white text-2xl" type="submit">
+                            <i class="fa-regular fa-thumbs-up mx-1"></i>Liked({{ .Post.LikesCount }})
+                        </button>
+                        {{end}}
+                    </form>
+    
+                    <form action="/dislike"  method="POST">
+                        <input type="hidden" name="PostID" value="{{.Post.PostID}}">
+                        {{if .Post.IsDisLike}}
+                        <button class="btn_like btn_like_active text-2x" type="submit">
+                            <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked({{.Post.DislikesCount}})
+                        </button>
+                        {{else}}
+                        <button class="btn_like text-white text-2xl" type="submit">
+                            <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked({{.Post.DislikesCount}})
+                        </button>
+                        {{end}}
+                    </form>
+                </div>
+    
+                <!-- INPUT COMMENT -->
+                <div class="flex flex-col mb-4">
+                    {{if .IsAuth}}
+                    <form class="flex_full_col" style="align-items: center;" action="/post/comment" method="POST">
+                        <input type="hidden" name="post-id" id="PostID">
+                        <div class="flex_full_col ">
+                            <textarea
+                            id="comment-text-area"
+                            name="comment_text"
+                            class="border border-gray-500 rounded-md w-full focus:outline-none focus:border-blue-600 py-3 px-3"
+                            rows="2"
+                            cols="20"></textarea>
+                            <button type="submit" style="margin-top: 2%;" class="btn_create btn_auth">
+                            Create comment
+                            </button>
+                            <!--ADD LIKKES AND DISLIKES HERE-->
+                        </div>
+                    </form>
+                    {{end}}
+                    <!-- COMMENT LIST -->
+                    {{range .Comment}}
+                        <div class="comments">
+                            <div class="commentHeader">
+                                <div class="flex justify-between">
+                                    <div class="flex items-center">
+                                        <div class="post_icon user_icon">
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                        <span class="commentAuthor">{{.Author}}</span>
+                                        <div class="flex w-full items-center flex-col ml-2 text">
+                                                <span class="created-at">{{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- Check if the comment's OwnerID matches the current user -->
+                                    {{if eq .OwnerID .Author}}
+                                        <div class="text-xl dropdown">
+                                            <i class="fa-solid fa-bars" data-target="dropdown-{{.CommentID}}"></i>
+                                            <div class="select_menu" id="dropdown-{{.CommentID}}">
+                                                <ul class="options card">
+                                                    <li class="option del_btn_modal" data-modal="delete_comm_{{.CommentID}}">
+                                                        Delete                                         
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="modal" id="delete_comm_{{.CommentID}}">
+                                            <div class="modal-content delete_form_modal">
+                                                <div class="flex items-center justify-between w-full">
+                                                    <span class="text-bold text-2xl">DELETE COMMENT</span>
+                                                    <span class="close" data-close="delete_comm_{{.CommentID}}">&times;</span>
+                                                </div>
+                                                <form action="/user/comment/delete" method="POST" class="flex flex-col items-center justify-center w-full mt-3">
+                                                    <input type="hidden" name="CommentID" value="{{.CommentID}}">
+                                                    <input type="hidden" name="PostID" id="post-id-like" value="{{$.Post.PostID}}">
+                                                    <p class="text-xl">Are you sure??</p>
+                                                    <div class="flex items-center justify-center mt-2">
+                                                        <button class="bg-red-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-red-700 transition duration-300" type="submit">yes</button>
+                                                        <div class="bg-green-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-green-700 transition duration-300 cursor-pointer" data-close="delete_comm_{{.CommentID}}">no</div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    {{end}}
+                                </div>   
+                            </div>
+                            <span class="commentText">{{.CommentText}}</span>
+                            <div class="flex py-2 justify-between">
+                                <div class="flex items-start w-full">
+                                    <form class="flex" action="/comment/like" method="POST">
+                                        <input type="hidden" name="CommentID" value="{{ .CommentID}}">
+                                        <input type="hidden" name="PostID" id="post-id-like" value="{{$.Post.PostID}}">
+                                        {{if .IsLiked}}
+                                        <button class="btn_like_com btn_like_active">
+                                            <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{ .LikesCount }})
+                                        </button>
+                                        {{ else }}
+                                        <button class="btn_like_com">
+                                            <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{.LikesCount}})
+                                        </button>
+                                        {{ end }}
+                                    </form>
+                                    <form action="/comment/dislike" method="POST">
+                                        <input type="hidden" name="CommentID" value="{{ .CommentID}}">
+                                        <input type="hidden" name="PostID" id="post-id-like" value="{{$.Post.PostID}}">
+                                        {{if .DisLiked}}
+                                        <button class="btn_like_com btn_like_active">
+                                            <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked ({{.DislikesCount}})
+                                        </button>     
+                                        {{else}}
+                                        <button class="btn_like_com">
+                                            <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked ({{ .DislikesCount}})
+                                        </button>
+                                        {{end}}    
+                                    </form>
+                                </div> 
+                            </div> 
+                        </div>
+                    {{end}}
+                </div>
+            </div>
+            
+            <!-- USER INFO -->
+            {{if .IsAuth}}
+                <div class="rSide">
+                    <div class="welcome card">
+                        <div>
+                            <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, mmmm</h2>
+                            <span style="font-size: larger;">Glad to see you!</span>                        </div>
+                        <a href="/create-post" class="createButton" id="openModalBtn">
+                            <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
+                        </a>
+                    </div>
+                    <div class="userInfo card">
+                        {{ template "user_info" .}}
+                    </div>
+                </div>
+
+            {{end}}
+        </div>
+    </main>
+    
+</body>
+<script src="/static/js/script.js"></script>
+<script>
+    // Функция для получения значения параметра из URL
+    function getQueryParam(param) {
+        let params = new URLSearchParams(window.location.search);
+        return params.get(param);
+    }
+
+    // Получаем post-id из URL
+    let PostID = getQueryParam('post-id');
+    if (PostID) {
+        document.getElementById('PostID').value = PostID;
+        document.getElementById('post-id-like').value = PostID
+        document.getElementById('post-id-dislike').value = PostID
+    }
+
+    window.onload = function() {
+        const commentTextArea = document.getElementById('comment-text-area');
+        if (commentTextArea) {
+            commentTextArea.focus();
+            commentTextArea.setSelectionRange(0, 0); // Установка курсора в начало
+        }
+    }
+    
+
+    // Если post-id отсутствует, вы можете обрабатывать это соответствующим образом
+
+    // Обработка нажатия на кнопку "Delete
+    var del_btn_comm = document.querySelectorAll(".del_btn_comm")
+    // var close_btn_modals = document.querySelectorAll("[data-close]")
+
+    // Закрытие модального окна при нажатии на крестик или кнопку "no"
+    del_btn_comm.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            const modalId = btn.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+              modal.style.display = "flex";
+            } else {
+              console.error(`No modal found for button with modal ID: ${modalId}`);
+            }
+        });
+    })
+
+
+    //Закрытие модального окна за при клике за пределами модального окна
+    window.onclick = function(event) {
+     if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+};
+</script>
+</html>

@@ -1,0 +1,12 @@
+{{define "user_info"}}
+    <div class="flex w-full flex-col">
+        <div class="user_card" style="background-color: #748d92; border-top-left-radius: 1rem; border-top-right-radius: 1rem;">
+            <div class="user_icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+        <div class="user_card">
+            <span style="font-weight: 500; font-size: 1.25rem;">{{ .Username}}</span>
+        </div>
+    </div>
+{{end}}
