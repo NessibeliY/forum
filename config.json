@@ -1,0 +1,6 @@
+{
+  "port": ":8080",
+  "dsn": "forum.sqlite3?parseTime=true",
+  "db_name": "forum.db",
+  "log_file": "forum.log"
+}
