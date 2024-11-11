@@ -13,3 +13,7 @@ func NewSessionService(repo models.SessionRepository) *SessionService {
 		repo: repo,
 	}
 }
+
+func (s *SessionService) DeleteSession(cookieValue string) error {
+	return s.repo.DeleteSessionByID(cookieValue)
+}

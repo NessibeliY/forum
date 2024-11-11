@@ -29,9 +29,9 @@ type UpdateUserRequest struct {
 }
 
 type UserService interface {
-	SignupUser(user *Signup) error
-	LoginUser(user *Login) (int, error)
-	UpdateUser(user *UpdateUser) error
+	SignupUser(user *SignupRequest) error
+	LoginUser(user *LoginRequest) (int, error)
+	UpdateUser(user *UpdateUserRequest) error
 }
 
 type UserRepository interface {

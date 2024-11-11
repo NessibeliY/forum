@@ -11,3 +11,8 @@ func NewSessionRepository(db *sql.DB) *SessionRepository {
 		db: db,
 	}
 }
+
+func (r *SessionRepository) DeleteSessionByID(sessionID string) error {
+	_, err := r.db.Exec("DELETE FROM sessions WHERE uuid = $1", sessionID)
+	return err
+}

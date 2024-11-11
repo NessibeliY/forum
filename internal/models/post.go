@@ -1,6 +1,7 @@
 package models
 
 import (
+	"context"
 	"time"
 )
 
@@ -15,6 +16,7 @@ type Post struct {
 	Comments      []Comment
 	LikesCount    int
 	DislikesCount int
+	CommentsCount int
 }
 
 type CreatePostRequest struct {
@@ -35,13 +37,15 @@ type DeletePostRequest struct {
 }
 
 type PostService interface {
-	CreatePost(request *CreatePostRequest) (int, error)
-	UpdatePost(request *UpdatePostRequest) error
-	DeletePost(request *DeletePostRequest) error
+	GetAllPosts() ([]Post, error)
+	//CreatePost(request *CreatePostRequest) (int, error)
+	//UpdatePost(request *UpdatePostRequest) error
+	//DeletePost(request *DeletePostRequest) error
 }
 
 type PostRepository interface {
-	AddPost(post *Post) (int, error)
-	UpdatePost(post *Post) error
-	DeletePost(id int) error
+	GetAllPosts(ctx context.Context) ([]Post, error)
+	//AddPost(post *Post) (int, error)
+	//UpdatePost(post *Post) error
+	//DeletePost(id int) error
 }

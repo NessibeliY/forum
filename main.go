@@ -50,6 +50,9 @@ func main() {
 	mux.HandleFunc("/", handler.Home)
 	mux.HandleFunc("/user/signup", handler.Signup)
 	mux.HandleFunc("/login", handler.Login)
+	mux.Handle("/user/logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
+
+	mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
 
 	router := &http.Server{
 		Addr:         config.Port,

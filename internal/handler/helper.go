@@ -2,22 +2,11 @@ package handler
 
 import (
 	"net/http"
-
-	"01.alem.school/git/nyeltay/forum/internal/models"
-	"01.alem.school/git/nyeltay/forum/pkg/validator"
 )
 
-type PageData struct {
-	Validator         *validator.Validator
-	AuthenticatedUser *models.User
-	Posts             []models.Post
-	Post              models.Post
-	Categories        []models.Category
-	Comments          []models.Comment
-	Error             string
-}
+type H map[string]any
 
-func (h *Handler) Render(w http.ResponseWriter, page string, data *PageData) {
+func (h *Handler) Render(w http.ResponseWriter, page string, obj any) {
 	ts, ok := h.templateCache[page]
 	if !ok {
 		http.Error(w, "Template Not Found", http.StatusInternalServerError)
@@ -25,7 +14,7 @@ func (h *Handler) Render(w http.ResponseWriter, page string, data *PageData) {
 		return
 	}
 
-	err := ts.ExecuteTemplate(w, page, data)
+	err := ts.ExecuteTemplate(w, page, obj)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		//h.logger.Errorf("execute template: %v", err)
