@@ -16,8 +16,11 @@
     <div class="main_container">
         <div class="sign offset">
             <div class="form_wrappper">
-                <form class="form" action="/sign-up" method="POST">
+                <form class="form" action="/user/signup" method="POST">
                     <h2 class="text-2xl mb-8">Signup</h2>
+                    {{if .error }}
+                        <label class="text-red-600 my-2"> {{ .error}}</label>
+                    {{end}}
                     <div class="mt-3">
                         <label for="email" class="block text-base mb-2">Username</label>
                         <input 
@@ -28,7 +31,7 @@
                             name="username"
                             value="{{.Username}}"
                             />
-                        <label class="text-red-600 my-2"> {{ .ErrorMessages.Username}}</label>
+                        <label class="text-red-600 my-2"> {{ .ErrorMessages.username}}</label>
                     </div>
                     <div class="mt-3">
                         <label for="email" class="block text-base mb-2">Email</label>
@@ -40,7 +43,7 @@
                             name="email"
                             value="{{.Email}}"
                             />
-                        <label class="text-red-600 my-2"> {{ .ErrorMessages.Email}}</label>
+                        <label class="text-red-600 my-2"> {{ .ErrorMessages.email}}</label>
                     </div>
                     <div class="mt-3">
                         <label for="password" class="block text-base mb-2">Password</label>
@@ -52,7 +55,7 @@
                             name="password"
                             value="{{.Password}}"
                             />
-                        <label class="text-red-600 my-2"> {{ .ErrorMessages.Password}}</label>    
+                        <label class="text-red-600 my-2"> {{ .ErrorMessages.password}}</label> 
                     </div>
                     <button
                     type="submit" 

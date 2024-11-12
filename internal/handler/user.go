@@ -91,7 +91,7 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, "/login", http.StatusSeeOther)
+	http.Redirect(w, r, "/user/login", http.StatusSeeOther)
 }
 
 func validateSignupForm(username string, email string, password string) error {
@@ -183,7 +183,7 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	}
 	cookies.SetCookie(w, session.UUID, int(time.Until(session.ExpiresAt).Seconds()))
 
-	http.Redirect(w, r, "/", http.StatusFound)
+	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
 func validateLoginForm(email string, password string) error {

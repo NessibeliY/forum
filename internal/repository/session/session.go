@@ -18,11 +18,12 @@ func NewSessionRepository(db *sql.DB) *SessionRepository {
 }
 
 func (r *SessionRepository) DeleteSessionByID(sessionID string) error {
-	_, err := r.db.Exec("DELETE FROM sessions WHERE uuid = $1", sessionID)
+	_, err := r.db.Exec("DELETE FROM session WHERE uuid = $1", sessionID)
 	return err
 }
 
 func (r *SessionRepository) GetSessionBySessionID(sessionID string) (session *models.Session, err error) {
+	session = &models.Session{}
 	query := `SELECT * FROM session WHERE uuid = $1`
 	err = r.db.QueryRow(query, sessionID).Scan(&session.UUID, &session.UserID, &session.ExpiresAt)
 	if err != nil {
@@ -36,7 +37,8 @@ func (r *SessionRepository) GetSessionBySessionID(sessionID string) (session *mo
 }
 
 func (r *SessionRepository) GetSessionByUserID(userID int) (session *models.Session, err error) {
-	query := `SELECT * FROM session WHERE user_id = $1`
+	session = &models.Session{}
+	query := `SELECT * FROM session WHERE user_id = ?`
 	err = r.db.QueryRow(query, userID).Scan(&session.UUID, &session.UserID, &session.ExpiresAt)
 	if err != nil {
 		if err == sql.ErrNoRows {

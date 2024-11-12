@@ -42,18 +42,20 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
+	_ = postID
 }
 
 func validateCreateCommentForm(content string, postIDStr string) map[string]string {
 	errors := make(map[string]string)
 
-	if content == "" || postIDStr == "" {
-		return errors.New("content or post_id is empty")
-	}
-
-	if len(content) > 10000 {
-		return errors.New("content must be less than 10000 characters")
-	}
-
-	return nil
+	//if content == "" || postIDStr == "" {
+	//	return errors.New("content or post_id is empty")
+	//}
+	//
+	//if len(content) > 10000 {
+	//	return errors.New("content must be less than 10000 characters")
+	//}
+	//
+	//return nil
+	return errors
 }

@@ -29,7 +29,7 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	h.Render(w, "index.html", H{
+	h.Render(w, "index.page.html", H{
 		"posts":              posts,
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),

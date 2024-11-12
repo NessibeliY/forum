@@ -24,11 +24,6 @@ func NewTemplateCache() (map[string]*template.Template, error) {
 			return nil, fmt.Errorf("parse %s: %v", name, err)
 		}
 
-		ts, err = ts.ParseGlob("ui/templates/*.layout.html")
-		if err != nil {
-			return nil, fmt.Errorf("parse %s: %v", name, err)
-		}
-
 		ts, err = ts.ParseGlob("ui/templates/*.partial.html")
 		if err != nil {
 			return nil, fmt.Errorf("parse %s: %v", name, err)

@@ -1,3 +1,4 @@
+{{ template "index" .}}
 {{define "header"}}
 <header class="header">
     <div class="offset">
@@ -26,7 +27,7 @@
             </div>
             {{else}}
             <div class="auth_bnts">
-                <a class="btn_auth" style="margin-right: 1.5rem; background-color: #994413" href="/sign-in">
+                <a class="btn_auth" style="margin-right: 1.5rem; background-color: #994413" href="/user/login">
                 sign-in
                 </a>
                 <a class="btn_auth btn_signup" href="/user/signup">sign-up</a>
