@@ -23,3 +23,13 @@ func (s *PostService) GetAllPosts() ([]models.Post, error) {
 
 	return s.repo.GetAllPosts(ctx)
 }
+
+func (s *PostService) CreatePost(createPostRequest *models.CreatePostRequest) (int, error) {
+	post := &models.Post{
+		Title:      createPostRequest.Title,
+		Content:    createPostRequest.Content,
+		AuthorID:   createPostRequest.AuthorID,
+		Categories: createPostRequest.Categories,
+	}
+	return s.repo.AddPost(post)
+}

@@ -50,6 +50,17 @@ func (r *CategoryRepository) GetAllCategories(ctx context.Context) ([]models.Cat
 	return categories, nil
 }
 
-func (r *CategoryRepository) AddCategory(category *models.Category) (string, error) {
-	return "", nil
+func (r *CategoryRepository) GetCategoryByName(ctx context.Context, name string) (*models.Category, error) {
+	row := r.db.QueryRowContext(ctx, `SELECT id, name FROM category WHERE name = $1`, name)
+	category := models.Category{}
+	err := row.Scan(
+		&category.ID,
+		&category.Name)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, fmt.Errorf("row scan: %w", err)
+	}
+	return &category, nil
 }

@@ -12,7 +12,7 @@ type Post struct {
 	AuthorID      int
 	CreatedAt     time.Time
 	UpdatedAt     time.Time
-	Categories    []Category
+	Categories    []*Category
 	Comments      []Comment
 	LikesCount    int
 	DislikesCount int
@@ -20,16 +20,16 @@ type Post struct {
 }
 
 type CreatePostRequest struct {
-	Title      string     `json:"title"`
-	Content    string     `json:"content"`
-	AuthorID   int        `json:"author_id"`
-	Categories []Category `json:"categories"`
+	Title      string      `json:"title"`
+	Content    string      `json:"content"`
+	AuthorID   int         `json:"author_id"`
+	Categories []*Category `json:"categories"`
 }
 
 type UpdatePostRequest struct {
-	Title      string     `json:"title"`
-	Content    string     `json:"content"`
-	Categories []Category `json:"categories"`
+	Title      string      `json:"title"`
+	Content    string      `json:"content"`
+	Categories []*Category `json:"categories"`
 }
 
 type DeletePostRequest struct {
@@ -38,14 +38,14 @@ type DeletePostRequest struct {
 
 type PostService interface {
 	GetAllPosts() ([]Post, error)
-	//CreatePost(request *CreatePostRequest) (int, error)
+	CreatePost(request *CreatePostRequest) (int, error)
 	//UpdatePost(request *UpdatePostRequest) error
 	//DeletePost(request *DeletePostRequest) error
 }
 
 type PostRepository interface {
 	GetAllPosts(ctx context.Context) ([]Post, error)
-	//AddPost(post *Post) (int, error)
+	AddPost(post *Post) (int, error)
 	//UpdatePost(post *Post) error
 	//DeletePost(id int) error
 }

@@ -112,3 +112,35 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 
 	return posts, nil
 }
+
+func (r *PostRepository) AddPost(post *models.Post) (int, error) {
+	createdAt := time.Now()
+	updatedAt := createdAt
+	query := `
+	INSERT INTO post (title, content, author_id, created_at, updated_at)
+	VALUES ($1, $2, $3, $4, $5)
+	RETURNING id;
+	`
+	err := r.db.QueryRow(query, post.Title, post.Content, post.AuthorID, createdAt, updatedAt).Scan(&post.ID)
+	if err != nil {
+		return 0, fmt.Errorf("insert post: %w", err)
+	}
+
+	err = r.addPostCategories(post.ID, post.Categories)
+	if err != nil {
+		return 0, fmt.Errorf("add post categories: %w", err)
+	}
+
+	return post.ID, nil
+}
+
+func (r *PostRepository) addPostCategories(postID int, categories []*models.Category) error {
+	for _, category := range categories {
+		query := `INSERT INTO post_category (post_id, category_id) VALUES ($1, $2)`
+		_, err := r.db.Exec(query, postID, category.ID)
+		if err != nil {
+			return fmt.Errorf("insert post_category: %w", err)
+		}
+	}
+	return nil
+}

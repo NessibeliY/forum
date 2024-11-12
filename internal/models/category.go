@@ -9,10 +9,12 @@ type Category struct {
 
 type CategoryService interface {
 	GetAllCategories() ([]Category, error)
-	CreateCategory(category *Category) (string, error)
+	GetCategoryByName(name string) (*Category, error)
+	//CreateCategory(category *Category) (string, error)
 }
 
 type CategoryRepository interface {
 	GetAllCategories(ctx context.Context) ([]Category, error)
-	AddCategory(category *Category) (string, error)
+	GetCategoryByName(ctx context.Context, name string) (*Category, error)
+	//AddCategory(category *Category) (string, error)
 }
