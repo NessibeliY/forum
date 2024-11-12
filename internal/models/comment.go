@@ -6,13 +6,15 @@ import (
 )
 
 type Comment struct {
-	ID            int
-	Content       string
-	AuthorID      int
-	PostID        int
-	CreatedAt     time.Time
-	LikesCount    int
-	DislikesCount int
+	ID               int
+	Content          string
+	AuthorID         int
+	PostID           int
+	CreatedAt        time.Time
+	LikesCount       int
+	DislikesCount    int
+	IsLikedByUser    bool
+	IsDislikedByUser bool
 }
 
 type CreateCommentRequest struct {
@@ -23,10 +25,10 @@ type CreateCommentRequest struct {
 
 type CommentService interface {
 	GetAllCommentsByPostID(postID int) ([]*Comment, error)
-	//CreateComment(createCommentRequest *CreateCommentRequest) error
+	CreateComment(createCommentRequest *CreateCommentRequest) error
 }
 
 type CommentRepository interface {
 	GetAllCommentsByPostID(ctx context.Context, postID int) ([]*Comment, error)
-	//AddComment(comment *Comment) error
+	AddComment(comment *Comment) error
 }

@@ -2,11 +2,9 @@ package cookies
 
 import "net/http"
 
-const cookieName = "forum_cookie"
-
-func SetCookie(w http.ResponseWriter, value string, maxAge int) {
+func SetCookie(w http.ResponseWriter, name, value string, maxAge int) {
 	cookie := &http.Cookie{
-		Name:     cookieName,
+		Name:     name,
 		Value:    value,
 		HttpOnly: true,
 		Path:     "/",
@@ -15,17 +13,17 @@ func SetCookie(w http.ResponseWriter, value string, maxAge int) {
 	http.SetCookie(w, cookie)
 }
 
-func GetCookie(r *http.Request) (*http.Cookie, error) {
-	cookie, err := r.Cookie(cookieName)
+func GetCookie(r *http.Request, name string) (*http.Cookie, error) {
+	cookie, err := r.Cookie(name)
 	if err != nil {
 		return nil, err
 	}
 	return cookie, nil
 }
 
-func DeleteCookie(w http.ResponseWriter) {
+func DeleteCookie(w http.ResponseWriter, name string) {
 	cookie := &http.Cookie{
-		Name:     cookieName,
+		Name:     name,
 		Value:    "",
 		HttpOnly: true,
 		Path:     "/",

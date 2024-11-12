@@ -8,7 +8,7 @@ type PostReaction struct {
 	Reaction string
 }
 
-type PostReactionRequest struct {
+type CreatePostReactionRequest struct {
 	AuthorID int    `json:"author_id"`
 	PostID   int    `json:"post_id"`
 	Reaction string `json:"reaction"`

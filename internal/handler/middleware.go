@@ -22,7 +22,7 @@ func (h *Handler) RequireAuthentication(next http.Handler) http.Handler {
 
 func (h *Handler) Authenticate(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		cookie, err := cookies.GetCookie(r)
+		cookie, err := cookies.GetCookie(r, sessionCookieName)
 		if err != nil {
 			next.ServeHTTP(w, r)
 			return
@@ -30,14 +30,14 @@ func (h *Handler) Authenticate(next http.Handler) http.Handler {
 
 		session, err := h.service.SessionService.GetSession(cookie.Value)
 		if err != nil || session == nil {
-			cookies.DeleteCookie(w)
+			cookies.DeleteCookie(w, sessionCookieName)
 			next.ServeHTTP(w, r)
 			return
 		}
 
 		user, err := h.service.UserService.GetUserByID(session.UserID)
 		if err != nil || user == nil {
-			cookies.DeleteCookie(w)
+			cookies.DeleteCookie(w, sessionCookieName)
 			h.service.SessionService.DeleteSession(cookie.Value)
 			next.ServeHTTP(w, r)
 		}

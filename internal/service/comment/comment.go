@@ -23,3 +23,13 @@ func (s *CommentService) GetAllCommentsByPostID(postID int) ([]*models.Comment, 
 
 	return s.repo.GetAllCommentsByPostID(ctx, postID)
 }
+
+func (s *CommentService) CreateComment(createCommentRequest models.CreateCommentRequest) error {
+	comment := &models.Comment{
+		Content:  createCommentRequest.Content,
+		AuthorID: createCommentRequest.AuthorID,
+		PostID:   createCommentRequest.PostID,
+	}
+
+	return s.repo.AddComment(comment)
+}
