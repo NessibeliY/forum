@@ -10,14 +10,13 @@ type Session struct {
 
 type SessionService interface {
 	SetSession(userID int) (*Session, error)
-	GetSession(userID int) (*Session, error)
-	UpdateSession(session *Session) error
+	GetSession(uuid string) (*Session, error)
 	DeleteSession(cookieValue string) error
 }
 
 type SessionRepository interface {
 	AddSession(session *Session) error
-	GetSessionByUserID(userID string) (*Session, error)
-	UpdateSession(session *Session) error
+	GetSessionBySessionID(sessionID string) (*Session, error)
+	GetSessionByUserID(userID int) (session *Session, err error)
 	DeleteSessionByID(sessionID string) error
 }

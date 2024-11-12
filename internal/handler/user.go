@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 	"regexp"
 	"strings"
@@ -162,6 +163,7 @@ func (h *Handler) loginGet(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	err := r.ParseForm()
 	if err != nil {
+		fmt.Println("parse form", err)
 		// h.logger.
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -186,6 +188,8 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	userID, err := h.service.UserService.LoginUser(loginPostRequest)
+	fmt.Println("userID", userID)
+	fmt.Println("err", err)
 	if err != nil {
 		if err == models.ErrInvalidCredentials {
 			h.Render(w, "sign_in.page.html", H{
@@ -195,13 +199,17 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 			})
 			return
 		}
-		h.logger.Info("login user service request", err)
+
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
+	fmt.Println("here")
 
 	session, err := h.service.SessionService.SetSession(userID)
+	fmt.Println("session", session)
+	fmt.Println("err", err)
 	if err != nil {
+		fmt.Println("SetSession", err)
 		// h.logger.Errorf("create session: %w", err)
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return

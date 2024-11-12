@@ -1,6 +1,10 @@
 package comment_reaction
 
 import (
+	"context"
+	"fmt"
+	"time"
+
 	"01.alem.school/git/nyeltay/forum/internal/models"
 )
 
@@ -14,14 +18,23 @@ func NewCommentReactionService(repo models.CommentReactionRepository) *CommentRe
 	}
 }
 
-func (s *CommentReactionService) CreateCommentReaction(commentReactionRequest *models.CommentReactionRequest) error {
-	return nil
-}
+func (s *CommentReactionService) GetCommentLikesAndDislikesByID(commentID int) (int, int, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
 
-func (s *CommentReactionService) UpdateCommentReaction(commentReactionRequest *models.CommentReactionRequest) error {
-	return nil
-}
+	reactions, err := s.repo.GetReactionsByCommentID(ctx, commentID)
+	if err != nil {
+		return 0, 0, fmt.Errorf("get reactions by comment id: %v", err)
+	}
 
-func (s *CommentReactionService) DeleteCommentReaction(commentID, authorID int) error {
-	return nil
+	var likesCount, dislikesCount int
+	for _, reaction := range reactions {
+		if reaction.Reaction == "like" {
+			likesCount++
+		} else {
+			dislikesCount++
+		}
+	}
+
+	return likesCount, dislikesCount, nil
 }

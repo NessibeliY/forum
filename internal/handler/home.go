@@ -17,6 +17,7 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 
 	posts, err := h.service.PostService.GetAllPosts()
 	if err != nil {
+
 		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
