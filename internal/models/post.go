@@ -39,6 +39,7 @@ type DeletePostRequest struct {
 type PostService interface {
 	GetAllPosts() ([]Post, error)
 	CreatePost(request *CreatePostRequest) (int, error)
+	GetPostByID(id int) (*Post, error)
 	//UpdatePost(request *UpdatePostRequest) error
 	//DeletePost(request *DeletePostRequest) error
 }
@@ -46,6 +47,7 @@ type PostService interface {
 type PostRepository interface {
 	GetAllPosts(ctx context.Context) ([]Post, error)
 	AddPost(post *Post) (int, error)
+	GetPostByID(ctx context.Context, id int) (*Post, error)
 	//UpdatePost(post *Post) error
 	//DeletePost(id int) error
 }

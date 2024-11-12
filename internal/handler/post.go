@@ -3,6 +3,8 @@ package handler
 import (
 	"fmt"
 	"net/http"
+	"net/url"
+	"strconv"
 	"strings"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
@@ -122,4 +124,75 @@ func validateCreatePostForm(title, content string, categoryNames []string) map[s
 	}
 
 	return errors
+}
+
+func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
+	if !strings.HasPrefix(r.URL.Path, "/post/") {
+		http.NotFound(w, r)
+		return
+	}
+
+	if r.Method != http.MethodGet {
+		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+		return
+	}
+
+	query, err := url.ParseQuery(r.URL.RawQuery)
+	if err != nil {
+		//h.logger
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	postIDStr := query.Get("post-id")
+
+	if len(query) != 1 || postIDStr == "" {
+		http.Error(w, "query must only contain 'post-id'", http.StatusBadRequest)
+		return
+	}
+
+	postID, err := strconv.Atoi(postIDStr)
+	if err != nil || postID < 1 {
+		http.NotFound(w, r)
+		return
+	}
+
+	post, err := h.service.PostService.GetPostByID(postID)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if post == nil {
+		http.NotFound(w, r)
+		return
+	}
+
+	comments, err := h.service.CommentService.GetAllCommentsByPostID(postID)
+	if err != nil {
+		//h.logger
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	for _, comment := range comments {
+		comment.LikesCount, comment.DislikesCount, err = h.service.CommentReactionService.GetCommentLikesAndDislikesByID(comment.ID)
+		if err != nil {
+			//h.logger
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	}
+
+	post.LikesCount, post.DislikesCount, err = h.service.PostReactionService.GetPostLikesAndDislikesByID(postID)
+	if err != nil {
+		//h.logger
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	h.Render(w, "post.page.html", H{
+		"post":               post,
+		"comments":           comments,
+		"authenticated_user": h.getUserFromContext(r),
+	})
 }

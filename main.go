@@ -53,10 +53,11 @@ func main() {
 	mux.Handle("/user/logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
 
 	mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
+	mux.HandleFunc("/post/", handler.ShowPost)
 
 	router := &http.Server{
 		Addr:         config.Port,
-		Handler:      handler,
+		Handler:      mux,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
 		IdleTimeout:  120 * time.Second,

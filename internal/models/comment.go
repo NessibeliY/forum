@@ -1,6 +1,9 @@
 package models
 
-import "time"
+import (
+	"context"
+	"time"
+)
 
 type Comment struct {
 	ID            int
@@ -19,9 +22,11 @@ type CreateCommentRequest struct {
 }
 
 type CommentService interface {
-	CreateComment(createCommentRequest *CreateCommentRequest) error
+	GetAllCommentsByPostID(postID int) ([]*Comment, error)
+	//CreateComment(createCommentRequest *CreateCommentRequest) error
 }
 
 type CommentRepository interface {
-	AddComment(comment *Comment) error
+	GetAllCommentsByPostID(ctx context.Context, postID int) ([]*Comment, error)
+	//AddComment(comment *Comment) error
 }

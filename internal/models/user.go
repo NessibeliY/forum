@@ -31,11 +31,11 @@ type UpdateUserRequest struct {
 type UserService interface {
 	SignupUser(user *SignupRequest) error
 	LoginUser(user *LoginRequest) (int, error)
-	UpdateUser(user *UpdateUserRequest) error
+	//UpdateUser(user *UpdateUserRequest) error
 }
 
 type UserRepository interface {
 	AddUser(user *User) error
 	GetUserByEmail(email string) (*User, error)
-	UpdateUser(user *UpdateUser) error
+	//UpdateUser(user *UpdateUser) error
 }

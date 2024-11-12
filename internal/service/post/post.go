@@ -33,3 +33,10 @@ func (s *PostService) CreatePost(createPostRequest *models.CreatePostRequest) (i
 	}
 	return s.repo.AddPost(post)
 }
+
+func (s *PostService) GetPostByID(id int) (*models.Post, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	return s.repo.GetPostByID(ctx, id)
+}

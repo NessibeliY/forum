@@ -1,5 +1,7 @@
 package models
 
+import "context"
+
 type CommentReaction struct {
 	CommentID int
 	AuthorID  int
@@ -13,13 +15,15 @@ type CommentReactionRequest struct {
 }
 
 type CommentReactionService interface {
-	CreateCommentReaction(commentReactionRequest *CommentReactionRequest) error
-	UpdateCommentReaction(commentReactionRequest *CommentReactionRequest) error
-	DeleteCommentReaction(commentID, authorID int) error
+	GetCommentLikesAndDislikesByID(commentID int) (int, int, error)
+	//CreateCommentReaction(commentReactionRequest *CommentReactionRequest) error
+	//UpdateCommentReaction(commentReactionRequest *CommentReactionRequest) error
+	//DeleteCommentReaction(commentID, authorID int) error
 }
 
 type CommentReactionRepository interface {
-	AddCommentReaction(commentReaction *CommentReaction) error
-	UpdateCommentReaction(commentReaction *CommentReaction) error
-	DeleteCommentReaction(commentID, authorID int) error
+	GetReactionsByCommentID(ctx context.Context, commentID int) (reactions []*CommentReaction, err error)
+	//AddCommentReaction(commentReaction *CommentReaction) error
+	//UpdateCommentReaction(commentReaction *CommentReaction) error
+	//DeleteCommentReaction(commentID, authorID int) error
 }

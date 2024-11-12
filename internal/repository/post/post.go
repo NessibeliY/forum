@@ -85,7 +85,7 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 				AuthorID:      authorID,
 				CreatedAt:     createdAt,
 				UpdatedAt:     updatedAt,
-				Categories:    []models.Category{},
+				Categories:    []*models.Category{},
 				LikesCount:    likesCount,
 				DislikesCount: dislikesCount,
 				CommentsCount: commentsCount,
@@ -93,7 +93,7 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 		}
 
 		if categoryID != 0 {
-			category := models.Category{
+			category := &models.Category{
 				ID:   categoryID,
 				Name: categoryName,
 			}
@@ -143,4 +143,51 @@ func (r *PostRepository) addPostCategories(postID int, categories []*models.Cate
 		}
 	}
 	return nil
+}
+
+func (r *PostRepository) GetPostByID(ctx context.Context, id int) (*models.Post, error) {
+	query := `SELECT * FROM post WHERE id = $1`
+
+	post := &models.Post{}
+	err := r.db.QueryRowContext(ctx, query, id).Scan(
+		&post.ID,
+		&post.Title,
+		&post.Content,
+		&post.AuthorID,
+		&post.CreatedAt,
+		&post.UpdatedAt,
+	)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, fmt.Errorf("query row: %w", err)
+	}
+
+	query = `
+	SELECT c.name FROM category c2 
+	JOIN post_category pc ON pc.post_id = c2.id
+	WHERE c2.id = $1`
+
+	rows, err := r.db.QueryContext(ctx, query, id)
+	if err != nil {
+		return nil, fmt.Errorf("query context: %w", err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		category := models.Category{}
+		err := rows.Scan(&category.Name)
+		if err != nil {
+			return nil, fmt.Errorf("row scan: %w", err)
+		}
+		post.Categories = append(post.Categories, &category)
+	}
+
+	err = rows.Err()
+	if err != nil {
+		return nil, fmt.Errorf("rows scan: %w", err)
+	}
+
+	return post, nil
 }
