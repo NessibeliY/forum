@@ -28,7 +28,7 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 	    COUNT(CASE WHEN pr.reaction = 'dislike' THEN 1 END) AS dislikes_count,
 	    COUNT(co.id) AS comments_count
 	FROM
-	    posts p
+	    post p
 	LEFT JOIN
 	        post_category pc ON p.id = pc.post_id
 	LEFT JOIN

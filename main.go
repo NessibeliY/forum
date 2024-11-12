@@ -40,7 +40,7 @@ func main() {
 	}
 	handler := handler.NewHandler(service, templateCache, l)
 
-	l.Infof("server is running on localhost:%s", config.Port)
+	l.Infof("server is running on localhost%s", config.Port)
 
 	mux := http.NewServeMux()
 
@@ -55,9 +55,17 @@ func main() {
 	mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
 	mux.HandleFunc("/post/", handler.ShowPost)
 
+	finalHandler := handler.SecureHeaders(
+		handler.RecoverPanic(
+			handler.LogRequest(
+				handler.Authenticate(mux),
+			),
+		),
+	)
+
 	router := &http.Server{
 		Addr:         config.Port,
-		Handler:      mux,
+		Handler:      finalHandler,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
 		IdleTimeout:  120 * time.Second,
@@ -70,4 +78,6 @@ func main() {
 			l.Info("server stopped")
 		}
 	}()
+
+	select {}
 }

@@ -49,3 +49,19 @@ INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:
 INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/main.go:33 2024/11/05 16:06:32 logger.go:39: connected to db
 INFO: C:/Users/galiy/Desktop/ALISHER/alem-forum/forum/internal/server/server.go:31 2024/11/05 16:06:32 logger.go:39: starting server at http://localhost:8080
 
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/12 18:08:39 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/12 18:08:39 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/12 18:11:23 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/12 18:11:23 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/12 18:12:45 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/12 18:12:45 logger.go:39: server is running on localhost:8080
+FATAL: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:76 2024/11/12 18:12:45 logger.go:39: listen tcp: address 8080: missing port in address
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/12 18:13:00 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/12 18:13:00 logger.go:39: server is running on localhost::8080
+FATAL: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:76 2024/11/12 18:13:00 logger.go:39: listen tcp :8080: bind: address already in use
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/12 18:13:08 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/12 18:13:08 logger.go:39: server is running on localhost::8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/12 18:14:02 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/12 18:14:02 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/12 18:15:33 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/12 18:15:33 logger.go:39: server is running on localhost:8080

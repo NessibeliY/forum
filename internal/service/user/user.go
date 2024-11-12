@@ -54,3 +54,7 @@ func (s *UserService) LoginUser(loginRequest *models.LoginRequest) (int, error) 
 
 	return user.ID, nil
 }
+
+func (s *UserService) GetUserByID(id int) (*models.User, error) {
+	return s.repo.GetUserByID(id)
+}
