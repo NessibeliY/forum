@@ -49,3 +49,7 @@ func (r *CategoryRepository) GetAllCategories(ctx context.Context) ([]models.Cat
 
 	return categories, nil
 }
+
+func (r *CategoryRepository) AddCategory(category *models.Category) (string, error) {
+	return "", nil
+}

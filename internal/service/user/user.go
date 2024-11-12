@@ -54,3 +54,7 @@ func (s *UserService) LoginUser(loginRequest *models.LoginRequest) (int, error) 
 
 	return user.ID, nil
 }
+
+func (s *UserService) UpdateUser(user *models.UpdateUserRequest) error {
+	return nil
+}

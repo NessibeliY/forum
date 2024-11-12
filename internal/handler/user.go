@@ -40,7 +40,7 @@ func (h *Handler) signupGet(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) getUserFromContext(r *http.Request) *models.User {
 	user, ok := r.Context().Value("user").(*models.User)
 	if !ok {
-		//h.logger.Info("user is not authenticated")
+		// h.logger.Info("user is not authenticated")
 		return nil
 	}
 	return user
@@ -49,7 +49,7 @@ func (h *Handler) getUserFromContext(r *http.Request) *models.User {
 func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 	err := r.ParseForm()
 	if err != nil {
-		//h.logger.Errorf("signup post %w", err)
+		// h.logger.Errorf("signup post %w", err)
 		http.Error(w, "unable to parse form", http.StatusInternalServerError)
 		return
 	}
@@ -60,7 +60,7 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 
 	err = validateSignupForm(username, email, password)
 	if err != nil {
-		//h.logger
+		// h.logger
 		h.Render(w, "signup.page.html", H{
 			"error": err.Error(),
 		})
@@ -132,7 +132,7 @@ func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handler) loginGet(w http.ResponseWriter, r *http.Request) {
-	h.Render(w, "login.page.html", H{
+	h.Render(w, "sign-in.page.html", H{
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }
@@ -140,7 +140,7 @@ func (h *Handler) loginGet(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	err := r.ParseForm()
 	if err != nil {
-		//h.logger.
+		// h.logger.
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -164,20 +164,20 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	userID, err := h.service.UserService.LoginUser(loginPostRequest)
 	if err != nil {
 		if err == models.ErrInvalidCredentials {
-			//h.logger.
+			// h.logger.
 			h.Render(w, "login.page.html", H{
 				"Error": err.Error(),
 			})
 			return
 		}
-		//h.logger
+		// h.logger
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
 
 	session, err := h.service.SessionService.SetSession(userID)
 	if err != nil {
-		//h.logger.Errorf("create session: %w", err)
+		// h.logger.Errorf("create session: %w", err)
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
@@ -204,26 +204,26 @@ func validateLoginForm(email string, password string) error {
 
 func (h *Handler) Logout(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/user/logout" {
-		//h.logger
+		// h.logger
 		http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
 		return
 	}
 
 	if r.Method != http.MethodPost {
-		//h.logger
+		// h.logger
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
 	}
 
 	cookie, err := cookies.GetCookie(r)
 	if err != nil {
-		//h.logger
+		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 
 	err = h.service.SessionService.DeleteSession(cookie.Value)
 	if err != nil {
-		//h.logger
+		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 

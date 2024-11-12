@@ -37,5 +37,5 @@ type UserService interface {
 type UserRepository interface {
 	AddUser(user *User) error
 	GetUserByEmail(email string) (*User, error)
-	UpdateUser(user *UpdateUser) error
+	// UpdateUser(user *UpdateUser) error
 }

@@ -2,11 +2,10 @@ package main
 
 import (
 	"log"
-	"net/http"
-	"time"
 
 	"01.alem.school/git/nyeltay/forum/internal/handler"
 	"01.alem.school/git/nyeltay/forum/internal/repository"
+	"01.alem.school/git/nyeltay/forum/internal/server"
 	"01.alem.school/git/nyeltay/forum/internal/service"
 	"01.alem.school/git/nyeltay/forum/internal/template_cache"
 	"01.alem.school/git/nyeltay/forum/pkg/db"
@@ -38,35 +37,41 @@ func main() {
 	if err != nil {
 		l.Fatal(err)
 	}
+
 	handler := handler.NewHandler(service, templateCache, l)
 
-	l.Infof("server is running on localhost:%s", config.Port)
+	// l.Infof("server is running on localhost:%s", config.Port)
 
-	mux := http.NewServeMux()
-
-	fileServer := http.FileServer(http.Dir("./ui/static"))
-	mux.Handle("/static/", http.StripPrefix("/static/", fileServer))
-
-	mux.HandleFunc("/", handler.Home)
-	mux.HandleFunc("/user/signup", handler.Signup)
-	mux.HandleFunc("/login", handler.Login)
-	mux.Handle("/user/logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
-
-	mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
-
-	router := &http.Server{
-		Addr:         config.Port,
-		Handler:      handler,
-		ReadTimeout:  10 * time.Second,
-		WriteTimeout: 10 * time.Second,
-		IdleTimeout:  120 * time.Second,
+	srv := server.NewServer() // run server
+	if err := srv.RunServer("8080", handler.Routes()); err != nil {
+		log.Fatalf("error occured while running http server: %s", err.Error())
 	}
-	go func() {
-		err := router.ListenAndServe()
-		if err != nil && err != http.ErrServerClosed {
-			l.Fatal(err)
-		} else {
-			l.Info("server stopped")
-		}
-	}()
+	// mux := http.NewServeMux()
+
+	// fileServer := http.FileServer(http.Dir("./ui/static"))
+	// mux.Handle("/static/", http.StripPrefix("/static/", fileServer))
+
+	// mux.HandleFunc("/", handler.Home)
+	// mux.HandleFunc("/user/signup", handler.Signup)
+	// mux.HandleFunc("/login", handler.Login)
+	// mux.Handle("/user/logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
+
+	// mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
+
+	// router := &http.Server{
+	// 	Addr:         config.Port,
+	// 	Handler:      handler.Routes(),
+	// 	ReadTimeout:  10 * time.Second,
+	// 	WriteTimeout: 10 * time.Second,
+	// 	IdleTimeout:  120 * time.Second,
+	// }
+
+	// go func() {
+	// 	err := router.ListenAndServe()
+	// 	if err != nil && err != http.ErrServerClosed {
+	// 		l.Fatal(err)
+	// 	} else {
+	// 		l.Info("server stopped")
+	// 	}
+	// }()
 }

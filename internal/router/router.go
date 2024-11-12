@@ -1,11 +1,5 @@
 package router
 
-import (
-	"net/http"
+// func Serve(config *conf.Config, handler http.Handler) error {
 
-	"01.alem.school/git/nyeltay/forum/conf"
-)
-
-func Serve(config *conf.Config, handler http.Handler) error {
-
-}
+// }

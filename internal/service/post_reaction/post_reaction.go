@@ -13,3 +13,15 @@ func NewPostReactionService(repo models.PostReactionRepository) *PostReactionSer
 		repo: repo,
 	}
 }
+
+func (s *PostReactionService) CreatePostReaction(request *models.PostReactionRequest) error {
+	return nil
+}
+
+func (s *PostReactionService) UpdatePostReaction(request *models.PostReactionRequest) error {
+	return nil
+}
+
+func (s *PostReactionService) DeletePostReaction(request *models.PostReactionRequest) error {
+	return nil
+}

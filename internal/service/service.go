@@ -3,6 +3,13 @@ package service
 import (
 	"01.alem.school/git/nyeltay/forum/internal/models"
 	"01.alem.school/git/nyeltay/forum/internal/repository"
+	"01.alem.school/git/nyeltay/forum/internal/service/category"
+	"01.alem.school/git/nyeltay/forum/internal/service/comment"
+	"01.alem.school/git/nyeltay/forum/internal/service/comment_reaction"
+	"01.alem.school/git/nyeltay/forum/internal/service/post"
+	"01.alem.school/git/nyeltay/forum/internal/service/post_reaction"
+	"01.alem.school/git/nyeltay/forum/internal/service/session"
+	"01.alem.school/git/nyeltay/forum/internal/service/user"
 )
 
 type Service struct {
@@ -17,12 +24,12 @@ type Service struct {
 
 func NewService(repo *repository.Repository) *Service {
 	return &Service{
-		CategoryService:        category.NewService(repo),
-		CommentService:         comment.NewService(repo),
-		CommentReactionService: comment_reaction.NewService(repo),
-		PostService:            post.NewService(repo),
-		PostReactionService:    post_reaction.NewService(repo),
-		SessionService:         session.NewService(repo),
-		UserService:            user.NewService(repo),
+		CategoryService:        category.NewCategoryService(repo.CategoryRepo),
+		CommentService:         comment.NewCommentService(repo.CommentRepo),
+		CommentReactionService: comment_reaction.NewCommentReactionService(repo.CommentReactionRepo),
+		PostService:            post.NewPostService(repo.PostRepo),
+		PostReactionService:    post_reaction.NewPostReactionService(repo.PostReactionRepo),
+		SessionService:         session.NewSessionService(repo.SessionRepo),
+		UserService:            user.NewUserService(repo.UserRepo),
 	}
 }

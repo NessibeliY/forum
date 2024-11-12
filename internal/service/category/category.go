@@ -23,3 +23,7 @@ func (s *CategoryService) GetAllCategories() ([]models.Category, error) {
 
 	return s.repo.GetAllCategories(ctx)
 }
+
+func (s *CategoryService) CreateCategory(category *models.Category) (string, error) {
+	return "", nil
+}

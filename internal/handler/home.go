@@ -17,19 +17,19 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 
 	posts, err := h.service.PostService.GetAllPosts()
 	if err != nil {
-		//h.logger
+		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
 	categories, err := h.service.CategoryService.GetAllCategories()
 	if err != nil {
-		//h.logger
+		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	h.Render(w, "index.html", H{
+	h.Render(w, "index.page.html", H{
 		"posts":              posts,
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),

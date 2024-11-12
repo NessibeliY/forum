@@ -13,3 +13,15 @@ func NewCommentReactionService(repo models.CommentReactionRepository) *CommentRe
 		repo: repo,
 	}
 }
+
+func (s *CommentReactionService) CreateCommentReaction(commentReactionRequest *models.CommentReactionRequest) error {
+	return nil
+}
+
+func (s *CommentReactionService) UpdateCommentReaction(commentReactionRequest *models.CommentReactionRequest) error {
+	return nil
+}
+
+func (s *CommentReactionService) DeleteCommentReaction(commentID, authorID int) error {
+	return nil
+}

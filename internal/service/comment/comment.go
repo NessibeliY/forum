@@ -13,3 +13,7 @@ func NewCommentService(repo models.CommentRepository) *CommentService {
 		repo: repo,
 	}
 }
+
+func (s *CommentService) CreateComment(createCommentRequest *models.CreateCommentRequest) error {
+	return nil
+}

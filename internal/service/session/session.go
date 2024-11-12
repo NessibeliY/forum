@@ -17,3 +17,7 @@ func NewSessionService(repo models.SessionRepository) *SessionService {
 func (s *SessionService) DeleteSession(cookieValue string) error {
 	return s.repo.DeleteSessionByID(cookieValue)
 }
+
+func (s *SessionService) SetSession(userID int) (*models.Session, error) { return nil, nil }
+func (s *SessionService) GetSession(userID int) (*models.Session, error) { return nil, nil }
+func (s *SessionService) UpdateSession(session *models.Session) error    { return nil }
