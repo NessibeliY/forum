@@ -20,10 +20,10 @@
                 <!--LIST OF TAGS  -->
                 <div class="tags card">
                     <h3 class="font-semibold">Tags</h3>
-                    {{range .Categories}}
+                    {{range .categories}}
                         <form action="/user/posts/" method="GET" class="flex">
-                            <input type="hidden" name="filter" value="{{.CategoryName}}">
-                            <button class="categories" type="submit">#{{.CategoryName}}</button>
+                            <input type="hidden" name="filter" value="{{ .Name }}">
+                            <button class="categories" type="submit">#{{ .Name}} </button>
                         </form>
                     {{end}}
                 </div>

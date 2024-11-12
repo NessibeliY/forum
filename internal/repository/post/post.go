@@ -85,7 +85,7 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 				AuthorID:      authorID,
 				CreatedAt:     createdAt,
 				UpdatedAt:     updatedAt,
-				Categories:    []models.Category{},
+				Categories:    []*models.Category{},
 				LikesCount:    likesCount,
 				DislikesCount: dislikesCount,
 				CommentsCount: commentsCount,
@@ -93,7 +93,7 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 		}
 
 		if categoryID != 0 {
-			category := models.Category{
+			category := &models.Category{
 				ID:   categoryID,
 				Name: categoryName,
 			}

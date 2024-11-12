@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 	"regexp"
 	"strings"
@@ -171,11 +170,12 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	email := strings.TrimSpace(r.PostFormValue("email"))
 	password := r.PostFormValue("password")
 
-	err = validateLoginForm(email, password)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
+	errMap := validateLoginForm(email, password)
+	if len(errMap) > 0 {
 		h.Render(w, "sign_in.page.html", H{
-			"error": err.Error(),
+			"Email":         email,
+			"Password":      password,
+			"ErrorMessages": errMap,
 		})
 		return
 	}
@@ -184,16 +184,18 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 		Email:    email,
 		Password: password,
 	}
+
 	userID, err := h.service.UserService.LoginUser(loginPostRequest)
 	if err != nil {
 		if err == models.ErrInvalidCredentials {
-			// h.logger.
 			h.Render(w, "sign_in.page.html", H{
-				"Error": err.Error(),
+				"Email":    email,
+				"Password": password,
+				"Error":    err.Error(),
 			})
 			return
 		}
-		// h.logger
+		h.logger.Info("login user service request", err)
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
@@ -206,23 +208,29 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	}
 	cookies.SetCookie(w, session.UUID, int(time.Until(session.ExpiresAt).Seconds()))
 
-	http.Redirect(w, r, "/", http.StatusFound)
+	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
-func validateLoginForm(email string, password string) error {
-	if email == "" || password == "" {
-		return fmt.Errorf("email or password is empty")
+func validateLoginForm(email string, password string) map[string]string {
+	errors := make(map[string]string)
+
+	if email == "" {
+		errors["email"] = "email  is empty"
+	}
+
+	if password == "" {
+		errors["password"] = "password  is empty"
 	}
 
 	if len(email) > 320 || !emailRegex.MatchString(email) {
-		return fmt.Errorf("invalid email format or length exceeds 320 characters")
+		errors["email"] = "invalid email format or length exceeds 320 characters"
 	}
 
 	if len(password) < 8 || len(password) > 50 {
-		return fmt.Errorf("password length must be between 8 and 50 characters")
+		errors["password"] = "password length must be between 8 and 50 characters"
 	}
 
-	return nil
+	return errors
 }
 
 func (h *Handler) Logout(w http.ResponseWriter, r *http.Request) {

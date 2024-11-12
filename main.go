@@ -42,10 +42,16 @@ func main() {
 
 	// l.Infof("server is running on localhost:%s", config.Port)
 
+	done := make(chan bool)
 	srv := server.NewServer() // run server
-	if err := srv.RunServer("8080", handler.Routes()); err != nil {
-		log.Fatalf("error occured while running http server: %s", err.Error())
-	}
+	go func() {
+		if err := srv.RunServer("8080", handler.Routes()); err != nil {
+			log.Fatalf("error occured while running http server: %s", err.Error())
+		}
+		done <- true // Отправляем сигнал о завершении работы сервера
+	}()
+	// Ожидаем завершения работы сервера
+	<-done
 	// mux := http.NewServeMux()
 
 	// fileServer := http.FileServer(http.Dir("./ui/static"))
