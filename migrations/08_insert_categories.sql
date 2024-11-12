@@ -1,4 +1,4 @@
-INSERT OR IGNORE INTO category (category_name)
+INSERT OR IGNORE INTO category (name)
 VALUES ('Art'),
        ('Music'),
        ('Cinema'),

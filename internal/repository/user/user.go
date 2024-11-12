@@ -21,7 +21,7 @@ func (r *UserRepository) AddUser(user *models.User) error {
 	createdAt := time.Now()
 	updatedAt := createdAt
 
-	_, err := r.db.Exec("INSERT INTO user (username, hashed_pw, email, created_at, updated_at) VALUES (?, ?, ?, ?, ?)",
+	_, err := r.db.Exec("INSERT INTO users (username, hashed_pw, email, created_at, updated_at) VALUES (?, ?, ?, ?, ?)",
 		user.Username,
 		user.HashedPassword,
 		user.Email,
@@ -30,9 +30,9 @@ func (r *UserRepository) AddUser(user *models.User) error {
 	)
 	if err != nil {
 		switch err.Error() {
-		case "UNIQUE constraint failed: user.email":
+		case "UNIQUE constraint failed: users.email":
 			return models.ErrDuplicateEmail
-		case "UNIQUE constraint failed: user.username":
+		case "UNIQUE constraint failed: users.username":
 			return models.ErrDuplicateUsername
 		default:
 			return err
@@ -44,7 +44,7 @@ func (r *UserRepository) AddUser(user *models.User) error {
 
 func (r *UserRepository) GetUserByEmail(email string) (*models.User, error) {
 	var user models.User
-	err := r.db.QueryRow("SELECT * FROM user WHERE email = $1", email).Scan(&user.ID, &user.Username, &user.HashedPassword, &user.Email, &user.CreatedAt, &user.UpdatedAt)
+	err := r.db.QueryRow("SELECT * FROM users WHERE email = $1", email).Scan(&user.ID, &user.Username, &user.HashedPassword, &user.Email, &user.CreatedAt, &user.UpdatedAt)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return nil, nil

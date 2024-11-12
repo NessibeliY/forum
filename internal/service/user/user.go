@@ -32,7 +32,7 @@ func (s *UserService) SignupUser(signupRequest *models.SignupRequest) error {
 
 	err = s.repo.AddUser(user)
 	if err != nil {
-		return fmt.Errorf("add user: %w", err)
+		return err
 	}
 
 	return nil

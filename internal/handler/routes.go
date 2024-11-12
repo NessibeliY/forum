@@ -10,7 +10,7 @@ func (h *Handler) Routes() http.Handler {
 
 	mux.HandleFunc("/", h.Home)
 	mux.HandleFunc("/user/signup", h.Signup)
-	mux.HandleFunc("/login", h.Login)
+	mux.HandleFunc("/user/login", h.Login)
 	mux.Handle("/user/logout", h.RequireAuthentication(http.HandlerFunc(h.Logout)))
 
 	mux.Handle("/post/create", h.RequireAuthentication(http.HandlerFunc(h.CreatePost)))

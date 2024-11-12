@@ -5,5 +5,5 @@ CREATE TABLE IF NOT EXISTS post (
     author_id INTEGER NOT NULL,
     created_at DATETIME NOT NULL,
     updated_at DATETIME NOT NULL,
-    FOREIGN KEY (author_id) REFERENCES user(id) ON DELETE CASCADE
+    FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE
 );

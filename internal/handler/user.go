@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"errors"
 	"fmt"
 	"net/http"
 	"regexp"
@@ -32,7 +31,7 @@ func (h *Handler) Signup(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handler) signupGet(w http.ResponseWriter, r *http.Request) {
-	h.Render(w, "signup.page.html", H{
+	h.Render(w, "sign_up.page.html", H{
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }
@@ -58,11 +57,15 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 	email := strings.TrimSpace(r.PostFormValue("email"))
 	password := r.PostFormValue("password")
 
-	err = validateSignupForm(username, email, password)
-	if err != nil {
+	errorsMap := validateSignupForm(username, email, password)
+
+	if len(errorsMap) > 0 {
 		// h.logger
-		h.Render(w, "signup.page.html", H{
-			"error": err.Error(),
+		h.Render(w, "sign_up.page.html", H{
+			"Username":      username,
+			"Email":         email,
+			"Password":      password,
+			"ErrorMessages": errorsMap,
 		})
 		return
 	}
@@ -74,44 +77,64 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	err = h.service.UserService.SignupUser(signupRequest)
+	var errorMsg string
 	if err != nil {
-		var errorMsg string
-		switch {
-		case errors.Is(err, models.ErrDuplicateEmail):
-			errorMsg = models.ErrDuplicateEmail.Error()
-		case errors.Is(err, models.ErrDuplicateUsername):
-			errorMsg = models.ErrDuplicateUsername.Error()
+		switch err {
+		case models.ErrDuplicateEmail:
+			errorMsg = "Email already in use"
+			h.Render(w, "sign_up.page.html", H{
+				"Username": username,
+				"Email":    email,
+				"Password": password,
+				"error":    errorMsg,
+			})
+			return
+		case models.ErrDuplicateUsername:
+			errorMsg = "UserName already in use"
+			h.Render(w, "sign_up.page.html", H{
+				"Username": username,
+				"Email":    email,
+				"Password": password,
+				"error":    errorMsg,
+			})
+			return
 		default:
 			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 			return
 		}
-		h.Render(w, "signup.page.html", H{
-			"error": errorMsg,
-		})
-		return
 	}
 
-	http.Redirect(w, r, "/login", http.StatusSeeOther)
+	http.Redirect(w, r, "/user/login", http.StatusSeeOther)
 }
 
-func validateSignupForm(username string, email string, password string) error {
-	if username == "" || email == "" || password == "" {
-		return fmt.Errorf("username or email or password is empty")
+func validateSignupForm(username string, email string, password string) map[string]string {
+	errors := make(map[string]string)
+
+	if username == "" {
+		errors["username"] = "username cannot be empty"
+	}
+
+	if email == "" {
+		errors["email"] = "email cannot be empty"
+	}
+
+	if password == "" {
+		errors["password"] = "password cannot be empty"
 	}
 
 	if len(username) < 3 || len(username) > 50 {
-		return fmt.Errorf("username length must be between 3 and 50 characters")
+		errors["username"] = "username length must be between 3 and 50 characters"
 	}
 
 	if len(email) > 320 || !emailRegex.MatchString(email) {
-		return fmt.Errorf("invalid email format or length exceeds 320 characters")
+		errors["email"] = "invalid email format or length exceeds 320 characters"
 	}
 
 	if len(password) < 8 || len(password) > 50 {
-		return fmt.Errorf("password length must be between 8 and 50 characters")
+		errors["password"] = "password length must be between 8 and 50 characters"
 	}
 
-	return nil
+	return errors
 }
 
 func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
@@ -132,7 +155,7 @@ func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handler) loginGet(w http.ResponseWriter, r *http.Request) {
-	h.Render(w, "sign-in.page.html", H{
+	h.Render(w, "sign_in.page.html", H{
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }
@@ -151,7 +174,7 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	err = validateLoginForm(email, password)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
-		h.Render(w, "login.page.html", H{
+		h.Render(w, "sign_in.page.html", H{
 			"error": err.Error(),
 		})
 		return
@@ -165,7 +188,7 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		if err == models.ErrInvalidCredentials {
 			// h.logger.
-			h.Render(w, "login.page.html", H{
+			h.Render(w, "sign_in.page.html", H{
 				"Error": err.Error(),
 			})
 			return
