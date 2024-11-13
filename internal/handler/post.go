@@ -57,7 +57,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		fmt.Println(validationsErrMap)
+
 		h.Render(w, "create_post.page.html", H{
 			"errors":             validationsErrMap,
 			"categories":         categories,
@@ -100,7 +100,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, fmt.Sprintf("/post/%d", id), http.StatusFound)
+	http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%d", id), http.StatusFound)
 }
 
 func validateCreatePostForm(title, content string, categoryNames []string) map[string]string {
@@ -148,7 +148,6 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	postIDStr := query.Get("post-id")
-	fmt.Println("postIDStr", postIDStr)
 
 	if len(query) != 1 || postIDStr == "" {
 		http.Error(w, "query must only contain 'post-id'", http.StatusBadRequest)
