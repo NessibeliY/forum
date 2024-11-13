@@ -66,10 +66,6 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Println("title", title)
-	fmt.Println("content", content)
-	fmt.Println("categoryNames", categoryNames)
-
 	categories := make([]*models.Category, 0, len(categoryNames))
 	for _, categoryName := range categoryNames {
 		c, err := h.service.CategoryService.GetCategoryByName(categoryName)
@@ -207,9 +203,9 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	h.Render(w, "post.page.html", H{
+		"authenticated_user": h.getUserFromContext(r),
 		"post":               post,
 		"categories":         categories,
 		"comments":           comments,
-		"authenticated_user": h.getUserFromContext(r),
 	})
 }

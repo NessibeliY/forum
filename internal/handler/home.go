@@ -33,8 +33,8 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 	}
 
 	h.Render(w, "index.page.html", H{
+		"authenticated_user": h.getUserFromContext(r),
 		"posts":              posts,
 		"categories":         categories,
-		"authenticated_user": h.getUserFromContext(r),
 	})
 }

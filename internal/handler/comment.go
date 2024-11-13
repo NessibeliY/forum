@@ -83,7 +83,7 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postID), http.StatusSeeOther)
+	http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postIDStr), http.StatusSeeOther)
 }
 
 func validateCreateCommentForm(content string, postIDStr string) map[string]string {

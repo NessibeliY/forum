@@ -62,25 +62,26 @@
                         {{end}}
                     </form>
                 </div>
-    
                 <!-- INPUT COMMENT -->
                 <div class="flex flex-col mb-4">
                     {{if .authenticated_user}}
-                    <form class="flex_full_col" style="align-items: center;" action="/comment/create" method="POST">
-                        <input type="hidden" name="post_id" id="PostID" value="{{$.post.ID}}">
-                        <div class="flex_full_col ">
-                            <textarea
-                            id="comment-text-area"
-                            name="content"
-                            class="border border-gray-500 rounded-md w-full focus:outline-none focus:border-blue-600 py-3 px-3"
-                            rows="2"
-                            cols="20"></textarea>
-                            <button type="submit" style="margin-top: 2%;" class="btn_create btn_auth">
-                            Create comment
-                            </button>
-                            <!--ADD LIKKES AND DISLIKES HERE-->
-                        </div>
-                    </form>
+                        {{if .authenticated_user.ID}}
+                        <form class="flex_full_col" style="align-items: center;" action="/comment/create" method="POST">
+                            <input type="hidden" name="post_id" id="PostID" value="{{$.post.ID}}">
+                            <div class="flex_full_col ">
+                                <textarea
+                                id="comment-text-area"
+                                name="content"
+                                class="border border-gray-500 rounded-md w-full focus:outline-none focus:border-blue-600 py-3 px-3"
+                                rows="2"
+                                cols="20"></textarea>
+                                <button type="submit" style="margin-top: 2%;" class="btn_create btn_auth">
+                                Create comment
+                                </button>
+                                <!--ADD LIKKES AND DISLIKES HERE-->
+                            </div>
+                        </form>
+                        {{end}}
                     {{end}}
                     <!-- COMMENT LIST -->
                     {{range .comments}}
@@ -96,8 +97,10 @@
                                                 <span class="created-at">{{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
                                         </div>
                                     </div>
-                                    <!-- Check if the comment's OwnerID matches the current user -->
-                                    {{if eq .authenticated_user.ID .AuthorID}}
+                      
+                                      
+                                 
+                                    {{if eq  $.authenticated_user.ID .AuthorID}}        
                                     <div class="text-xl dropdown">
                                         <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
                                         <div class="select_menu" id="dropdown-{{.ID}}">
@@ -112,22 +115,22 @@
                                         <div class="modal-content delete_form_modal">
                                             <div class="flex items-center justify-between w-full">
                                                 <span class="text-bold text-2xl">DELETE COMMENT</span>
-                                                <span class="close" data-close="delete_comm_{{.CommentID}}">&times;</span>
+                                                <span class="close" data-close="delete_comm_{{.ID}}">&times;</span>
                                             </div>
                                             <form action="/user/comment/delete" method="POST" class="flex flex-col items-center justify-center w-full mt-3">
                                                 <input type="hidden" name="CommentID" value="{{.ID}}">
-                                                <input type="hidden" name="PostID" id="post-id-like" value="{{$.ID}}">
+                                                <input type="hidden" name="PostID" id="post-id-like" value="{{$.post.ID}}">
                                                 <p class="text-xl">Are you sure??</p>
                                                 <div class="flex items-center justify-center mt-2">
                                                     <button class="bg-red-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-red-700 transition duration-300" type="submit">yes</button>
-                                                    <div class="bg-green-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-green-700 transition duration-300 cursor-pointer" data-close="delete_comm_{{.CommentID}}">no</div>
+                                                    <div class="bg-green-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-green-700 transition duration-300 cursor-pointer" data-close="delete_comm_{{.ID}}">no</div>
                                                 </div>
                                             </form>
                                         </div>
                                     </div>
-                                {{end}}
-                            </div>   
- 
+                                    {{end}} 
+                                    
+                                </div>   
                             </div>
                             <span class="commentText">{{ .Content }}</span>
                             <div class="flex py-2 justify-between">
@@ -167,20 +170,22 @@
             
             <!-- USER INFO -->
             {{if .authenticated_user}}
-                <div class="rSide">
-                    <div class="welcome card">
-                        <div>
-                            <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, mmmm</h2>
-                            <span style="font-size: larger;">Glad to see you!</span>                        </div>
-                        <a href="/create-post" class="createButton" id="openModalBtn">
-                            <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
-                        </a>
+                {{if .authenticated_user.ID}}
+                    <div class="rSide">
+                        <div class="welcome card">
+                            <div>
+                                <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, {{.authenticated_user.Username}}</h2>
+                                <span style="font-size: larger;">Glad to see you!</span>                        
+                            </div>
+                            <a href="/post/create" class="createButton" id="openModalBtn">
+                                <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
+                            </a>
+                        </div>
+                        <div class="userInfo card">
+                            {{ template "user_info" .}}
+                        </div>
                     </div>
-                    <div class="userInfo card">
-                        {{ template "user_info" .}}
-                    </div>
-                </div>
-
+                {{end}}
             {{end}}
         </div>
     </main>
