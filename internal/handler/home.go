@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 )
 
@@ -17,7 +18,7 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 
 	posts, err := h.service.PostService.GetAllPosts()
 	if err != nil {
-
+		fmt.Println("error home page posts", err)
 		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -25,7 +26,8 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 
 	categories, err := h.service.CategoryService.GetAllCategories()
 	if err != nil {
-		// h.logger
+		fmt.Println("error home page posts", err)
+		// h.logger.Info("User is not authenticated")
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}

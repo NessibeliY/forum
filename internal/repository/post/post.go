@@ -165,7 +165,7 @@ func (r *PostRepository) GetPostByID(ctx context.Context, id int) (*models.Post,
 	}
 
 	query = `
-	SELECT c.name FROM category c2 
+	SELECT c2.name FROM category c2 
 	JOIN post_category pc ON pc.post_id = c2.id
 	WHERE c2.id = $1`
 

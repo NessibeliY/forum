@@ -30,14 +30,17 @@ func (h *Handler) CreatePost(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) createPostMethodGet(w http.ResponseWriter, r *http.Request) {
 	categories, err := h.service.CategoryService.GetAllCategories()
 	if err != nil {
-		//h.logger
+		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	h.Render(w, "create.page.html", H{
+	user := h.getUserFromContext(r)
+
+	h.Render(w, "create_post.page.html", H{
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
+		"Username":           user.Username,
 	})
 }
 
@@ -47,21 +50,25 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 	categoryNames := r.PostForm["categories"]
 
 	validationsErrMap := validateCreatePostForm(title, content, categoryNames)
-	if validationsErrMap != nil {
+	if len(validationsErrMap) > 0 {
 		categories, err := h.service.CategoryService.GetAllCategories()
 		if err != nil {
-			//h.logger
+			// h.logger
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-
-		h.Render(w, "create.page.html", H{
+		fmt.Println(validationsErrMap)
+		h.Render(w, "create_post.page.html", H{
 			"errors":             validationsErrMap,
 			"categories":         categories,
 			"authenticated_user": h.getUserFromContext(r),
 		})
 		return
 	}
+
+	fmt.Println("title", title)
+	fmt.Println("content", content)
+	fmt.Println("categoryNames", categoryNames)
 
 	categories := make([]*models.Category, 0, len(categoryNames))
 	for _, categoryName := range categoryNames {
@@ -72,9 +79,9 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 		}
 		if c == nil {
 			validationsErrMap["categories"] = "category not found"
-			//h.logger
+			// h.logger
 			w.WriteHeader(http.StatusBadRequest)
-			h.Render(w, "create.page.html", H{
+			h.Render(w, "create_post.page.html", H{
 				"errors":             validationsErrMap,
 				"categories":         categories,
 				"authenticated_user": h.getUserFromContext(r),
@@ -92,7 +99,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 
 	id, err := h.service.PostService.CreatePost(createPostRequest)
 	if err != nil {
-		//h.logger
+		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -139,12 +146,13 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 
 	query, err := url.ParseQuery(r.URL.RawQuery)
 	if err != nil {
-		//h.logger
+		// h.logger
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
 	postIDStr := query.Get("post-id")
+	fmt.Println("postIDStr", postIDStr)
 
 	if len(query) != 1 || postIDStr == "" {
 		http.Error(w, "query must only contain 'post-id'", http.StatusBadRequest)
@@ -169,7 +177,7 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 
 	comments, err := h.service.CommentService.GetAllCommentsByPostID(postID)
 	if err != nil {
-		//h.logger
+		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -177,7 +185,7 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 	for _, comment := range comments {
 		comment.LikesCount, comment.DislikesCount, err = h.service.CommentReactionService.GetCommentLikesAndDislikesByID(comment.ID)
 		if err != nil {
-			//h.logger
+			// h.logger
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
@@ -185,13 +193,22 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 
 	post.LikesCount, post.DislikesCount, err = h.service.PostReactionService.GetPostLikesAndDislikesByID(postID)
 	if err != nil {
-		//h.logger
+		// h.logger
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	categories, err := h.service.CategoryService.GetAllCategories()
+	if err != nil {
+		fmt.Println("error home page posts", err)
+		// h.logger.Info("User is not authenticated")
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
 	h.Render(w, "post.page.html", H{
 		"post":               post,
+		"categories":         categories,
 		"comments":           comments,
 		"authenticated_user": h.getUserFromContext(r),
 	})

@@ -6,7 +6,9 @@
             </div>
         </div>
         <div class="user_card">
-            <span style="font-weight: 500; font-size: 1.25rem;">{{ .Username}}</span>
+            {{if .authenticated_user}}
+                <span style="font-weight: 500; font-size: 1.25rem;">{{ .authenticated_user.Username}}</span>
+            {{end}}
         </div>
     </div>
 {{end}}

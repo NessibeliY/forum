@@ -35,13 +35,13 @@ func (h *Handler) Signup(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handler) signupGet(w http.ResponseWriter, r *http.Request) {
-	h.Render(w, "sign_up.page.html", H{
+	h.Render(w, "signup.page.html", H{
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }
 
 func (h *Handler) getUserFromContext(r *http.Request) *models.User {
-	user, ok := r.Context().Value("user").(*models.User)
+	user, ok := r.Context().Value(contextKeyUser).(*models.User)
 	if !ok {
 		// h.logger.Info("user is not authenticated")
 		return nil
@@ -65,7 +65,7 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 
 	if len(errorsMap) > 0 {
 		// h.logger
-		h.Render(w, "sign_up.page.html", H{
+		h.Render(w, "signup.page.html", H{
 			"Username":      username,
 			"Email":         email,
 			"Password":      password,
@@ -86,7 +86,7 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 		switch err {
 		case models.ErrDuplicateEmail:
 			errorMsg = "Email already in use"
-			h.Render(w, "sign_up.page.html", H{
+			h.Render(w, "signup.page.html", H{
 				"Username": username,
 				"Email":    email,
 				"Password": password,
@@ -95,7 +95,7 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 			return
 		case models.ErrDuplicateUsername:
 			errorMsg = "UserName already in use"
-			h.Render(w, "sign_up.page.html", H{
+			h.Render(w, "signup.page.html", H{
 				"Username": username,
 				"Email":    email,
 				"Password": password,
@@ -159,7 +159,7 @@ func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handler) loginGet(w http.ResponseWriter, r *http.Request) {
-	h.Render(w, "sign_in.page.html", H{
+	h.Render(w, "login.page.html", H{
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }
@@ -178,7 +178,7 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 
 	errMap := validateLoginForm(email, password)
 	if len(errMap) > 0 {
-		h.Render(w, "sign_in.page.html", H{
+		h.Render(w, "login.page.html", H{
 			"Email":         email,
 			"Password":      password,
 			"ErrorMessages": errMap,
@@ -196,7 +196,7 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("err", err)
 	if err != nil {
 		if err == models.ErrInvalidCredentials {
-			h.Render(w, "sign_in.page.html", H{
+			h.Render(w, "login.page.html", H{
 				"Email":    email,
 				"Password": password,
 				"Error":    err.Error(),
@@ -207,13 +207,10 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
-	fmt.Println("here")
 
 	session, err := h.service.SessionService.SetSession(userID)
-	fmt.Println("session", session)
-	fmt.Println("err", err)
 	if err != nil {
-		fmt.Println("SetSession", err)
+
 		// h.logger.Errorf("create session: %w", err)
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
@@ -266,6 +263,7 @@ func (h *Handler) Logout(w http.ResponseWriter, r *http.Request) {
 
 	err = h.service.SessionService.DeleteSession(cookie.Value)
 	if err != nil {
+		fmt.Println("error:", err)
 		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}

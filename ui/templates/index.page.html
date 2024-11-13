@@ -33,15 +33,16 @@
                         {{ template "posts" .}}
                     </div>
                 </div>
-                {{if .IsAuth}}
+                {{if .authenticated_user }}
                 <div class="rSide">
                     <div class="welcome card">
                         <div>
-                            <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, mmmm</h2>
-                            <span style="font-size: larger;">Glad to see you!</span>                        </div>
-                        <a href="/create-post" class="createButton" id="openModalBtn">
-                            <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
-                        </a>
+                            <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, {{.authenticated_user.Username}}</h2>
+                            <span style="font-size: larger;">Glad to see you!</span>
+                            <a href="/post/create" class="createButton" id="openModalBtn">
+                                <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
+                            </a>
+                        </div>
                     </div>
                     <div class="userInfo card">
                         {{ template "user_info" .}}

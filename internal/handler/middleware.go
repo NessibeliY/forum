@@ -7,6 +7,10 @@ import (
 	"01.alem.school/git/nyeltay/forum/pkg/cookies"
 )
 
+type contextKey string
+
+var contextKeyUser = contextKey("user")
+
 func (h *Handler) RequireAuthentication(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		user := h.getUserFromContext(r)
@@ -30,6 +34,7 @@ func (h *Handler) Authenticate(next http.Handler) http.Handler {
 
 		session, err := h.service.SessionService.GetSession(cookie.Value)
 		if err != nil || session == nil {
+			h.logger.Info("Session not found or invalid: ", err)
 			cookies.DeleteCookie(w, sessionCookieName)
 			next.ServeHTTP(w, r)
 			return
@@ -37,19 +42,20 @@ func (h *Handler) Authenticate(next http.Handler) http.Handler {
 
 		user, err := h.service.UserService.GetUserByID(session.UserID)
 		if err != nil || user == nil {
+			h.logger.Info("User not found or invalid: ", err)
 			cookies.DeleteCookie(w, sessionCookieName)
 			h.service.SessionService.DeleteSession(cookie.Value)
 			next.ServeHTTP(w, r)
 		}
 
-		ctx := context.WithValue(r.Context(), "user", user)
+		ctx := context.WithValue(r.Context(), contextKeyUser, user)
 		next.ServeHTTP(w, r.WithContext(ctx))
 	})
 }
 
 func (h *Handler) LogRequest(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		//h.logger.Infof("%s - %s %s %s", r.RemoteAddr, r.Proto, r.Method, r.RequestURI)
+		// h.logger.Infof("%s - %s %s %s", r.RemoteAddr, r.Proto, r.Method, r.RequestURI)
 		next.ServeHTTP(w, r)
 	})
 }
@@ -60,7 +66,7 @@ func (h *Handler) RecoverPanic(next http.Handler) http.Handler {
 			if err := recover(); err != nil {
 				w.Header().Set("Connection", "close")
 
-				//h.logger.Error(err)
+				// h.logger.Error(err)
 
 				http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 			}
