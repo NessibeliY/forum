@@ -15,20 +15,20 @@ const errorsMapCookieName = "forum_errors_map_cookie"
 
 func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/comment/create" {
-		//h.logger.
+		// h.logger.
 		http.NotFound(w, r)
 		return
 	}
 
 	if r.Method != http.MethodPost {
-		//h.logger.
+		// h.logger.
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
 	}
 
 	err := r.ParseForm()
 	if err != nil {
-		//h.logger
+		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -37,23 +37,25 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 	postIDStr := strings.TrimSpace(r.PostFormValue("post_id"))
 
 	validationsErrMap := validateCreateCommentForm(content, postIDStr)
-	if validationsErrMap != nil {
-		//h.logger
+	if len(validationsErrMap) > 0 {
+		// h.logger
 		errorsJSON, err := json.Marshal(validationsErrMap)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
 
+		fmt.Println("validationsErrMap", validationsErrMap)
 		cookies.SetCookie(w, errorsMapCookieName, string(errorsJSON), 300)
 
 		http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postIDStr), http.StatusSeeOther)
 		return
 	}
 
+	fmt.Println("ok")
 	postID, err := strconv.Atoi(postIDStr)
 	if err != nil {
-		//h.logger
+		// h.logger
 		validationsErrMap["post_id"] = postIDStr
 		errorsJSON, err := json.Marshal(validationsErrMap)
 		if err != nil {
@@ -61,12 +63,14 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
+		fmt.Println("post-id atoi")
 		cookies.SetCookie(w, errorsMapCookieName, string(errorsJSON), 300)
 
 		http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postIDStr), http.StatusSeeOther)
 		return
 	}
 
+	fmt.Println("ok - 2")
 	createCommentRequest := &models.CreateCommentRequest{
 		Content:  content,
 		AuthorID: h.getUserFromContext(r).ID,

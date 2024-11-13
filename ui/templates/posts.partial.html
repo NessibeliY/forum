@@ -15,7 +15,7 @@
                         </span>
                     </div>
                     <!-- CHECK IF USER IS OWNER -->
-                    {{if eq .AuthorID .AuthorID}}
+                    {{if eq .authenticated_user.ID .AuthorID}}
                         <div class="text-xl dropdown">
                             <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
                             <div class="select_menu " id="dropdown-{{.ID}}">

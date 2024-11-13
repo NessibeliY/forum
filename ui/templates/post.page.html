@@ -28,8 +28,6 @@
                 {{end}}
             </div>
 
-
-            
             <!-- IF USER AUTH SHOW THIS BLOCK -->
             <div class="middleContainer">
                 <div class="flex w-full flex-col break-words">
@@ -49,12 +47,13 @@
                         </button>
                         {{end}}
                     </form>
+        
     
                     <form action="/dislike"  method="POST">
                         <input type="hidden" name="PostID" value="{{.Post.PostID}}">
                         {{if .post.IsDislikedByUser}}
                         <button class="btn_like btn_like_active text-2x" type="submit">
-                            <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked({{.postDislikesCount}})
+                            <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked({{.post.DislikesCount}})
                         </button>
                         {{else}}
                         <button class="btn_like text-white text-2xl" type="submit">
@@ -67,12 +66,12 @@
                 <!-- INPUT COMMENT -->
                 <div class="flex flex-col mb-4">
                     {{if .authenticated_user}}
-                    <form class="flex_full_col" style="align-items: center;" action="/post/comment" method="POST">
-                        <input type="hidden" name="post-id" id="PostID">
+                    <form class="flex_full_col" style="align-items: center;" action="/comment/create" method="POST">
+                        <input type="hidden" name="post_id" id="PostID" value="{{$.post.ID}}">
                         <div class="flex_full_col ">
                             <textarea
                             id="comment-text-area"
-                            name="comment_text"
+                            name="content"
                             class="border border-gray-500 rounded-md w-full focus:outline-none focus:border-blue-600 py-3 px-3"
                             rows="2"
                             cols="20"></textarea>
@@ -84,7 +83,7 @@
                     </form>
                     {{end}}
                     <!-- COMMENT LIST -->
-                    {{range .Comments}}
+                    {{range .comments}}
                         <div class="comments">
                             <div class="commentHeader">
                                 <div class="flex justify-between">
@@ -92,64 +91,64 @@
                                         <div class="post_icon user_icon">
                                             <i class="fa-solid fa-user"></i>
                                         </div>
-                                        <span class="commentAuthor">{{.AuthorID}}</span>
+                                        <span class="commentAuthor">{{.ID}}</span>
                                         <div class="flex w-full items-center flex-col ml-2 text">
                                                 <span class="created-at">{{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
-                                            
                                         </div>
                                     </div>
                                     <!-- Check if the comment's OwnerID matches the current user -->
-                                    {{if eq .AuthorID .AuthorID}}
-                                        <div class="text-xl dropdown">
-                                            <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
-                                            <div class="select_menu" id="dropdown-{{.ID}}">
-                                                <ul class="options card">
-                                                    <li class="option del_btn_modal" data-modal="delete_comm_{{.ID}}">
-                                                        Delete                                         
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                    {{if eq .authenticated_user.ID .AuthorID}}
+                                    <div class="text-xl dropdown">
+                                        <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
+                                        <div class="select_menu" id="dropdown-{{.ID}}">
+                                            <ul class="options card">
+                                                <li class="option del_btn_modal" data-modal="delete_comm_{{.ID}}">
+                                                    Delete                                         
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <div class="modal" id="delete_comm_{{.ID}}">
-                                            <div class="modal-content delete_form_modal">
-                                                <div class="flex items-center justify-between w-full">
-                                                    <span class="text-bold text-2xl">DELETE COMMENT</span>
-                                                    <span class="close" data-close="delete_comm_{{.CommentID}}">&times;</span>
+                                    </div>
+                                    <div class="modal" id="delete_comm_{{.ID}}">
+                                        <div class="modal-content delete_form_modal">
+                                            <div class="flex items-center justify-between w-full">
+                                                <span class="text-bold text-2xl">DELETE COMMENT</span>
+                                                <span class="close" data-close="delete_comm_{{.CommentID}}">&times;</span>
+                                            </div>
+                                            <form action="/user/comment/delete" method="POST" class="flex flex-col items-center justify-center w-full mt-3">
+                                                <input type="hidden" name="CommentID" value="{{.ID}}">
+                                                <input type="hidden" name="PostID" id="post-id-like" value="{{$.ID}}">
+                                                <p class="text-xl">Are you sure??</p>
+                                                <div class="flex items-center justify-center mt-2">
+                                                    <button class="bg-red-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-red-700 transition duration-300" type="submit">yes</button>
+                                                    <div class="bg-green-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-green-700 transition duration-300 cursor-pointer" data-close="delete_comm_{{.CommentID}}">no</div>
                                                 </div>
-                                                <form action="/user/comment/delete" method="POST" class="flex flex-col items-center justify-center w-full mt-3">
-                                                    <input type="hidden" name="CommentID" value="{{.ID}}">
-                                                    <input type="hidden" name="PostID" id="post-id-like" value="{{$.ID}}">
-                                                    <p class="text-xl">Are you sure??</p>
-                                                    <div class="flex items-center justify-center mt-2">
-                                                        <button class="bg-red-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-red-700 transition duration-300" type="submit">yes</button>
-                                                        <div class="bg-green-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-green-700 transition duration-300 cursor-pointer" data-close="delete_comm_{{.CommentID}}">no</div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                            </form>
                                         </div>
-                                    {{end}}
-                                </div>   
+                                    </div>
+                                {{end}}
+                            </div>   
+ 
                             </div>
-                            <span class="commentText">{{.Content}}</span>
+                            <span class="commentText">{{ .Content }}</span>
                             <div class="flex py-2 justify-between">
                                 <div class="flex items-start w-full">
                                     <form class="flex" action="/comment/like" method="POST">
-                                        <input type="hidden" name="CommentID" value="{{ .CommentID}}">
-                                        <input type="hidden" name="PostID" id="post-id-like" value="{{$.Post.PostID}}">
-                                        {{if .IsLiked}}
+                                        <input type="hidden" name="CommentID" value="{{ .ID}}">
+                                        <input type="hidden" name="PostID" id="post-id-like" value="{{$.post.ID}}">
+                                        {{if .IsLikedByUser}}
                                         <button class="btn_like_com btn_like_active">
                                             <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{ .LikesCount }})
                                         </button>
                                         {{ else }}
                                         <button class="btn_like_com">
-                                            <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{.LikesCount}})
+                                            <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{ .LikesCount }})
                                         </button>
                                         {{ end }}
                                     </form>
                                     <form action="/comment/dislike" method="POST">
-                                        <input type="hidden" name="CommentID" value="{{ .CommentID}}">
-                                        <input type="hidden" name="PostID" id="post-id-like" value="{{$.Post.PostID}}">
-                                        {{if .DisLiked}}
+                                        <input type="hidden" name="CommentID" value="{{.ID}}">
+                                        <input type="hidden" name="PostID" id="post-id-like" value="{{$.post.ID}}">
+                                        {{if .IsDislikedByUser}}
                                         <button class="btn_like_com btn_like_active">
                                             <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked ({{.DislikesCount}})
                                         </button>     
