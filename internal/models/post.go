@@ -6,17 +6,19 @@ import (
 )
 
 type Post struct {
-	ID            int
-	Title         string
-	Content       string
-	AuthorID      int
-	CreatedAt     time.Time
-	UpdatedAt     time.Time
-	Categories    []*Category
-	Comments      []Comment
-	LikesCount    int
-	DislikesCount int
-	CommentsCount int
+	ID               int
+	Title            string
+	Content          string
+	AuthorID         int
+	CreatedAt        time.Time
+	UpdatedAt        time.Time
+	Categories       []*Category
+	Comments         []Comment
+	LikesCount       int
+	DislikesCount    int
+	CommentsCount    int
+	IsLikedByUser    bool
+	IsDislikedByUser bool
 }
 
 type CreatePostRequest struct {
@@ -40,7 +42,6 @@ type PostService interface {
 	GetAllPosts() ([]Post, error)
 	CreatePost(request *CreatePostRequest) (int, error)
 	GetPostByID(id int) (*Post, error)
-	//UpdatePost(request *UpdatePostRequest) error
 	//DeletePost(request *DeletePostRequest) error
 }
 
@@ -48,6 +49,5 @@ type PostRepository interface {
 	GetAllPosts(ctx context.Context) ([]Post, error)
 	AddPost(post *Post) (int, error)
 	GetPostByID(ctx context.Context, id int) (*Post, error)
-	//UpdatePost(post *Post) error
 	//DeletePost(id int) error
 }

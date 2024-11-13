@@ -17,14 +17,19 @@ func NewCommentService(repo models.CommentRepository) *CommentService {
 	}
 }
 
-func (s *CommentService) CreateComment(createCommentRequest *models.CreateCommentRequest) error {
-	return nil
-}
-
-
 func (s *CommentService) GetAllCommentsByPostID(postID int) ([]*models.Comment, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
 	return s.repo.GetAllCommentsByPostID(ctx, postID)
+}
+
+func (s *CommentService) CreateComment(createCommentRequest *models.CreateCommentRequest) error {
+	comment := &models.Comment{
+		Content:  createCommentRequest.Content,
+		AuthorID: createCommentRequest.AuthorID,
+		PostID:   createCommentRequest.PostID,
+	}
+
+	return s.repo.AddComment(comment)
 }

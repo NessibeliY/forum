@@ -56,6 +56,7 @@ func (r *UserRepository) GetUserByEmail(email string) (*models.User, error) {
 }
 
 func (r *UserRepository) GetUserByID(id int) (user *models.User, err error) {
+	user = &models.User{}
 	query := `SELECT * FROM user WHERE id = $1`
 	err = r.db.QueryRow(query, id).Scan(
 		&user.ID,

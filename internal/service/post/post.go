@@ -2,6 +2,7 @@ package post
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
@@ -21,7 +22,12 @@ func (s *PostService) GetAllPosts() ([]models.Post, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
-	return s.repo.GetAllPosts(ctx)
+	posts, err := s.repo.GetAllPosts(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("get all posts: %w", err)
+	}
+
+	return posts, nil
 }
 
 func (s *PostService) CreatePost(createPostRequest *models.CreatePostRequest) (int, error) {

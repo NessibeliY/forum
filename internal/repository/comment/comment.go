@@ -4,6 +4,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"time"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
 )
@@ -16,10 +17,6 @@ func NewCommentRepository(db *sql.DB) *CommentRepository {
 	return &CommentRepository{
 		db: db,
 	}
-}
-
-func (r *CommentRepository) AddComment(comment *models.Comment) error {
-	return nil
 }
 
 func (r *CommentRepository) GetAllCommentsByPostID(ctx context.Context, postID int) ([]*models.Comment, error) {
@@ -51,4 +48,11 @@ func (r *CommentRepository) GetAllCommentsByPostID(ctx context.Context, postID i
 	}
 
 	return comments, nil
+}
+
+func (r *CommentRepository) AddComment(comment *models.Comment) error {
+	createdAt := time.Now()
+	query := `INSERT INTO comment (content, post_id, author_id, created_at) VALUES (?, ?, ?, ?)`
+	_, err := r.db.Exec(query, comment.Content, comment.PostID, comment.AuthorID, createdAt)
+	return err
 }

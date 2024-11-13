@@ -11,6 +11,10 @@ import (
 	"01.alem.school/git/nyeltay/forum/pkg/cookies"
 )
 
+const (
+	sessionCookieName = "forum_session_cookie"
+)
+
 var emailRegex = regexp.MustCompile("(?:[a-z0-9!#$%&'*+\\/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+\\/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])")
 
 func (h *Handler) Signup(w http.ResponseWriter, r *http.Request) {
@@ -214,7 +218,7 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
-	cookies.SetCookie(w, session.UUID, int(time.Until(session.ExpiresAt).Seconds()))
+	cookies.SetCookie(w, sessionCookieName, session.UUID, int(time.Until(session.ExpiresAt).Seconds()))
 
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
@@ -254,7 +258,7 @@ func (h *Handler) Logout(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	cookie, err := cookies.GetCookie(r)
+	cookie, err := cookies.GetCookie(r, sessionCookieName)
 	if err != nil {
 		// h.logger
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -266,7 +270,7 @@ func (h *Handler) Logout(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 
-	cookies.DeleteCookie(w)
+	cookies.DeleteCookie(w, sessionCookieName)
 
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
