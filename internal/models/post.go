@@ -42,6 +42,7 @@ type PostService interface {
 	GetAllPosts() ([]Post, error)
 	CreatePost(request *CreatePostRequest) (int, error)
 	GetPostByID(id int) (*Post, error)
+	GetPostsByAuthorID(authorID int) ([]Post, error)
 	//DeletePost(request *DeletePostRequest) error
 }
 
@@ -49,5 +50,6 @@ type PostRepository interface {
 	GetAllPosts(ctx context.Context) ([]Post, error)
 	AddPost(post *Post) (int, error)
 	GetPostByID(ctx context.Context, id int) (*Post, error)
+	GetPostsByAuthorID(ctx context.Context, authorID int) ([]Post, error)
 	//DeletePost(id int) error
 }

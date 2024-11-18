@@ -196,3 +196,27 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }
+
+func (h *Handler) ShowMyPosts(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/myposts" {
+		http.NotFound(w, r)
+		return
+	}
+
+	if r.Method != http.MethodGet {
+		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+		return
+	}
+
+	posts, err := h.service.PostService.GetPostsByAuthorID(h.getUserFromContext(r).ID)
+	if err != nil {
+		//h.logger.
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	h.Render(w, "index.page.html", H{
+		"posts":              posts,
+		"authenticated_user": h.getUserFromContext(r),
+	})
+}
