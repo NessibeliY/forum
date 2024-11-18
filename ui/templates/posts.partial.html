@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="flex w-full flex-col py-4 px-4 break-words">
-                <a href="/post/?post-id={{.ID}}" class="postsTitle">{{ .Title }}</a>
+                <a href="/post/?id={{.ID}}" class="postsTitle">{{ .Title }}</a>
                 <!-- POST DESCRIPTION -->
                 <p class="text-lg my-2">{{ .Content }}</p>
                 <!-- POST TAGS -->
@@ -62,8 +62,9 @@
                 <div class="flex w-full mt-4">
                     <div class="header_wrapper">
                         <div class="flex">
-                            <form action="/like" method="POST">
-                                <input type="hidden" name="PostID" value="{{.ID}}">
+                            <form action="/post/reaction/create" method="POST">
+                                <input type="hidden" name="post_id" value="{{.ID}}">
+                                <input type="hidden" name="reaction" value="like">
                                 {{if .IsLikedByUser}}
                                     <button class="btn_like btn_like_active" type="submit">
                                         <i class="fa-regular fa-thumbs-up mx-1"></i> Liked({{ .LikesCount }})
@@ -74,8 +75,9 @@
                                     </button>
                                 {{end}}
                             </form>
-                            <form action="/dislike" method="POST">
-                                <input type="hidden" name="PostID" value="{{.ID}}">
+                            <form action="/post/reaction/create" method="POST">
+                                <input type="hidden" name="post_id" value="{{.ID}}">
+                                <input type="hidden" name="reaction" value="dislike">
                                 {{if .IsDislikedByUser}}
                                     <button class="btn_like btn_like_active" type="submit">
                                         <i class="fa-regular fa-thumbs-down mx-1"></i> Disliked({{ .DislikesCount }})
@@ -87,7 +89,7 @@
                                 {{end}}
                             </form>
                         </div>
-                        <a href="/post/?post-id={{.ID}}" class="btn_like">
+                        <a href="/post/?id={{.ID}}" class="btn_like">
                             <i class="fa-regular fa-comments mx-1 text-2xl"></i>{{ .CommentsCount }}
                         </a>
                     </div>

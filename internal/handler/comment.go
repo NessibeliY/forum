@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"strconv"
 	"strings"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
 	"01.alem.school/git/nyeltay/forum/pkg/cookies"
+	"01.alem.school/git/nyeltay/forum/pkg/utils"
 )
 
 const errorsMapCookieName = "forum_errors_map_cookie"
@@ -37,7 +37,7 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 	postIDStr := strings.TrimSpace(r.PostFormValue("post_id"))
 
 	validationsErrMap := validateCreateCommentForm(content, postIDStr)
-	if len(validationsErrMap) > 0 {
+	if validationsErrMap != nil {
 		// h.logger
 		errorsJSON, err := json.Marshal(validationsErrMap)
 		if err != nil {
@@ -45,32 +45,19 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		fmt.Println("validationsErrMap", validationsErrMap)
 		cookies.SetCookie(w, errorsMapCookieName, string(errorsJSON), 300)
 
-		http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postIDStr), http.StatusSeeOther)
+		http.Redirect(w, r, fmt.Sprintf("/post?id=%s", postIDStr), http.StatusSeeOther)
 		return
 	}
 
-	fmt.Println("ok")
-	postID, err := strconv.Atoi(postIDStr)
+	postID, err := utils.ParsePositiveIntID(postIDStr)
 	if err != nil {
 		// h.logger
-		validationsErrMap["post_id"] = postIDStr
-		errorsJSON, err := json.Marshal(validationsErrMap)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-
-		fmt.Println("post-id atoi")
-		cookies.SetCookie(w, errorsMapCookieName, string(errorsJSON), 300)
-
-		http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postIDStr), http.StatusSeeOther)
+		http.NotFound(w, r)
 		return
 	}
 
-	fmt.Println("ok - 2")
 	createCommentRequest := &models.CreateCommentRequest{
 		Content:  content,
 		AuthorID: h.getUserFromContext(r).ID,
@@ -83,7 +70,7 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postIDStr), http.StatusSeeOther)
+	http.Redirect(w, r, fmt.Sprintf("/post?id=%d", postID), http.StatusSeeOther)
 }
 
 func validateCreateCommentForm(content string, postIDStr string) map[string]string {

@@ -35,8 +35,9 @@
                     <span class="postDescription">{{.post.Content}}</span>
                 </div>
                 <div class="flex w-full items-center">
-                    <form action="/like" method="POST" class="flex my-2 mb-2">   
-                        <input type="hidden" name="PostID" value="{{.ID}}">
+                    <form action="/post/reaction/create" method="POST" class="flex my-2 mb-2">   
+                        <input type="hidden" name="post_id" value="{{.post.ID}}">
+                        <input type="hidden" name="reaction" value="like">
                         {{if .post.IsLikedByUser}}
                         <button class="btn_like btn_like_active text-2xl" type="submit">
                             <i class="fa-regular fa-thumbs-up mx-1"></i> Liked({{ .post.LikesCount }})
@@ -49,8 +50,9 @@
                     </form>
         
     
-                    <form action="/dislike"  method="POST">
-                        <input type="hidden" name="PostID" value="{{.Post.PostID}}">
+                    <form action="/post/reaction/create" method="POST">
+                        <input type="hidden" name="post_id" value="{{.post.ID}}">
+                        <input type="hidden" name="reaction" value="dislike">
                         {{if .post.IsDislikedByUser}}
                         <button class="btn_like btn_like_active text-2x" type="submit">
                             <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked({{.post.DislikesCount}})
@@ -147,7 +149,7 @@
                                             <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{ .LikesCount }})
                                         </button>
                                         {{ end }}
-                                    </form>
+                                    </form>m
                                     <form action="/comment/dislike" method="POST">
                                         <input type="hidden" name="CommentID" value="{{.ID}}">
                                         <input type="hidden" name="PostID" id="post-id-like" value="{{$.post.ID}}">

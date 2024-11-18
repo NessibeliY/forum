@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
-	"strconv"
 	"strings"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
+	"01.alem.school/git/nyeltay/forum/pkg/utils"
 )
 
 func (h *Handler) CreatePost(w http.ResponseWriter, r *http.Request) {
@@ -147,15 +147,15 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	postIDStr := query.Get("post-id")
+	postIDStr := query.Get("id")
 
 	if len(query) != 1 || postIDStr == "" {
 		http.Error(w, "query must only contain 'post-id'", http.StatusBadRequest)
 		return
 	}
 
-	postID, err := strconv.Atoi(postIDStr)
-	if err != nil || postID < 1 {
+	postID, err := utils.ParsePositiveIntID(postIDStr)
+	if err != nil {
 		http.NotFound(w, r)
 		return
 	}

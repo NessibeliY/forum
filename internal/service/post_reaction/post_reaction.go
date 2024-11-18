@@ -38,3 +38,44 @@ func (s *PostReactionService) GetPostLikesAndDislikesByID(postID int) (int, int,
 
 	return likesCount, dislikesCount, nil
 }
+
+func (s *PostReactionService) CreatePostReaction(request *models.CreatePostReactionRequest) error {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	postReaction := &models.PostReaction{
+		AuthorID: request.AuthorID,
+		PostID:   request.PostID,
+		Reaction: request.Reaction,
+	}
+
+	currentReaction, err := s.repo.GetReactionByPostIDAndAuthorID(ctx, request.PostID, request.AuthorID)
+	if err != nil {
+		return fmt.Errorf("get reaction by post id: %v", err)
+	}
+
+	if currentReaction != nil {
+		fmt.Println("currentReaction.Reaction", currentReaction.Reaction)
+		fmt.Println("request.Reaction", request.Reaction)
+		if currentReaction.Reaction == request.Reaction {
+			err = s.repo.DeletePostReaction(request.PostID, request.AuthorID)
+			if err != nil {
+				return fmt.Errorf("delete post reaction: %v", err)
+			}
+			return nil
+		}
+
+		err = s.repo.UpdatePostReaction(postReaction)
+		if err != nil {
+			return fmt.Errorf("update post reaction: %v", err)
+		}
+		return nil
+	}
+
+	err = s.repo.AddPostReaction(postReaction)
+	if err != nil {
+		return fmt.Errorf("add post reaction: %v", err)
+	}
+
+	return nil
+}

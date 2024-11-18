@@ -16,14 +16,15 @@ type CreatePostReactionRequest struct {
 
 type PostReactionService interface {
 	GetPostLikesAndDislikesByID(postID int) (int, int, error)
-	//CreatePostReaction(request *PostReactionRequest) error
+	CreatePostReaction(request *CreatePostReactionRequest) error
 	//UpdatePostReaction(request *PostReactionRequest) error
 	//DeletePostReaction(request *PostReactionRequest) error
 }
 
 type PostReactionRepository interface {
 	GetReactionsByPostID(ctx context.Context, postID int) (reactions []*PostReaction, err error)
-	//AddPostReaction(postReaction *PostReaction) error
-	//UpdatePostReaction(postReaction *PostReaction) error
-	//DeletePostReaction(postID, authorID int) error
+	GetReactionByPostIDAndAuthorID(ctx context.Context, postID, authorID int) (reaction *PostReaction, err error)
+	AddPostReaction(postReaction *PostReaction) error
+	UpdatePostReaction(postReaction *PostReaction) error
+	DeletePostReaction(postID, authorID int) error
 }
