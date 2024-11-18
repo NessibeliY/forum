@@ -27,7 +27,7 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 	    c.id AS category_id, c.name AS category_name,
 	    COUNT(CASE WHEN pr.reaction = 'like' THEN 1 END) AS likes_count,
 	    COUNT(CASE WHEN pr.reaction = 'dislike' THEN 1 END) AS dislikes_count,
-	    COUNT(co.id) AS comments_count
+	    (SELECT COUNT(*) FROM comment co WHERE co.post_id = p.id) AS comments_count
 	FROM
 	    post p
 	LEFT JOIN
@@ -147,7 +147,7 @@ func (r *PostRepository) addPostCategories(postID int, categories []*models.Cate
 }
 
 func (r *PostRepository) GetPostByID(ctx context.Context, id int) (*models.Post, error) {
-	query := `SELECT * FROM post WHERE id = $1`
+	query := `SELECT * FROM post WHERE id = $1 ORDER BY id DESC`
 
 	post := &models.Post{}
 	err := r.db.QueryRowContext(ctx, query, id).Scan(

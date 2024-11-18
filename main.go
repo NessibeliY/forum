@@ -38,6 +38,7 @@ func main() {
 	if err != nil {
 		l.Fatal(err)
 	}
+
 	handler := handler.NewHandler(service, templateCache, l)
 
 	l.Infof("server is running on localhost%s", config.Port)
@@ -56,8 +57,8 @@ func main() {
 	mux.HandleFunc("/post/", handler.ShowPost)
 	mux.Handle("/post/delete", handler.RequireAuthentication(http.HandlerFunc(handler.DeletePost)))
 
-	mux.Handle("comment/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreateComment)))
-	mux.Handle("comment/delete", handler.RequireAuthentication(http.HandlerFunc(handler.DeleteComment)))
+	mux.Handle("/comment/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreateComment)))
+	mux.Handle("/comment/delete", handler.RequireAuthentication(http.HandlerFunc(handler.DeleteComment)))
 
 	mux.Handle("/post/reaction/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePostReaction)))
 	mux.Handle("/comment/reaction/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreateCommentReaction)))

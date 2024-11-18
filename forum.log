@@ -110,3 +110,147 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:53 2024/11/18 22:06:38 logger.go:39: [::1]:50076 - HTTP/1.1 GET /user/login
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:53 2024/11/18 22:07:12 logger.go:39: [::1]:50089 - HTTP/1.1 PUT /user/login
 ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:143 2024/11/18 22:07:12 logger.go:39: method not allowed: PUT
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 23:22:31 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:44 2024/11/18 23:22:31 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:22:37 logger.go:39: [::1]:50297 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:22:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:22:37 logger.go:39: [::1]:50297 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:22:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:22:42 logger.go:39: [::1]:50297 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:22:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:23:25 logger.go:39: [::1]:50297 - HTTP/1.1 GET /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:23:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:23:25 logger.go:39: [::1]:50297 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:23:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:23:25 logger.go:39: [::1]:50297 - HTTP/1.1 GET /favicon.ico
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:23:25 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/home.go:9 2024/11/18 23:23:25 logger.go:39: url path: /favicon.ico
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:23:43 logger.go:39: [::1]:50297 - HTTP/1.1 POST /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:23:43 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 23:24:10 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:44 2024/11/18 23:24:10 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:24:34 logger.go:39: [::1]:50310 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:24:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:24:34 logger.go:39: [::1]:50310 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:24:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:24:37 logger.go:39: [::1]:50310 - HTTP/1.1 GET /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:24:37 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/helper.go:19 2024/11/18 23:26:01 logger.go:39: execute template: write tcp [::1]:8080->[::1]:50310: i/o timeout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:26:24 logger.go:39: [::1]:50312 - HTTP/1.1 GET /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:26:24 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/helper.go:19 2024/11/18 23:26:45 logger.go:39: execute template: write tcp [::1]:8080->[::1]:50312: i/o timeout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:26:46 logger.go:39: [::1]:50313 - HTTP/1.1 GET /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:26:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:26:46 logger.go:39: [::1]:50313 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:26:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:26:53 logger.go:39: [::1]:50313 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:26:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:26:56 logger.go:39: [::1]:50313 - HTTP/1.1 GET /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:26:56 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:27:23 logger.go:39: [::1]:50313 - HTTP/1.1 POST /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:27:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 23:29:07 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:44 2024/11/18 23:29:07 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 23:29:11 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:44 2024/11/18 23:29:11 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:29:22 logger.go:39: [::1]:50334 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:29:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:48 2024/11/18 23:29:22 logger.go:39: user is not authenticated
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:29:22 logger.go:39: [::1]:50334 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:29:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:29:27 logger.go:39: [::1]:50334 - HTTP/1.1 GET /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:29:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:48 2024/11/18 23:29:27 logger.go:39: user is not authenticated
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:29:36 logger.go:39: [::1]:50334 - HTTP/1.1 POST /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:29:36 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:29:53 logger.go:39: [::1]:50337 - HTTP/1.1 POST /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:29:53 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:93 2024/11/18 23:29:58 logger.go:39: signup user: add user: duplicate email
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:30:51 logger.go:39: [::1]:50337 - HTTP/1.1 POST /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:30:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:30:51 logger.go:39: [::1]:50337 - HTTP/1.1 GET /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:30:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:48 2024/11/18 23:30:51 logger.go:39: user is not authenticated
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:30:51 logger.go:39: [::1]:50337 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:30:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:30:57 logger.go:39: [::1]:50337 - HTTP/1.1 GET /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:30:57 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:48 2024/11/18 23:30:57 logger.go:39: user is not authenticated
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:31:05 logger.go:39: [::1]:50337 - HTTP/1.1 POST /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:31:05 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:93 2024/11/18 23:31:05 logger.go:39: signup user: add user: duplicate email
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 23:40:36 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:44 2024/11/18 23:40:36 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:40:42 logger.go:39: [::1]:50371 - HTTP/1.1 GET /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:40:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:48 2024/11/18 23:40:42 logger.go:39: user is not authenticated
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:40:42 logger.go:39: [::1]:50371 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:40:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:40:54 logger.go:39: [::1]:50371 - HTTP/1.1 POST /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:40:54 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:93 2024/11/18 23:40:54 logger.go:39: signup user: add user: duplicate email
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 23:44:12 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:44 2024/11/18 23:44:12 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:44:29 logger.go:39: [::1]:50388 - HTTP/1.1 POST /user/signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:44:29 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:93 2024/11/18 23:44:29 logger.go:39: signup user: add user: duplicate email
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:44:29 logger.go:39: [::1]:50388 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:44:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 23:46:35 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:44 2024/11/18 23:46:35 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:46:39 logger.go:39: [::1]:50398 - HTTP/1.1 GET /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:46:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:48 2024/11/18 23:46:39 logger.go:39: user is not authenticated
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:46:44 logger.go:39: [::1]:50398 - HTTP/1.1 POST /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:46:44 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:177 2024/11/18 23:46:44 logger.go:39: validate login form: map[password:password length must be between 8 and 50 characters]
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:47:54 logger.go:39: [::1]:50398 - HTTP/1.1 POST /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:47:54 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:177 2024/11/18 23:47:54 logger.go:39: validate login form: map[password:password length must be between 8 and 50 characters]
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:47:54 logger.go:39: [::1]:50401 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:47:54 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:47:54 logger.go:39: [::1]:50398 - HTTP/1.1 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:47:54 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:47:55 logger.go:39: [::1]:50398 - HTTP/1.1 GET /favicon.ico
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:47:55 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/home.go:9 2024/11/18 23:47:55 logger.go:39: url path: /favicon.ico
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:48:00 logger.go:39: [::1]:50398 - HTTP/1.1 POST /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:48:00 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:177 2024/11/18 23:48:00 logger.go:39: validate login form: map[password:password length must be between 8 and 50 characters]
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 23:48:05 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:44 2024/11/18 23:48:05 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:48:14 logger.go:39: [::1]:50408 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:48:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:48 2024/11/18 23:48:14 logger.go:39: user is not authenticated
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:48:14 logger.go:39: [::1]:50408 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:48:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:48:18 logger.go:39: [::1]:50408 - HTTP/1.1 GET /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:48:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:48 2024/11/18 23:48:19 logger.go:39: user is not authenticated
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:48:23 logger.go:39: [::1]:50408 - HTTP/1.1 POST /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:48:23 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:177 2024/11/18 23:48:23 logger.go:39: validate login form: map[password:password length must be between 8 and 50 characters]
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:48:30 logger.go:39: [::1]:50408 - HTTP/1.1 POST /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:48:30 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/user.go:177 2024/11/18 23:48:30 logger.go:39: validate login form: map[email:invalid email format or length exceeds 320 characters password:password length must be between 8 and 50 characters]
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:48:45 logger.go:39: [::1]:50408 - HTTP/1.1 POST /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:48:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:49:48 logger.go:39: [::1]:50408 - HTTP/1.1 POST /user/login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/18 23:49:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:49:48 logger.go:39: [::1]:50408 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:50:06 logger.go:39: [::1]:50408 - HTTP/1.1 GET /user/posts/?filter=disliked
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/home.go:9 2024/11/18 23:50:06 logger.go:39: url path: /user/posts/
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:50:12 logger.go:39: [::1]:50408 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:50:12 logger.go:39: [::1]:50408 - HTTP/1.1 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:50:12 logger.go:39: [::1]:50413 - HTTP/1.1 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:50:12 logger.go:39: [::1]:50408 - HTTP/1.1 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:55:52 logger.go:39: [::1]:50434 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:55:52 logger.go:39: [::1]:50435 - HTTP/1.1 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:55:52 logger.go:39: [::1]:50434 - HTTP/1.1 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:55:53 logger.go:39: [::1]:50434 - HTTP/1.1 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 23:55:58 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:44 2024/11/18 23:55:58 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:56:07 logger.go:39: [::1]:50442 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:56:07 logger.go:39: [::1]:50442 - HTTP/1.1 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:56:07 logger.go:39: [::1]:50443 - HTTP/1.1 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/18 23:56:07 logger.go:39: [::1]:50443 - HTTP/1.1 GET /static/images/logo.png

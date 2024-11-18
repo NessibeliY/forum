@@ -20,7 +20,7 @@ func NewCommentRepository(db *sql.DB) *CommentRepository {
 }
 
 func (r *CommentRepository) GetAllCommentsByPostID(ctx context.Context, postID int) ([]*models.Comment, error) {
-	query := `SELECT id, content, post_id, author_id, created_at FROM comment WHERE post_id=?`
+	query := `SELECT id, content, post_id, author_id, created_at FROM comment WHERE post_id=? ORDER BY id DESC`
 	rows, err := r.db.QueryContext(ctx, query, postID)
 	if err != nil {
 		return nil, fmt.Errorf("query: %w", err)

@@ -45,7 +45,7 @@ func (h *Handler) signupGet(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) getUserFromContext(r *http.Request) *models.User {
 	user, ok := r.Context().Value("user").(*models.User)
 	if !ok {
-		//h.logger.Info("user is not authenticated")
+		h.logger.Info("user is not authenticated")
 		return nil
 	}
 	return user
@@ -92,7 +92,8 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 		}
 		h.logger.Error("signup user:", err.Error())
 		h.Render(w, "signup.page.html", H{
-			"error": errorMsg,
+			"error":          errorMsg,
+			"signup_request": signupRequest,
 		})
 		return
 	}
@@ -166,25 +167,27 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	email := strings.TrimSpace(r.PostFormValue("email"))
 	password := r.PostFormValue("password")
 
+	loginPostRequest := &models.LoginRequest{
+		Email:    email,
+		Password: password,
+	}
+
 	validationsErrMap := validateLoginForm(email, password)
 	if len(validationsErrMap) > 0 {
 		h.logger.Error("validate login form:", validationsErrMap)
 		h.Render(w, "login.page.html", H{
-			"errors_map": validationsErrMap,
+			"errors_map":    validationsErrMap,
+			"login_request": loginPostRequest,
 		})
 		return
-	}
-
-	loginPostRequest := &models.LoginRequest{
-		Email:    email,
-		Password: password,
 	}
 
 	userID, err := h.service.UserService.LoginUser(loginPostRequest)
 	if err != nil {
 		if err == models.ErrInvalidCredentials {
 			h.Render(w, "login.page.html", H{
-				"Error": err.Error(),
+				"Error":         err.Error(),
+				"login_request": loginPostRequest,
 			})
 			return
 		}

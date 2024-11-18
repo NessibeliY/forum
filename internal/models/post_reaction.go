@@ -17,8 +17,6 @@ type CreatePostReactionRequest struct {
 type PostReactionService interface {
 	GetPostLikesAndDislikesByID(postID int) (int, int, error)
 	CreatePostReaction(request *CreatePostReactionRequest) error
-	//UpdatePostReaction(request *PostReactionRequest) error
-	//DeletePostReaction(request *PostReactionRequest) error
 }
 
 type PostReactionRepository interface {

@@ -17,7 +17,9 @@
         <div class="sign offset">
             <div class="form_wrappper">
                 <form class="form" action="/user/signup" method="POST">
-                    <h2 class="text-2xl mb-8">Signup</h2>
+                    <div class="flex w-full items-center justify-center">
+                        <h2 class="text-2xl mb-8">Signup</h2>
+                    </div>
                     {{if .error }}
                         <label class="text-red-600 my-2"> {{ .error}}</label>
                     {{end}}
@@ -29,7 +31,7 @@
                             placeholder="&#128100; username" 
                             class="py-4 px-4 border border-neutral-500 my-2 rounded-md w-full"
                             name="username"
-                            value="{{.Username}}"
+                            value="{{.signup_request.Username}}"
                             />
                         <label class="text-red-600 my-2"> {{ .ErrorMessages.username}}</label>
                     </div>
@@ -41,7 +43,7 @@
                             placeholder="&#128231; email" 
                             class="input_email"
                             name="email"
-                            value="{{.Email}}"
+                            value="{{.signup_request.Email}}"
                             />
                         <label class="text-red-600 my-2"> {{ .ErrorMessages.email}}</label>
                     </div>
@@ -53,16 +55,16 @@
                             placeholder="&#128274; password" 
                             class="input_email"
                             name="password"
-                            value="{{.Password}}"
+                            value="{{.signup_request.Password}}"
                             />
                         <label class="text-red-600 my-2"> {{ .ErrorMessages.password}}</label> 
                     </div>
                     <button
                     type="submit" 
-                    class="btn_login">Signup</button>
+                    class="w-full py-3 px-3 bg-indigo-500 mt-3 rounded-lg text-white hover:bg-indigo-600 transition duration-300">Signup</button>
                     <hr class="mt-5"/>
                     <div class="haveAcc">
-                        <span class="text-base">Already have an account?<a href="/sign-in" style="color: rgb(12, 112, 199);">Login</a></span>
+                        <span class="text-base">Already have an account?<a href="/user/login" style="color: rgb(12, 112, 199);">Login</a></span>
                     </div>
                 </form>
                 <div class="flex w-full text-center items-center justify-center my-2">
@@ -72,4 +74,5 @@
         </div>
     </div>
 </body>
+<script src="/static/js/script.js"></script>
 </html>
