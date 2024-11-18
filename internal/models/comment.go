@@ -23,12 +23,18 @@ type CreateCommentRequest struct {
 	PostID   int    `json:"post_id"`
 }
 
+type DeleteCommentRequest struct {
+	ID int `json:"id"`
+}
+
 type CommentService interface {
 	GetAllCommentsByPostID(postID int) ([]*Comment, error)
 	CreateComment(createCommentRequest *CreateCommentRequest) error
+	DeleteComment(deleteCommentRequest *DeleteCommentRequest) error
 }
 
 type CommentRepository interface {
 	GetAllCommentsByPostID(ctx context.Context, postID int) ([]*Comment, error)
 	AddComment(comment *Comment) error
+	DeleteComment(id int) error
 }

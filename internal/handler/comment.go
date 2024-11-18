@@ -90,3 +90,45 @@ func validateCreateCommentForm(content string, postIDStr string) map[string]stri
 
 	return errors
 }
+
+func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/comment/delete" {
+		http.NotFound(w, r)
+		return
+	}
+
+	if r.Method != http.MethodDelete {
+		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+		return
+	}
+
+	commentIDStr := r.URL.Query().Get("comment_id")
+	if commentIDStr == "" {
+		http.Error(w, "comment_id is required", http.StatusBadRequest)
+		return
+	}
+
+	commentID, err := utils.ParsePositiveIntID(commentIDStr)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	deleteCommentRequest := &models.DeleteCommentRequest{
+		ID: commentID,
+	}
+
+	err = h.service.CommentService.DeleteComment(deleteCommentRequest)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	postIDStr := r.URL.Query().Get("post_id")
+	if postIDStr == "" {
+		http.Error(w, "post_id is required", http.StatusBadRequest)
+		return
+	}
+
+	http.Redirect(w, r, fmt.Sprintf("/post?id=%s", postIDStr), http.StatusSeeOther)
+}

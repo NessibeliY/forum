@@ -126,6 +126,52 @@ func validateCreatePostForm(title, content string, categoryNames []string) map[s
 	return errors
 }
 
+func (h *Handler) DeletePost(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/post/delete" {
+		http.NotFound(w, r)
+		return
+	}
+
+	if r.Method != http.MethodDelete {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	postIDStr := r.URL.Query().Get("post_id")
+	if postIDStr == "" {
+		http.Error(w, "Post id is required", http.StatusBadRequest)
+		return
+	}
+
+	postID, err := utils.ParsePositiveIntID(postIDStr)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	post, err := h.service.PostService.GetPostByID(postID)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if post == nil {
+		http.NotFound(w, r)
+		return
+	}
+
+	deletePostRequest := &models.DeletePostRequest{
+		ID: postID,
+	}
+
+	err = h.service.PostService.DeletePost(deletePostRequest)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	http.Redirect(w, r, "/", http.StatusSeeOther)
+}
+
 func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 	if !strings.HasPrefix(r.URL.Path, "/post/") {
 		http.NotFound(w, r)
@@ -217,6 +263,68 @@ func (h *Handler) ShowMyPosts(w http.ResponseWriter, r *http.Request) {
 
 	h.Render(w, "index.page.html", H{
 		"posts":              posts,
+		"authenticated_user": h.getUserFromContext(r),
+	})
+}
+
+func (h *Handler) ShowLikedPosts(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/likedposts" {
+		http.NotFound(w, r)
+		return
+	}
+
+	if r.Method != http.MethodGet {
+		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+		return
+	}
+
+	posts, err := h.service.PostService.GetLikedPosts(h.getUserFromContext(r).ID)
+	if err != nil {
+		//h.logger
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	h.Render(w, "index.page.html", H{
+		"posts":              posts,
+		"authenticated_user": h.getUserFromContext(r),
+	})
+}
+
+func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/showposts" {
+		http.NotFound(w, r)
+		return
+	}
+
+	if r.Method != http.MethodGet {
+		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+		return
+	}
+
+	queryParams := r.URL.Query()
+	categories := queryParams["category"]
+
+	if len(categories) == 0 {
+		http.Error(w, "category parameter is required", http.StatusBadRequest)
+		return
+	}
+
+	posts, err := h.service.PostService.GetPostsByCategories(categories)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	allCategories, err := h.service.CategoryService.GetAllCategories()
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	h.Render(w, "index.page.html", H{
+		"posts":              posts,
+		"categories":         allCategories,
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }

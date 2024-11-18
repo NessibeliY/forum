@@ -99,3 +99,5 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/12 19:15:11
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/12 19:15:11 logger.go:39: server is running on localhost:8080
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/12 19:15:28 logger.go:39: connected to db
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/12 19:15:28 logger.go:39: server is running on localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:33 2024/11/18 21:42:13 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:43 2024/11/18 21:42:13 logger.go:39: server is running on localhost:8080

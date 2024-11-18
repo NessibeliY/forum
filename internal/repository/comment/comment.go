@@ -56,3 +56,22 @@ func (r *CommentRepository) AddComment(comment *models.Comment) error {
 	_, err := r.db.Exec(query, comment.Content, comment.PostID, comment.AuthorID, createdAt)
 	return err
 }
+
+func (r *CommentRepository) DeleteComment(id int) error {
+	query := `DELETE FROM comment WHERE id = $1`
+	result, err := r.db.Exec(query, id)
+	if err != nil {
+		return fmt.Errorf("exec: %w", err)
+	}
+
+	rowsAffected, err := result.RowsAffected()
+	if err != nil {
+		return fmt.Errorf("rows affected: %w", err)
+	}
+
+	if rowsAffected == 0 {
+		return nil
+	}
+
+	return nil
+}
