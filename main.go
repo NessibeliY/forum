@@ -1,8 +1,12 @@
 package main
 
 import (
+	"context"
 	"log"
 	"net/http"
+	"os"
+	"os/signal"
+	"syscall"
 	"time"
 
 	"01.alem.school/git/nyeltay/forum/internal/handler"
@@ -75,21 +79,32 @@ func main() {
 		),
 	)
 
-	router := &http.Server{
+	server := &http.Server{
 		Addr:         config.Port,
 		Handler:      finalHandler,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
 		IdleTimeout:  120 * time.Second,
 	}
+
+	stop := make(chan os.Signal, 1)
+	signal.Notify(stop, os.Interrupt, syscall.SIGTERM)
+
 	go func() {
-		err := router.ListenAndServe()
-		if err != nil && err != http.ErrServerClosed {
+		if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			l.Fatal(err)
-		} else {
-			l.Info("server stopped")
 		}
 	}()
 
-	select {}
+	<-stop
+	l.Info("shutting down server...")
+
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	if err := server.Shutdown(ctx); err != nil {
+		l.Fatalf("server forced to shutdown: %v", err)
+	}
+
+	l.Info("server stopped gracefully")
 }
