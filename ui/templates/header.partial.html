@@ -26,10 +26,10 @@
             </div>
             {{else}}
             <div class="auth_bnts">
-                <a class="btn_auth" style="margin-right: 1.5rem; background-color: #994413" href="/user/login">
+                <a class="btn_auth bg-indigo-500 hover:bg-indigo-600 duration-300 transition" href="/user/login">
                 sign-in
                 </a>
-                <a class="btn_auth btn_signup" href="/user/signup">sign-up</a>
+                <a class="btn_auth btn_signup bg-blue-500 hover:bg-blue-600 duration-300 transition" href="/user/signup">sign-up</a>
             </div>
             {{end}}     
         </div>
@@ -52,8 +52,8 @@
                 <li><a href="/create-post">Create Post</a></li>
             {{end}}
             {{if not .authenticated_user}}
-            <li><a href="/sign-in">Sign In</a></li>
-            <li><a href="/sign-up">Sign Up</a></li>
+            <li><a href="/user/login">Sign In</a></li>
+            <li><a href="/user/signup">Sign Up</a></li>
             {{end}}
 
             {{ if .authenticated_user }}

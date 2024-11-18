@@ -18,12 +18,12 @@
     <main class="main_container">
            <div class="offset">
                 <!--LIST OF TAGS  -->
-                <div class="tags card">
+                <div class="tags card bg-white">
                     <h3 class="font-semibold">Tags</h3>
                     {{range .categories}}
-                        <form action="/user/posts/" method="GET" class="flex">
+                        <form action="/user/posts/" method="GET" class="flex ">
                             <input type="hidden" name="filter" value="{{ .Name }}">
-                            <button class="categories" type="submit">#{{ .Name}} </button>
+                            <button class="categories hover:text-blue-400 duration-300 transition" type="submit">#{{ .Name}} </button>
                         </form>
                     {{end}}
                 </div>
@@ -39,7 +39,7 @@
                         <div>
                             <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, {{.authenticated_user.Username}}</h2>
                             <span style="font-size: larger;">Glad to see you!</span>
-                            <a href="/post/create" class="createButton" id="openModalBtn">
+                            <a href="/post/create" class="createButton bg-green-600 hover:bg-green-700 transition duration-300" id="openModalBtn">
                                 <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
                             </a>
                         </div>

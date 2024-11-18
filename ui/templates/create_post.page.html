@@ -21,7 +21,7 @@
                 <!--LIST OF TAGS  -->
                    <!--LIST OF TAGS  -->
                
-                <div class="tags card">
+                <div class="tags card bg-white">
                     <h3 class="font-semibold">Tags</h3>
                     {{range .categories }}
                     <form action="/user/posts/" method="GET" class="flex">
@@ -73,8 +73,8 @@
                                         <label class="text-red-600 my-2"> {{ .errors.content }}</label>
                                     </div>
                                     <div style="display: flex; justify-content: start;">
-                                        <a href="/" class="btn_create btn_auth ">cancel</a>
-                                        <button class="btn_create btn_auth" type="submit">create</button>
+                                        <a href="/" class="btn_create btn_auth bg-red-500">cancel</a>
+                                        <button class="btn_create btn_auth bg-green-500 " type="submit">create</button>
                                     </div>
                                 </form>
                        

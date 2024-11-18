@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #124e66;
+    background-color: rgb(208, 226, 235);
     font-family: "Montserrat", sans-serif !important;
     overflow: auto;
 }
@@ -27,10 +27,10 @@ p {
 }
 
 .offset {
-    max-width: 1600px;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .card {
@@ -71,7 +71,6 @@ p {
 }
 
 .btn_auth {
-    background-color: #c34b05; 
     color: white;         
     padding: 1rem 1rem;    
     justify-content: center;
@@ -81,10 +80,6 @@ p {
     text-decoration: none;     
     display: flex;
     margin-right: 1.5rem;    
-}
-
-.btn_auth:hover {
-    background-color: #d95d15; 
 }
 
 
@@ -168,18 +163,7 @@ p {
     border-color: #3B82F6;  
 }
 
-.btn_login {
-    background-color: #2e3944;
-    color: white;             
-    padding: 1rem 1rem;       
-    border-radius: 0.5rem;    
-    margin-top: 2rem;         
-    transition: 0.3s;
-}
 
-.btn_login:hover {
-    background-color: #1f211f;
-}
 
 /* MODAL */
 .modal {
@@ -307,7 +291,6 @@ p {
 
 .tags {
     padding: 1rem 2rem;
-    background-color: #748d92;
     width: 17%;
     height: 500px;
     border-radius: 1rem;
@@ -319,19 +302,18 @@ p {
     margin-right: 8px;
     font-size: 24px;
     font-weight: bold; 
+    color: #000;
 }
 
 .categories {
     cursor: pointer;
     transition: color 0.4s;
     margin-top: 5%;
-    color: white;
+    color: black;
     font-size: large;
 }
 
-.categories:hover {
-    color: rgb(184, 184, 184);
-}
+
 
 .rSide {
     width: 25%;
@@ -347,10 +329,9 @@ p {
     display: flex;
     width: 100%;
     justify-items: center;
-    background-color: #d3d9d4;
+    align-items: center;
     padding: 10px;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-bottom: 1px solid #000;
 }
 
 .post_icon {
@@ -398,7 +379,6 @@ p {
 
 
 .createButton {
-    background-color: #c34b05; 
     color: #ffffff; 
     padding: 0.5rem; 
     border-radius: 0.5rem; 
@@ -409,9 +389,7 @@ p {
     margin: 10% 0 5% 0;
 }
 
-.createButton:hover {
-    background-color: #d95d15;
-}
+
 
 h3 {
     color: white;
@@ -434,18 +412,10 @@ h3 {
     margin-bottom: 16px;
 }
 
-.postsTitle {
-    font-size: 2.25rem; 
-    margin: 0.5rem 0;
-    transition: color 400ms; 
-}
 
-.postsTitle:hover {
-    color: rgb(121, 121, 121);
-}
 
 h2 {
-    font-size: clamp(1rem, 0.7984rem + 0.6452vw, 2.25rem) !important;
+    font-size: clamp(1rem, 0.5588rem + 1.3072vw, 3.5rem);
     line-height: 2.5rem !important;
 }
 
@@ -481,7 +451,6 @@ h2 {
 }
 
 .postDescription {
-    color: white;
     font-size: clamp(0.875rem, 0.7944rem + 0.2581vw, 1.375rem);
     font-weight: 500;
     margin: 3% 0;
@@ -743,4 +712,14 @@ h2 {
     }
 }
 
+
+@media (max-width: 600px) {
+    .form_wrappper{
+        width: 100%;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
 

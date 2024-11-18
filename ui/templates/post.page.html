@@ -18,7 +18,7 @@
     <main class="main_container">
         <div class="offset">
             <!--LIST OF TAGS-->
-            <div class="tags card">
+            <div class="tags card bg-white">
                 <h3 class="font-semibold">Tags</h3>
                 {{range .categories}}
                     <form action="/user/posts/" method="GET" class="flex">
@@ -31,7 +31,7 @@
             <!-- IF USER AUTH SHOW THIS BLOCK -->
             <div class="middleContainer">
                 <div class="flex w-full flex-col break-words">
-                    <h2 class="postName">{{.post.Title}}</h2>
+                    <h2 class="text-4xl">{{.post.Title}}</h2>
                     <span class="postDescription">{{.post.Content}}</span>
                 </div>
                 <div class="flex w-full items-center">
@@ -77,7 +77,7 @@
                                 class="border border-gray-500 rounded-md w-full focus:outline-none focus:border-blue-600 py-3 px-3"
                                 rows="2"
                                 cols="20"></textarea>
-                                <button type="submit" style="margin-top: 2%;" class="btn_create btn_auth">
+                                <button type="submit" style="margin-top: 2%;" class="btn_create btn_auth bg-indigo-500 hover:bg-indigo-600 duration-300 transition">
                                 Create comment
                                 </button>
                                 <!--ADD LIKKES AND DISLIKES HERE-->
@@ -149,7 +149,7 @@
                                             <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{ .LikesCount }})
                                         </button>
                                         {{ end }}
-                                    </form>m
+                                    </form>
                                     <form action="/comment/dislike" method="POST">
                                         <input type="hidden" name="CommentID" value="{{.ID}}">
                                         <input type="hidden" name="PostID" id="post-id-like" value="{{$.post.ID}}">

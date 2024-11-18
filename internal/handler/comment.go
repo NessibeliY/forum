@@ -37,14 +37,13 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 	postIDStr := strings.TrimSpace(r.PostFormValue("post_id"))
 
 	validationsErrMap := validateCreateCommentForm(content, postIDStr)
-	if validationsErrMap != nil {
+	if len(validationsErrMap) > 0 {
 		// h.logger
 		errorsJSON, err := json.Marshal(validationsErrMap)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-
 		cookies.SetCookie(w, errorsMapCookieName, string(errorsJSON), 300)
 
 		http.Redirect(w, r, fmt.Sprintf("/post?id=%s", postIDStr), http.StatusSeeOther)
