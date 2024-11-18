@@ -24,10 +24,6 @@ func (s *CategoryService) GetAllCategories() ([]models.Category, error) {
 	return s.repo.GetAllCategories(ctx)
 }
 
-func (s *CategoryService) CreateCategory(category *models.Category) (string, error) {
-	return "", nil
-}
-
 func (s *CategoryService) GetCategoryByName(name string) (*models.Category, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()

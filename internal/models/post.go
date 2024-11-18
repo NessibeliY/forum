@@ -42,12 +42,18 @@ type PostService interface {
 	GetAllPosts() ([]Post, error)
 	CreatePost(request *CreatePostRequest) (int, error)
 	GetPostByID(id int) (*Post, error)
-	//DeletePost(request *DeletePostRequest) error
+	GetPostsByAuthorID(authorID int) ([]Post, error)
+	GetLikedPosts(userID int) ([]Post, error)
+	GetPostsByCategories(categories []string) ([]Post, error)
+	DeletePost(request *DeletePostRequest) error
 }
 
 type PostRepository interface {
 	GetAllPosts(ctx context.Context) ([]Post, error)
 	AddPost(post *Post) (int, error)
 	GetPostByID(ctx context.Context, id int) (*Post, error)
-	//DeletePost(id int) error
+	GetPostsByAuthorID(ctx context.Context, authorID int) ([]Post, error)
+	GetLikedPosts(ctx context.Context, userID int) ([]Post, error)
+	GetPostsByCategories(ctx context.Context, categories []string) ([]Post, error)
+	DeletePost(id int) error
 }

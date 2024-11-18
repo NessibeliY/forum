@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"fmt"
+	"errors"
 	"net/http"
 	"regexp"
 	"strings"
@@ -19,6 +19,7 @@ var emailRegex = regexp.MustCompile("(?:[a-z0-9!#$%&'*+\\/=?^_`{|}~-]+(?:\\.[a-z
 
 func (h *Handler) Signup(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/user/signup" {
+		h.logger.Error("url path:", r.URL.Path)
 		http.Error(w, "Not found", http.StatusNotFound)
 		return
 	}
@@ -29,6 +30,7 @@ func (h *Handler) Signup(w http.ResponseWriter, r *http.Request) {
 	case http.MethodPost:
 		h.signupPost(w, r)
 	default:
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
@@ -41,9 +43,9 @@ func (h *Handler) signupGet(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handler) getUserFromContext(r *http.Request) *models.User {
-	user, ok := r.Context().Value(contextKeyUser).(*models.User)
+	user, ok := r.Context().Value("user").(*models.User)
 	if !ok {
-		// h.logger.Info("user is not authenticated")
+		h.logger.Info("user is not authenticated")
 		return nil
 	}
 	return user
@@ -52,7 +54,7 @@ func (h *Handler) getUserFromContext(r *http.Request) *models.User {
 func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 	err := r.ParseForm()
 	if err != nil {
-		// h.logger.Errorf("signup post %w", err)
+		h.logger.Error("parse form:", err.Error())
 		http.Error(w, "unable to parse form", http.StatusInternalServerError)
 		return
 	}
@@ -63,12 +65,9 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 
 	validationsErrMap := validateSignupForm(username, email, password)
 	if len(validationsErrMap) > 0 {
-		// h.logger
+		h.logger.Error("validate signup form:", validationsErrMap)
 		h.Render(w, "signup.page.html", H{
-			"Username":      username,
-			"Email":         email,
-			"Password":      password,
-			"ErrorMessages": validationsErrMap,
+			"errors_map": validationsErrMap,
 		})
 		return
 	}
@@ -80,31 +79,23 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	err = h.service.UserService.SignupUser(signupRequest)
-	var errorMsg string
 	if err != nil {
-		switch err {
-		case models.ErrDuplicateEmail:
-			errorMsg = "Email already in use"
-			h.Render(w, "signup.page.html", H{
-				"Username": username,
-				"Email":    email,
-				"Password": password,
-				"error":    errorMsg,
-			})
-			return
-		case models.ErrDuplicateUsername:
-			errorMsg = "UserName already in use"
-			h.Render(w, "signup.page.html", H{
-				"Username": username,
-				"Email":    email,
-				"Password": password,
-				"error":    errorMsg,
-			})
-			return
+		var errorMsg string
+		switch {
+		case errors.Is(err, models.ErrDuplicateEmail):
+			errorMsg = models.ErrDuplicateEmail.Error()
+		case errors.Is(err, models.ErrDuplicateUsername):
+			errorMsg = models.ErrDuplicateUsername.Error()
 		default:
 			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 			return
 		}
+		h.logger.Error("signup user:", err.Error())
+		h.Render(w, "signup.page.html", H{
+			"error":          errorMsg,
+			"signup_request": signupRequest,
+		})
+		return
 	}
 
 	http.Redirect(w, r, "/user/login", http.StatusSeeOther)
@@ -142,6 +133,7 @@ func validateSignupForm(username string, email string, password string) map[stri
 
 func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/user/login" {
+		h.logger.Error("url path:", r.URL.Path)
 		http.Error(w, "Not found", http.StatusNotFound)
 		return
 	}
@@ -152,6 +144,7 @@ func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
 	case http.MethodPost:
 		h.loginPost(w, r)
 	default:
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
@@ -166,8 +159,7 @@ func (h *Handler) loginGet(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	err := r.ParseForm()
 	if err != nil {
-		fmt.Println("parse form", err)
-		// h.logger.
+		h.logger.Error("parse form:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -175,42 +167,39 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	email := strings.TrimSpace(r.PostFormValue("email"))
 	password := r.PostFormValue("password")
 
-	validationsErrMap := validateLoginForm(email, password)
-	if len(validationsErrMap) > 0 {
-		h.Render(w, "login.page.html", H{
-			"Email":         email,
-			"Password":      password,
-			"ErrorMessages": validationsErrMap,
-		})
-		return
-	}
-
 	loginPostRequest := &models.LoginRequest{
 		Email:    email,
 		Password: password,
 	}
 
+	validationsErrMap := validateLoginForm(email, password)
+	if len(validationsErrMap) > 0 {
+		h.logger.Error("validate login form:", validationsErrMap)
+		h.Render(w, "login.page.html", H{
+			"errors_map":    validationsErrMap,
+			"login_request": loginPostRequest,
+		})
+		return
+	}
+
 	userID, err := h.service.UserService.LoginUser(loginPostRequest)
-	fmt.Println("userID", userID)
-	fmt.Println("err", err)
 	if err != nil {
 		if err == models.ErrInvalidCredentials {
 			h.Render(w, "login.page.html", H{
-				"Email":    email,
-				"Password": password,
-				"Error":    err.Error(),
+				"Error":         err.Error(),
+				"login_request": loginPostRequest,
 			})
 			return
 		}
 
+		h.logger.Error("login user:", err.Error())
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
 
 	session, err := h.service.SessionService.SetSession(userID)
 	if err != nil {
-
-		// h.logger.Errorf("create session: %w", err)
+		h.logger.Error("set session:", err.Error())
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
@@ -243,27 +232,26 @@ func validateLoginForm(email string, password string) map[string]string {
 
 func (h *Handler) Logout(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/user/logout" {
-		// h.logger
+		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return
 	}
 
 	if r.Method != http.MethodPost {
-		// h.logger
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
 	}
 
 	cookie, err := cookies.GetCookie(r, sessionCookieName)
 	if err != nil {
-		// h.logger
+		h.logger.Error("get cookie:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 
 	err = h.service.SessionService.DeleteSession(cookie.Value)
 	if err != nil {
-		fmt.Println("error:", err)
-		// h.logger
+		h.logger.Error("delete session:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 

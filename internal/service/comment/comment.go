@@ -33,3 +33,7 @@ func (s *CommentService) CreateComment(createCommentRequest *models.CreateCommen
 
 	return s.repo.AddComment(comment)
 }
+
+func (s *CommentService) DeleteComment(request *models.DeleteCommentRequest) error {
+	return s.repo.DeleteComment(request.ID)
+}

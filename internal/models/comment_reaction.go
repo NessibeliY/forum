@@ -17,8 +17,6 @@ type CreateCommentReactionRequest struct {
 type CommentReactionService interface {
 	GetCommentLikesAndDislikesByID(commentID int) (int, int, error)
 	CreateCommentReaction(createCommentReactionRequest *CreateCommentReactionRequest) error
-	//UpdateCommentReaction(commentReactionRequest *CommentReactionRequest) error
-	//DeleteCommentReaction(commentID, authorID int) error
 }
 
 type CommentReactionRepository interface {

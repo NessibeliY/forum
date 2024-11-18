@@ -46,3 +46,28 @@ func (s *PostService) GetPostByID(id int) (*models.Post, error) {
 
 	return s.repo.GetPostByID(ctx, id)
 }
+
+func (s *PostService) GetPostsByAuthorID(authorID int) ([]models.Post, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	return s.repo.GetPostsByAuthorID(ctx, authorID)
+}
+
+func (s *PostService) GetLikedPosts(userID int) ([]models.Post, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	return s.repo.GetLikedPosts(ctx, userID)
+}
+
+func (s *PostService) GetPostsByCategories(categories []string) ([]models.Post, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	return s.repo.GetPostsByCategories(ctx, categories)
+}
+
+func (s *PostService) DeletePost(request *models.DeletePostRequest) error {
+	return s.repo.DeletePost(request.ID)
+}

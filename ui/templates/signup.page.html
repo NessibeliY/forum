@@ -31,7 +31,7 @@
                             placeholder="&#128100; username" 
                             class="py-4 px-4 border border-neutral-500 my-2 rounded-md w-full"
                             name="username"
-                            value="{{.Username}}"
+                            value="{{.signup_request.Username}}"
                             />
                         <label class="text-red-600 my-2"> {{ .ErrorMessages.username}}</label>
                     </div>
@@ -43,7 +43,7 @@
                             placeholder="&#128231; email" 
                             class="input_email"
                             name="email"
-                            value="{{.Email}}"
+                            value="{{.signup_request.Email}}"
                             />
                         <label class="text-red-600 my-2"> {{ .ErrorMessages.email}}</label>
                     </div>
@@ -55,7 +55,7 @@
                             placeholder="&#128274; password" 
                             class="input_email"
                             name="password"
-                            value="{{.Password}}"
+                            value="{{.signup_request.Password}}"
                             />
                         <label class="text-red-600 my-2"> {{ .ErrorMessages.password}}</label> 
                     </div>

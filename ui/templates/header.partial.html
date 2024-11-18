@@ -12,8 +12,7 @@
                     <button class="py-2 px-2 pages {{if eq .CurrentPage "all"}} active{{end}}" id="allPost" type="submit" onclick="document.getElementById('filter').value='all'">All Posts</button>
                     <button class="pages {{if eq .CurrentPage "my"}} active{{end}}" id="myPosts" type="submit" onclick="document.getElementById('filter').value='my'">My Posts</button>
                     <button class="pages {{if eq .CurrentPage "liked"}} active{{end}}" id="likedPosts" type="submit" onclick="document.getElementById('filter').value='liked'">Liked</button>
-                    <button class="pages {{if eq .CurrentPage "disliked"}} active{{end}}" id="dislikedPosts" type="submit" onclick="document.getElementById('filter').value='disliked'">DisLiked</button>
-                    
+
                     {{end}}
                 </form>
             {{ if .authenticated_user}}

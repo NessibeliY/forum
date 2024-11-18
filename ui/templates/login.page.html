@@ -30,9 +30,9 @@
                             placeholder="&#128231; email" 
                             class="input_email"
                             name="email"
-                            value="{{.Email}}"
+                            value="{{.login_request.Email}}"
                         />
-                        <label class="text-red-600 my-2"> {{ .ErrorMessages.email}}</label>  
+                        <label class="text-red-600 my-2"> {{ .errors_map.email}}</label>
                         {{if .Error}} 
                             <label class="text-red-600 my-2">Invalid email or password</label> 
                         {{end}}
@@ -45,10 +45,10 @@
                             placeholder="&#128274; password" 
                             class="input_email"
                             name="password"
-                            value="{{.Password}}"
+                            value="{{.login_request.Password}}"
                             
                         />
-                    <label class="text-red-600 my-2">{{ .ErrorMessages.password}}</label>
+                    <label class="text-red-600 my-2">{{ .errors_map.password}}</label>
                     {{if .Error}} 
                         <label class="text-red-600 my-2">Invalid email or password</label> 
                     {{end}}

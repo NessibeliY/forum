@@ -12,37 +12,42 @@ import (
 
 func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/post/reaction/create" {
+		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return
 	}
 
 	if r.Method != http.MethodPost {
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
 	}
 
 	err := r.ParseForm()
 	if err != nil {
+		h.logger.Error("parse form:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
 	redirectTo := strings.TrimSpace(r.PostFormValue("redirect_to"))
 	if !isValidRedirectTo(redirectTo) {
+		h.logger.Error("redirect_to:", redirectTo)
 		redirectTo = "/"
 	}
 
 	postIDStr := strings.TrimSpace(r.PostFormValue("post_id"))
 	postID, err := utils.ParsePositiveIntID(postIDStr)
 	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
 	reaction := strings.TrimSpace(r.PostFormValue("reaction"))
-
 	err = validateCreatePostReactionForm(reaction)
 	if err != nil {
+		h.logger.Error("validate create post reaction form:", err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
@@ -55,6 +60,7 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 
 	err = h.service.PostReactionService.CreatePostReaction(createPostReactionRequest)
 	if err != nil {
+		h.logger.Error("create post reaction:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}

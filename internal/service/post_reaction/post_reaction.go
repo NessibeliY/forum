@@ -53,10 +53,7 @@ func (s *PostReactionService) CreatePostReaction(request *models.CreatePostReact
 	if err != nil {
 		return fmt.Errorf("get reaction by post id: %v", err)
 	}
-
 	if currentReaction != nil {
-		fmt.Println("currentReaction.Reaction", currentReaction.Reaction)
-		fmt.Println("request.Reaction", request.Reaction)
 		if currentReaction.Reaction == request.Reaction {
 			err = s.repo.DeletePostReaction(postReaction)
 			if err != nil {
