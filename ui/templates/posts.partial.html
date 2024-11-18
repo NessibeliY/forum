@@ -15,6 +15,7 @@
                         </span>
                     </div>
                     <!-- CHECK IF USER IS OWNER -->
+                    {{if $.authenticated_user}}
                     {{if eq $.authenticated_user.ID  .AuthorID  }}
                         <div class="text-xl dropdown">
                             <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
@@ -43,6 +44,7 @@
                                 </form>
                             </div>
                         </div>
+                    {{end}}
                     {{end}}
                 </div>
             </div>
