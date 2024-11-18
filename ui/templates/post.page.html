@@ -137,9 +137,10 @@
                             <span class="commentText">{{ .Content }}</span>
                             <div class="flex py-2 justify-between">
                                 <div class="flex items-start w-full">
-                                    <form class="flex" action="/comment/like" method="POST">
-                                        <input type="hidden" name="CommentID" value="{{ .ID}}">
+                                    <form class="flex" action="/comment/reaction/create" method="POST">
+                                        <input type="hidden" name="comment_id" value="{{.ID}}">
                                         <input type="hidden" name="PostID" id="post-id-like" value="{{$.post.ID}}">
+                                        <input type="hidden" name="reaction" value="like">
                                         {{if .IsLikedByUser}}
                                         <button class="btn_like_com btn_like_active">
                                             <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{ .LikesCount }})
@@ -150,9 +151,10 @@
                                         </button>
                                         {{ end }}
                                     </form>
-                                    <form action="/comment/dislike" method="POST">
-                                        <input type="hidden" name="CommentID" value="{{.ID}}">
+                                    <form action="/comment/reaction/create" method="POST">
+                                        <input type="hidden" name="comment_id" value="{{.ID}}">
                                         <input type="hidden" name="PostID" id="post-id-like" value="{{$.post.ID}}">
+                                        <input type="hidden" name="reaction" value="dislike">
                                         {{if .IsDislikedByUser}}
                                         <button class="btn_like_com btn_like_active">
                                             <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked ({{.DislikesCount}})

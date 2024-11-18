@@ -61,15 +61,14 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 	email := strings.TrimSpace(r.PostFormValue("email"))
 	password := r.PostFormValue("password")
 
-	errorsMap := validateSignupForm(username, email, password)
-
-	if len(errorsMap) > 0 {
+	validationsErrMap := validateSignupForm(username, email, password)
+	if len(validationsErrMap) > 0 {
 		// h.logger
 		h.Render(w, "signup.page.html", H{
 			"Username":      username,
 			"Email":         email,
 			"Password":      password,
-			"ErrorMessages": errorsMap,
+			"ErrorMessages": validationsErrMap,
 		})
 		return
 	}
@@ -176,12 +175,12 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	email := strings.TrimSpace(r.PostFormValue("email"))
 	password := r.PostFormValue("password")
 
-	errMap := validateLoginForm(email, password)
-	if len(errMap) > 0 {
+	validationsErrMap := validateLoginForm(email, password)
+	if len(validationsErrMap) > 0 {
 		h.Render(w, "login.page.html", H{
 			"Email":         email,
 			"Password":      password,
-			"ErrorMessages": errMap,
+			"ErrorMessages": validationsErrMap,
 		})
 		return
 	}

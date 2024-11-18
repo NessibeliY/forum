@@ -38,3 +38,41 @@ func (s *CommentReactionService) GetCommentLikesAndDislikesByID(commentID int) (
 
 	return likesCount, dislikesCount, nil
 }
+
+func (s *CommentReactionService) CreateCommentReaction(request *models.CreateCommentReactionRequest) error {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	commentReaction := &models.CommentReaction{
+		AuthorID:  request.AuthorID,
+		CommentID: request.CommentID,
+		Reaction:  request.Reaction,
+	}
+
+	currentReaction, err := s.repo.GetReactionByCommentIDAndAuthorID(ctx, request.CommentID, request.AuthorID)
+	if err != nil {
+		return fmt.Errorf("get reaction by comment id: %v", err)
+	}
+	if currentReaction != nil {
+		if currentReaction.Reaction == request.Reaction {
+			err = s.repo.DeleteCommentReaction(commentReaction)
+			if err != nil {
+				return fmt.Errorf("delete comment reaction: %v", err)
+			}
+			return nil
+		}
+
+		err = s.repo.UpdateCommentReaction(commentReaction)
+		if err != nil {
+			return fmt.Errorf("update comment reaction: %v", err)
+		}
+		return nil
+	}
+
+	err = s.repo.AddCommentReaction(commentReaction)
+	if err != nil {
+		return fmt.Errorf("add comment reaction: %v", err)
+	}
+
+	return nil
+}

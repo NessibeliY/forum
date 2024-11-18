@@ -58,7 +58,7 @@ func (s *PostReactionService) CreatePostReaction(request *models.CreatePostReact
 		fmt.Println("currentReaction.Reaction", currentReaction.Reaction)
 		fmt.Println("request.Reaction", request.Reaction)
 		if currentReaction.Reaction == request.Reaction {
-			err = s.repo.DeletePostReaction(request.PostID, request.AuthorID)
+			err = s.repo.DeletePostReaction(postReaction)
 			if err != nil {
 				return fmt.Errorf("delete post reaction: %v", err)
 			}

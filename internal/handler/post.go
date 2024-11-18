@@ -109,7 +109,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%d", id), http.StatusFound)
+	http.Redirect(w, r, fmt.Sprintf("/post/?id=%d", id), http.StatusFound)
 }
 
 func validateCreatePostForm(title, content string, categoryNames []string) map[string]string {

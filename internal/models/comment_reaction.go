@@ -8,7 +8,7 @@ type CommentReaction struct {
 	Reaction  string
 }
 
-type CommentReactionRequest struct {
+type CreateCommentReactionRequest struct {
 	CommentID int    `json:"comment_id"`
 	AuthorID  int    `json:"author_id"`
 	Reaction  string `json:"reaction"`
@@ -16,14 +16,15 @@ type CommentReactionRequest struct {
 
 type CommentReactionService interface {
 	GetCommentLikesAndDislikesByID(commentID int) (int, int, error)
-	//CreateCommentReaction(commentReactionRequest *CommentReactionRequest) error
+	CreateCommentReaction(createCommentReactionRequest *CreateCommentReactionRequest) error
 	//UpdateCommentReaction(commentReactionRequest *CommentReactionRequest) error
 	//DeleteCommentReaction(commentID, authorID int) error
 }
 
 type CommentReactionRepository interface {
 	GetReactionsByCommentID(ctx context.Context, commentID int) (reactions []*CommentReaction, err error)
-	//AddCommentReaction(commentReaction *CommentReaction) error
-	//UpdateCommentReaction(commentReaction *CommentReaction) error
-	//DeleteCommentReaction(commentID, authorID int) error
+	GetReactionByCommentIDAndAuthorID(ctx context.Context, commentID int, authorID int) (reaction *CommentReaction, err error)
+	AddCommentReaction(commentReaction *CommentReaction) error
+	UpdateCommentReaction(commentReaction *CommentReaction) error
+	DeleteCommentReaction(commentReaction *CommentReaction) error
 }
