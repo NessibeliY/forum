@@ -12,6 +12,7 @@ import (
 
 func (h *Handler) CreatePost(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/post/create" {
+		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return
 	}
@@ -22,6 +23,7 @@ func (h *Handler) CreatePost(w http.ResponseWriter, r *http.Request) {
 	case http.MethodPost:
 		h.createPostMethodPost(w, r)
 	default:
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
@@ -30,7 +32,7 @@ func (h *Handler) CreatePost(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) createPostMethodGet(w http.ResponseWriter, r *http.Request) {
 	categories, err := h.service.CategoryService.GetAllCategories()
 	if err != nil {
-		//h.logger
+		h.logger.Error("get all categories:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -48,9 +50,11 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 
 	validationsErrMap := validateCreatePostForm(title, content, categoryNames)
 	if len(validationsErrMap) > 0 {
+		h.logger.Error("validate create post form:", validationsErrMap)
+
 		categories, err := h.service.CategoryService.GetAllCategories()
 		if err != nil {
-			//h.logger
+			h.logger.Error("get all categories:", err.Error())
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
@@ -67,12 +71,13 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 	for _, categoryName := range categoryNames {
 		c, err := h.service.CategoryService.GetCategoryByName(categoryName)
 		if err != nil {
+			h.logger.Error("get category by name:", err.Error())
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
 		if c == nil {
 			validationsErrMap["categories"] = "category not found"
-			//h.logger
+			h.logger.Error("category not found:", c)
 			w.WriteHeader(http.StatusBadRequest)
 			h.Render(w, "create_post.page.html", H{
 				"errors":             validationsErrMap,
@@ -92,7 +97,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 
 	id, err := h.service.PostService.CreatePost(createPostRequest)
 	if err != nil {
-		//h.logger
+		h.logger.Error("create post:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -128,33 +133,39 @@ func validateCreatePostForm(title, content string, categoryNames []string) map[s
 
 func (h *Handler) DeletePost(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/post/delete" {
+		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return
 	}
 
 	if r.Method != http.MethodDelete {
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
 
 	postIDStr := r.URL.Query().Get("post_id")
 	if postIDStr == "" {
+		h.logger.Error("get query for post_id")
 		http.Error(w, "Post id is required", http.StatusBadRequest)
 		return
 	}
 
 	postID, err := utils.ParsePositiveIntID(postIDStr)
 	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
 	post, err := h.service.PostService.GetPostByID(postID)
 	if err != nil {
+		h.logger.Error("get post by id:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	if post == nil {
+		h.logger.Info("post nil")
 		http.NotFound(w, r)
 		return
 	}
@@ -165,6 +176,7 @@ func (h *Handler) DeletePost(w http.ResponseWriter, r *http.Request) {
 
 	err = h.service.PostService.DeletePost(deletePostRequest)
 	if err != nil {
+		h.logger.Error("delete post:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -174,18 +186,20 @@ func (h *Handler) DeletePost(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 	if !strings.HasPrefix(r.URL.Path, "/post/") {
+		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return
 	}
 
 	if r.Method != http.MethodGet {
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
 	}
 
 	query, err := url.ParseQuery(r.URL.RawQuery)
 	if err != nil {
-		//h.logger
+		h.logger.Error("parse query:", err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
@@ -193,29 +207,33 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 	postIDStr := query.Get("id")
 
 	if len(query) != 1 || postIDStr == "" {
+		h.logger.Error("query or post_id invalid")
 		http.Error(w, "query must only contain 'post-id'", http.StatusBadRequest)
 		return
 	}
 
 	postID, err := utils.ParsePositiveIntID(postIDStr)
 	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
 		http.NotFound(w, r)
 		return
 	}
 
 	post, err := h.service.PostService.GetPostByID(postID)
 	if err != nil {
+		h.logger.Error("get post by id:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	if post == nil {
+		h.logger.Error("post nil")
 		http.NotFound(w, r)
 		return
 	}
 
 	comments, err := h.service.CommentService.GetAllCommentsByPostID(postID)
 	if err != nil {
-		//h.logger
+		h.logger.Error("get all comments by post_id:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -223,7 +241,7 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 	for _, comment := range comments {
 		comment.LikesCount, comment.DislikesCount, err = h.service.CommentReactionService.GetCommentLikesAndDislikesByID(comment.ID)
 		if err != nil {
-			//h.logger
+			h.logger.Error("get comment likes and dislikes by id:", err.Error())
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
@@ -231,7 +249,7 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 
 	post.LikesCount, post.DislikesCount, err = h.service.PostReactionService.GetPostLikesAndDislikesByID(postID)
 	if err != nil {
-		//h.logger
+		h.logger.Error("get post likes and dislikes by id:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -245,18 +263,20 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) ShowMyPosts(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/myposts" {
+		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return
 	}
 
 	if r.Method != http.MethodGet {
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
 	}
 
 	posts, err := h.service.PostService.GetPostsByAuthorID(h.getUserFromContext(r).ID)
 	if err != nil {
-		//h.logger.
+		h.logger.Error("get posts by author_id:", err.Error())
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
@@ -269,18 +289,20 @@ func (h *Handler) ShowMyPosts(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) ShowLikedPosts(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/likedposts" {
+		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return
 	}
 
 	if r.Method != http.MethodGet {
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
 	}
 
 	posts, err := h.service.PostService.GetLikedPosts(h.getUserFromContext(r).ID)
 	if err != nil {
-		//h.logger
+		h.logger.Error("get liked posts:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -293,11 +315,13 @@ func (h *Handler) ShowLikedPosts(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/showposts" {
+		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return
 	}
 
 	if r.Method != http.MethodGet {
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
 	}
@@ -306,18 +330,21 @@ func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
 	categories := queryParams["category"]
 
 	if len(categories) == 0 {
+		h.logger.Error("categories empty")
 		http.Error(w, "category parameter is required", http.StatusBadRequest)
 		return
 	}
 
 	posts, err := h.service.PostService.GetPostsByCategories(categories)
 	if err != nil {
+		h.logger.Error("get posts by categories:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
 	allCategories, err := h.service.CategoryService.GetAllCategories()
 	if err != nil {
+		h.logger.Error("get all categories:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}

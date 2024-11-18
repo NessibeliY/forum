@@ -11,17 +11,20 @@ import (
 
 func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/comment/reaction/create" {
+		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return
 	}
 
 	if r.Method != http.MethodPost {
+		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
 	}
 
 	err := r.ParseForm()
 	if err != nil {
+		h.logger.Error("parse form:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -34,6 +37,7 @@ func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) 
 	commentIDStr := strings.TrimSpace(r.PostFormValue("comment_id"))
 	commentID, err := utils.ParsePositiveIntID(commentIDStr)
 	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
@@ -41,6 +45,7 @@ func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) 
 	reaction := r.PostFormValue("reaction")
 	err = validateCreateCommentReactionForm(reaction)
 	if err != nil {
+		h.logger.Error("validate create comment reaction form:", err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
@@ -53,6 +58,7 @@ func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) 
 
 	err = h.service.CommentReactionService.CreateCommentReaction(createCommentReactionRequest)
 	if err != nil {
+		h.logger.Error("create comment reaction:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
