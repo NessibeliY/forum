@@ -22,12 +22,12 @@ func (s *PostService) GetAllPosts() ([]models.Post, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
-	posts,err:=s.repo.GetAllPosts(ctx)
+	posts, err := s.repo.GetAllPosts(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("get all posts: %w", err)
 	}
 
-	if s.repo.IsPost
+	return posts, nil
 }
 
 func (s *PostService) CreatePost(createPostRequest *models.CreatePostRequest) (int, error) {

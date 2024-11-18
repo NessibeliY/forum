@@ -62,9 +62,9 @@ func (r *PostReactionRepository) GetReactionByPostIDAndAuthorID(ctx context.Cont
 	return reaction, nil
 }
 
-func (r *PostReactionRepository) DeletePostReaction(postID, authorID int) error {
+func (r *PostReactionRepository) DeletePostReaction(postReaction *models.PostReaction) error {
 	query := `DELETE FROM post_reaction WHERE post_id=$1 AND author_id=$2`
-	result, err := r.db.Exec(query, postID, authorID)
+	result, err := r.db.Exec(query, postReaction.PostID, postReaction.AuthorID)
 	if err != nil {
 		return fmt.Errorf("exec: %w", err)
 	}

@@ -2,7 +2,6 @@ package handler
 
 import (
 	"errors"
-	"fmt"
 	"net/http"
 	"regexp"
 	"strings"
@@ -62,11 +61,11 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 	email := strings.TrimSpace(r.PostFormValue("email"))
 	password := r.PostFormValue("password")
 
-	err = validateSignupForm(username, email, password)
-	if err != nil {
+	validationsErrMap := validateSignupForm(username, email, password)
+	if len(validationsErrMap) > 0 {
 		//h.logger
 		h.Render(w, "signup.page.html", H{
-			"error": err.Error(),
+			"errors_map": validationsErrMap,
 		})
 		return
 	}
@@ -98,24 +97,34 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/user/login", http.StatusSeeOther)
 }
 
-func validateSignupForm(username string, email string, password string) error {
-	if username == "" || email == "" || password == "" {
-		return fmt.Errorf("username or email or password is empty")
+func validateSignupForm(username string, email string, password string) map[string]string {
+	errors := make(map[string]string)
+
+	if username == "" {
+		errors["username"] = "username cannot be empty"
+	}
+
+	if email == "" {
+		errors["email"] = "email cannot be empty"
+	}
+
+	if password == "" {
+		errors["password"] = "password cannot be empty"
 	}
 
 	if len(username) < 3 || len(username) > 50 {
-		return fmt.Errorf("username length must be between 3 and 50 characters")
+		errors["username"] = "username length must be between 3 and 50 characters"
 	}
 
 	if len(email) > 320 || !emailRegex.MatchString(email) {
-		return fmt.Errorf("invalid email format or length exceeds 320 characters")
+		errors["email"] = "invalid email format or length exceeds 320 characters"
 	}
 
 	if len(password) < 8 || len(password) > 50 {
-		return fmt.Errorf("password length must be between 8 and 50 characters")
+		errors["password"] = "password length must be between 8 and 50 characters"
 	}
 
-	return nil
+	return errors
 }
 
 func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
@@ -152,11 +161,11 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	email := strings.TrimSpace(r.PostFormValue("email"))
 	password := r.PostFormValue("password")
 
-	err = validateLoginForm(email, password)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
+	validationsErrMap := validateLoginForm(email, password)
+	if len(validationsErrMap) > 0 {
+		//h.logger
 		h.Render(w, "login.page.html", H{
-			"error": err.Error(),
+			"errors_map": validationsErrMap,
 		})
 		return
 	}
@@ -165,6 +174,7 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 		Email:    email,
 		Password: password,
 	}
+
 	userID, err := h.service.UserService.LoginUser(loginPostRequest)
 	if err != nil {
 		if err == models.ErrInvalidCredentials {
@@ -190,20 +200,26 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
-func validateLoginForm(email string, password string) error {
-	if email == "" || password == "" {
-		return fmt.Errorf("email or password is empty")
+func validateLoginForm(email string, password string) map[string]string {
+	errors := make(map[string]string)
+
+	if email == "" {
+		errors["email"] = "email  is empty"
+	}
+
+	if password == "" {
+		errors["password"] = "password  is empty"
 	}
 
 	if len(email) > 320 || !emailRegex.MatchString(email) {
-		return fmt.Errorf("invalid email format or length exceeds 320 characters")
+		errors["email"] = "invalid email format or length exceeds 320 characters"
 	}
 
 	if len(password) < 8 || len(password) > 50 {
-		return fmt.Errorf("password length must be between 8 and 50 characters")
+		errors["password"] = "password length must be between 8 and 50 characters"
 	}
 
-	return nil
+	return errors
 }
 
 func (h *Handler) Logout(w http.ResponseWriter, r *http.Request) {

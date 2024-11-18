@@ -26,5 +26,5 @@ type PostReactionRepository interface {
 	GetReactionByPostIDAndAuthorID(ctx context.Context, postID, authorID int) (reaction *PostReaction, err error)
 	AddPostReaction(postReaction *PostReaction) error
 	UpdatePostReaction(postReaction *PostReaction) error
-	DeletePostReaction(postID, authorID int) error
+	DeletePostReaction(postReaction *PostReaction) error
 }

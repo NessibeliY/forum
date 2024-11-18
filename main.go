@@ -58,6 +58,7 @@ func main() {
 	mux.Handle("comment/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreateComment)))
 
 	mux.Handle("/post/reaction/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePostReaction)))
+	mux.Handle("/comment/reaction/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreateCommentReaction)))
 
 	finalHandler := handler.SecureHeaders(
 		handler.RecoverPanic(

@@ -3,15 +3,14 @@ package handler
 import (
 	"fmt"
 	"net/http"
-	"regexp"
 	"strings"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
 	"01.alem.school/git/nyeltay/forum/pkg/utils"
 )
 
-func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/post/reaction/create" {
+func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/comment/reaction/create" {
 		http.NotFound(w, r)
 		return
 	}
@@ -32,48 +31,39 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 		redirectTo = "/"
 	}
 
-	postIDStr := strings.TrimSpace(r.PostFormValue("post_id"))
-	postID, err := utils.ParsePositiveIntID(postIDStr)
+	commentIDStr := strings.TrimSpace(r.PostFormValue("comment_id"))
+	commentID, err := utils.ParsePositiveIntID(commentIDStr)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
-	reaction := strings.TrimSpace(r.PostFormValue("reaction"))
-	err = validateCreatePostReactionForm(reaction)
+	reaction := r.PostFormValue("reaction")
+	err = validateCreateCommentReactionForm(reaction)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
-	createPostReactionRequest := &models.CreatePostReactionRequest{
-		AuthorID: h.getUserFromContext(r).ID,
-		PostID:   postID,
-		Reaction: reaction,
+	createCommentReactionRequest := &models.CreateCommentReactionRequest{
+		AuthorID:  h.getUserFromContext(r).ID,
+		Reaction:  reaction,
+		CommentID: commentID,
 	}
 
-	err = h.service.PostReactionService.CreatePostReaction(createPostReactionRequest)
+	err = h.service.CommentReactionService.CreateCommentReaction(createCommentReactionRequest)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	http.Redirect(w, r, redirectTo, http.StatusSeeOther)
+	http.Redirect(w, r, redirectTo, http.StatusFound)
 }
 
-func validateCreatePostReactionForm(reaction string) error {
+func validateCreateCommentReactionForm(reaction string) error {
 	if reaction != "like" && reaction != "dislike" {
 		return fmt.Errorf("reaction must either like or dislike")
 	}
 
 	return nil
-}
-
-func isValidRedirectTo(redirectTo string) bool {
-	if redirectTo == "/" {
-		return true
-	}
-
-	matched, err := regexp.MatchString(`^\/post\?id=[1-9]\d*$`, redirectTo)
-	return err == nil && matched
 }

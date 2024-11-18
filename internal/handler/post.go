@@ -35,7 +35,7 @@ func (h *Handler) createPostMethodGet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	h.Render(w, "create.page.html", H{
+	h.Render(w, "create_post.page.html", H{
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
 	})
@@ -47,7 +47,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 	categoryNames := r.PostForm["categories"]
 
 	validationsErrMap := validateCreatePostForm(title, content, categoryNames)
-	if validationsErrMap != nil {
+	if len(validationsErrMap) > 0 {
 		categories, err := h.service.CategoryService.GetAllCategories()
 		if err != nil {
 			//h.logger
@@ -55,7 +55,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		h.Render(w, "create.page.html", H{
+		h.Render(w, "create_post.page.html", H{
 			"errors":             validationsErrMap,
 			"categories":         categories,
 			"authenticated_user": h.getUserFromContext(r),
@@ -74,7 +74,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 			validationsErrMap["categories"] = "category not found"
 			//h.logger
 			w.WriteHeader(http.StatusBadRequest)
-			h.Render(w, "create.page.html", H{
+			h.Render(w, "create_post.page.html", H{
 				"errors":             validationsErrMap,
 				"categories":         categories,
 				"authenticated_user": h.getUserFromContext(r),

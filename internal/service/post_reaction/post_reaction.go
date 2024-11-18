@@ -55,7 +55,7 @@ func (s *PostReactionService) CreatePostReaction(request *models.CreatePostReact
 	}
 	if currentReaction != nil {
 		if currentReaction.Reaction == request.Reaction {
-			err = s.repo.DeletePostReaction(request.PostID, request.AuthorID)
+			err = s.repo.DeletePostReaction(postReaction)
 			if err != nil {
 				return fmt.Errorf("delete post reaction: %v", err)
 			}
@@ -66,9 +66,10 @@ func (s *PostReactionService) CreatePostReaction(request *models.CreatePostReact
 		if err != nil {
 			return fmt.Errorf("update post reaction: %v", err)
 		}
+		return nil
 	}
 
-	err := s.repo.AddPostReaction(postReaction)
+	err = s.repo.AddPostReaction(postReaction)
 	if err != nil {
 		return fmt.Errorf("add post reaction: %v", err)
 	}
