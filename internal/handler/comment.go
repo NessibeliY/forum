@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"strconv"
 	"strings"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
 	"01.alem.school/git/nyeltay/forum/pkg/cookies"
+	"01.alem.school/git/nyeltay/forum/pkg/utils"
 )
 
 const errorsMapCookieName = "forum_errors_map_cookie"
@@ -47,23 +47,14 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 
 		cookies.SetCookie(w, errorsMapCookieName, string(errorsJSON), 300)
 
-		http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postIDStr), http.StatusSeeOther)
+		http.Redirect(w, r, fmt.Sprintf("/post?id=%s", postIDStr), http.StatusSeeOther)
 		return
 	}
 
-	postID, err := strconv.Atoi(postIDStr)
+	postID, err := utils.ParsePositiveIntID(postIDStr)
 	if err != nil {
 		//h.logger
-		validationsErrMap["post_id"] = postIDStr
-		errorsJSON, err := json.Marshal(validationsErrMap)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-
-		cookies.SetCookie(w, errorsMapCookieName, string(errorsJSON), 300)
-
-		http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postIDStr), http.StatusSeeOther)
+		http.NotFound(w, r)
 		return
 	}
 
@@ -79,7 +70,7 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, fmt.Sprintf("/post/?post-id=%s", postID), http.StatusSeeOther)
+	http.Redirect(w, r, fmt.Sprintf("/post?id=%d", postID), http.StatusSeeOther)
 }
 
 func validateCreateCommentForm(content string, postIDStr string) map[string]string {
