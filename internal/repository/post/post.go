@@ -146,7 +146,7 @@ func (r *PostRepository) addPostCategories(postID int, categories []*models.Cate
 }
 
 func (r *PostRepository) GetPostByID(ctx context.Context, id int) (*models.Post, error) {
-	query := `SELECT * FROM post WHERE id = $1`
+	query := `SELECT * FROM post WHERE id = $1 ORDER BY id DESC`
 
 	post := &models.Post{}
 	err := r.db.QueryRowContext(ctx, query, id).Scan(

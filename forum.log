@@ -927,3 +927,15 @@ INFO: /home/student/1/forum/main.go:33 2024/11/18 17:42:47 logger.go:39: connect
 INFO: /home/student/1/forum/main.go:44 2024/11/18 17:42:47 logger.go:39: server is running on localhost:8080
 INFO: /home/student/1/forum/main.go:33 2024/11/18 17:43:40 logger.go:39: connected to db
 INFO: /home/student/1/forum/main.go:44 2024/11/18 17:43:40 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/main.go:33 2024/11/18 17:52:18 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:44 2024/11/18 17:52:18 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/main.go:33 2024/11/18 17:53:23 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:44 2024/11/18 17:53:23 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/main.go:33 2024/11/18 17:53:36 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:44 2024/11/18 17:53:36 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/main.go:33 2024/11/18 17:54:31 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:44 2024/11/18 17:54:31 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/main.go:33 2024/11/18 17:55:23 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:44 2024/11/18 17:55:23 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/main.go:33 2024/11/18 17:56:25 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:44 2024/11/18 17:56:25 logger.go:39: server is running on localhost:8080
