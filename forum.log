@@ -750,3 +750,9 @@ INFO: /home/student/1/forum/main.go:33 2024/11/18 13:45:52 logger.go:39: connect
 INFO: /home/student/1/forum/main.go:44 2024/11/18 13:45:52 logger.go:39: server is running on localhost:8080
 INFO: /home/student/1/forum/main.go:33 2024/11/18 13:47:07 logger.go:39: connected to db
 INFO: /home/student/1/forum/main.go:44 2024/11/18 13:47:07 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/main.go:33 2024/11/18 14:15:38 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:44 2024/11/18 14:15:38 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/main.go:33 2024/11/18 14:16:07 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:44 2024/11/18 14:16:07 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/main.go:33 2024/11/18 14:19:21 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:44 2024/11/18 14:19:21 logger.go:39: server is running on localhost:8080

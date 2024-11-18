@@ -74,6 +74,14 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		if c == nil {
+
+			categories, err := h.service.CategoryService.GetAllCategories()
+			if err != nil {
+				h.logger.Info("get categories create post page", err)
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+
 			validationsErrMap["categories"] = "category not found"
 			// h.logger
 			w.WriteHeader(http.StatusBadRequest)
@@ -82,6 +90,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 				"categories":         categories,
 				"authenticated_user": h.getUserFromContext(r),
 			})
+			return
 		}
 		categories = append(categories, c)
 	}
