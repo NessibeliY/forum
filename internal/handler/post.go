@@ -111,7 +111,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, fmt.Sprintf("/post/%d", id), http.StatusFound)
+	http.Redirect(w, r, fmt.Sprintf("/post/?id=%d", id), http.StatusFound)
 }
 
 func validateCreatePostForm(title, content string, categoryNames []string) map[string]string {
@@ -147,13 +147,13 @@ func (h *Handler) DeletePost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if r.Method != http.MethodDelete {
+	if r.Method != http.MethodPost {
 		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
 
-	postIDStr := r.URL.Query().Get("post_id")
+	postIDStr := r.URL.Query().Get("id")
 	if postIDStr == "" {
 		h.logger.Error("get query for post_id")
 		http.Error(w, "Post id is required", http.StatusBadRequest)
@@ -263,9 +263,17 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	categories, err := h.service.CategoryService.GetAllCategories()
+	if err != nil {
+		h.logger.Info("get all categories:", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
 	h.Render(w, "post.page.html", H{
 		"post":               post,
 		"comments":           comments,
+		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }
@@ -290,8 +298,16 @@ func (h *Handler) ShowMyPosts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	categories, err := h.service.CategoryService.GetAllCategories()
+	if err != nil {
+		h.logger.Info("get all categories:", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
 	h.Render(w, "index.page.html", H{
 		"posts":              posts,
+		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }
@@ -316,8 +332,16 @@ func (h *Handler) ShowLikedPosts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	categories, err := h.service.CategoryService.GetAllCategories()
+	if err != nil {
+		h.logger.Info("get all categories:", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
 	h.Render(w, "index.page.html", H{
 		"posts":              posts,
+		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
 	})
 }

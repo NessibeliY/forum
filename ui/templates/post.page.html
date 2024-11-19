@@ -21,18 +21,51 @@
             <div class="tags card bg-white">
                 <h3 class="font-semibold">Tags</h3>
                 {{range .categories}}
-                    <form action="/user/posts/" method="GET" class="flex">
-                        <input type="hidden" name="filter" value="{{.Name}}">
-                        <button class="categories" type="submit">#{{.Name}}</button>
-                    </form>
+                    <div class="flex flex-col">
+                        <a href="/showposts?category={{.Name}}" class="categories hover:text-blue-400 duration-300 transition">#{{ .Name}}</a>
+                    </div>
                 {{end}}
             </div>
 
             <!-- IF USER AUTH SHOW THIS BLOCK -->
             <div class="middleContainer">
                 <div class="flex w-full flex-col break-words">
-                    <h2 class="text-4xl">{{.post.Title}}</h2>
-                    <span class="postDescription">{{.post.Content}}</span>
+                    <div class="flex w-full items-center justify-between">
+                        <h2 class="text-4xl">{{.post.Title}}</h2>
+                         <!-- CHECK IF USER IS OWNER -->
+                        {{if $.authenticated_user}}
+                        {{if eq $.authenticated_user.ID  .post.AuthorID  }}
+                        <div class="text-xl dropdown">
+                            <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
+                            <div class="select_menu " id="dropdown-{{.ID}}">
+                                <ul class="options card">
+                                    <li class="option del_btn_modal" data-modal="delete_modal_{{.ID}}">
+                                        Delete
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- DELETE POST MODAL SUBMIT -->
+                        <div class="modal" id="delete_modal_{{.ID}}">
+                            <div class="modal-content delete_form_modal">
+                                <div class="flex items-center justify-between w-full">
+                                    <span class="text-bold text-2xl">DELETE POST</span>
+                                    <span class="close" data-close="delete_modal_{{.ID}}">&times;</span>
+                                </div>
+                                <form action="/post/delete?id={{.post.ID}}" method="POST" class="flex flex-col items-center justify-center w-full mt-3">
+                                    <!-- <input type="hidden" name="PostID" value="{{.ID}}"> -->
+                                    <p class="text-xl">Are you sure??</p>
+                                    <div class="flex items-center justify-center mt-2">
+                                        <button class="bg-red-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-red-700 transition duration-300" type="submit">yes</button>
+                                        <div class="bg-green-600 py-2 px-2 mx-1 rounded-lg text-white hover:bg-green-700 transition duration-300 cursor-pointer" data-close="delete_modal_{{.ID}}">no</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    {{end}}
+                    {{end}}
+                    </div>
+                    <span class="postDescription">{{.post.Content}}</span>                    
                 </div>
                 <div class="flex w-full items-center">
                     <form action="/post/reaction/create" method="POST" class="flex my-2 mb-2">   

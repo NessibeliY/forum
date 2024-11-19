@@ -9,10 +9,9 @@
                 <form class="pagesList" action="/user/posts/" method="GET">
                     <input type="hidden" name="filter" id="filter" value="all">
                     {{if .authenticated_user }}
-                    <button class="py-2 px-2 pages {{if eq .CurrentPage "all"}} active{{end}}" id="allPost" type="submit" onclick="document.getElementById('filter').value='all'">All Posts</button>
-                    <button class="pages {{if eq .CurrentPage "my"}} active{{end}}" id="myPosts" type="submit" onclick="document.getElementById('filter').value='my'">My Posts</button>
-                    <button class="pages {{if eq .CurrentPage "liked"}} active{{end}}" id="likedPosts" type="submit" onclick="document.getElementById('filter').value='liked'">Liked</button>
-
+                    <a href="/" class="text-xl hover:text-blue-500 transition duration-300 mx-2">Home</a>
+                    <a href="/myposts" class="text-xl hover:text-blue-500 transition duration-300 mx-2">My posts</a>
+                    <a href="/likedposts" class="text-xl hover:text-blue-500 transition duration-300 mx-2s">Liked posts</a>
                     {{end}}
                 </form>
             {{ if .authenticated_user}}

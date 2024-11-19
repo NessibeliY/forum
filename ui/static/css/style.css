@@ -421,7 +421,7 @@ h2 {
 
 .pagesList {
     display: flex;
-    justify-content: space-between;
+    width: 25%;
 }
 
 .pages {
