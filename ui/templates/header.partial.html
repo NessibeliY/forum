@@ -43,15 +43,14 @@
         {{end}}
         <ul>
             {{ if .authenticated_user }}
-                <li><a href="/user/posts?filter=all">All Posts</a></li>
-                <li><a href="/user/posts?filter=my">My Posts</a></li>
-                <li><a href="/user/posts?filter=liked">Liked</a></li>
-                <li><a href="/user/posts?filter=disliked">DisLiked</a></li>
-                <li><a href="/create-post">Create Post</a></li>
+                <li><a href="/" class="text-xl hover:text-blue-500 transition duration-300">Home</a></li>
+                <li><a href="/myposts" class="text-xl hover:text-blue-500 transition duration-300">My posts</a></li>
+                <li><a href="/likedposts" class="text-xl hover:text-blue-500 transition duration-300">Liked posts</a></li>
+                <li><a href="/post/create" class="text-xl">Create Post</a></li>
             {{end}}
             {{if not .authenticated_user}}
-            <li><a href="/user/login">Sign In</a></li>
-            <li><a href="/user/signup">Sign Up</a></li>
+            <li><a href="/user/login" class="text-xl">Sign In</a></li>
+            <li><a href="/user/signup" class="text-xl">Sign Up</a></li>
             {{end}}
 
             {{ if .authenticated_user }}
