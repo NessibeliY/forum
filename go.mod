@@ -1,6 +1,6 @@
 module 01.alem.school/git/nyeltay/forum
 
-go 1.23.2
+go 1.22.6
 
 require (
 	github.com/gofrs/uuid v4.4.0+incompatible // indirect

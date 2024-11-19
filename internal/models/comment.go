@@ -6,16 +6,14 @@ import (
 )
 
 type Comment struct {
-	ID               int
-	Content          string
-	AuthorID         int
-	AuthorName       string
-	PostID           int
-	CreatedAt        time.Time
-	LikesCount       int
-	DislikesCount    int
-	IsLikedByUser    bool
-	IsDislikedByUser bool
+	ID            int
+	Content       string
+	AuthorID      int
+	AuthorName    string
+	PostID        int
+	CreatedAt     time.Time
+	LikesCount    int
+	DislikesCount int
 }
 
 type CreateCommentRequest struct {

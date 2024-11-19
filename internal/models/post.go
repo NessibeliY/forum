@@ -6,20 +6,18 @@ import (
 )
 
 type Post struct {
-	ID               int
-	Title            string
-	Content          string
-	AuthorID         int
-	AuthorName       string
-	CreatedAt        time.Time
-	UpdatedAt        time.Time
-	Categories       []*Category
-	Comments         []Comment
-	LikesCount       int
-	DislikesCount    int
-	CommentsCount    int
-	IsLikedByUser    bool
-	IsDislikedByUser bool
+	ID            int
+	Title         string
+	Content       string
+	AuthorID      int
+	AuthorName    string
+	CreatedAt     time.Time
+	UpdatedAt     time.Time
+	Categories    []*Category
+	Comments      []Comment
+	LikesCount    int
+	DislikesCount int
+	CommentsCount int
 }
 
 type CreatePostRequest struct {

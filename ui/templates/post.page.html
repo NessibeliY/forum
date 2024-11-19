@@ -71,30 +71,18 @@
                     <form action="/post/reaction/create" method="POST" class="flex my-2 mb-2">   
                         <input type="hidden" name="post_id" value="{{.post.ID}}">
                         <input type="hidden" name="reaction" value="like">
-                        {{if .post.IsLikedByUser}}
-                        <button class="btn_like btn_like_active text-2xl" type="submit">
-                            <i class="fa-regular fa-thumbs-up mx-1"></i> Liked({{ .post.LikesCount }})
-                        </button>
-                        {{else}}
                         <button class="btn_like text-white text-2xl" type="submit">
                             <i class="fa-regular fa-thumbs-up mx-1"></i>Liked({{ .post.LikesCount }})
                         </button>
-                        {{end}}
                     </form>
         
     
                     <form action="/post/reaction/create" method="POST">
                         <input type="hidden" name="post_id" value="{{.post.ID}}">
                         <input type="hidden" name="reaction" value="dislike">
-                        {{if .post.IsDislikedByUser}}
-                        <button class="btn_like btn_like_active text-2x" type="submit">
-                            <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked({{.post.DislikesCount}})
-                        </button>
-                        {{else}}
                         <button class="btn_like text-white text-2xl" type="submit">
                             <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked({{.post.DislikesCount}})
                         </button>
-                        {{end}}
                     </form>
                 </div>
                 <!-- INPUT COMMENT -->
@@ -173,28 +161,16 @@
                                     <form class="flex" action="/comment/reaction/create" method="POST">
                                         <input type="hidden" name="comment_id" value="{{.ID}}">
                                         <input type="hidden" name="reaction" value="like">
-                                        {{if .IsLikedByUser}}
-                                        <button class="btn_like_com btn_like_active">
-                                            <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{ .LikesCount }})
-                                        </button>
-                                        {{ else }}
                                         <button class="btn_like_com">
                                             <i class="fa-regular fa-thumbs-up mx-1"></i> Liked ({{ .LikesCount }})
                                         </button>
-                                        {{ end }}
                                     </form>
                                     <form action="/comment/reaction/create" method="POST">
                                         <input type="hidden" name="comment_id" value="{{.ID}}">
                                         <input type="hidden" name="reaction" value="dislike">
-                                        {{if .IsDislikedByUser}}
-                                        <button class="btn_like_com btn_like_active">
-                                            <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked ({{.DislikesCount}})
-                                        </button>     
-                                        {{else}}
                                         <button class="btn_like_com">
                                             <i class="fa-regular fa-thumbs-down mx-1"></i>Disliked ({{ .DislikesCount}})
                                         </button>
-                                        {{end}}    
                                     </form>
                                 </div> 
                             </div> 
