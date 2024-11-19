@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>SignUp</title>
 </head>
 <body>
@@ -33,7 +33,7 @@
                             name="username"
                             value="{{.signup_request.Username}}"
                             />
-                        <label class="text-red-600 my-2"> {{ .ErrorMessages.username}}</label>
+                        <label class="text-red-600 my-2"> {{ .errors_map.username}}</label>
                     </div>
                     <div class="mt-3">
                         <label for="email" class="block text-base mb-2">Email</label>
@@ -45,7 +45,7 @@
                             name="email"
                             value="{{.signup_request.Email}}"
                             />
-                        <label class="text-red-600 my-2"> {{ .ErrorMessages.email}}</label>
+                        <label class="text-red-600 my-2"> {{ .errors_map.email}}</label>
                     </div>
                     <div class="mt-3">
                         <label for="password" class="block text-base mb-2">Password</label>
@@ -57,7 +57,7 @@
                             name="password"
                             value="{{.signup_request.Password}}"
                             />
-                        <label class="text-red-600 my-2"> {{ .ErrorMessages.password}}</label> 
+                        <label class="text-red-600 my-2"> {{ .errors_map.password}}</label> 
                     </div>
                     <button
                     type="submit" 

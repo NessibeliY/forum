@@ -309,3 +309,822 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/11/19 14:07:01 logger.go:39: [::1]:50794 - HTTP/1.1 GET /post/create
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:100 2024/11/19 14:07:18 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:109 2024/11/19 14:07:18 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:37 2024/11/19 14:46:58 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:48 2024/11/19 14:46:58 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:06 logger.go:39: 127.0.0.1:59080 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:06 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:09 logger.go:39: 127.0.0.1:59082 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:09 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:09 logger.go:39: 127.0.0.1:59086 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:09 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:10 logger.go:39: 127.0.0.1:59088 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:10 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:10 logger.go:39: 127.0.0.1:59090 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:10 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:10 logger.go:39: 127.0.0.1:59092 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:10 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:10 logger.go:39: 127.0.0.1:59094 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:10 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:10 logger.go:39: 127.0.0.1:59096 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:10 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:10 logger.go:39: 127.0.0.1:59098 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:10 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:11 logger.go:39: 127.0.0.1:59100 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:11 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:11 logger.go:39: 127.0.0.1:59102 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:11 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:11 logger.go:39: 127.0.0.1:59104 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:11 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:11 logger.go:39: 127.0.0.1:59108 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2024/11/19 14:47:11 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:35 logger.go:39: 127.0.0.1:59110 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:47:35 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:35 logger.go:39: 127.0.0.1:59110 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:38 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:47:38 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:38 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:38 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:39 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:40 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:47:40 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:42 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:47:42 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:43 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:43 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:49 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 POST /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:49 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:47:49 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:49 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:54 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:47:54 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:54 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:54 logger.go:39: 127.0.0.1:59118 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:57 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:58 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /likedposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:47:59 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:00 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:00 logger.go:39: 127.0.0.1:59118 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:09 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:09 logger.go:39: 127.0.0.1:59118 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:10 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:10 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:10 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:48:10 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:11 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:11 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:48:11 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:16 logger.go:39: 127.0.0.1:59112 - HTTP/1.1 POST /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:16 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/user.go:68 2024/11/19 14:48:16 logger.go:39: validate signup form: map[email:invalid email format or length exceeds 320 characters password:password length must be between 8 and 50 characters username:username length must be between 3 and 50 characters]
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:16 logger.go:39: 127.0.0.1:59118 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/main.go:100 2024/11/19 14:48:39 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:109 2024/11/19 14:48:39 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:37 2024/11/19 14:48:40 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:48 2024/11/19 14:48:40 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:48 logger.go:39: 127.0.0.1:59120 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:48:48 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:48 logger.go:39: 127.0.0.1:59120 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:49 logger.go:39: 127.0.0.1:59120 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:48:49 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:50 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:50 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:48:50 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:50 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:50 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:50 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:50 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:50 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:50 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/home.go:9 2024/11/19 14:48:50 logger.go:39: url path: /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:51 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 POST /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:51 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/user.go:68 2024/11/19 14:48:51 logger.go:39: validate signup form: map[email:invalid email format or length exceeds 320 characters password:password length must be between 8 and 50 characters username:username length must be between 3 and 50 characters]
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:48:58 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 POST /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:48:58 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/user.go:93 2024/11/19 14:48:58 logger.go:39: signup user: add user: duplicate email
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:49:19 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:49:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:49:19 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:49:19 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:49:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:49:27 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:49:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:49:27 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:49:27 logger.go:39: 127.0.0.1:59122 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:49:27 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/home.go:9 2024/11/19 14:49:27 logger.go:39: url path: /favicon.ico
+INFO: /home/student/1/forum/main.go:100 2024/11/19 14:50:11 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:109 2024/11/19 14:50:11 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:37 2024/11/19 14:50:12 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:48 2024/11/19 14:50:12 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:14 logger.go:39: 127.0.0.1:59126 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:50:14 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:14 logger.go:39: 127.0.0.1:59126 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:15 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:50:15 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:15 logger.go:39: 127.0.0.1:59130 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:15 logger.go:39: 127.0.0.1:59130 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:15 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:15 logger.go:39: 127.0.0.1:59132 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:16 logger.go:39: 127.0.0.1:59132 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:16 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:50:16 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:16 logger.go:39: 127.0.0.1:59132 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:16 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/home.go:9 2024/11/19 14:50:16 logger.go:39: url path: /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:17 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:50:17 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:17 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:50:17 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:20 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:50:20 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:21 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:50:21 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:28 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/user.go:93 2024/11/19 14:50:28 logger.go:39: signup user: add user: duplicate email
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:31 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:50:31 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:33 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:33 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/user.go:177 2024/11/19 14:50:33 logger.go:39: validate login form: map[email:invalid email format or length exceeds 320 characters password:password length must be between 8 and 50 characters]
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:50:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:41 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /showposts?category=Music
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:42 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:56 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:56 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=2
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:58 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:50:58 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:50:58 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:01 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:01 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:01 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:01 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:01 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:01 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:02 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:02 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:02 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:07 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:07 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:18 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:18 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:18 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:23 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:23 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:51:25 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:27 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:28 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:29 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:29 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:31 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:31 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:35 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:35 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:35 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:35 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:36 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:36 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:36 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:52 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:52 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:52 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:52 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:51:52 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:53 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:57 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:51:57 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:57 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:59 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:51:59 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:51:59 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:00 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:52:00 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:00 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:02 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:07 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:07 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:10 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:52:10 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:10 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:13 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:52:13 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:13 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:14 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:14 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:52:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:52:14 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:16 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:52:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:52:16 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:20 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:52:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:20 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:24 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:52:24 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:24 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:24 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:52:26 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:52:28 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:32 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:52:32 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:32 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:35 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:52:35 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:35 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:40 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:40 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:52:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:52:40 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:41 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:52:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:52:41 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:45 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:52:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:45 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:47 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:52:47 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:47 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:52 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:52 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:52:52 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:52:52 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:52:54 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:52:54 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:52:54 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:00 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:53:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:53:00 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:00 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:53:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:10 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/signup
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:53:10 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:10 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:53:10 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:53:10 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:15 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:53:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:15 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:18 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:53:18 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:18 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:19 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:53:19 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:19 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:20 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:53:20 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:20 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:21 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:53:21 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:21 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:22 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:53:22 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:22 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:23 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /comment/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:30 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:32 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:32 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:53:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:53:32 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:33 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:53:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:53:33 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:53:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:43 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:46 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /comment/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:46 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:46 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:48 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:48 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:50 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:56 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:53:56 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:53:56 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:05 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:07 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:11 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:54:11 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:11 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:13 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:14 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:16 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=2
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:18 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:54:18 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:18 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:18 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:20 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=2
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:22 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:54:22 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:22 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:24 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=2
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:54:26 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:33 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:33 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:54:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:54:33 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:34 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:54:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:54:34 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:54:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:41 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=2
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:42 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:54:42 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:43 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:47 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:47 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:54:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:54:47 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:49 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:54:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:54:49 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:58 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:54:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:54:58 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:01 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:01 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:01 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:03 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:03 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:03 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:03 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:05 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:05 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:55:05 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:55:05 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:06 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:55:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:55:06 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:11 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:55:11 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:11 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:12 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=2
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:14 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:14 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:14 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:16 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=2
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:16 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:16 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:17 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:19 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:19 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:55:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:55:19 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:20 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:55:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:55:20 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:55:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=2
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:29 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:31 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:31 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:31 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:34 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:34 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:55:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:55:34 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:35 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:55:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:55:35 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:44 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:55:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:44 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:45 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:45 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:45 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:48 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:50 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:50 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:52 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:52 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:52 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:52 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:54 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:55 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:55 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:55 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:56 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:58 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:55:58 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:55:58 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:05 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:11 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:11 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=4
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:13 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:56:13 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:13 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:15 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:15 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:56:15 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:17 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:56:17 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:23 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:23 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:56:27 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:56:28 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:30 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:30 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:56:30 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:35 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:35 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:37 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:56:37 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:37 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:56:38 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:40 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:40 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:56:40 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:41 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:56:41 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:45 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:45 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:45 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:47 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:56:47 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:48 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:49 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:56:49 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:49 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:51 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:51 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:56:51 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:53 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:56:53 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:57 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:56:57 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:56:57 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:00 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:00 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:00 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:01 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:01 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:57:01 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:57:01 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:03 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:57:03 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:57:03 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:08 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:57:08 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:08 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:10 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=4
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:11 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:11 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:11 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:17 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:17 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:17 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:18 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:18 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:18 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:19 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:19 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:19 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:20 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:20 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:20 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:21 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:21 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:21 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:22 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:22 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:22 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:22 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:22 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:22 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:23 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:23 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:23 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:23 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:23 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:23 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:24 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:24 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:24 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:25 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:25 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:25 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:25 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:25 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:25 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:26 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:26 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:26 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:27 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:27 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:27 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:27 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:27 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:28 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:28 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:28 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:29 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:29 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:29 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:29 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:29 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:30 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:30 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:30 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:30 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:30 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:30 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:30 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:30 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:31 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:31 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:31 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:31 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:31 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:32 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:32 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:32 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:32 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:32 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:32 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:32 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:33 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:33 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:33 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:33 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:33 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:34 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:34 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:34 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:34 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:35 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:35 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:35 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:36 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:36 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:36 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:36 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:36 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:36 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:37 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:37 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:37 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:38 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:38 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:39 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:39 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:39 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:40 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:40 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:40 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:40 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:40 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:40 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:41 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:41 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:41 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:42 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:42 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:42 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:48 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:48 logger.go:39: 127.0.0.1:59128 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:49 logger.go:39: 127.0.0.1:59158 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:49 logger.go:39: 127.0.0.1:59158 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:49 logger.go:39: 127.0.0.1:59160 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:50 logger.go:39: 127.0.0.1:59160 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:50 logger.go:39: 127.0.0.1:59158 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:52 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:52 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:52 logger.go:39: 127.0.0.1:59164 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:53 logger.go:39: 127.0.0.1:59164 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:56 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/1/forum/internal/handler/post_reaction.go:35 2024/11/19 14:57:56 logger.go:39: redirect_to: 
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:56 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:57:58 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:00 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:05 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=4
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:06 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:08 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:09 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:09 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:10 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:13 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:13 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:13 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:14 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:14 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:16 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:17 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:17 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:18 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:21 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:23 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:23 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:58:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:58:23 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:24 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:58:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:58:24 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:29 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:58:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:29 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:31 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:33 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:33 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:34 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:36 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:36 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:37 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:39 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:39 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:40 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:43 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:43 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:44 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:47 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:47 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:58:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:58:47 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:49 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:58:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:58:49 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:54 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:58:54 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:54 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:55 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:56 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:56 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:57 logger.go:39: 127.0.0.1:59164 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:57 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:59 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:58:59 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:00 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:01 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:01 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:02 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:04 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:04 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:59:04 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:59:04 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:06 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:59:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:59:06 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:11 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:59:11 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:11 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:15 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:16 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:16 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:17 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:18 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:18 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:20 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:21 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:21 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:22 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:24 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:24 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:26 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:27 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:27 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:29 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:29 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:59:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:59:29 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:30 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:59:30 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 14:59:30 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:35 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 14:59:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:35 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:37 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:38 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:38 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:39 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:40 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 POST /comment/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:40 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:41 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:42 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:49 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 14:59:54 logger.go:39: 127.0.0.1:59162 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 15:02:17 logger.go:39: 127.0.0.1:59166 - HTTP/1.1 GET /post/?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 15:02:17 logger.go:39: 127.0.0.1:59166 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 15:02:20 logger.go:39: 127.0.0.1:59166 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 15:02:26 logger.go:39: 127.0.0.1:59166 - HTTP/1.1 POST /user/logout
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 15:02:26 logger.go:39: 127.0.0.1:59166 - HTTP/1.1 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 15:02:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 15:02:26 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 15:02:27 logger.go:39: 127.0.0.1:59166 - HTTP/1.1 GET /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 15:02:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/user.go:48 2024/11/19 15:02:27 logger.go:39: user is not authenticated
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 15:02:33 logger.go:39: 127.0.0.1:59166 - HTTP/1.1 POST /user/login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/19 15:02:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/19 15:02:33 logger.go:39: 127.0.0.1:59166 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/main.go:100 2024/11/19 15:05:14 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:109 2024/11/19 15:05:14 logger.go:39: server stopped gracefully
