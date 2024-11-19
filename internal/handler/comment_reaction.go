@@ -3,6 +3,7 @@ package handler
 import (
 	"fmt"
 	"net/http"
+	"net/url"
 	"strings"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
@@ -29,8 +30,17 @@ func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 
-	redirectTo := strings.TrimSpace(r.PostFormValue("redirect_to"))
-	if !isValidRedirectTo(redirectTo) {
+	redirectTo := r.Header.Get("Referer")
+	parsedURL, err := url.Parse(redirectTo)
+	if err != nil {
+		h.logger.Error("url parse:", err.Error())
+		redirectTo = "/"
+	} else {
+		redirectTo = parsedURL.Path + "?" + parsedURL.RawQuery
+	}
+
+	if !h.isValidRedirectTo(redirectTo) {
+		h.logger.Error("invalid redirect to:", redirectTo)
 		redirectTo = "/"
 	}
 
@@ -38,7 +48,7 @@ func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) 
 	commentID, err := utils.ParsePositiveIntID(commentIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		http.NotFound(w, r)
 		return
 	}
 
@@ -58,12 +68,17 @@ func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) 
 
 	err = h.service.CommentReactionService.CreateCommentReaction(createCommentReactionRequest)
 	if err != nil {
+		if strings.Contains(err.Error(), "FOREIGN KEY constraint failed") {
+			h.logger.Error("comment doesn't exist:", err.Error())
+			http.Error(w, "comment doesn't exist", http.StatusNotFound)
+			return
+		}
 		h.logger.Error("create comment reaction:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	http.Redirect(w, r, redirectTo, http.StatusFound)
+	http.Redirect(w, r, redirectTo, http.StatusSeeOther)
 }
 
 func validateCreateCommentReactionForm(reaction string) error {

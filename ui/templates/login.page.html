@@ -33,9 +33,6 @@
                             value="{{.login_request.Email}}"
                         />
                         <label class="text-red-600 my-2"> {{ .errors_map.email}}</label>
-                        {{if .Error}} 
-                            <label class="text-red-600 my-2">Invalid email or password</label> 
-                        {{end}}
                     </div>
                     <div class="mt-3">
                         <label for="password" class="block text-base mb-2">Password</label>
@@ -49,8 +46,8 @@
                             
                         />
                     <label class="text-red-600 my-2">{{ .errors_map.password}}</label>
-                    {{if .Error}} 
-                        <label class="text-red-600 my-2">Invalid email or password</label> 
+                    {{if .error}}
+                        <label class="text-red-600 my-2">{{ .error }}</label>
                     {{end}}
                     </div>
                     <button

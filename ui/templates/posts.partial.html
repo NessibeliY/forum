@@ -10,8 +10,9 @@
                 <div class="flex w-full justify-between">
                     <!-- AUTHOR -->
                     <div class="flex flex-col ml-2">
+
                         <span class="text-base text-slate-400 font-extralight italic">
-                            {{ .CreatedAt.Format "02-01-2006 15:04"}}
+                            {{ .AuthorName }} {{ .CreatedAt.Format "02-01-2006 15:04"}}
                         </span>
                     </div>
                    
@@ -19,7 +20,7 @@
                 </div>
             </div>
             <div class="flex w-full flex-col py-4 px-4 break-words">
-                <a href="/post/?id={{.ID}}" class="text-4xl text-black hover:text-blue-400 transition duration-300">{{ .Title }}</a>
+                <a href="/post?id={{ .ID }}" class="text-4xl text-black hover:text-blue-400 transition duration-300">{{ .Title }}</a>
                 <!-- POST DESCRIPTION -->
                 <p class="text-lg my-2">{{ .Content }}</p>
                 <!-- POST TAGS -->
@@ -35,31 +36,19 @@
                             <form action="/post/reaction/create" method="POST">
                                 <input type="hidden" name="post_id" value="{{.ID}}">
                                 <input type="hidden" name="reaction" value="like">
-                                {{if .IsLikedByUser}}
-                                    <button class="btn_like btn_like_active" type="submit">
-                                        <i class="fa-regular fa-thumbs-up mx-1"></i> Liked({{ .LikesCount }})
-                                    </button>
-                                {{else}}
-                                    <button class="btn_like" type="submit">
-                                        <i class="fa-regular fa-thumbs-up mx-1"></i> Liked({{ .LikesCount }})
-                                    </button>
-                                {{end}}
+                                <button class="btn_like" type="submit">
+                                    <i class="fa-regular fa-thumbs-up mx-1"></i> Liked({{ .LikesCount }})
+                                </button>
                             </form>
                             <form action="/post/reaction/create" method="POST">
                                 <input type="hidden" name="post_id" value="{{.ID}}">
                                 <input type="hidden" name="reaction" value="dislike">
-                                {{if .IsDislikedByUser}}
-                                    <button class="btn_like btn_like_active" type="submit">
-                                        <i class="fa-regular fa-thumbs-down mx-1"></i> Disliked({{ .DislikesCount }})
-                                    </button>
-                                {{else}}
-                                    <button class="btn_like" type="submit">
-                                        <i class="fa-regular fa-thumbs-down mx-1"></i> Disliked({{ .DislikesCount }})
-                                    </button>
-                                {{end}}
+                                <button class="btn_like" type="submit">
+                                    <i class="fa-regular fa-thumbs-down mx-1"></i> Disliked({{ .DislikesCount }})
+                                </button>
                             </form>
                         </div>
-                        <a href="/post/?id={{.ID}}" class="btn_like">
+                        <a href="/post?id={{ .ID }}" class="btn_like">
                             <i class="fa-regular fa-comments mx-1 text-2xl"></i>{{ .CommentsCount }}
                         </a>
                     </div>

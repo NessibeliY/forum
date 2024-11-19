@@ -9,6 +9,7 @@ type Comment struct {
 	ID               int
 	Content          string
 	AuthorID         int
+	AuthorName       string
 	PostID           int
 	CreatedAt        time.Time
 	LikesCount       int

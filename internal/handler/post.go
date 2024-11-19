@@ -111,7 +111,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, fmt.Sprintf("/post/?id=%d", id), http.StatusSeeOther)
+	http.Redirect(w, r, fmt.Sprintf("/post?id=%d", id), http.StatusSeeOther)
 }
 
 func validateCreatePostForm(title, content string, categoryNames []string) map[string]string {
@@ -163,7 +163,7 @@ func (h *Handler) DeletePost(w http.ResponseWriter, r *http.Request) {
 	postID, err := utils.ParsePositiveIntID(postIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		http.NotFound(w, r)
 		return
 	}
 
@@ -194,7 +194,7 @@ func (h *Handler) DeletePost(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
-	if !strings.HasPrefix(r.URL.Path, "/post/") {
+	if r.URL.Path != "/post" {
 		h.logger.Error("url path:", r.URL.Path)
 		http.NotFound(w, r)
 		return

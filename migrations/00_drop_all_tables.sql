@@ -5,3 +5,4 @@ DROP TABLE IF EXISTS session;
 DROP TABLE IF EXISTS comment;
 DROP TABLE IF EXISTS post_reaction;
 DROP TABLE IF EXISTS comment_reaction;
+DROP TABLE IF EXISTS post_category;

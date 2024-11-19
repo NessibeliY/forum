@@ -3,6 +3,7 @@ package handler
 import (
 	"fmt"
 	"net/http"
+	"net/url"
 	"regexp"
 	"strings"
 
@@ -30,9 +31,15 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	redirectTo := strings.TrimSpace(r.PostFormValue("redirect_to"))
-	if !isValidRedirectTo(redirectTo) {
-		h.logger.Error("redirect_to:", redirectTo)
+	redirectTo := "/"
+	referer := r.Header.Get("Referer")
+	parsedURL, err := url.Parse(referer)
+	if err == nil && parsedURL.RawQuery != "" {
+		redirectTo = parsedURL.Path + "?" + parsedURL.RawQuery
+	}
+
+	if !h.isValidRedirectTo(redirectTo) {
+		h.logger.Error("invalid redirect to:", redirectTo)
 		redirectTo = "/"
 	}
 
@@ -40,7 +47,19 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 	postID, err := utils.ParsePositiveIntID(postIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		http.NotFound(w, r)
+		return
+	}
+
+	post, err := h.service.PostService.GetPostByID(postID)
+	if err != nil {
+		h.logger.Error("get post by id:", err.Error())
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if post == nil {
+		h.logger.Error("post doesn't exist: post nil")
+		http.Error(w, "post doesn't exist", http.StatusNotFound)
 		return
 	}
 
@@ -76,11 +95,43 @@ func validateCreatePostReactionForm(reaction string) error {
 	return nil
 }
 
-func isValidRedirectTo(redirectTo string) bool {
+func (h *Handler) isValidRedirectTo(redirectTo string) bool {
 	if redirectTo == "/" {
 		return true
 	}
 
 	matched, err := regexp.MatchString(`^\/post\?id=[1-9]\d*$`, redirectTo)
-	return err == nil && matched
+	if err != nil {
+		h.logger.Error("match string error:", err.Error())
+		return false
+	}
+	if !matched {
+		h.logger.Error("not matched")
+		return false
+	}
+
+	parsedURL, err := url.Parse(redirectTo)
+	if err != nil {
+		h.logger.Error("url parse:", err.Error())
+		return false
+	}
+
+	postIDStr := parsedURL.Query().Get("id")
+	postID, err := utils.ParsePositiveIntID(postIDStr)
+	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
+		return false
+	}
+
+	post, err := h.service.PostService.GetPostByID(postID)
+	if err != nil {
+		h.logger.Error("get post by id:", err.Error())
+		return false
+	}
+	if post == nil {
+		h.logger.Error("post nil")
+		return false
+	}
+
+	return true
 }

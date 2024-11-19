@@ -29,8 +29,10 @@ func (s *SessionService) GetSession(cookieValue string) (*models.Session, error)
 		return nil, fmt.Errorf("get session: %v", err)
 	}
 
-	if session.ExpiresAt.Before(time.Now()) {
-		return nil, models.ErrSessionExpired
+	if session != nil {
+		if session.ExpiresAt.Before(time.Now()) {
+			return nil, models.ErrSessionExpired
+		}
 	}
 
 	return session, nil

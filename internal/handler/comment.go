@@ -67,6 +67,11 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 
 	err = h.service.CommentService.CreateComment(createCommentRequest)
 	if err != nil {
+		if strings.Contains(err.Error(), "FOREIGN KEY constraint failed") {
+			h.logger.Error("post doesn't exist:", err.Error())
+			http.Error(w, "post doesn't exist", http.StatusNotFound)
+			return
+		}
 		h.logger.Error("create comment:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -113,11 +118,10 @@ func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Println("commentIDStr", commentIDStr)
 	commentID, err := utils.ParsePositiveIntID(commentIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		http.NotFound(w, r)
 		return
 	}
 
@@ -127,18 +131,10 @@ func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
 
 	err = h.service.CommentService.DeleteComment(deleteCommentRequest)
 	if err != nil {
-		fmt.Println("error here ", err)
 		h.logger.Error("delete comment:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-
-	// postIDStr := r.URL.Query().Get("id")
-	// if postIDStr == "" {
-	// 	h.logger.Error("get url query:", err.Error())
-	// 	http.Error(w, "post_id is required", http.StatusBadRequest)
-	// 	return
-	// }
 
 	err = r.ParseForm()
 	if err != nil {
@@ -149,5 +145,5 @@ func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
 
 	postIDStr := strings.TrimSpace(r.PostFormValue("post_id"))
 
-	http.Redirect(w, r, fmt.Sprintf("/post/?id=%s", postIDStr), http.StatusSeeOther)
+	http.Redirect(w, r, fmt.Sprintf("/post?id=%s", postIDStr), http.StatusSeeOther)
 }

@@ -10,6 +10,7 @@ type Post struct {
 	Title            string
 	Content          string
 	AuthorID         int
+	AuthorName       string
 	CreatedAt        time.Time
 	UpdatedAt        time.Time
 	Categories       []*Category

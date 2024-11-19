@@ -23,10 +23,10 @@ func NewPostRepository(db *sql.DB) *PostRepository {
 func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error) {
 	query := `
 	SELECT
-	    p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at,
+	    p.id, p.title, p.content, p.author_id, u.username AS author_name, p.created_at, p.updated_at,
 	    c.id AS category_id, c.name AS category_name,
-	    COUNT(CASE WHEN pr.reaction = 'like' THEN 1 END) AS likes_count,
-	    COUNT(CASE WHEN pr.reaction = 'dislike' THEN 1 END) AS dislikes_count,
+	    (SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'like') AS likes_count,
+    	(SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'dislike') AS dislikes_count,
 	    (SELECT COUNT(*) FROM comment co WHERE co.post_id = p.id) AS comments_count
 	FROM
 	    post p
@@ -38,8 +38,10 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 	        post_reaction pr ON p.id = pr.post_id
 	LEFT JOIN
 	        comment co ON p.id = co.post_id
+	LEFT JOIN
+	        users u ON p.author_id = u.id
 	GROUP BY
-	    p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at, c.id, c.name
+	    p.id, p.title, p.content, p.author_id, u.username, p.created_at, p.updated_at, c.id, c.name
 	ORDER BY p.id DESC
 	`
 
@@ -54,7 +56,7 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 
 	for rows.Next() {
 		var postID, categoryID, likesCount, dislikesCount, commentsCount int
-		var title, content, categoryName string
+		var title, content, categoryName, authorName string
 		var authorID int
 		var createdAt, updatedAt time.Time
 
@@ -63,6 +65,7 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 			&title,
 			&content,
 			&authorID,
+			&authorName,
 			&createdAt,
 			&updatedAt,
 			&categoryID,
@@ -84,6 +87,7 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 				Title:         title,
 				Content:       content,
 				AuthorID:      authorID,
+				AuthorName:    authorName,
 				CreatedAt:     createdAt,
 				UpdatedAt:     updatedAt,
 				Categories:    []*models.Category{},
@@ -196,10 +200,10 @@ func (r *PostRepository) GetPostByID(ctx context.Context, id int) (*models.Post,
 func (r *PostRepository) GetPostsByAuthorID(ctx context.Context, authorID int) ([]models.Post, error) {
 	query := `
 	SELECT
-	    p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at,
+	    p.id, p.title, p.content, p.author_id, u.username AS author_name, p.created_at, p.updated_at,
 	    c.id AS category_id, c.name AS category_name,
-	    COUNT(CASE WHEN pr.reaction = 'like' THEN 1 END) AS likes_count,
-	    COUNT(CASE WHEN pr.reaction = 'dislike' THEN 1 END) AS dislikes_count,
+	    (SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'like') AS likes_count,
+    	(SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'dislike') AS dislikes_count,
 	    COUNT(co.id) AS comments_count
 	FROM
 	    post p
@@ -211,6 +215,8 @@ func (r *PostRepository) GetPostsByAuthorID(ctx context.Context, authorID int) (
 	        post_reaction pr ON p.id = pr.post_id
 	LEFT JOIN
 	        comment co ON p.id = co.post_id
+	LEFT JOIN
+	        users u ON p.author_id = u.id
 	WHERE
 	    p.author_id = $1
 	GROUP BY
@@ -229,7 +235,7 @@ func (r *PostRepository) GetPostsByAuthorID(ctx context.Context, authorID int) (
 
 	for rows.Next() {
 		var postID, categoryID, likesCount, dislikesCount, commentsCount int
-		var title, content, categoryName string
+		var title, content, categoryName, authorName string
 		var authorID int
 		var createdAt, updatedAt time.Time
 
@@ -238,6 +244,7 @@ func (r *PostRepository) GetPostsByAuthorID(ctx context.Context, authorID int) (
 			&title,
 			&content,
 			&authorID,
+			&authorName,
 			&createdAt,
 			&updatedAt,
 			&categoryID,
@@ -259,6 +266,7 @@ func (r *PostRepository) GetPostsByAuthorID(ctx context.Context, authorID int) (
 				Title:         title,
 				Content:       content,
 				AuthorID:      authorID,
+				AuthorName:    authorName,
 				CreatedAt:     createdAt,
 				UpdatedAt:     updatedAt,
 				Categories:    []*models.Category{},
@@ -292,10 +300,10 @@ func (r *PostRepository) GetPostsByAuthorID(ctx context.Context, authorID int) (
 func (r *PostRepository) GetLikedPosts(ctx context.Context, userID int) ([]models.Post, error) {
 	query := `
 	SELECT
-	    p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at,
+	    p.id, p.title, p.content, p.author_id, u.username AS author_name, p.created_at, p.updated_at,
 	    c.id AS category_id, c.name AS category_name,
-	    COUNT(CASE WHEN pr.reaction = 'like' THEN 1 END) AS likes_count,
-	    COUNT(CASE WHEN pr.reaction = 'dislike' THEN 1 END) AS dislikes_count,
+	    (SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'like') AS likes_count,
+    	(SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'dislike') AS dislikes_count,
 	    (SELECT COUNT(*) FROM comment co WHERE co.post_id = p.id) AS comments_count
 	FROM
 	    post p
@@ -307,6 +315,8 @@ func (r *PostRepository) GetLikedPosts(ctx context.Context, userID int) ([]model
 	    post_reaction pr ON p.id = pr.post_id
 	LEFT JOIN
 	    comment co ON p.id = co.post_id
+	LEFT JOIN
+	    users u ON p.author_id = u.id
 	WHERE
 	    EXISTS (
 	        SELECT 1
@@ -331,7 +341,7 @@ func (r *PostRepository) GetLikedPosts(ctx context.Context, userID int) ([]model
 
 	for rows.Next() {
 		var postID, categoryID, likesCount, dislikesCount, commentsCount int
-		var title, content, categoryName string
+		var title, content, categoryName, authorName string
 		var authorID int
 		var createdAt, updatedAt time.Time
 
@@ -340,6 +350,7 @@ func (r *PostRepository) GetLikedPosts(ctx context.Context, userID int) ([]model
 			&title,
 			&content,
 			&authorID,
+			&authorName,
 			&createdAt,
 			&updatedAt,
 			&categoryID,
@@ -361,6 +372,7 @@ func (r *PostRepository) GetLikedPosts(ctx context.Context, userID int) ([]model
 				Title:         title,
 				Content:       content,
 				AuthorID:      authorID,
+				AuthorName:    authorName,
 				CreatedAt:     createdAt,
 				UpdatedAt:     updatedAt,
 				Categories:    []*models.Category{},
@@ -394,10 +406,10 @@ func (r *PostRepository) GetLikedPosts(ctx context.Context, userID int) ([]model
 func (r *PostRepository) GetPostsByCategories(ctx context.Context, categories []string) ([]models.Post, error) {
 	query := `
 	SELECT
-	    p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at,
+	    p.id, p.title, p.content, p.author_id, u.username AS author_name, p.created_at, p.updated_at,
 	    c.id AS category_id, c.name AS category_name,
-	    COUNT(CASE WHEN pr.reaction = 'like' THEN 1 END) AS likes_count,
-	    COUNT(CASE WHEN pr.reaction = 'dislike' THEN 1 END) AS dislikes_count,
+	    (SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'like') AS likes_count,
+    	(SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'dislike') AS dislikes_count,
 	    (SELECT COUNT(*) FROM comment co WHERE co.post_id = p.id) AS comments_count
 	FROM
 	    post p
@@ -409,6 +421,8 @@ func (r *PostRepository) GetPostsByCategories(ctx context.Context, categories []
 	    post_reaction pr ON p.id = pr.post_id
 	LEFT JOIN
 	    comment co ON p.id = co.post_id
+	LEFT JOIN
+	    users u ON p.author_id = u.id
 	WHERE
 	    c.name IN (` + placeholders(len(categories)) + `)
 	GROUP BY

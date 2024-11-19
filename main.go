@@ -58,7 +58,7 @@ func main() {
 	mux.Handle("/user/logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
 
 	mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
-	mux.HandleFunc("/post/", handler.ShowPost)
+	mux.HandleFunc("/post", handler.ShowPost)
 	mux.Handle("/post/delete", handler.RequireAuthentication(http.HandlerFunc(handler.DeletePost)))
 
 	mux.Handle("/comment/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreateComment)))

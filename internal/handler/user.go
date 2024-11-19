@@ -63,19 +63,20 @@ func (h *Handler) signupPost(w http.ResponseWriter, r *http.Request) {
 	email := strings.TrimSpace(r.PostFormValue("email"))
 	password := r.PostFormValue("password")
 
-	validationsErrMap := validateSignupForm(username, email, password)
-	if len(validationsErrMap) > 0 {
-		h.logger.Error("validate signup form:", validationsErrMap)
-		h.Render(w, "signup.page.html", H{
-			"errors_map": validationsErrMap,
-		})
-		return
-	}
-
 	signupRequest := &models.SignupRequest{
 		Username: username,
 		Email:    email,
 		Password: password,
+	}
+
+	validationsErrMap := validateSignupForm(username, email, password)
+	if len(validationsErrMap) > 0 {
+		h.logger.Error("validate signup form:", validationsErrMap)
+		h.Render(w, "signup.page.html", H{
+			"errors_map":     validationsErrMap,
+			"signup_request": signupRequest,
+		})
+		return
 	}
 
 	err = h.service.UserService.SignupUser(signupRequest)
@@ -186,7 +187,7 @@ func (h *Handler) loginPost(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		if err == models.ErrInvalidCredentials {
 			h.Render(w, "login.page.html", H{
-				"Error":         err.Error(),
+				"error":         err.Error(),
 				"login_request": loginPostRequest,
 			})
 			return
@@ -212,11 +213,11 @@ func validateLoginForm(email string, password string) map[string]string {
 	errors := make(map[string]string)
 
 	if email == "" {
-		errors["email"] = "email  is empty"
+		errors["email"] = "email is empty"
 	}
 
 	if password == "" {
-		errors["password"] = "password  is empty"
+		errors["password"] = "password is empty"
 	}
 
 	if len(email) > 320 || !emailRegex.MatchString(email) {
