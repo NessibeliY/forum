@@ -152,8 +152,8 @@
                                                 <span class="text-bold text-2xl">DELETE COMMENT</span>
                                                 <span class="close" data-close="delete_comm_{{.ID}}">&times;</span>
                                             </div>
-                                            <form action="/user/comment/delete" method="POST" class="flex flex-col items-center justify-center w-full mt-3">
-                                                <input type="hidden" name="CommentID" value="{{.ID}}">
+                                            <form action="/comment/delete?comment_id={{.ID}}" method="POST" class="flex flex-col items-center justify-center w-full mt-3">
+                                                <input type="hidden" name="post_id" value="{{$.post.ID}}">
                                                 <input type="hidden" name="PostID" id="post-id-like" value="{{$.post.ID}}">
                                                 <p class="text-xl">Are you sure??</p>
                                                 <div class="flex items-center justify-center mt-2">

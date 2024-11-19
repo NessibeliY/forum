@@ -100,7 +100,7 @@ func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if r.Method != http.MethodDelete {
+	if r.Method != http.MethodPost {
 		h.logger.Errorf("method not allowed: %s", r.Method)
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 		return
@@ -113,6 +113,7 @@ func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	fmt.Println("commentIDStr", commentIDStr)
 	commentID, err := utils.ParsePositiveIntID(commentIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
@@ -126,17 +127,27 @@ func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
 
 	err = h.service.CommentService.DeleteComment(deleteCommentRequest)
 	if err != nil {
+		fmt.Println("error here ", err)
 		h.logger.Error("delete comment:", err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	postIDStr := r.URL.Query().Get("post_id")
-	if postIDStr == "" {
-		h.logger.Error("get url query:", err.Error())
-		http.Error(w, "post_id is required", http.StatusBadRequest)
+	// postIDStr := r.URL.Query().Get("id")
+	// if postIDStr == "" {
+	// 	h.logger.Error("get url query:", err.Error())
+	// 	http.Error(w, "post_id is required", http.StatusBadRequest)
+	// 	return
+	// }
+
+	err = r.ParseForm()
+	if err != nil {
+		h.logger.Error("parse form:", err.Error())
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	http.Redirect(w, r, fmt.Sprintf("/post?id=%s", postIDStr), http.StatusSeeOther)
+	postIDStr := strings.TrimSpace(r.PostFormValue("post_id"))
+
+	http.Redirect(w, r, fmt.Sprintf("/post/?id=%s", postIDStr), http.StatusSeeOther)
 }
