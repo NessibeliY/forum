@@ -446,7 +446,7 @@ func (r *PostRepository) GetPostsByCategories(ctx context.Context, categories []
 
 	for rows.Next() {
 		var postID, categoryID, likesCount, dislikesCount, commentsCount int
-		var title, content, categoryName string
+		var title, content, categoryName, authorName string
 		var authorID int
 		var createdAt, updatedAt time.Time
 
@@ -455,6 +455,7 @@ func (r *PostRepository) GetPostsByCategories(ctx context.Context, categories []
 			&title,
 			&content,
 			&authorID,
+			&authorName,
 			&createdAt,
 			&updatedAt,
 			&categoryID,
@@ -476,6 +477,7 @@ func (r *PostRepository) GetPostsByCategories(ctx context.Context, categories []
 				Title:         title,
 				Content:       content,
 				AuthorID:      authorID,
+				AuthorName:    authorName,
 				CreatedAt:     createdAt,
 				UpdatedAt:     updatedAt,
 				Categories:    []*models.Category{},

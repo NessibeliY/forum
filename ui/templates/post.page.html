@@ -34,7 +34,7 @@
                     <span class="postDescription">{{.post.Content}}</span>                    
                 </div>
                 <div class="flex w-full items-center justify-between">
-                    <div class="flex">
+                    <div class="flex items-center">
                         <form action="/post/reaction/create" method="POST" class="flex my-2 mb-2">   
                             <input type="hidden" name="post_id" value="{{.post.ID}}">
                             <input type="hidden" name="reaction" value="like">
@@ -155,7 +155,7 @@
                                     {{end}}
                                 </div>   
                             </div>
-                            <span class="commentText">{{ .Content }}</span>
+                            <span class="commentText break-words">{{ .Content }}</span>
                             <div class="flex py-2 justify-between">
                                 <div class="flex items-start w-full">
                                     <form class="flex" action="/comment/reaction/create" method="POST">

@@ -140,3 +140,162 @@ INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 12:59:1
 INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 12:59:11 logger.go:39: 127.0.0.1:53232 - HTTP/1.1 GET /
 INFO: /home/student/1/forum/main.go:100 2024/11/20 12:59:20 logger.go:39: shutting down server...
 INFO: /home/student/1/forum/main.go:109 2024/11/20 12:59:20 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:37 2024/11/20 13:01:48 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:48 2024/11/20 13:01:48 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:01:49 logger.go:39: 127.0.0.1:53278 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:01:49 logger.go:39: 127.0.0.1:53278 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:01:49 logger.go:39: 127.0.0.1:53280 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:01:50 logger.go:39: 127.0.0.1:53280 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:01:52 logger.go:39: 127.0.0.1:53278 - HTTP/1.1 GET /post?id=6
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:01:53 logger.go:39: 127.0.0.1:53278 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:01:54 logger.go:39: 127.0.0.1:53278 - HTTP/1.1 GET /post?id=6
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:01:58 logger.go:39: 127.0.0.1:53278 - HTTP/1.1 GET /post?id=06
+ERROR: /home/student/1/forum/internal/handler/post.go:226 2024/11/20 13:01:58 logger.go:39: parse positive int: match string: 06
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:03 logger.go:39: 127.0.0.1:53278 - HTTP/1.1 GET /post?id=22
+ERROR: /home/student/1/forum/internal/handler/post.go:238 2024/11/20 13:02:03 logger.go:39: post nil
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:07 logger.go:39: 127.0.0.1:53278 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:08 logger.go:39: 127.0.0.1:53278 - HTTP/1.1 GET /post?id=6
+INFO: /home/student/1/forum/main.go:100 2024/11/20 13:02:17 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:109 2024/11/20 13:02:17 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:37 2024/11/20 13:02:18 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:48 2024/11/20 13:02:18 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:21 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=6
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:21 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:21 logger.go:39: 127.0.0.1:53290 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:22 logger.go:39: 127.0.0.1:53290 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:23 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 POST /post/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:23 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=6
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:25 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 POST /post/reaction/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:25 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=6
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:26 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:29 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=4
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:32 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 POST /comment/create
+ERROR: /home/student/1/forum/internal/handler/comment.go:41 2024/11/20 13:02:32 logger.go:39: validate create comment form: map[content:content is required]
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:32 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=4
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:33 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 POST /comment/create
+ERROR: /home/student/1/forum/internal/handler/comment.go:41 2024/11/20 13:02:33 logger.go:39: validate create comment form: map[content:content is required]
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:33 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=4
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:35 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 POST /comment/create
+ERROR: /home/student/1/forum/internal/handler/comment.go:41 2024/11/20 13:02:35 logger.go:39: validate create comment form: map[content:content is required]
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:35 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=4
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:37 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 POST /comment/create
+ERROR: /home/student/1/forum/internal/handler/comment.go:41 2024/11/20 13:02:37 logger.go:39: validate create comment form: map[content:content is required]
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:02:37 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=4
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:04 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:05 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:10 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 POST /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:10 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:11 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:14 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:16 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:23 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:26 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 POST /comment/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:26 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:29 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 POST /comment/delete?comment_id=10
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:29 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:31 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Cinema
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:03:31 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:46 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Fashion
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:48 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Dance
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:03:48 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:50 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:52 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /post?id=6
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:03:54 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Dance
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:03:54 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:02 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Music
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:04:02 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:05 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:06 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Architecture
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:04:06 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:09 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Graphics
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:11 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Architecture
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:04:11 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:16 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Fashion
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:16 logger.go:39: 127.0.0.1:53290 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:16 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:19 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Dance
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:04:19 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:21 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Cinema
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:04:21 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:23 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Music
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:04:23 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:24 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Art
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:04:24 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:26 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Cooking
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:04:26 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:04:30 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=IT
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:04:30 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:05:11 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Music
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:05:11 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:05:22 logger.go:39: 127.0.0.1:53288 - HTTP/1.1 GET /showposts?category=Cooking
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:05:22 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:05:24 logger.go:39: 127.0.0.1:53292 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:05:24 logger.go:39: 127.0.0.1:53292 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:05:24 logger.go:39: 127.0.0.1:53292 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:05:25 logger.go:39: 127.0.0.1:53292 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:05:32 logger.go:39: 127.0.0.1:53292 - HTTP/1.1 GET /showposts?category=Cinema
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:05:32 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:06:39 logger.go:39: 127.0.0.1:53292 - HTTP/1.1 GET /showposts?category=Art
+ERROR: /home/student/1/forum/internal/handler/post.go:373 2024/11/20 13:06:39 logger.go:39: get posts by categories: row scan: sql: expected 12 destination arguments in Scan, not 11
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:06:42 logger.go:39: 127.0.0.1:53292 - HTTP/1.1 GET /showposts?category=Fashion
+INFO: /home/student/1/forum/main.go:100 2024/11/20 13:10:20 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:109 2024/11/20 13:10:20 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:37 2024/11/20 13:10:21 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:48 2024/11/20 13:10:21 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:23 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Fashion
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:23 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:23 logger.go:39: 127.0.0.1:53296 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:23 logger.go:39: 127.0.0.1:53296 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:24 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:25 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Art
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:26 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Music
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:26 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Cinema
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:27 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Dance
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:28 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Architecture
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:28 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Fashion
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:29 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Graphics
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:30 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Cooking
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:30 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=IT
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:30 logger.go:39: 127.0.0.1:53298 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:26 2024/11/20 13:10:30 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:31 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Life
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:36 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /post?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:37 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Music
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:38 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:39 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Cinema
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:40 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /post?id=5
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:41 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Dance
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:42 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:43 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Fashion
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:44 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Architecture
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:45 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /post?id=3
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:46 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Architecture
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:48 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:50 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:53 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Art
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:55 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Music
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:58 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Cinema
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:10:59 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Dance
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:11:02 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Architecture
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:11:04 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Fashion
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:11:06 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Fashion
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:11:09 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Graphics
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:11:11 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Graphics
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:11:14 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Cooking
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:11:16 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Cooking
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:11:18 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=IT
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:11:21 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /showposts?category=Life
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:12:30 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 POST /comment/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:12:30 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:12:37 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 POST /comment/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:12:37 logger.go:39: 127.0.0.1:53294 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/main.go:100 2024/11/20 13:13:31 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:109 2024/11/20 13:13:31 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:37 2024/11/20 13:13:33 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:48 2024/11/20 13:13:33 logger.go:39: server is running on localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:13:33 logger.go:39: 127.0.0.1:53300 - HTTP/1.1 GET /post?id=8
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:13:33 logger.go:39: 127.0.0.1:53300 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:13:33 logger.go:39: 127.0.0.1:53302 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:54 2024/11/20 13:13:34 logger.go:39: 127.0.0.1:53302 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:100 2024/11/20 13:13:42 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:109 2024/11/20 13:13:42 logger.go:39: server stopped gracefully
