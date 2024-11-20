@@ -20,11 +20,15 @@
             <!--LIST OF TAGS-->
             <div class="tags card bg-white">
                 <h3 class="font-semibold">Tags</h3>
-                {{range .categories}}
-                    <div class="flex flex-col">
-                        <a href="/showposts?category={{.Name}}" class="categories hover:text-blue-400 duration-300 transition">#{{ .Name}}</a>
+                <form class="flex flex-col" action="/showposts" method="GET">
+                    {{range .categories}}
+                    <div class="flex items-center w-full cursor-pointer transition duration-300 hover:text-blue-400 duration-300 transition categories">
+                        <input type="checkbox" id="category--{{.Name}}" class="cursor-pointer" name="category" value="{{.Name}}"/>
+                        <label for="category--{{.Name}}" class="ml-2 cursor-pointer w-full">{{.Name}}</label>
                     </div>
-                {{end}}
+                    {{end}}
+                    <button class="bg-indigo-600 py-2 px-2 rounded-lg mt-2 text-white">search</button>
+            </form>
             </div>
 
             <!-- IF USER AUTH SHOW THIS BLOCK -->
@@ -32,6 +36,11 @@
                 <div class="flex w-full flex-col break-words">
                     <h2 class="text-4xl break-words">{{.post.Title}}</h2>
                     <span class="postDescription">{{.post.Content}}</span>                    
+                </div>
+                <div class="flex flex-wrap w-full my-2 break-words">
+                    {{range .post.Categories}}
+                        <a href="/showposts?category={{.Name}}" class="mr-1 text-base cursor-pointer text-gray-500 text-sm italic hover:text-red-600 transition duration-300">#{{.Name}}</a>
+                    {{end}}
                 </div>
                 <div class="flex w-full items-center justify-between">
                     <div class="flex items-center">

@@ -10,7 +10,6 @@
                 <div class="flex w-full justify-between">
                     <!-- AUTHOR -->
                     <div class="flex flex-col ml-2">
-
                         <span class="text-base text-slate-400 font-extralight italic">
                             {{ .AuthorName }} {{ .CreatedAt.Format "02-01-2006 15:04"}}
                         </span>
@@ -26,7 +25,7 @@
                 <!-- POST TAGS -->
                 <div class="flex flex-wrap w-full my-2 break-words">
                     {{range .Categories}}
-                        <span class="mr-1 text-base cursor-pointer text-gray-500 text-sm italic hover:text-red-600 transition duration-300">#{{.Name}}</span>
+                        <a href="/showposts?category={{.Name}}" class="mr-1 text-base cursor-pointer text-gray-500 text-sm italic hover:text-red-600 transition duration-300">#{{.Name}}</a>
                     {{end}}
                 </div>
                 <!-- LIKE AND DISLIKE -->

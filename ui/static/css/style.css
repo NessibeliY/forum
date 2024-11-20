@@ -308,7 +308,6 @@ p {
 .categories {
     cursor: pointer;
     transition: color 0.4s;
-    margin-top: 5%;
     color: black;
     font-size: large;
 }
@@ -622,7 +621,7 @@ h2 {
 
     .tags{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         height: auto;
         flex-wrap: wrap;
         margin: 24px 0px;
