@@ -9,7 +9,6 @@ import (
 type Config struct {
 	Port    string `json:"port" env-default:"8080"`
 	DSN     string `json:"dsn"`
-	DBName  string `json:"db_name"`
 	LogFile string `json:"log_file"`
 }
 

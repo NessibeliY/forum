@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"syscall"
 	"time"
 
@@ -20,7 +21,14 @@ import (
 )
 
 func main() {
-	config, err := conf.Load("config.json")
+	cwd, err := os.Getwd()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	configPath := filepath.Join(cwd, "config.json")
+
+	config, err := conf.Load(configPath)
 	if err != nil {
 		log.Fatal(err)
 	}
