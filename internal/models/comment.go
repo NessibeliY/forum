@@ -30,10 +30,12 @@ type CommentService interface {
 	GetAllCommentsByPostID(postID int) ([]*Comment, error)
 	CreateComment(createCommentRequest *CreateCommentRequest) error
 	DeleteComment(deleteCommentRequest *DeleteCommentRequest) error
+	GetCommentByID(id int) (*Comment, error)
 }
 
 type CommentRepository interface {
 	GetAllCommentsByPostID(ctx context.Context, postID int) ([]*Comment, error)
 	AddComment(comment *Comment) error
 	DeleteComment(id int) error
+	GetCommentByID(ctx context.Context, id int) (*Comment, error)
 }

@@ -14,20 +14,20 @@ import (
 func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/post/reaction/create" {
 		h.logger.Error("url path:", r.URL.Path)
-		http.NotFound(w, r)
+		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
 	if r.Method != http.MethodPost {
 		h.logger.Errorf("method not allowed: %s", r.Method)
-		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+		h.clientError(w, http.StatusMethodNotAllowed)
 		return
 	}
 
 	err := r.ParseForm()
 	if err != nil {
 		h.logger.Error("parse form:", err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 
@@ -47,19 +47,19 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 	postID, err := utils.ParsePositiveIntID(postIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
-		http.NotFound(w, r)
+		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
 	post, err := h.service.PostService.GetPostByID(postID)
 	if err != nil {
 		h.logger.Error("get post by id:", err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		h.serverError(w, err)
 		return
 	}
 	if post == nil {
 		h.logger.Error("post doesn't exist: post nil")
-		http.Error(w, "post doesn't exist", http.StatusNotFound)
+		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
@@ -80,7 +80,7 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 	err = h.service.PostReactionService.CreatePostReaction(createPostReactionRequest)
 	if err != nil {
 		h.logger.Error("create post reaction:", err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		h.serverError(w, err)
 		return
 	}
 

@@ -37,3 +37,10 @@ func (s *CommentService) CreateComment(createCommentRequest *models.CreateCommen
 func (s *CommentService) DeleteComment(request *models.DeleteCommentRequest) error {
 	return s.repo.DeleteComment(request.ID)
 }
+
+func (s *CommentService) GetCommentByID(id int) (*models.Comment, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	return s.repo.GetCommentByID(ctx, id)
+}

@@ -13,20 +13,20 @@ import (
 func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/comment/reaction/create" {
 		h.logger.Error("url path:", r.URL.Path)
-		http.NotFound(w, r)
+		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
 	if r.Method != http.MethodPost {
 		h.logger.Errorf("method not allowed: %s", r.Method)
-		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+		h.clientError(w, http.StatusMethodNotAllowed)
 		return
 	}
 
 	err := r.ParseForm()
 	if err != nil {
 		h.logger.Error("parse form:", err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 
@@ -48,7 +48,19 @@ func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) 
 	commentID, err := utils.ParsePositiveIntID(commentIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
-		http.NotFound(w, r)
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	comment, err := h.service.CommentService.GetCommentByID(commentID)
+	if err != nil {
+		h.logger.Error("get comment by id:", err.Error())
+		h.serverError(w, err)
+		return
+	}
+	if comment == nil {
+		h.logger.Error("comment doesn't exist: comment nil")
+		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
@@ -56,7 +68,7 @@ func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) 
 	err = validateCreateCommentReactionForm(reaction)
 	if err != nil {
 		h.logger.Error("validate create comment reaction form:", err.Error())
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 
@@ -70,11 +82,11 @@ func (h *Handler) CreateCommentReaction(w http.ResponseWriter, r *http.Request) 
 	if err != nil {
 		if strings.Contains(err.Error(), "FOREIGN KEY constraint failed") {
 			h.logger.Error("comment doesn't exist:", err.Error())
-			http.Error(w, "comment doesn't exist", http.StatusNotFound)
+			h.clientError(w, http.StatusNotFound)
 			return
 		}
 		h.logger.Error("create comment reaction:", err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		h.serverError(w, err)
 		return
 	}
 

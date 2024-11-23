@@ -16,7 +16,7 @@
                 </form>
             {{ if .authenticated_user}}
             <div class="flex sign-out">
-                <form method="POST" action="/user/logout" class="flex items-center justify-center ml-2">
+                <form method="POST" action="/logout" class="flex items-center justify-center ml-2">
                     <button class="flex items-center justify-center text-2xl hover:text-red-600  transition duration-300" type="submit">
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     </button>
@@ -24,10 +24,10 @@
             </div>
             {{else}}
             <div class="auth_bnts">
-                <a class="btn_auth bg-indigo-500 hover:bg-indigo-600 duration-300 transition" href="/user/login">
+                <a class="btn_auth bg-indigo-500 hover:bg-indigo-600 duration-300 transition" href="/login">
                 sign-in
                 </a>
-                <a class="btn_auth btn_signup bg-blue-500 hover:bg-blue-600 duration-300 transition" href="/user/signup">sign-up</a>
+                <a class="btn_auth btn_signup bg-blue-500 hover:bg-blue-600 duration-300 transition" href="/signup">sign-up</a>
             </div>
             {{end}}     
         </div>
@@ -49,12 +49,12 @@
                 <li><a href="/post/create" class="text-xl">Create Post</a></li>
             {{end}}
             {{if not .authenticated_user}}
-            <li><a href="/user/login" class="text-xl">Sign In</a></li>
-            <li><a href="/user/signup" class="text-xl">Sign Up</a></li>
+            <li><a href="/login" class="text-xl">Sign In</a></li>
+            <li><a href="/signup" class="text-xl">Sign Up</a></li>
             {{end}}
 
             {{ if .authenticated_user }}
-            <form method="POST" action="/user/logout" class="flex items-center justify-start" style="padding: 10px;">
+            <form method="POST" action="/logout" class="flex items-center justify-start" style="padding: 10px;">
                 <button class="flex items-center justify-center" type="submit">
                    Sign-out
                 </button>

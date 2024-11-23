@@ -16,20 +16,20 @@ const errorsMapCookieName = "forum_errors_map_cookie"
 func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/comment/create" {
 		h.logger.Error("url path:", r.URL.Path)
-		http.NotFound(w, r)
+		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
 	if r.Method != http.MethodPost {
 		h.logger.Errorf("method not allowed: %s", r.Method)
-		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+		h.clientError(w, http.StatusMethodNotAllowed)
 		return
 	}
 
 	err := r.ParseForm()
 	if err != nil {
 		h.logger.Error("parse form:", err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 
@@ -42,7 +42,7 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 		errorsJSON, err := json.Marshal(validationsErrMap)
 		if err != nil {
 			h.logger.Error("marshal:", err.Error())
-			http.Error(w, err.Error(), http.StatusInternalServerError)
+			h.serverError(w, err)
 			return
 		}
 
@@ -55,7 +55,19 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 	postID, err := utils.ParsePositiveIntID(postIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
-		http.NotFound(w, r)
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	post, err := h.service.PostService.GetPostByID(postID)
+	if err != nil {
+		h.logger.Error("get post by id:", err.Error())
+		h.serverError(w, err)
+		return
+	}
+	if post == nil {
+		h.logger.Error("post doesn't exist: post nil")
+		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
@@ -69,11 +81,11 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		if strings.Contains(err.Error(), "FOREIGN KEY constraint failed") {
 			h.logger.Error("post doesn't exist:", err.Error())
-			http.Error(w, "post doesn't exist", http.StatusNotFound)
+			h.clientError(w, http.StatusNotFound)
 			return
 		}
 		h.logger.Error("create comment:", err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		h.serverError(w, err)
 		return
 	}
 
@@ -101,27 +113,27 @@ func validateCreateCommentForm(content string, postIDStr string) map[string]stri
 func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/comment/delete" {
 		h.logger.Error("url path:", r.URL.Path)
-		http.NotFound(w, r)
+		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
 	if r.Method != http.MethodPost {
 		h.logger.Errorf("method not allowed: %s", r.Method)
-		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+		h.clientError(w, http.StatusMethodNotAllowed)
 		return
 	}
 
 	commentIDStr := r.URL.Query().Get("comment_id")
 	if commentIDStr == "" {
 		h.logger.Error("comment id is required:", commentIDStr)
-		http.Error(w, "comment_id is required", http.StatusBadRequest)
+		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 
 	commentID, err := utils.ParsePositiveIntID(commentIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
-		http.NotFound(w, r)
+		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
@@ -132,18 +144,16 @@ func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
 	err = h.service.CommentService.DeleteComment(deleteCommentRequest)
 	if err != nil {
 		h.logger.Error("delete comment:", err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		h.serverError(w, err)
 		return
 	}
 
 	err = r.ParseForm()
 	if err != nil {
 		h.logger.Error("parse form:", err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 
-	postIDStr := strings.TrimSpace(r.PostFormValue("post_id"))
-
-	http.Redirect(w, r, fmt.Sprintf("/post?id=%s", postIDStr), http.StatusSeeOther)
+	http.Redirect(w, r, "/", http.StatusSeeOther)
 }

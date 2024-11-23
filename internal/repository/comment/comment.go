@@ -81,3 +81,24 @@ func (r *CommentRepository) DeleteComment(id int) error {
 
 	return nil
 }
+
+func (r *CommentRepository) GetCommentByID(ctx context.Context, id int) (*models.Comment, error) {
+	query := `SELECT * FROM comment WHERE id = $1 ORDER BY id DESC`
+
+	comment := &models.Comment{}
+	err := r.db.QueryRowContext(ctx, query, id).Scan(
+		&comment.ID,
+		&comment.Content,
+		&comment.PostID,
+		&comment.AuthorID,
+		&comment.CreatedAt,
+	)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, fmt.Errorf("query row: %w", err)
+	}
+
+	return comment, nil
+}

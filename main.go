@@ -59,11 +59,12 @@ func main() {
 
 	fileServer := http.FileServer(http.Dir("./ui/static"))
 	mux.Handle("/static/", http.StripPrefix("/static/", fileServer))
+	mux.Handle("/favicon.ico", http.NotFoundHandler())
 
 	mux.HandleFunc("/", handler.Home)
-	mux.HandleFunc("/user/signup", handler.Signup)
-	mux.HandleFunc("/user/login", handler.Login)
-	mux.Handle("/user/logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
+	mux.HandleFunc("/signup", handler.Signup)
+	mux.HandleFunc("/login", handler.Login)
+	mux.Handle("POST /logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
 
 	mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
 	mux.HandleFunc("/post", handler.ShowPost)
