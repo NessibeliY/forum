@@ -406,29 +406,38 @@ func (r *PostRepository) GetLikedPosts(ctx context.Context, userID int) ([]model
 
 func (r *PostRepository) GetPostsByCategories(ctx context.Context, categories []string) ([]models.Post, error) {
 	query := `
+	WITH FilteredPosts AS (
+		SELECT
+			p.id
+		FROM
+			post p
+		LEFT JOIN
+			post_category pc ON p.id = pc.post_id
+		LEFT JOIN
+			category c ON pc.category_id = c.id
+		WHERE
+			c.name IN (` + placeholders(len(categories)) + `)
+		GROUP BY
+			p.id
+	)
 	SELECT
-	    p.id, p.title, p.content, p.author_id, u.username AS author_name, p.created_at, p.updated_at,
-	    c.id AS category_id, c.name AS category_name,
-	    (SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'like') AS likes_count,
-    	(SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'dislike') AS dislikes_count,
-	    (SELECT COUNT(*) FROM comment co WHERE co.post_id = p.id) AS comments_count
+		p.id, p.title, p.content, p.author_id, u.username AS author_name, p.created_at, p.updated_at,
+		c.id AS category_id, c.name AS category_name,
+		(SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'like') AS likes_count,
+		(SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'dislike') AS dislikes_count,
+		(SELECT COUNT(*) FROM comment co WHERE co.post_id = p.id) AS comments_count
 	FROM
-	    post p
+		post p
 	LEFT JOIN
-	    post_category pc ON p.id = pc.post_id
+		post_category pc ON p.id = pc.post_id
 	LEFT JOIN
-	    category c ON pc.category_id = c.id
+		category c ON pc.category_id = c.id
 	LEFT JOIN
-	    post_reaction pr ON p.id = pr.post_id
-	LEFT JOIN
-	    comment co ON p.id = co.post_id
-	LEFT JOIN
-	    users u ON p.author_id = u.id
+		users u ON p.author_id = u.id
 	WHERE
-	    c.name IN (` + placeholders(len(categories)) + `)
-	GROUP BY
-	    p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at, c.id, c.name
-	ORDER BY p.id DESC
+		p.id IN (SELECT id FROM FilteredPosts)
+	ORDER BY
+		p.id DESC	
 	`
 
 	args := make([]interface{}, len(categories))

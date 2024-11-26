@@ -56,10 +56,12 @@ This project is a web forum where users can:
    ```bash
    git clone git@git.01.alem.school:nyeltay/forum.git
    cd forum
+   ```
 
 2. Run the program:
    ```bash
-   go run ./cmd/
+   go run .
+   ```
    
 Or run the project with Docker:
    ```bash
@@ -71,4 +73,3 @@ Or run the project with Docker:
 
 - [@algaliyev](https://01.alem.school/git/algaliyev)
 - [@nyeltay](https://01.alem.school/git/nyeltay)
-- [@morazaye](https://01.alem.school/git/morazaye)

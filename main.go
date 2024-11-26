@@ -53,7 +53,7 @@ func main() {
 
 	handler := handler.NewHandler(service, templateCache, l)
 
-	l.Infof("server is running on localhost%s", config.Port)
+	l.Infof("server is running on http://localhost%s", config.Port)
 
 	mux := http.NewServeMux()
 

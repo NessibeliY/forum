@@ -368,6 +368,19 @@ func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	for _, categoryName := range categories {
+		c, err := h.service.CategoryService.GetCategoryByName(categoryName)
+		if err != nil {
+			h.logger.Error("get category by name:", err.Error())
+			h.serverError(w, err)
+			return
+		}
+		if c == nil {
+			h.clientError(w, http.StatusNotFound)
+			return
+		}
+	}
+
 	posts, err := h.service.PostService.GetPostsByCategories(categories)
 	if err != nil {
 		h.logger.Error("get posts by categories:", err.Error())
