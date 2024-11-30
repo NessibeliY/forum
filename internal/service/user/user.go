@@ -58,3 +58,7 @@ func (s *UserService) LoginUser(loginRequest *models.LoginRequest) (int, error) 
 func (s *UserService) GetUserByID(id int) (*models.User, error) {
 	return s.repo.GetUserByID(id)
 }
+
+func (s *UserService) GetUserByEmail(email string) (*models.User, error) {
+	return s.repo.GetUserByEmail(email)
+}

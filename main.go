@@ -51,7 +51,7 @@ func main() {
 		l.Fatal(err)
 	}
 
-	handler := handler.NewHandler(service, templateCache, l)
+	handler := handler.NewHandler(service, templateCache, l, config.GoogleConfig, config.GithubConfig)
 
 	l.Infof("server is running on http://localhost%s", config.Port)
 
@@ -65,6 +65,11 @@ func main() {
 	mux.HandleFunc("/signup", handler.Signup)
 	mux.HandleFunc("/login", handler.Login)
 	mux.Handle("POST /logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
+
+	mux.HandleFunc("/signup/google/callback", handler.GoogleCallback)
+	mux.HandleFunc("/login/google/callback", handler.GoogleLogin)
+	mux.HandleFunc("/signup/github/callback", handler.GithubCallback)
+	mux.HandleFunc("/login/github/callback", handler.GithubLogin)
 
 	mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
 	mux.HandleFunc("/post", handler.ShowPost)
