@@ -66,9 +66,9 @@ func main() {
 	mux.HandleFunc("/login", handler.Login)
 	mux.Handle("POST /logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
 
-	mux.HandleFunc("/signup/google/callback", handler.GoogleCallback)
+	mux.HandleFunc("/google/callback", handler.GoogleCallback)
 	mux.HandleFunc("/login/google/callback", handler.GoogleLogin)
-	mux.HandleFunc("/signup/github/callback", handler.GithubCallback)
+	mux.HandleFunc("/github/callback", handler.GithubCallback)
 	mux.HandleFunc("/login/github/callback", handler.GithubLogin)
 
 	mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
