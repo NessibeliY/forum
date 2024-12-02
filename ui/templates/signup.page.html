@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <title>SignUp</title>
 </head>
@@ -16,7 +17,8 @@
     <div class="main_container">
         <div class="sign offset">
             <div class="form_wrappper">
-                <form class="form" action="/signup" method="POST">
+                <div class="form">
+                <form  action="/signup" method="POST">
                     <div class="flex w-full items-center justify-center">
                         <h2 class="text-2xl mb-8">Signup</h2>
                     </div>
@@ -61,15 +63,30 @@
                     </div>
                     <button
                     type="submit" 
-                    class="w-full py-3 px-3 bg-indigo-500 mt-3 rounded-lg text-white hover:bg-indigo-600 transition duration-300">Signup</button>
-                    <hr class="mt-5"/>
-                    <div class="haveAcc">
-                        <span class="text-base">Already have an account?<a href="/login" style="color: rgb(12, 112, 199);">Login</a></span>
+                    class="w-full py-3 px-3 bg-indigo-500 mt-3 rounded-lg text-white font-bold hover:bg-indigo-600 transition duration-300">Signup</button>
+                    <div class="w-full flex items-center justify-center mt-5 mb-5">
+                        <span class="text-base">OR</span>
                     </div>
                 </form>
+                <div class="flex w-full flex-col my-2">
+                    <a href="/login/google/callback" class="flex items-center justify-center bg-blue-600 py-2 px-2 text-white font-extrabold text-xl rounded-lg hover:bg-blue-700 transition duration-300" type="submit">
+                        <i class="fa-brands fa-google"></i>
+                        <span class="ml-3 text-2xl">Continue with Google</span>
+                    </a>
+                </div>
+                <div class="flex w-full flex-col my-2">
+                    <a href="/login/github/callback" class="flex items-center justify-center bg-blue-600 py-2 px-2 text-white font-extrabold text-xl rounded-lg hover:bg-blue-700 transition duration-300" type="submit">
+                        <i class="fa-brands fa-github"></i>
+                        <span class="ml-3 text-2xl">Continue with GitHub</span>
+                    </a>
+                </div>
+                <div class="haveAcc">
+                    <span class="text-base">Already have an account?<a href="/login" style="color: rgb(12, 112, 199);">Login</a></span>
+                </div>
                 <div class="flex w-full text-center items-center justify-center my-2">
                     <a href="/" style="font-size: larger; color: white;">HOME</a>
                 </div>
+            </div>
             </div>
         </div>
     </div>
