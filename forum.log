@@ -123,3 +123,966 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go
 ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/11/30 17:42:03 logger.go:39: get cookie: http: named cookie not present
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/11/30 17:42:31 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/11/30 17:42:31 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:45:33 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:45:33 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:45:42 logger.go:39: 127.0.0.1:36696 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:45:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:45:42 logger.go:39: 127.0.0.1:36696 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:45:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:45:42 logger.go:39: 127.0.0.1:36698 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:45:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:45:43 logger.go:39: 127.0.0.1:36698 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:45:43 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:47:47 logger.go:39: 127.0.0.1:36700 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:47:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:47:47 logger.go:39: 127.0.0.1:36700 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:47:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:47:47 logger.go:39: 127.0.0.1:36702 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:47:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:47:47 logger.go:39: 127.0.0.1:36702 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:47:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:52:18 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:52:18 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:52:19 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:52:19 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:52:25 logger.go:39: 127.0.0.1:36706 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:52:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:52:25 logger.go:39: 127.0.0.1:36706 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:52:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:52:25 logger.go:39: 127.0.0.1:36708 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:52:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:52:26 logger.go:39: 127.0.0.1:36708 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:52:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:53:09 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:53:09 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:53:10 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:53:10 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:13 logger.go:39: 127.0.0.1:36712 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:13 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:13 logger.go:39: 127.0.0.1:36712 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:13 logger.go:39: 127.0.0.1:36716 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:13 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:13 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:14 logger.go:39: 127.0.0.1:36716 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:14 logger.go:39: 127.0.0.1:36718 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:14 logger.go:39: 127.0.0.1:36718 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:14 logger.go:39: 127.0.0.1:36720 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:15 logger.go:39: 127.0.0.1:36720 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:24 logger.go:39: 127.0.0.1:36718 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:53:24 logger.go:39: 127.0.0.1:36720 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:53:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:54:10 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:54:10 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:54:14 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:54:14 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:18 logger.go:39: 127.0.0.1:36722 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:18 logger.go:39: 127.0.0.1:36722 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:18 logger.go:39: 127.0.0.1:36722 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:28 logger.go:39: 127.0.0.1:36724 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:28 logger.go:39: 127.0.0.1:36724 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:28 logger.go:39: 127.0.0.1:36726 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:29 logger.go:39: 127.0.0.1:36726 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:34 logger.go:39: [::1]:35920 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:34 logger.go:39: [::1]:35920 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:34 logger.go:39: [::1]:35924 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:35 logger.go:39: [::1]:35920 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:37 logger.go:39: [::1]:35920 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:37 logger.go:39: [::1]:35924 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:37 logger.go:39: [::1]:35920 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:37 logger.go:39: [::1]:35924 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:37 logger.go:39: [::1]:35920 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:37 logger.go:39: [::1]:35924 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:37 logger.go:39: [::1]:35924 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:37 logger.go:39: [::1]:35920 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:37 logger.go:39: [::1]:35924 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:38 logger.go:39: [::1]:35920 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:38 logger.go:39: [::1]:35924 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:38 logger.go:39: [::1]:35920 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:38 logger.go:39: [::1]:35920 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:38 logger.go:39: [::1]:35920 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:38 logger.go:39: [::1]:35920 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:38 logger.go:39: [::1]:35924 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:54:39 logger.go:39: [::1]:35924 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:54:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:54:56 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:54:56 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:54:57 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:54:57 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:55:02 logger.go:39: 127.0.0.1:36730 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:55:02 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:55:02 logger.go:39: 127.0.0.1:36730 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:55:02 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:55:02 logger.go:39: 127.0.0.1:36732 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:55:02 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:55:03 logger.go:39: 127.0.0.1:36732 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:55:03 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:55:03 logger.go:39: 127.0.0.1:36730 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:55:03 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:55:04 logger.go:39: 127.0.0.1:36734 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:55:04 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:55:04 logger.go:39: 127.0.0.1:36734 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:55:04 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:55:04 logger.go:39: 127.0.0.1:36736 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:55:04 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:55:05 logger.go:39: 127.0.0.1:36736 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:55:05 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:56:12 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:56:12 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:56:13 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:56:13 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:15 logger.go:39: 127.0.0.1:36740 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:15 logger.go:39: 127.0.0.1:36740 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:15 logger.go:39: 127.0.0.1:36742 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:15 logger.go:39: 127.0.0.1:36742 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:56:37 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:56:37 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:56:38 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:56:38 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:40 logger.go:39: 127.0.0.1:36746 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:40 logger.go:39: 127.0.0.1:36746 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:40 logger.go:39: 127.0.0.1:36748 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:40 logger.go:39: 127.0.0.1:36748 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:41 logger.go:39: 127.0.0.1:36750 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:41 logger.go:39: 127.0.0.1:36750 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:41 logger.go:39: 127.0.0.1:36752 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:56:41 logger.go:39: 127.0.0.1:36752 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:56:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:57:05 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:57:05 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:57:06 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:57:06 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:06 logger.go:39: 127.0.0.1:36756 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:06 logger.go:39: 127.0.0.1:36756 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:06 logger.go:39: 127.0.0.1:36758 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:07 logger.go:39: 127.0.0.1:36758 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:08 logger.go:39: 127.0.0.1:36760 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:08 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:08 logger.go:39: 127.0.0.1:36760 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:08 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:08 logger.go:39: 127.0.0.1:36762 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:08 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:09 logger.go:39: 127.0.0.1:36762 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:09 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:57:30 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:57:30 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:57:31 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:57:31 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:33 logger.go:39: 127.0.0.1:36766 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:33 logger.go:39: 127.0.0.1:36766 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:33 logger.go:39: 127.0.0.1:36768 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:34 logger.go:39: 127.0.0.1:36768 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:57:55 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:57:55 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:57:56 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:57:56 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:56 logger.go:39: 127.0.0.1:36774 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:56 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:56 logger.go:39: 127.0.0.1:36774 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:56 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:56 logger.go:39: 127.0.0.1:36776 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:56 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:57:57 logger.go:39: 127.0.0.1:36776 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:57:57 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 13:59:33 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 13:59:33 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 13:59:34 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 13:59:34 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:59:37 logger.go:39: 127.0.0.1:36780 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:59:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:59:37 logger.go:39: 127.0.0.1:36780 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:59:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:59:37 logger.go:39: 127.0.0.1:36784 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:59:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:59:38 logger.go:39: 127.0.0.1:36784 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:59:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 13:59:41 logger.go:39: 127.0.0.1:36780 - HTTP/1.1 POST /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 13:59:41 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/user.go:177 2024/12/02 13:59:41 logger.go:39: validate login form: map[email:invalid email format or length exceeds 320 characters password:password length must be between 8 and 50 characters]
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:00:34 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:00:34 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:00:35 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:00:35 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:00:41 logger.go:39: 127.0.0.1:36788 - HTTP/1.1 POST /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:00:41 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/user.go:177 2024/12/02 14:00:41 logger.go:39: validate login form: map[email:invalid email format or length exceeds 320 characters password:password length must be between 8 and 50 characters]
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:00:41 logger.go:39: 127.0.0.1:36788 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:00:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:00:41 logger.go:39: 127.0.0.1:36790 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:00:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:00:42 logger.go:39: 127.0.0.1:36790 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:00:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:03:25 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:03:25 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:03:26 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:03:26 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:03:35 logger.go:39: 127.0.0.1:36794 - HTTP/1.1 POST /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:03:35 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/user.go:177 2024/12/02 14:03:35 logger.go:39: validate login form: map[email:invalid email format or length exceeds 320 characters password:password length must be between 8 and 50 characters]
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:03:35 logger.go:39: 127.0.0.1:36794 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:03:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:03:35 logger.go:39: 127.0.0.1:36796 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:03:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:03:36 logger.go:39: 127.0.0.1:36796 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:03:36 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:03:53 logger.go:39: [::1]:35928 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:03:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:03:53 logger.go:39: [::1]:35930 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:03:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:03:53 logger.go:39: [::1]:35928 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:03:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:04:13 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:04:13 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:04:14 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:04:14 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:04:16 logger.go:39: [::1]:35932 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:04:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:04:16 logger.go:39: [::1]:35932 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:04:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:04:16 logger.go:39: [::1]:35934 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:04:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:04:17 logger.go:39: [::1]:35932 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:04:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:04:20 logger.go:39: [::1]:35932 - HTTP/1.1 POST /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:04:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:04:57 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:04:57 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:04:58 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:04:58 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:04:59 logger.go:39: [::1]:35938 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:04:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:04:59 logger.go:39: [::1]:35938 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:04:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:04:59 logger.go:39: [::1]:35940 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:04:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:00 logger.go:39: [::1]:35938 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:05:17 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:05:17 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:05:19 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:05:19 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:19 logger.go:39: [::1]:35942 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:19 logger.go:39: [::1]:35946 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:19 logger.go:39: [::1]:35942 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:20 logger.go:39: [::1]:35942 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:21 logger.go:39: [::1]:35942 - HTTP/1.1 POST /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:05:54 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:05:54 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:05:55 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:05:55 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:55 logger.go:39: [::1]:35948 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:55 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:55 logger.go:39: [::1]:35950 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:55 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:55 logger.go:39: [::1]:35948 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:55 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:56 logger.go:39: [::1]:35948 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:56 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:05:57 logger.go:39: [::1]:35948 - HTTP/1.1 GET /login/google/callback?
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:05:57 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:06:27 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:06:27 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:06:28 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:06:28 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:06:29 logger.go:39: [::1]:35952 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:06:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:06:29 logger.go:39: [::1]:35952 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:06:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:06:29 logger.go:39: [::1]:35954 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:06:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:06:29 logger.go:39: [::1]:35952 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:06:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:07:00 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:07:00 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:07:01 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:07:01 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:07:58 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:07:58 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:07:59 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:07:59 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:07 logger.go:39: [::1]:35956 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:07 logger.go:39: [::1]:35956 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:07 logger.go:39: [::1]:35958 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:08 logger.go:39: [::1]:35956 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:08 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:08:30 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:08:30 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:08:31 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:08:31 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:34 logger.go:39: [::1]:35960 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:34 logger.go:39: [::1]:35962 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:34 logger.go:39: [::1]:35960 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:34 logger.go:39: [::1]:35960 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:38 logger.go:39: [::1]:35960 - HTTP/1.1 POST /login/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:08:45 logger.go:39: [::1]:35960 - HTTP/1.1 POST /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:08:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:10:25 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:10:25 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:10:26 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:10:26 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:10:28 logger.go:39: [::1]:35964 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:10:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:10:28 logger.go:39: [::1]:35966 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:10:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:10:28 logger.go:39: [::1]:35964 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:10:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:10:28 logger.go:39: [::1]:35964 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:10:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:10:29 logger.go:39: [::1]:35964 - HTTP/1.1 POST /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:10:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:10:42 logger.go:39: [::1]:35964 - HTTP/1.1 GET /login/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:10:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:11:12 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:11:12 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:11:14 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:11:14 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:16 logger.go:39: [::1]:35968 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:16 logger.go:39: [::1]:35968 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:16 logger.go:39: [::1]:35972 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:16 logger.go:39: [::1]:35968 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:18 logger.go:39: [::1]:35968 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:11:36 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:11:36 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:11:37 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:11:37 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:38 logger.go:39: [::1]:35974 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:38 logger.go:39: [::1]:35974 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:38 logger.go:39: [::1]:35976 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:39 logger.go:39: [::1]:35976 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:39 logger.go:39: [::1]:35976 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:39 logger.go:39: [::1]:35974 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:39 logger.go:39: [::1]:35976 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:39 logger.go:39: [::1]:35976 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:40 logger.go:39: [::1]:35976 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:52 logger.go:39: 127.0.0.1:36798 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:52 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:52 logger.go:39: 127.0.0.1:36798 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:52 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:52 logger.go:39: 127.0.0.1:36800 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:52 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:53 logger.go:39: 127.0.0.1:36798 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:11:55 logger.go:39: 127.0.0.1:36798 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:11:55 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:16:15 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:16:15 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:16:17 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:16:17 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:18 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:18 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:18 logger.go:39: 127.0.0.1:36804 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:25 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:26 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:27 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:27 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:28 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:29 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:31 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:32 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:32 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:37 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:37 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:16:53 logger.go:39: 127.0.0.1:36802 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:16:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:17:18 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:17:18 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:17:20 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:17:20 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:21 logger.go:39: 127.0.0.1:36806 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:23 logger.go:39: 127.0.0.1:36810 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:23 logger.go:39: 127.0.0.1:36810 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:23 logger.go:39: 127.0.0.1:36812 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:23 logger.go:39: 127.0.0.1:36812 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:25 logger.go:39: 127.0.0.1:36810 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:25 logger.go:39: 127.0.0.1:36812 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:25 logger.go:39: 127.0.0.1:36810 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:26 logger.go:39: 127.0.0.1:36812 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:17:53 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:17:53 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:17:54 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:17:54 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:56 logger.go:39: 127.0.0.1:36814 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:56 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:56 logger.go:39: 127.0.0.1:36814 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:56 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:56 logger.go:39: 127.0.0.1:36816 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:56 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:17:57 logger.go:39: 127.0.0.1:36816 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:17:57 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:18:13 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:18:13 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:18:14 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:18:14 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:18:24 logger.go:39: 127.0.0.1:36818 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:18:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:18:24 logger.go:39: 127.0.0.1:36818 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:18:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:18:25 logger.go:39: 127.0.0.1:36818 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:18:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:18:26 logger.go:39: 127.0.0.1:36818 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:18:26 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:36 2024/12/02 14:18:26 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:18:31 logger.go:39: 127.0.0.1:36818 - HTTP/1.1 GET /signup/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:18:31 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/github.go:31 2024/12/02 14:18:31 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:18:31 logger.go:39: 127.0.0.1:36818 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:18:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:19:27 logger.go:39: 127.0.0.1:36824 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:19:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:19:27 logger.go:39: 127.0.0.1:36824 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:19:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:19:27 logger.go:39: 127.0.0.1:36826 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:19:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:19:27 logger.go:39: 127.0.0.1:36826 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:19:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:19:28 logger.go:39: 127.0.0.1:36824 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:19:28 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:36 2024/12/02 14:19:28 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:20:25 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:20:25 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:20:26 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:20:26 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:20:32 logger.go:39: 127.0.0.1:36830 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:20:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:20:32 logger.go:39: 127.0.0.1:36830 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:20:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:20:32 logger.go:39: 127.0.0.1:36832 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:20:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:20:32 logger.go:39: 127.0.0.1:36832 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:20:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:20:33 logger.go:39: 127.0.0.1:36830 - HTTP/1.1 POST /signup/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:20:33 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/github.go:31 2024/12/02 14:20:33 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:23:56 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:23:56 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:23:58 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:23:58 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:23:59 logger.go:39: 127.0.0.1:36834 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:23:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:23:59 logger.go:39: 127.0.0.1:36834 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:23:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:23:59 logger.go:39: 127.0.0.1:36836 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:23:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:24:00 logger.go:39: 127.0.0.1:36836 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:24:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:24:01 logger.go:39: 127.0.0.1:36834 - HTTP/1.1 POST /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:24:01 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:36 2024/12/02 14:24:01 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:24:03 logger.go:39: 127.0.0.1:36834 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:24:03 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:24:06 logger.go:39: 127.0.0.1:36834 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:24:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:24:07 logger.go:39: 127.0.0.1:36834 - HTTP/1.1 GET /login/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:24:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:24:12 logger.go:39: 127.0.0.1:36834 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:24:12 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:24:17 logger.go:39: 127.0.0.1:36834 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:24:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:24:19 logger.go:39: 127.0.0.1:36834 - HTTP/1.1 POST /signup/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:24:19 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/github.go:33 2024/12/02 14:24:19 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:25:16 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:25:16 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:25:17 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:25:17 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:18 logger.go:39: 127.0.0.1:36838 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:18 logger.go:39: 127.0.0.1:36838 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:18 logger.go:39: 127.0.0.1:36840 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:19 logger.go:39: 127.0.0.1:36840 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:20 logger.go:39: 127.0.0.1:36838 - HTTP/1.1 GET /signup/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:20 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/github.go:33 2024/12/02 14:25:20 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:20 logger.go:39: 127.0.0.1:36840 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:23 logger.go:39: 127.0.0.1:36838 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:23 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:36 2024/12/02 14:25:23 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:25 logger.go:39: 127.0.0.1:36838 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:26 logger.go:39: 127.0.0.1:36838 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:25:29 logger.go:39: 127.0.0.1:36838 - HTTP/1.1 GET /login/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:25:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:28:03 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:28:03 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:28:04 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:28:04 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:06 logger.go:39: 127.0.0.1:36842 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:06 logger.go:39: 127.0.0.1:36842 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:06 logger.go:39: 127.0.0.1:36844 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:07 logger.go:39: 127.0.0.1:36844 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:08 logger.go:39: 127.0.0.1:36842 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:08 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:11 logger.go:39: 127.0.0.1:36844 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:11 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:12 logger.go:39: 127.0.0.1:36842 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:12 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:18 logger.go:39: 127.0.0.1:36842 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:18 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:36 2024/12/02 14:28:18 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:22 logger.go:39: 127.0.0.1:36842 - HTTP/1.1 GET /signup/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:22 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/github.go:33 2024/12/02 14:28:22 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:27 logger.go:39: 127.0.0.1:36842 - HTTP/1.1 GET /signup/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:27 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/github.go:33 2024/12/02 14:28:27 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:28:39 logger.go:39: 127.0.0.1:36842 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:28:39 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:36 2024/12/02 14:28:39 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:29:27 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:29:27 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:29:28 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:29:28 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:29:29 logger.go:39: 127.0.0.1:36846 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:29:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:29:29 logger.go:39: 127.0.0.1:36846 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:29:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:29:29 logger.go:39: 127.0.0.1:36848 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:29:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:29:30 logger.go:39: 127.0.0.1:36848 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:29:30 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:29:31 logger.go:39: 127.0.0.1:36846 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:29:31 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:39 2024/12/02 14:29:31 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:33:12 logger.go:39: 127.0.0.1:36852 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:33:12 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:33:12 logger.go:39: 127.0.0.1:36852 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:33:12 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:33:12 logger.go:39: 127.0.0.1:36854 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:33:12 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:33:13 logger.go:39: 127.0.0.1:36854 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:33:13 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:33:14 logger.go:39: 127.0.0.1:36852 - HTTP/1.1 GET /signup/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:33:14 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/github.go:33 2024/12/02 14:33:14 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:33:19 logger.go:39: 127.0.0.1:36852 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:33:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:33:20 logger.go:39: 127.0.0.1:36852 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:33:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:33:33 logger.go:39: 127.0.0.1:36852 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:33:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:42:00 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:42:00 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:42:01 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:42:01 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:12 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:42:12 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:12 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:42:12 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:12 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:42:12 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:24 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:42:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:24 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 GET /
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:29 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 POST /logout
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:29 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:42:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:31 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:42:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:32 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:42:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:42:33 logger.go:39: 127.0.0.1:36856 - HTTP/1.1 GET /
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:42:42 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:42:42 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:42:43 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:42:43 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:43:13 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:43:13 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:45:34 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:45:34 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:36 logger.go:39: 127.0.0.1:36868 - HTTP/1.1 GET /user/signup
+ERROR: /home/student/forum-github/forum/internal/handler/home.go:9 2024/12/02 14:45:36 logger.go:39: url path: /user/signup
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:36 logger.go:39: 127.0.0.1:36868 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:36 logger.go:39: 127.0.0.1:36868 - HTTP/1.1 GET /favicon.ico
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:41 logger.go:39: 127.0.0.1:36868 - HTTP/1.1 GET /
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:43 logger.go:39: 127.0.0.1:36870 - HTTP/1.1 GET /
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:43 logger.go:39: 127.0.0.1:36870 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:43 logger.go:39: 127.0.0.1:36872 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:44 logger.go:39: 127.0.0.1:36872 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:45 logger.go:39: 127.0.0.1:36870 - HTTP/1.1 POST /logout
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:45 logger.go:39: 127.0.0.1:36870 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:45:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:46 logger.go:39: 127.0.0.1:36874 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:45:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:46 logger.go:39: 127.0.0.1:36874 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:45:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:46 logger.go:39: 127.0.0.1:36876 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:45:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:47 logger.go:39: 127.0.0.1:36876 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:45:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:47 logger.go:39: 127.0.0.1:36874 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:45:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:45:49 logger.go:39: 127.0.0.1:36874 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:45:49 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:38 2024/12/02 14:45:49 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:46:33 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:46:33 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:46:34 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:46:34 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:46:36 logger.go:39: 127.0.0.1:36878 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:46:36 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:46:36 logger.go:39: 127.0.0.1:36878 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:46:36 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:46:36 logger.go:39: 127.0.0.1:36880 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:46:36 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:46:36 logger.go:39: 127.0.0.1:36880 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:46:36 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:46:38 logger.go:39: 127.0.0.1:36878 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:46:38 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:38 2024/12/02 14:46:38 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:46:41 logger.go:39: 127.0.0.1:36878 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:46:41 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:38 2024/12/02 14:46:41 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:47:02 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:47:02 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:47:03 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:47:03 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:06 logger.go:39: 127.0.0.1:36882 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:06 logger.go:39: 127.0.0.1:36882 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:06 logger.go:39: 127.0.0.1:36884 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:06 logger.go:39: 127.0.0.1:36886 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:06 logger.go:39: 127.0.0.1:36886 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:06 logger.go:39: 127.0.0.1:36888 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:06 logger.go:39: 127.0.0.1:36892 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:06 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:07 logger.go:39: 127.0.0.1:36892 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:07 logger.go:39: 127.0.0.1:36894 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:07 logger.go:39: 127.0.0.1:36894 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:07 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:08 logger.go:39: 127.0.0.1:36892 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:08 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:09 logger.go:39: 127.0.0.1:36892 - HTTP/1.1 GET /
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:11 logger.go:39: 127.0.0.1:36892 - HTTP/1.1 POST /logout
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:11 logger.go:39: 127.0.0.1:36892 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:11 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:15 logger.go:39: 127.0.0.1:36892 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:15 logger.go:39: 127.0.0.1:36894 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:16 logger.go:39: 127.0.0.1:36892 - HTTP/1.1 GET /signup/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:16 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/github.go:33 2024/12/02 14:47:16 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:47:25 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:47:25 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:47:27 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:47:27 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:27 logger.go:39: 127.0.0.1:36896 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:27 logger.go:39: 127.0.0.1:36896 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:27 logger.go:39: 127.0.0.1:36898 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:27 logger.go:39: 127.0.0.1:36898 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:47:29 logger.go:39: 127.0.0.1:36896 - HTTP/1.1 GET /signup/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:47:29 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/github.go:51 2024/12/02 14:47:29 logger.go:39: decode token response: invalid character 'e' looking for beginning of value
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:48:14 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:48:14 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:48:15 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:48:15 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:48:17 logger.go:39: 127.0.0.1:36900 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:48:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:48:18 logger.go:39: 127.0.0.1:36900 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:48:18 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:48:20 logger.go:39: 127.0.0.1:36900 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:48:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:48:23 logger.go:39: 127.0.0.1:36900 - HTTP/1.1 GET /login/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:48:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:51:20 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:51:20 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:51:31 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:51:31 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:52:20 logger.go:39: 127.0.0.1:36902 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:52:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:52:20 logger.go:39: 127.0.0.1:36902 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:52:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:52:21 logger.go:39: 127.0.0.1:36902 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:52:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:53:33 logger.go:39: 127.0.0.1:36902 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:53:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:53:34 logger.go:39: 127.0.0.1:36902 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:53:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:53:34 logger.go:39: 127.0.0.1:36902 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:53:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:53:35 logger.go:39: 127.0.0.1:36902 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:53:35 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:53:48 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:53:48 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:53:49 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:53:49 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:53:51 logger.go:39: 127.0.0.1:36904 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:53:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:53:51 logger.go:39: 127.0.0.1:36904 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:53:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:53:51 logger.go:39: 127.0.0.1:36906 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:53:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:53:52 logger.go:39: 127.0.0.1:36906 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:53:52 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:54:45 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:54:45 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:54:46 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:54:46 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:54:48 logger.go:39: 127.0.0.1:36910 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:54:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:54:48 logger.go:39: 127.0.0.1:36910 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:54:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:54:48 logger.go:39: 127.0.0.1:36912 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:54:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:54:49 logger.go:39: 127.0.0.1:36912 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:54:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:55:07 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:55:07 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:55:08 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:55:08 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:09 logger.go:39: 127.0.0.1:36916 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:09 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:09 logger.go:39: 127.0.0.1:36916 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:09 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:09 logger.go:39: 127.0.0.1:36918 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:09 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:10 logger.go:39: 127.0.0.1:36918 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:10 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:55:31 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:55:31 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:55:32 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:55:32 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:33 logger.go:39: 127.0.0.1:36920 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:33 logger.go:39: 127.0.0.1:36920 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:33 logger.go:39: 127.0.0.1:36922 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:33 logger.go:39: 127.0.0.1:36922 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:55:49 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:55:49 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:55:50 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:55:50 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:51 logger.go:39: 127.0.0.1:36924 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:51 logger.go:39: 127.0.0.1:36924 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:51 logger.go:39: 127.0.0.1:36926 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:51 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:55:52 logger.go:39: 127.0.0.1:36926 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:55:52 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:56:18 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:56:18 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:56:19 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:56:19 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:21 logger.go:39: 127.0.0.1:36928 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:21 logger.go:39: 127.0.0.1:36928 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:21 logger.go:39: 127.0.0.1:36930 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:22 logger.go:39: 127.0.0.1:36930 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:26 logger.go:39: 127.0.0.1:36928 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:56:44 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:56:44 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:56:45 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:56:45 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:46 logger.go:39: 127.0.0.1:36932 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:46 logger.go:39: 127.0.0.1:36932 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:46 logger.go:39: 127.0.0.1:36936 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:47 logger.go:39: 127.0.0.1:36936 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:56:52 logger.go:39: 127.0.0.1:36932 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:56:52 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:59:29 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:59:29 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:59:31 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:59:31 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:59:32 logger.go:39: 127.0.0.1:36944 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:59:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:59:32 logger.go:39: 127.0.0.1:36944 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:59:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:59:32 logger.go:39: 127.0.0.1:36946 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:59:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:59:33 logger.go:39: 127.0.0.1:36946 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:59:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 14:59:54 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 14:59:54 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 14:59:55 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 14:59:55 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:59:58 logger.go:39: 127.0.0.1:36948 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:59:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 14:59:59 logger.go:39: 127.0.0.1:36948 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 14:59:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:00:00 logger.go:39: 127.0.0.1:36952 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:00:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:00:00 logger.go:39: 127.0.0.1:36952 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:00:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:00:00 logger.go:39: 127.0.0.1:36952 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:00:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:00:01 logger.go:39: 127.0.0.1:36952 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:00:01 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 15:13:23 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 15:13:23 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 15:13:24 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 15:13:24 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:13:24 logger.go:39: 127.0.0.1:36956 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:13:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:13:24 logger.go:39: 127.0.0.1:36956 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:13:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:13:24 logger.go:39: 127.0.0.1:36958 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:13:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:13:25 logger.go:39: 127.0.0.1:36958 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:13:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:13:28 logger.go:39: 127.0.0.1:36956 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:13:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:13:28 logger.go:39: 127.0.0.1:36958 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:13:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:13:30 logger.go:39: 127.0.0.1:36956 - HTTP/1.1 POST /post/reaction/create
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:13:30 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:13:30 logger.go:39: 127.0.0.1:36956 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:13:30 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:13:32 logger.go:39: 127.0.0.1:36956 - HTTP/1.1 GET /
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:13:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:43:38 logger.go:39: 127.0.0.1:36960 - HTTP/1.1 GET /login
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:43:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:43:38 logger.go:39: 127.0.0.1:36960 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:43:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:43:38 logger.go:39: 127.0.0.1:36962 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:43:38 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:43:41 logger.go:39: 127.0.0.1:36960 - HTTP/1.1 GET /login/github/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:43:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:43:45 logger.go:39: 127.0.0.1:36960 - HTTP/1.1 GET /login/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:43:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:43:55 logger.go:39: 127.0.0.1:36960 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:43:55 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:43:56 logger.go:39: 127.0.0.1:36960 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:43:56 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/forum-github/forum/internal/handler/google.go:38 2024/12/02 15:43:56 logger.go:39: missing code in callback request
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 15:44:17 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 15:44:17 logger.go:39: server stopped gracefully
+INFO: /home/student/forum-github/forum/main.go:45 2024/12/02 15:44:19 logger.go:39: connected to db
+INFO: /home/student/forum-github/forum/main.go:56 2024/12/02 15:44:19 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:44:24 logger.go:39: 127.0.0.1:36964 - HTTP/1.1 GET /signup
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:44:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:44:26 logger.go:39: 127.0.0.1:36964 - HTTP/1.1 GET /signup/google/callback
+ERROR: /home/student/forum-github/forum/internal/handler/middleware.go:26 2024/12/02 15:44:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum-github/forum/internal/handler/middleware.go:54 2024/12/02 15:44:26 logger.go:39: 127.0.0.1:36964 - HTTP/1.1 GET /
+INFO: /home/student/forum-github/forum/main.go:114 2024/12/02 15:45:24 logger.go:39: shutting down server...
+INFO: /home/student/forum-github/forum/main.go:123 2024/12/02 15:45:24 logger.go:39: server stopped gracefully

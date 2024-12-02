@@ -11,9 +11,11 @@ import (
 	"01.alem.school/git/nyeltay/forum/pkg/cookies"
 )
 
-var googleOAuthEndpoint = "https://accounts.google.com/o/oauth2/v2/auth"
-var googleTokenEndpoint = "https://accounts.google.com/o/oauth2/token"
-var googleUserInfoEndpoint = "https://www.googleapis.com/oauth2/v3/userinfo"
+var (
+	googleOAuthEndpoint    = "https://accounts.google.com/o/oauth2/v2/auth"
+	googleTokenEndpoint    = "https://accounts.google.com/o/oauth2/token"
+	googleUserInfoEndpoint = "https://www.googleapis.com/oauth2/v3/userinfo"
+)
 
 type tokenResp struct {
 	AccessToken string `json:"access_token"`

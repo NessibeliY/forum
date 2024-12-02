@@ -11,9 +11,11 @@ import (
 	"01.alem.school/git/nyeltay/forum/pkg/cookies"
 )
 
-var githubOAuthEndpoint = "https://github.com/login/oauth/authorize"
-var githubTokenEndpoint = "https://github.com/login/oauth/access_token"
-var githubUserInfoEndpoint = "https://api.github.com/user"
+var (
+	githubOAuthEndpoint    = "https://github.com/login/oauth/authorize"
+	githubTokenEndpoint    = "https://github.com/login/oauth/access_token"
+	githubUserInfoEndpoint = "https://api.github.com/user"
+)
 
 type githubUserInfo struct {
 	name   string `json:"name"`
