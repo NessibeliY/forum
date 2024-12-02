@@ -2,6 +2,7 @@ package models
 
 import (
 	"context"
+	"mime/multipart"
 	"time"
 )
 
@@ -18,19 +19,16 @@ type Post struct {
 	LikesCount    int
 	DislikesCount int
 	CommentsCount int
+	ImagePath     string
+	Image         []byte
 }
 
 type CreatePostRequest struct {
-	Title      string      `json:"title"`
-	Content    string      `json:"content"`
-	AuthorID   int         `json:"author_id"`
-	Categories []*Category `json:"categories"`
-}
-
-type UpdatePostRequest struct {
-	Title      string      `json:"title"`
-	Content    string      `json:"content"`
-	Categories []*Category `json:"categories"`
+	Title      string         `json:"title"`
+	Content    string         `json:"content"`
+	AuthorID   int            `json:"author_id"`
+	Categories []*Category    `json:"categories"`
+	ImageFile  multipart.File `json:"image_file"`
 }
 
 type DeletePostRequest struct {
@@ -40,6 +38,7 @@ type DeletePostRequest struct {
 type PostService interface {
 	GetAllPosts() ([]Post, error)
 	CreatePost(request *CreatePostRequest) (int, error)
+	CreatePostWithImage(request *CreatePostRequest) (int, error)
 	GetPostByID(id int) (*Post, error)
 	GetPostsByAuthorID(authorID int) ([]Post, error)
 	GetLikedPosts(userID int) ([]Post, error)
@@ -50,6 +49,7 @@ type PostService interface {
 type PostRepository interface {
 	GetAllPosts(ctx context.Context) ([]Post, error)
 	AddPost(post *Post) (int, error)
+	AddPostWithImage(post *Post) (int, error)
 	GetPostByID(ctx context.Context, id int) (*Post, error)
 	GetPostsByAuthorID(ctx context.Context, authorID int) ([]Post, error)
 	GetLikedPosts(ctx context.Context, userID int) ([]Post, error)

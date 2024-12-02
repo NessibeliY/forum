@@ -118,6 +118,33 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 	return posts, nil
 }
 
+func (r *PostRepository) AddPostWithImage(post *models.Post) (int, error) {
+	createdAt := time.Now()
+	updatedAt := createdAt
+	query := `
+	INSERT INTO post (title, content, author_id, created_at, updated_at)
+	VALUES ($1, $2, $3, $4, $5)
+	RETURNING id;`
+
+	err := r.db.QueryRow(query, post.Title, post.Content, post.AuthorID, createdAt, updatedAt).Scan(&post.ID)
+	if err != nil {
+		return 0, fmt.Errorf("insert post: %w", err)
+	}
+
+	err = r.addPostCategories(post.ID, post.Categories)
+	if err != nil {
+		return 0, fmt.Errorf("add post categories: %w", err)
+	}
+
+	query = `INSERT INTO image (post_id, image_path) VALUES ($1, $2);`
+	_, err = r.db.Exec(query, post.ID, post.ImagePath)
+	if err != nil {
+		return 0, fmt.Errorf("insert post image: %w", err)
+	}
+
+	return post.ID, nil
+}
+
 func (r *PostRepository) AddPost(post *models.Post) (int, error) {
 	createdAt := time.Now()
 	updatedAt := createdAt
@@ -193,6 +220,16 @@ func (r *PostRepository) GetPostByID(ctx context.Context, id int) (*models.Post,
 	err = rows.Err()
 	if err != nil {
 		return nil, fmt.Errorf("rows scan: %w", err)
+	}
+
+	query = `SELECT image_path FROM image WHERE post_id = $1`
+	row := r.db.QueryRowContext(ctx, query, id)
+	err = row.Scan(&post.ImagePath)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return post, nil
+		}
+		return nil, fmt.Errorf("query row: %w", err)
 	}
 
 	return post, nil
