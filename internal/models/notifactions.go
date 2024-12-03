@@ -1,6 +1,7 @@
 package models
 
 import (
+	"context"
 	"time"
 )
 
@@ -25,4 +26,5 @@ type NotificationService interface {
 type NotificationRepository interface {
 	AddNotification(notification *Notification) (int, error)
 	GetCountNotifications(user_id int) (int, error)
+	GetListNotifications(ctx context.Context, user_id int) ([]Notification, error)
 }
