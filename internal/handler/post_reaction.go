@@ -84,6 +84,18 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	notificationRequst := &models.NotificationRequest{
+		PostID:  postID,
+		Message: reaction,
+	}
+
+	_, err = h.service.NotificationService.CreateNotification(notificationRequst)
+	if err != nil {
+		h.logger.Error("create post notification:", err.Error())
+		h.serverError(w, err)
+		return
+	}
+
 	http.Redirect(w, r, redirectTo, http.StatusSeeOther)
 }
 

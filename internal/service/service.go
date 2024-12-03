@@ -6,6 +6,7 @@ import (
 	"01.alem.school/git/nyeltay/forum/internal/service/category"
 	"01.alem.school/git/nyeltay/forum/internal/service/comment"
 	"01.alem.school/git/nyeltay/forum/internal/service/comment_reaction"
+	"01.alem.school/git/nyeltay/forum/internal/service/notification"
 	"01.alem.school/git/nyeltay/forum/internal/service/post"
 	"01.alem.school/git/nyeltay/forum/internal/service/post_reaction"
 	"01.alem.school/git/nyeltay/forum/internal/service/session"
@@ -20,6 +21,7 @@ type Service struct {
 	PostReactionService    models.PostReactionService
 	SessionService         models.SessionService
 	UserService            models.UserService
+	NotificationService    models.NotificationService
 }
 
 func NewService(repo *repository.Repository) *Service {
@@ -31,5 +33,6 @@ func NewService(repo *repository.Repository) *Service {
 		PostReactionService:    post_reaction.NewPostReactionService(repo.PostReactionRepo),
 		SessionService:         session.NewSessionService(repo.SessionRepo),
 		UserService:            user.NewUserService(repo.UserRepo),
+		NotificationService:    notification.NewNotificationService(repo.NotificationRepo),
 	}
 }

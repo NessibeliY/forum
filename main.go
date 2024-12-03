@@ -85,6 +85,8 @@ func main() {
 	mux.Handle("/likedposts", handler.RequireAuthentication(http.HandlerFunc(handler.ShowLikedPosts)))
 	mux.HandleFunc("/showposts", handler.ShowPostsByCategory)
 
+	mux.Handle("/notifications", handler.RequireAuthentication(http.HandlerFunc(handler.Notification)))
+
 	finalHandler := handler.SecureHeaders(
 		handler.RecoverPanic(
 			handler.LogRequest(
