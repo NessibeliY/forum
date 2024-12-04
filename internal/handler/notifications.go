@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
@@ -28,7 +27,8 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var countNotification int
-	var notifications []models.Notification
+	var currentNotifications []models.Notification
+	var archivedNotifications []models.Notification
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -37,20 +37,33 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		notifications, err = h.service.NotificationService.GetListNotifications(h.getUserFromContext(r).ID)
+		currentNotifications, err = h.service.NotificationService.GetCurrentNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
 			h.logger.Info("get GetListNotifications:", err)
 			h.serverError(w, err)
 			return
 		}
 
-		fmt.Println("notifications", notifications[0].Message)
+		archivedNotifications, err = h.service.NotificationService.GetArchivedNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get archived notifications:", err)
+			h.serverError(w, err)
+			return
+		}
+
+		err = h.service.NotificationService.MakeNotificationIsRead(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get GetListNotifications:", err)
+			h.serverError(w, err)
+			return
+		}
 	}
 
 	h.Render(w, "notification.page.html", http.StatusOK, H{
-		"categories":         categories,
-		"authenticated_user": h.getUserFromContext(r),
-		"count_notification": countNotification,
-		"notifications":      notifications,
+		"categories":             categories,
+		"authenticated_user":     h.getUserFromContext(r),
+		"count_notification":     countNotification,
+		"current_notifications":  currentNotifications,
+		"archived_notifications": archivedNotifications,
 	})
 }

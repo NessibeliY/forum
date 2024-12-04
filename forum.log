@@ -1948,3 +1948,158 @@ INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handle
 INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 14:32:02 logger.go:39: [::1]:64990 - HTTP/1.1 GET /post?id=15
 INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 14:32:07 logger.go:39: shutting down server...
 INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 14:32:07 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 16:19:01 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 16:19:01 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:21:43 logger.go:39: [::1]:51817 - HTTP/1.1 GET /post?id=15
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:21:43 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:21:43 logger.go:39: [::1]:51818 - HTTP/1.1 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:21:43 logger.go:39: [::1]:51817 - HTTP/1.1 GET /static/css/style.css
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:21:43 logger.go:39: get cookie: http: named cookie not present
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:21:43 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 16:43:27 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 16:43:27 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 16:43:29 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 16:43:29 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:35 logger.go:39: [::1]:52107 - HTTP/1.1 GET /notifications
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:43:35 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:35 logger.go:39: [::1]:52107 - HTTP/1.1 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:43:35 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:35 logger.go:39: [::1]:52108 - HTTP/1.1 GET /static/js/script.js
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:43:35 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:35 logger.go:39: [::1]:52107 - HTTP/1.1 GET /static/css/style.css
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:43:35 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:35 logger.go:39: [::1]:52107 - HTTP/1.1 GET /favicon.ico
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:43:35 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:36 logger.go:39: [::1]:52107 - HTTP/1.1 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:43:36 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:42 logger.go:39: [::1]:52107 - HTTP/1.1 POST /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:26 2024/12/04 16:43:42 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:42 logger.go:39: [::1]:52107 - HTTP/1.1 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:42 logger.go:39: [::1]:52107 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:45 logger.go:39: [::1]:52107 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:47 logger.go:39: [::1]:52107 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:47 logger.go:39: [::1]:52107 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:47 logger.go:39: [::1]:52107 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:43:49 logger.go:39: [::1]:52107 - HTTP/1.1 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 16:44:26 logger.go:39: [::1]:52107 - HTTP/1.1 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:06:23 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:06:23 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:06:25 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:06:25 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:06:31 logger.go:39: [::1]:52260 - HTTP/1.1 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:06:31 logger.go:39: [::1]:52261 - HTTP/1.1 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:06:31 logger.go:39: [::1]:52260 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:06:31 logger.go:39: [::1]:52260 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:06:32 logger.go:39: [::1]:52260 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:07:48 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:07:48 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:07:50 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:07:50 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:07:50 logger.go:39: [::1]:52404 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:07:50 logger.go:39: [::1]:52404 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:07:51 logger.go:39: [::1]:52404 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:07:54 logger.go:39: [::1]:52404 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:07:54 logger.go:39: [::1]:52404 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:07:55 logger.go:39: [::1]:52404 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:08:31 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:08:31 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:08:34 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:08:34 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:08:35 logger.go:39: [::1]:52437 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:08:35 logger.go:39: [::1]:52437 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:08:35 logger.go:39: [::1]:52437 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:08:59 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:08:59 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:09:02 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:09:02 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:09:06 logger.go:39: [::1]:52470 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:09:06 logger.go:39: [::1]:52470 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:09:07 logger.go:39: [::1]:52470 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:11:20 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:11:20 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:11:22 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:11:22 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:11:28 logger.go:39: [::1]:52561 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:11:28 logger.go:39: [::1]:52561 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:11:28 logger.go:39: [::1]:52561 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:11:35 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:11:35 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:11:37 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:11:37 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:11:37 logger.go:39: [::1]:52569 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:11:37 logger.go:39: [::1]:52569 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:11:38 logger.go:39: [::1]:52569 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:11:45 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:11:45 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:11:48 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:11:48 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:11:48 logger.go:39: [::1]:52581 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:11:48 logger.go:39: [::1]:52581 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:11:48 logger.go:39: [::1]:52581 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:12:15 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:12:15 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:12:18 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:12:18 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:12:18 logger.go:39: [::1]:52616 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:12:18 logger.go:39: [::1]:52616 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:12:19 logger.go:39: [::1]:52616 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:12:54 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:12:54 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:12:58 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:12:58 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:13:01 logger.go:39: [::1]:52638 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:13:01 logger.go:39: [::1]:52638 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:13:02 logger.go:39: [::1]:52638 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:13:21 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:13:21 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:13:23 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:13:23 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:13:27 logger.go:39: [::1]:52655 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:13:27 logger.go:39: [::1]:52655 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:13:28 logger.go:39: [::1]:52655 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:14:04 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:14:04 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:14:07 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:14:07 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:14:13 logger.go:39: [::1]:52696 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:14:13 logger.go:39: [::1]:52696 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:14:14 logger.go:39: [::1]:52696 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:15:01 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:15:01 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:15:04 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:15:04 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:15:09 logger.go:39: [::1]:52725 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:15:09 logger.go:39: [::1]:52725 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:15:10 logger.go:39: [::1]:52725 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:17:30 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:17:30 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:17:32 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:17:32 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:17:37 logger.go:39: [::1]:52818 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:17:37 logger.go:39: [::1]:52818 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:17:38 logger.go:39: [::1]:52818 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:17:54 logger.go:39: [::1]:52818 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:17:54 logger.go:39: [::1]:52818 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:17:55 logger.go:39: [::1]:52818 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:20:53 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:20:53 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:20:56 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:20:56 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:20:57 logger.go:39: [::1]:52974 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:20:57 logger.go:39: [::1]:52974 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:20:57 logger.go:39: [::1]:52974 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:21:17 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:21:17 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:21:20 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:21:20 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:21:20 logger.go:39: [::1]:52994 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:21:20 logger.go:39: [::1]:52994 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:21:20 logger.go:39: [::1]:52994 - HTTP/1.1 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:21:29 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:21:29 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:45 2024/12/04 17:21:32 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:56 2024/12/04 17:21:32 logger.go:39: server is running on http://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:21:39 logger.go:39: [::1]:53012 - HTTP/1.1 GET /notifications
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/internal/handler/middleware.go:54 2024/12/04 17:21:39 logger.go:39: [::1]:53012 - HTTP/1.1 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:116 2024/12/04 17:32:44 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/forum-features_advencde/forum/main.go:125 2024/12/04 17:32:44 logger.go:39: server stopped gracefully

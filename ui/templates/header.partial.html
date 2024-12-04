@@ -9,9 +9,9 @@
                 <form class="pagesList" action="/user/posts/" method="GET">
                     <input type="hidden" name="filter" id="filter" value="all">
                     {{if .authenticated_user }}
-                    <a href="/" class="text-xl hover:text-blue-500 transition duration-300 mx-2">Home</a>
-                    <a href="/myposts" class="text-xl hover:text-blue-500 transition duration-300 mx-2">My posts</a>
-                    <a href="/likedposts" class="text-xl hover:text-blue-500 transition duration-300 mx-2s">Liked posts</a>
+                        <a href="/" class="text-xl hover:text-blue-500 transition duration-300 mx-2">Home</a>
+                        <a href="/myposts" class="text-xl hover:text-blue-500 transition duration-300 mx-2">My posts</a>
+                        <a href="/likedposts" class="text-xl hover:text-blue-500 transition duration-300 mx-2s">Liked posts</a>
                     {{end}}
                 </form>
             {{ if .authenticated_user}}

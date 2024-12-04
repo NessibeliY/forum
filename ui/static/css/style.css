@@ -71,24 +71,24 @@ p {
 }
 
 .btn_auth {
-    color: white;         
-    padding: 1rem 1rem;    
+    color: white;
+    padding: 1rem 1rem;
     justify-content: center;
     align-items: center;
-    border-radius: 0.5rem; 
-    transition: 0.3s; 
-    text-decoration: none;     
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    text-decoration: none;
     display: flex;
-    margin-right: 1.5rem;    
+    margin-right: 1.5rem;
 }
 
 
 
 
 .mobile_menu {
-    display: none; 
+    display: none;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: #fff;
@@ -147,20 +147,20 @@ p {
 }
 
 .input_email {
-        padding-top: 1rem;      
-        padding-bottom: 1rem;   
-        padding-left: 1rem;     
-        padding-right: 1rem;    
-        border: 1px solid #A0AEC0;
-        margin: 0.5rem 0;       
-        border-radius: 0.375rem;
-        width: 100%;         
-        outline: none;       
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid #A0AEC0;
+    margin: 0.5rem 0;
+    border-radius: 0.375rem;
+    width: 100%;
+    outline: none;
 }
 
 
 .input_email:focus {
-    border-color: #3B82F6;  
+    border-color: #3B82F6;
 }
 
 
@@ -195,7 +195,8 @@ p {
     font-weight: bold;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
     color: black;
     cursor: pointer;
 }
@@ -213,7 +214,7 @@ p {
 .dropdown .select_menu {
     display: none;
     flex-direction: column;
-    transition: opacity 0.3s ease; 
+    transition: opacity 0.3s ease;
 }
 
 .dropdown button {
@@ -264,15 +265,15 @@ p {
 
 /* CREATE POST */
 
-.create_container  {
-    background-color: white;  
+.create_container {
+    background-color: white;
     padding: 2% 3%;
-    display: flex;             
-    align-items: center;       
-    justify-content: space-between; 
-    border-radius: 0.5rem;     
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    margin-bottom: 1.25rem;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
 }
 
 .create_post {
@@ -301,7 +302,7 @@ p {
 .tags h3 {
     margin-right: 8px;
     font-size: 24px;
-    font-weight: bold; 
+    font-weight: bold;
     color: #000;
 }
 
@@ -320,8 +321,8 @@ p {
 
 .userInfo {
     width: 100%;
-    height: 16rem;   
-    background-color: #ffffff; 
+    height: 16rem;
+    background-color: #ffffff;
 }
 
 .post_header {
@@ -339,51 +340,51 @@ p {
 }
 
 .user_icon {
-        display: flex;               
-        align-items: center;         
-        justify-content: center;      
-        border-radius: 9999px;       
-        font-size: 1.5rem;           
-        background-color: #ffffff;   
-        color: rgb(53, 53, 53);                 
-        padding: 1rem;               
-        padding-left: 1rem;
-        padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    color: rgb(53, 53, 53);
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .user_card {
-    display: flex;             
-    align-items: center;       
-    justify-content: center;   
-    text-align: center;   
-    padding: 0.5rem;      
-    padding-left: 0.5rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
+    padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 
 
 .createPost {
-    margin-right: 0.25rem; 
-    font-size: 1.25rem;    
+    margin-right: 0.25rem;
+    font-size: 1.25rem;
 }
 
 .create_form {
-    width: 100%;             
-    padding-top: 2%;     
-    padding-left: 0.5rem;    
-    padding-right: 0.5rem;   
-    display: flex;           
-    flex-direction: column;  
+    width: 100%;
+    padding-top: 2%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .createButton {
-    color: #ffffff; 
-    padding: 0.5rem; 
-    border-radius: 0.5rem; 
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     display: flex;
-    align-items: center; 
-    transition: background-color 0.3s; 
+    align-items: center;
+    transition: background-color 0.3s;
     font-weight: 600;
     margin: 10% 0 5% 0;
 }
@@ -401,7 +402,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .postCard {
@@ -430,18 +431,19 @@ h2 {
     font-size: clamp(0.875rem, 0.7083rem + 0.2963vw, 1.375rem);
 }
 
-.pages:hover, .pages.active {
-    color: #2563eb; 
+.pages:hover,
+.pages.active {
+    color: #2563eb;
 }
 
 .welcome {
-    background-color: #ffffff; 
-    width: 100%; 
+    background-color: #ffffff;
+    width: 100%;
     padding: 1rem 2rem;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1.25rem; 
+    margin-bottom: 1.25rem;
 }
 
 .welcome_text {
@@ -464,29 +466,29 @@ h2 {
 }
 
 .comments {
-        display: flex; 
-        width: 100%; 
-        flex-direction: column; 
-        padding: 1.5% 2.5%;
-        margin-top: 2%;
-        background-color: white; 
-        border-radius: 15px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5% 2.5%;
+    margin-top: 2%;
+    background-color: white;
+    border-radius: 15px;
 }
 
 .commentText {
-    margin-top: 0.25rem; 
-    margin-bottom: 0.25rem; 
-    font-size: 1.25rem; 
-    color: #4a5568; 
-    font-style: italic; 
-    font-weight: 500; 
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+    color: #4a5568;
+    font-style: italic;
+    font-weight: 500;
 }
 
 .commentHeader {
-    display: flex; 
-    width: 100%; 
-    flex-direction: column; 
-    margin-bottom: 0.5rem; 
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
 }
 
 .commentAuthor {
@@ -494,13 +496,14 @@ h2 {
     font-size: large;
     line-height: 1.25rem;
 }
+
 .created-at {
     font-size: 1rem;
-    color: #626262; 
-    font-weight: 200; 
-    font-style: italic; 
-    margin-top: 0.25rem; 
-    margin-left: 0.25rem; 
+    color: #626262;
+    font-weight: 200;
+    font-style: italic;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
 }
 
 .postName {
@@ -515,17 +518,17 @@ h2 {
 .btn_like {
     transition: all 0.3s ease;
     margin: 0 0.25rem;
-    font-size: 1rem; 
-    color: #6b7280; 
+    font-size: 1rem;
+    color: #6b7280;
 }
 
 .btn_like:hover {
-    color: #d95d15; 
+    color: #d95d15;
     transition: all 0.3s ease;
 }
 
 .btn_like_active {
-    color: #d95d15;  
+    color: #d95d15;
 }
 
 .btn_like_com {
@@ -537,13 +540,13 @@ h2 {
 }
 
 .btn_like_com:hover {
-    color: #d95d15; 
-    transition: all 0.3s ease; 
+    color: #d95d15;
+    transition: all 0.3s ease;
 }
 
 
 .btn_like_com:active {
-    color: #d95d15;  
+    color: #d95d15;
 }
 
 .error_container {
@@ -557,7 +560,7 @@ h2 {
 
 .error_num {
     color: white;
-    font-weight: 700;    
+    font-weight: 700;
     font-size: 6rem;
     line-height: 1;
 }
@@ -573,7 +576,7 @@ h2 {
         max-width: 1480px;
     }
 
-    .middleContainer{
+    .middleContainer {
         width: 55%;
     }
 }
@@ -591,21 +594,21 @@ h2 {
         max-width: 1024px;
     }
 
-    .middleContainer{
+    .middleContainer {
         width: 52%;
     }
 }
 
 
 @media only screen and (max-width: 1024px) {
-     .offset {
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0px 2%;
+    .offset {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 2%;
     }
 
-    .rSide{
+    .rSide {
         display: none;
     }
 
@@ -613,13 +616,13 @@ h2 {
     .header .header_wrapper {
         align-items: center;
     }
-  
+
     .postsTitle {
         font-size: 1.5rem;
     }
 
 
-    .tags{
+    .tags {
         display: flex;
         flex-direction: column;
         height: auto;
@@ -629,42 +632,44 @@ h2 {
         width: 100%;
     }
 
-    .tags > form {
+    .tags>form {
         margin-right: 4px;
     }
-    .middleContainer{
+
+    .middleContainer {
         width: 100%;
     }
 
-    .auth_bnts{
+    .auth_bnts {
         width: auto;
     }
-    
-    .modal{
+
+    .modal {
         z-index: 10;
     }
 
     .delete_form_modal {
         width: 50%;
     }
+
     .modal-content {
         margin: 45% auto;
         padding-top: 10px;
     }
 
 
-    .pagesList{
+    .pagesList {
         display: none;
     }
 
     .header_burger {
-        display: block; 
+        display: block;
         position: relative;
         width: 30px;
         height: 20px;
         top: 16px;
     }
-    
+
     .header_burger span {
         display: block;
         position: absolute;
@@ -677,7 +682,7 @@ h2 {
     }
 
     .header_burger::before,
-    .header_burger::after{
+    .header_burger::after {
         content: '';
         background-color: #000;
         position: absolute;
@@ -686,39 +691,55 @@ h2 {
         left: 0;
     }
 
-    .header_burger::before{
+    .header_burger::before {
         top: 0;
-    }   
+    }
 
-    .header_burger::after{
+    .header_burger::after {
         bottom: 0;
     }
 
     .mobile_menu.active {
-        display: block; 
+        display: block;
     }
-    
-    .sign-out{
+
+    .sign-out {
         display: none;
     }
-    
-    .create_container{
+
+    .create_container {
         width: 100%;
     }
-    
-    .auth_bnts{
+
+    .auth_bnts {
         display: none;
     }
 }
 
 
 @media (max-width: 600px) {
-    .form_wrappper{
+    .form_wrappper {
         width: 100%;
     }
 
-    .form{
+    .form {
         width: 100%;
     }
 }
 
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-button.active {
+    background-color: rgb(59, 130, 246);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: .5rem;
+    color: white;
+}

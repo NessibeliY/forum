@@ -35,48 +35,97 @@
                 <div class="middleContainer">
                     <div class="flex_full_col">
                         <div class="flex flex-col w-full bg-white rounded-lg">
-                            <div class="flex w-full border-b border-black py-3 px-2">
+                            <div class="flex flex-col w-full border-b border-indigo-600 py-3 px-2">
                                 <span class="text-2xl font-bold">Your notifications</span>
+                                <!-- Tab buttons -->
+                                <div class="tabs flex space-x-4 mt-4 mb-2 px-2 py-2">
+                                    <button class="tab-button active" onclick="showTab('current')"  data-index="0">Current</button>
+                                    <button class="tab-button" onclick="showTab('archived')"  data-index="1">Archived</button>
+                                </div>
                             </div>
-                            {{range .notifications}}
-                            <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 shadow-md hover:shadow-lg transition">
-                                <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
-                                <span class="mt-2 text-base">
-                                    {{if eq .Message "like"}}
+
+                            <div id="current" class="tab-content active">
+                                <h3 class="text-xl">Current</h3>
+                                {{range .current_notifications}}
+                                <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 shadow-md hover:shadow-lg transition">
+                                    <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
+                                    <span class="mt-2 text-base">
+                                        {{if eq .Message "like"}}
                                         <span class="text-green-600 font-bold">👍 Like:</span> Someone liked your post.
-                                    {{end}}
-                                    {{if eq .Message "dislike"}}
+                                        {{end}}
+                                        {{if eq .Message "dislike"}}
                                         <span class="text-red-600 font-bold">👎 Dislike:</span> Someone disliked your post.
-                                    {{end}}
-                                    {{if eq .Message "commented"}}
+                                        {{end}}
+                                        {{if eq .Message "commented"}}
                                         <span class="text-blue-600 font-bold">💬 Comment:</span> Someone commented on your post.
-                                    {{end}}
-                                </span>
-                                <span class="text-sm text-gray-400 mt-1">Received: {{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
+                                        {{end}}
+                                    </span>
+                                    <span class="text-sm text-gray-400 mt-1">Received: {{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
+                                </div>
+                                {{end}}
                             </div>
-                            {{end}}
-                        </div>
+
+                            <div id="archived" class="tab-content">
+                                <h3 class="text-xl">Archived</h3>
+                                {{range .archived_notifications}}
+                                <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 shadow-md hover:shadow-lg transition">
+                                    <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
+                                    <span class="mt-2 text-base">
+                                        {{if eq .Message "like"}}
+                                        <span class="text-green-600 font-bold">👍 Like:</span> Someone liked your post.
+                                        {{end}}
+                                        {{if eq .Message "dislike"}}
+                                        <span class="text-red-600 font-bold">👎 Dislike:</span> Someone disliked your post.
+                                        {{end}}
+                                        {{if eq .Message "commented"}}
+                                        <span class="text-blue-600 font-bold">💬 Comment:</span> Someone commented on your post.
+                                        {{end}}
+                                    </span>
+                                    <span class="text-sm text-gray-400 mt-1">Received: {{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
+                                </div>
+                                {{end}}
+                            </div>
                                         
                     </div>
                 </div>
-                {{if .authenticated_user }}
-                <div class="rSide">
-                    <div class="welcome card">
-                        <div>
-                            <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, {{.authenticated_user.Username}}</h2>
-                            <span style="font-size: larger;">Glad to see you!</span>
-                            <a href="/post/create" class="createButton bg-green-600 hover:bg-green-700 transition duration-300" id="openModalBtn">
-                                <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
-                            </a>
-                        </div>
-                    </div>
-                    <div class="userInfo card">
-                        {{ template "user_info" .}}
+            </div>
+            {{if .authenticated_user }}
+            <div class="rSide">
+                <div class="welcome card">
+                    <div>
+                        <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, {{.authenticated_user.Username}}</h2>
+                        <span style="font-size: larger;">Glad to see you!</span>
+                        <a href="/post/create" class="createButton bg-green-600 hover:bg-green-700 transition duration-300" id="openModalBtn">
+                            <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
+                        </a>
                     </div>
                 </div>
-
+                <div class="userInfo card">
+                    {{ template "user_info" .}}
+                </div>
+            </div>
             {{end}}
-        </div>
     </main>
+
+
+
+    <script>
+      function showTab(tabName) {
+            // Скрыть все вкладки
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Убрать класс active с всех кнопок
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Показать выбранную вкладку
+            document.getElementById(tabName).classList.add('active');
+
+            // Выделить активную кнопку
+            const activeButton = document.querySelector(`.tab-button[onclick="showTab('${tabName}')"]`);
+            activeButton.classList.add('active');
+        }
+    </script>
 </body>
 </html>
