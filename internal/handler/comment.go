@@ -89,6 +89,18 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	notificationRequst := &models.NotificationRequest{
+		PostID:  postID,
+		Message: "commented",
+	}
+
+	_, err = h.service.NotificationService.CreateNotification(notificationRequst)
+	if err != nil {
+		h.logger.Error("create notifications:", err.Error())
+		h.serverError(w, err)
+		return
+	}
+
 	http.Redirect(w, r, fmt.Sprintf("/post?id=%d", postID), http.StatusSeeOther)
 }
 

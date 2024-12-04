@@ -43,10 +43,13 @@
                                 <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
                                 <span class="mt-2 text-base">
                                     {{if eq .Message "like"}}
-                                        <span class="text-green-600 font-bold">👍 Like:</span> {{.Message}}
+                                        <span class="text-green-600 font-bold">👍 Like:</span> Someone liked your post.
                                     {{end}}
                                     {{if eq .Message "dislike"}}
-                                        <span class="text-red-600 font-bold">👎 Dislike:</span> {{.Message}}
+                                        <span class="text-red-600 font-bold">👎 Dislike:</span> Someone disliked your post.
+                                    {{end}}
+                                    {{if eq .Message "commented"}}
+                                        <span class="text-blue-600 font-bold">💬 Comment:</span> Someone commented on your post.
                                     {{end}}
                                 </span>
                                 <span class="text-sm text-gray-400 mt-1">Received: {{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
