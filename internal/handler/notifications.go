@@ -50,13 +50,6 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 			h.serverError(w, err)
 			return
 		}
-
-		err = h.service.NotificationService.MakeNotificationIsRead(h.getUserFromContext(r).ID)
-		if err != nil {
-			h.logger.Info("get GetListNotifications:", err)
-			h.serverError(w, err)
-			return
-		}
 	}
 
 	h.Render(w, "notification.page.html", http.StatusOK, H{

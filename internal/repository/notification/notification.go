@@ -57,7 +57,7 @@ func (r *NotificationRepository) GetCurrentNotifications(ctx context.Context, us
 	FROM notifications n
 	JOIN post p ON p.id = n.post_id
 	JOIN users u ON u.id = p.author_id
-	WHERE u.id = $1 AND n.is_read = false
+	WHERE u.id = $1 AND n.is_read = 0
 	ORDER BY n.created_at DESC;
 	`
 	rows, err := r.db.QueryContext(ctx, query, user_id)
@@ -110,7 +110,7 @@ func (r *NotificationRepository) GetArchivedNotifications(ctx context.Context, u
 	FROM notifications n
 	JOIN post p ON p.id = n.post_id
 	JOIN users u ON u.id = p.author_id
-	WHERE u.id = $1
+	WHERE u.id = $1 AND  n.is_read = 1
 	ORDER BY n.created_at DESC;
 	`
 	rows, err := r.db.QueryContext(ctx, query, user_id)

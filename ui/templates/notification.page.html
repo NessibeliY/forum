@@ -48,7 +48,14 @@
                                 <h3 class="text-xl">Current</h3>
                                 {{range .current_notifications}}
                                 <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 shadow-md hover:shadow-lg transition">
-                                    <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
+                                    <div class="flex w-full items-center justify-between">
+                                        <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
+                                        <form class="flex items-center justify-center" action="" method="POST">
+                                            <button type="submit" class="flex items-center justify-center">
+                                                <i class="fa-solid fa-square-xmark text-xl hover:text-red-600 duration-300 transition cursor-pointer"></i>
+                                            </button>
+                                        </form>
+                                    </div>
                                     <span class="mt-2 text-base">
                                         {{if eq .Message "like"}}
                                         <span class="text-green-600 font-bold">👍 Like:</span> Someone liked your post.
