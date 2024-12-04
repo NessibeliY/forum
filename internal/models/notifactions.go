@@ -21,6 +21,7 @@ type NotificationRequest struct {
 type NotificationService interface {
 	CreateNotification(notification *NotificationRequest) (int, error)
 	GetCountNotifications(user_id int) (int, error)
+	GetListNotifications(user_id int) ([]Notification, error)
 }
 
 type NotificationRepository interface {

@@ -31,9 +31,21 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+
+	}
+
 	h.Render(w, "index.page.html", http.StatusOK, H{
 		"posts":              posts,
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
 	})
 }

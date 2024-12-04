@@ -18,7 +18,13 @@
             <div class="flex sign-out">
                 <a href="/notifications" class="text-2xl flex items-center justify-center mx-2 bg-gray-500 py-2 px-2 rounded-lg cursor-pointer hover:text-white duration-300 transition">
                     <i class="fa-solid fa-bell"></i>
-                    <span class="absolute top-0 right-7 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">5</span>
+                    {{ if gt .count_notification 0 }}
+                    <span class="absolute top-0 right-7 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                        {{ .count_notification }}
+                    </span>
+                    {{ else }}
+                    <span class="hidden"></span>
+                    {{ end }}
                 </a>
                 <form method="POST" action="/logout" class="flex items-center justify-center ml-2">
                     <button class="flex items-center justify-center text-2xl hover:text-red-600  transition duration-300" type="submit">

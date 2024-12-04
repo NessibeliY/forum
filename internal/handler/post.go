@@ -37,9 +37,20 @@ func (h *Handler) createPostMethodGet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+	}
+
 	h.Render(w, "create_post.page.html", http.StatusOK, H{
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
 	})
 }
 
@@ -270,11 +281,23 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+
+	}
+
 	h.Render(w, "post.page.html", http.StatusOK, H{
 		"post":               post,
 		"comments":           comments,
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
 	})
 }
 
@@ -305,10 +328,21 @@ func (h *Handler) ShowMyPosts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+	}
+
 	h.Render(w, "index.page.html", http.StatusOK, H{
 		"posts":              posts,
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
 	})
 }
 
@@ -339,10 +373,21 @@ func (h *Handler) ShowLikedPosts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+	}
+
 	h.Render(w, "index.page.html", http.StatusOK, H{
 		"posts":              posts,
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
 	})
 }
 
@@ -395,9 +440,20 @@ func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+	}
+
 	h.Render(w, "index.page.html", http.StatusOK, H{
 		"posts":              posts,
 		"categories":         allCategories,
 		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
 	})
 }

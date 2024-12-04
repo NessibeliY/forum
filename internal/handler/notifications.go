@@ -1,6 +1,11 @@
 package handler
 
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+
+	"01.alem.school/git/nyeltay/forum/internal/models"
+)
 
 func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/notifications" {
@@ -22,8 +27,30 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var countNotification int
+	var notifications []models.Notification
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+
+		notifications, err = h.service.NotificationService.GetListNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get GetListNotifications:", err)
+			h.serverError(w, err)
+			return
+		}
+
+		fmt.Println("notifications", notifications[0].Message)
+	}
+
 	h.Render(w, "notification.page.html", http.StatusOK, H{
 		"categories":         categories,
 		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
+		"notifications":      notifications,
 	})
 }

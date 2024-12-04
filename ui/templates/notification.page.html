@@ -33,8 +33,27 @@
                 </div>
                 <!-- IF USER AUTH SHOW THIS BLOCK -->
                 <div class="middleContainer">
-                    <div class="flex_full_col">                       
-                       <h2>Notification</h2>                       
+                    <div class="flex_full_col">
+                        <div class="flex flex-col w-full bg-white rounded-lg">
+                            <div class="flex w-full border-b border-black py-3 px-2">
+                                <span class="text-2xl font-bold">Your notifications</span>
+                            </div>
+                            {{range .notifications}}
+                            <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 shadow-md hover:shadow-lg transition">
+                                <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
+                                <span class="mt-2 text-base">
+                                    {{if eq .Message "like"}}
+                                        <span class="text-green-600 font-bold">👍 Like:</span> {{.Message}}
+                                    {{end}}
+                                    {{if eq .Message "dislike"}}
+                                        <span class="text-red-600 font-bold">👎 Dislike:</span> {{.Message}}
+                                    {{end}}
+                                </span>
+                                <span class="text-sm text-gray-400 mt-1">Received: {{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
+                            </div>
+                            {{end}}
+                        </div>
+                                        
                     </div>
                 </div>
                 {{if .authenticated_user }}

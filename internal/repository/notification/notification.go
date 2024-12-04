@@ -54,8 +54,8 @@ func (r *NotificationRepository) GetListNotifications(ctx context.Context, user_
 	SELECT 
 		n.id,n.post_id,n.message,n.is_read,n.created_at 
 	FROM notifications n
-	JOIN posts p ON p.id = n.post_id
-	JOIN users u ON u.id = p.user_id
+	JOIN post p ON p.id = n.post_id
+	JOIN users u ON u.id = p.author_id
 	WHERE u.id = $1
 	ORDER BY n.created_at DESC
 	`
@@ -66,33 +66,32 @@ func (r *NotificationRepository) GetListNotifications(ctx context.Context, user_
 	defer rows.Close()
 
 	var notifications []models.Notification
-	var currentNotification *models.Notification
 
 	for rows.Next() {
-		var postID int
+		var id, postID int
 		var message string
 		var isRead bool
-		var created_at time.Time
+		var createdAt time.Time
 
 		err := rows.Scan(
+			&id,
 			&postID,
 			&message,
 			&isRead,
-			&created_at,
+			&createdAt,
 		)
 		if err != nil {
 			return nil, fmt.Errorf("row scan: %w", err)
 		}
 
-		if currentNotification == nil || currentNotification.PostID != postID {
-			if currentNotification != nil {
-				notifications = append(notifications, *currentNotification)
-			}
+		notification := models.Notification{
+			ID:        id,
+			PostID:    postID,
+			Message:   message,
+			IsRead:    isRead,
+			CreatedAt: createdAt,
 		}
-	}
-
-	if currentNotification != nil {
-		notifications = append(notifications, *currentNotification)
+		notifications = append(notifications, notification)
 	}
 
 	err = rows.Err()
