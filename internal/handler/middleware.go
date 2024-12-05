@@ -3,6 +3,8 @@ package handler
 import (
 	"context"
 	"net/http"
+	"sync"
+	"time"
 
 	"01.alem.school/git/nyeltay/forum/pkg/cookies"
 )
@@ -78,4 +80,81 @@ func (h *Handler) SecureHeaders(next http.Handler) http.Handler {
 
 		next.ServeHTTP(w, r)
 	})
+}
+
+type RateLimiter struct {
+	mu       sync.Mutex
+	visitors map[string]*visitor
+	rate     int
+	burst    int
+	interval time.Duration
+}
+
+type visitor struct {
+	count    int
+	lastSeen time.Time
+}
+
+func (h *Handler) NewRateLimiter(rate int, burst int, interval time.Duration) *RateLimiter {
+	rl := &RateLimiter{
+		visitors: make(map[string]*visitor),
+		rate:     rate,
+		burst:    burst,
+		interval: interval,
+	}
+	go rl.cleanupExpiredVisitors()
+	return rl
+}
+
+func (rl *RateLimiter) cleanupExpiredVisitors() {
+	ticker := time.NewTicker(rl.interval)
+	defer ticker.Stop()
+
+	for range ticker.C {
+		rl.mu.Lock()
+		now := time.Now()
+		for ip, v := range rl.visitors {
+			if now.Sub(v.lastSeen) > rl.interval {
+				delete(rl.visitors, ip)
+			}
+		}
+		rl.mu.Unlock()
+	}
+}
+
+func (rl *RateLimiter) Limit(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		ip := r.RemoteAddr
+
+		if !rl.allow(ip) {
+			http.Error(w, http.StatusText(http.StatusTooManyRequests), http.StatusTooManyRequests)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
+
+func (rl *RateLimiter) allow(ip string) bool {
+	rl.mu.Lock()
+	defer rl.mu.Unlock()
+
+	v, exists := rl.visitors[ip]
+	now := time.Now()
+
+	if !exists || now.Sub(v.lastSeen) > rl.interval {
+		rl.visitors[ip] = &visitor{
+			count:    1,
+			lastSeen: now,
+		}
+		return true
+	}
+
+	if v.count >= rl.burst {
+		return false
+	}
+
+	v.count++
+	v.lastSeen = now
+	return true
 }

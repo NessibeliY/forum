@@ -1699,3 +1699,87 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go
 ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/post.go:170 2024/12/05 09:05:39 logger.go:39: file is too big: image/jpeg
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 09:05:46 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 09:05:46 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2024/12/05 20:31:16 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2024/12/05 20:31:16 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 20:31:28 logger.go:39: [::1]:64527 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 20:31:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 20:31:28 logger.go:39: [::1]:64527 - HTTP/1.1 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 20:31:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 20:31:33 logger.go:39: [::1]:64527 - HTTP/1.1 GET /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 20:31:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 20:31:33 logger.go:39: [::1]:64527 - HTTP/1.1 GET /favicon.ico
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 20:31:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:124 2024/12/05 20:31:44 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:133 2024/12/05 20:31:44 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2024/12/05 20:37:29 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2024/12/05 20:37:29 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:124 2024/12/05 20:39:39 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:133 2024/12/05 20:39:39 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2024/12/05 20:39:52 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2024/12/05 20:39:52 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 20:39:59 logger.go:39: [::1]:64549 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 20:39:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 20:39:59 logger.go:39: [::1]:64549 - HTTP/2.0 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 20:39:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 20:39:59 logger.go:39: [::1]:64549 - HTTP/2.0 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 20:39:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 20:40:00 logger.go:39: [::1]:64549 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 20:40:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:124 2024/12/05 20:40:08 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:133 2024/12/05 20:40:08 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2024/12/05 20:53:38 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2024/12/05 20:53:38 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:40 logger.go:39: [::1]:64563 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:40 logger.go:39: [::1]:64563 - HTTP/2.0 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:40 logger.go:39: [::1]:64563 - HTTP/2.0 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:44 logger.go:39: [::1]:64563 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:45 logger.go:39: [::1]:64563 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:46 logger.go:39: [::1]:64563 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:47 logger.go:39: [::1]:64563 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:47 logger.go:39: [::1]:64563 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:48 logger.go:39: [::1]:64563 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:53:50 logger.go:39: [::1]:64563 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:53:50 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:14 logger.go:39: [::1]:64573 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:56:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:14 logger.go:39: [::1]:64573 - HTTP/2.0 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:56:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:14 logger.go:39: [::1]:64573 - HTTP/2.0 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:56:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:14 logger.go:39: [::1]:64573 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:56:14 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:26 logger.go:39: [::1]:64573 - HTTP/2.0 GET /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:56:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:26 logger.go:39: [::1]:64573 - HTTP/2.0 GET /favicon.ico
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:56:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:31 logger.go:39: [::1]:64573 - HTTP/2.0 POST /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:56:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:31 logger.go:39: [::1]:64573 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:40 logger.go:39: [::1]:64573 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:56:40 logger.go:39: [::1]:64573 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:58:11 logger.go:39: 127.0.0.1:64927 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:58:11 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:58:11 logger.go:39: 127.0.0.1:64927 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:58:11 logger.go:39: 127.0.0.1:64927 - HTTP/2.0 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:58:11 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:58:11 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:58:13 logger.go:39: 127.0.0.1:64927 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:58:13 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:58:16 logger.go:39: 127.0.0.1:64927 - HTTP/2.0 GET /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:58:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:58:16 logger.go:39: 127.0.0.1:64927 - HTTP/2.0 GET /favicon.ico
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:58:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:58:26 logger.go:39: 127.0.0.1:64927 - HTTP/2.0 POST /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/05 20:58:26 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:58:26 logger.go:39: 127.0.0.1:64927 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:125 2024/12/05 20:59:31 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:134 2024/12/05 20:59:31 logger.go:39: server stopped gracefully
