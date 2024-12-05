@@ -20,7 +20,6 @@ type Post struct {
 	DislikesCount int
 	CommentsCount int
 	ImagePath     string
-	Image         []byte
 }
 
 type CreatePostRequest struct {
@@ -55,4 +54,5 @@ type PostRepository interface {
 	GetLikedPosts(ctx context.Context, userID int) ([]Post, error)
 	GetPostsByCategories(ctx context.Context, categories []string) ([]Post, error)
 	DeletePost(id int) error
+	DeletePostWithImage(id int) error
 }

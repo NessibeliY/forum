@@ -64,7 +64,7 @@ func (s *PostService) CreatePostWithImage(request *models.CreatePostRequest) (in
 
 	post := &models.Post{
 		Title:      request.Title,
-		Content:    string(data),
+		Content:    request.Content,
 		AuthorID:   request.AuthorID,
 		Categories: request.Categories,
 		ImagePath:  filePath,

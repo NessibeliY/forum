@@ -1539,3 +1539,163 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go
 ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/02 19:15:16 logger.go:39: get cookie: http: named cookie not present
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/02 19:15:19 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/02 19:15:19 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 08:25:20 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 08:25:20 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:25:24 logger.go:39: [::1]:62414 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:25:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:25:24 logger.go:39: [::1]:62414 - HTTP/1.1 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:25:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:25:24 logger.go:39: [::1]:62414 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:25:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:25:25 logger.go:39: [::1]:62414 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:25:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:25:32 logger.go:39: [::1]:62414 - HTTP/1.1 GET /post?id=13
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:25:32 logger.go:39: get cookie: http: named cookie not present
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/post.go:311 2024/12/05 08:25:32 logger.go:39: get post by id: get post by id: query row: no such table: image
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:25:32 logger.go:39: [::1]:62414 - HTTP/1.1 GET /favicon.ico
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:25:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:25:47 logger.go:39: [::1]:62414 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:25:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 08:25:49 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 08:25:53 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 08:26:37 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 08:26:37 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:26:41 logger.go:39: [::1]:62426 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:26:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:26:41 logger.go:39: [::1]:62426 - HTTP/1.1 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:26:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:26:41 logger.go:39: [::1]:62427 - HTTP/1.1 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:26:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:26:41 logger.go:39: [::1]:62426 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:26:41 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:27:28 logger.go:39: [::1]:62426 - HTTP/1.1 GET /post?id=13
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:27:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:27:30 logger.go:39: [::1]:62426 - HTTP/1.1 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:27:30 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:27:46 logger.go:39: [::1]:62426 - HTTP/1.1 GET /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:27:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:27:46 logger.go:39: [::1]:62426 - HTTP/1.1 GET /favicon.ico
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:27:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:27:53 logger.go:39: [::1]:62426 - HTTP/1.1 POST /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:26 2024/12/05 08:27:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:27:54 logger.go:39: [::1]:62426 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:28:06 logger.go:39: [::1]:62426 - HTTP/1.1 GET /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:28:31 logger.go:39: [::1]:62426 - HTTP/1.1 POST /post/create
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/post.go:182 2024/12/05 08:28:31 logger.go:39: create post: write file: open ui/static/img/e45cbc9c-42b4-4849-8849-58b16495b086: no such file or directory
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:29:29 logger.go:39: [::1]:62426 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:29:31 logger.go:39: [::1]:62426 - HTTP/1.1 GET /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:29:46 logger.go:39: [::1]:62426 - HTTP/1.1 POST /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:29:46 logger.go:39: [::1]:62426 - HTTP/1.1 GET /post?id=18
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:30:40 logger.go:39: [::1]:62426 - HTTP/1.1 POST /post/delete?id=18
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:30:40 logger.go:39: [::1]:62426 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 08:32:41 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 08:32:41 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 08:48:54 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 08:48:54 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:49:03 logger.go:39: [::1]:62607 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:49:04 logger.go:39: [::1]:62607 - HTTP/1.1 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:49:05 logger.go:39: [::1]:62607 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:49:05 logger.go:39: [::1]:62607 - HTTP/1.1 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:49:05 logger.go:39: [::1]:62608 - HTTP/1.1 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:49:06 logger.go:39: [::1]:62607 - HTTP/1.1 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:49:16 logger.go:39: [::1]:62607 - HTTP/1.1 GET /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:49:28 logger.go:39: [::1]:62607 - HTTP/1.1 POST /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:49:28 logger.go:39: [::1]:62607 - HTTP/1.1 GET /post?id=19
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/helper.go:20 2024/12/05 08:50:40 logger.go:39: execute template: write tcp [::1]:8080->[::1]:62607: i/o timeout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:50:42 logger.go:39: [::1]:62608 - HTTP/1.1 GET /post?id=19
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 08:53:19 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 08:53:19 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 08:53:20 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 08:53:20 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 08:53:22 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 08:53:22 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 08:53:25 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 08:53:25 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:53:27 logger.go:39: [::1]:62621 - HTTP/1.1 GET /post?id=19
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/helper.go:20 2024/12/05 08:53:27 logger.go:39: execute template: template: post.page.html:39:29: executing "post.page.html" at <len .ImagePath>: error calling len: reflect: call of reflect.Value.Type on zero Value
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:53:27 logger.go:39: [::1]:62621 - HTTP/1.1 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:53:29 logger.go:39: [::1]:62621 - HTTP/1.1 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 08:55:21 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 08:55:21 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 08:55:31 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 08:55:31 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:55:33 logger.go:39: [::1]:62627 - HTTP/1.1 GET /post?id=19
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:55:33 logger.go:39: [::1]:62627 - HTTP/1.1 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:55:33 logger.go:39: [::1]:62628 - HTTP/1.1 GET /static/img/c03fdaf6-92c0-4143-b4da-25b211de5391
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:55:33 logger.go:39: [::1]:62629 - HTTP/1.1 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:55:34 logger.go:39: [::1]:62628 - HTTP/1.1 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 08:56:10 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 08:56:10 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 08:56:12 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 08:56:12 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:56:29 logger.go:39: [::1]:62825 - HTTP/1.1 GET /post?id=19
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:59:53 logger.go:39: [::1]:63626 - HTTP/1.1 POST /post/delete?id=19
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/helper.go:20 2024/12/05 08:59:53 logger.go:39: execute template: write tcp [::1]:8080->[::1]:62825: i/o timeout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:59:53 logger.go:39: [::1]:63626 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 08:59:53 logger.go:39: [::1]:63626 - HTTP/1.1 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:00 logger.go:39: [::1]:63626 - HTTP/1.1 GET /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:11 logger.go:39: [::1]:63626 - HTTP/1.1 POST /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:11 logger.go:39: [::1]:63626 - HTTP/1.1 GET /post?id=20
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:13 logger.go:39: [::1]:63626 - HTTP/1.1 GET /static/img/a3f3b311-e955-4d21-ac6f-b83f028b7258
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:32 logger.go:39: [::1]:63626 - HTTP/1.1 POST /post/delete?id=20
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:32 logger.go:39: [::1]:63626 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 09:00:35 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 09:00:42 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 09:00:42 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:54 logger.go:39: [::1]:63676 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:54 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:54 logger.go:39: [::1]:63677 - HTTP/1.1 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:00:54 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:02 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:13 logger.go:39: [::1]:63676 - HTTP/1.1 POST /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:13 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=21
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:13 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/img/ef8667f9-b7a2-4e4b-abc5-73fd0dc6acb1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:18 logger.go:39: [::1]:63676 - HTTP/1.1 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:18 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=21
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:18 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/img/ef8667f9-b7a2-4e4b-abc5-73fd0dc6acb1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:19 logger.go:39: [::1]:63676 - HTTP/1.1 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:19 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=21
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:19 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/img/ef8667f9-b7a2-4e4b-abc5-73fd0dc6acb1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:20 logger.go:39: [::1]:63676 - HTTP/1.1 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:20 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=21
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:20 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/img/ef8667f9-b7a2-4e4b-abc5-73fd0dc6acb1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:20 logger.go:39: [::1]:63676 - HTTP/1.1 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:20 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=21
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:20 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/img/ef8667f9-b7a2-4e4b-abc5-73fd0dc6acb1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:21 logger.go:39: [::1]:63676 - HTTP/1.1 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:21 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=21
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:21 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/img/ef8667f9-b7a2-4e4b-abc5-73fd0dc6acb1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:22 logger.go:39: [::1]:63676 - HTTP/1.1 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:22 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=21
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:22 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/img/ef8667f9-b7a2-4e4b-abc5-73fd0dc6acb1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:23 logger.go:39: [::1]:63676 - HTTP/1.1 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:23 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=21
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:23 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/img/ef8667f9-b7a2-4e4b-abc5-73fd0dc6acb1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:27 logger.go:39: [::1]:63676 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:41 logger.go:39: [::1]:63676 - HTTP/1.1 GET /myposts
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:42 logger.go:39: [::1]:63676 - HTTP/1.1 GET /likedposts
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:44 logger.go:39: [::1]:63676 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:47 logger.go:39: [::1]:63676 - HTTP/1.1 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:47 logger.go:39: [::1]:63676 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:49 logger.go:39: [::1]:63676 - HTTP/1.1 GET /likedposts
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:52 logger.go:39: [::1]:63676 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:56 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=13
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:58 logger.go:39: [::1]:63676 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:59 logger.go:39: [::1]:63676 - HTTP/1.1 GET /post?id=21
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:01:59 logger.go:39: [::1]:63676 - HTTP/1.1 GET /static/img/ef8667f9-b7a2-4e4b-abc5-73fd0dc6acb1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:02:01 logger.go:39: [::1]:63676 - HTTP/1.1 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 09:02:08 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 09:02:08 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 09:02:21 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 09:02:21 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:03:16 logger.go:39: [::1]:63692 - HTTP/1.1 GET /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:03:31 logger.go:39: [::1]:63692 - HTTP/1.1 POST /post/create
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/post.go:170 2024/12/05 09:03:31 logger.go:39: file is too big: image/jpeg
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 09:05:15 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 09:05:15 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:45 2024/12/05 09:05:16 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:56 2024/12/05 09:05:16 logger.go:39: server is running on http://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:54 2024/12/05 09:05:39 logger.go:39: [::1]:63712 - HTTP/1.1 POST /post/create
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/post.go:170 2024/12/05 09:05:39 logger.go:39: file is too big: image/jpeg
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:114 2024/12/05 09:05:46 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:123 2024/12/05 09:05:46 logger.go:39: server stopped gracefully

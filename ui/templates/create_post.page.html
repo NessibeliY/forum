@@ -69,6 +69,7 @@
                                     <div class="mt-2 w-full flex flex-col">
                                         <label for="description" class="block text-base mb-2">IMAGE</label>
                                         <input type="file" accept="image/png,image/gif,image/jpeg,image/jpg" name="image" class="cursor-pointer"/>
+                                        <label class="text-red-600 my-2"> {{ .errors.image}}</label>
                                     </div>
                                     <div class="mt-2 w-full flex flex-col">
                                         <label for="description" class="block text-base mb-2">DESCRIPTION</label>

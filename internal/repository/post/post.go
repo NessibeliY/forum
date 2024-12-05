@@ -118,6 +118,40 @@ func (r *PostRepository) GetAllPosts(ctx context.Context) ([]models.Post, error)
 	return posts, nil
 }
 
+func (r *PostRepository) DeletePostWithImage(id int) error {
+	query := `DELETE FROM post WHERE id = $1`
+	result, err := r.db.Exec(query, id)
+	if err != nil {
+		return fmt.Errorf("exec: %w", err)
+	}
+
+	rowsAffected, err := result.RowsAffected()
+	if err != nil {
+		return fmt.Errorf("rows affected: %w", err)
+	}
+
+	if rowsAffected == 0 {
+		return nil
+	}
+
+	query = `DELETE FROM image WHERE post_id = $1`
+	result, err = r.db.Exec(query, id)
+	if err != nil {
+		return fmt.Errorf("exec image: %w", err)
+	}
+
+	rowsAffected, err = result.RowsAffected()
+	if err != nil {
+		return fmt.Errorf("rows affected image: %w", err)
+	}
+
+	if rowsAffected == 0 {
+		return nil
+	}
+
+	return nil
+}
+
 func (r *PostRepository) AddPostWithImage(post *models.Post) (int, error) {
 	createdAt := time.Now()
 	updatedAt := createdAt

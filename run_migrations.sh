@@ -7,3 +7,4 @@ sqlite3 forum.db < migrations/06_add_post_reaction_table.sql
 sqlite3 forum.db < migrations/07_add_comment_reaction_table.sql
 sqlite3 forum.db < migrations/08_insert_categories.sql
 sqlite3 forum.db < migrations/09_add_post_category_table.sql
+sqlite3 forum.db < migrations/10_add_image_table.sql
