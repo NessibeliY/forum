@@ -98,6 +98,21 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if h.getUserFromContext(r) != nil {
+		posts, err := h.service.PostService.GetPostsByAuthorID(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Error("get posts by author id:", err.Error())
+			h.serverError(w, err)
+			return
+		}
+		for _, el := range posts {
+			if el.AuthorID == h.getUserFromContext(r).ID {
+				http.Redirect(w, r, redirectTo, http.StatusSeeOther)
+				return
+			}
+		}
+	}
+
 	notificationRequst := &models.NotificationRequest{
 		PostID:  postID,
 		Message: reaction,

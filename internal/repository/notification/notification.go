@@ -174,3 +174,23 @@ func (r *NotificationRepository) MakeNotificationIsRead(user_id, post_id int) er
 
 	return nil
 }
+
+func (r *NotificationRepository) RemoveNotificationFromPost(postID int) error {
+	query := `DELETE FROM notifications WHERE post_id = $1`
+
+	result, err := r.db.Exec(query, postID)
+	if err != nil {
+		return fmt.Errorf("failed to delete notification for post %d: %w", postID, err)
+	}
+
+	rowsAffected, err := result.RowsAffected()
+	if err != nil {
+		return fmt.Errorf("failed to get rows affected for post %d: %w", postID, err)
+	}
+
+	if rowsAffected == 0 {
+		return fmt.Errorf("no notifications found for post %d to delete", postID)
+	}
+
+	return nil
+}

@@ -183,10 +183,20 @@ func (h *Handler) DeletePost(w http.ResponseWriter, r *http.Request) {
 		h.serverError(w, err)
 		return
 	}
+
 	if post == nil {
 		h.logger.Info("post nil")
 		h.clientError(w, http.StatusNotFound)
 		return
+	}
+
+	if post != nil {
+		err := h.service.NotificationService.RemoveNotificationFromPost(postID)
+		if err != nil {
+			h.logger.Error("delete notifications for post:", err.Error())
+			h.serverError(w, err)
+			return
+		}
 	}
 
 	deletePostRequest := &models.DeletePostRequest{

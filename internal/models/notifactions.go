@@ -24,6 +24,7 @@ type NotificationService interface {
 	GetCurrentNotifications(user_id int) ([]Notification, error)
 	MakeNotificationIsRead(user_id, post_id int) error
 	GetArchivedNotifications(user_id int) ([]Notification, error)
+	RemoveNotificationFromPost(post_id int) error
 }
 
 type NotificationRepository interface {
@@ -32,4 +33,5 @@ type NotificationRepository interface {
 	GetCurrentNotifications(ctx context.Context, user_id int) ([]Notification, error)
 	MakeNotificationIsRead(user_id, post_id int) error
 	GetArchivedNotifications(ctx context.Context, user_id int) ([]Notification, error)
+	RemoveNotificationFromPost(post_id int) error
 }

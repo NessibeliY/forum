@@ -117,6 +117,7 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 	}
+
 	notificationRequst := &models.NotificationRequest{
 		PostID:  postID,
 		Message: "commented",
