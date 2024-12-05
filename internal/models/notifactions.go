@@ -22,7 +22,7 @@ type NotificationService interface {
 	CreateNotification(notification *NotificationRequest) (int, error)
 	GetCountNotifications(user_id int) (int, error)
 	GetCurrentNotifications(user_id int) ([]Notification, error)
-	MakeNotificationIsRead(user_id int) error
+	MakeNotificationIsRead(user_id, post_id int) error
 	GetArchivedNotifications(user_id int) ([]Notification, error)
 }
 
@@ -30,6 +30,6 @@ type NotificationRepository interface {
 	AddNotification(notification *Notification) (int, error)
 	GetCountNotifications(user_id int) (int, error)
 	GetCurrentNotifications(ctx context.Context, user_id int) ([]Notification, error)
-	MakeNotificationIsRead(user_id int) error
+	MakeNotificationIsRead(user_id, post_id int) error
 	GetArchivedNotifications(ctx context.Context, user_id int) ([]Notification, error)
 }

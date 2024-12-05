@@ -47,11 +47,12 @@
                             <div id="current" class="tab-content active">
                                 <h3 class="text-xl">Current</h3>
                                 {{range .current_notifications}}
-                                <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 shadow-md hover:shadow-lg transition">
+                                <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 duration-300 transition">
                                     <div class="flex w-full items-center justify-between">
                                         <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
-                                        <form class="flex items-center justify-center" action="" method="POST">
+                                        <form class="flex items-center justify-center" action="/notifications/read" method="POST">
                                             <button type="submit" class="flex items-center justify-center">
+                                                <input type="hidden" name="postID" value="{{.PostID}}"/>
                                                 <i class="fa-solid fa-square-xmark text-xl hover:text-red-600 duration-300 transition cursor-pointer"></i>
                                             </button>
                                         </form>
@@ -68,6 +69,9 @@
                                         {{end}}
                                     </span>
                                     <span class="text-sm text-gray-400 mt-1">Received: {{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
+                                    <div class="w-full flex py-1 px-2">
+                                        <hr>
+                                    </div>
                                 </div>
                                 {{end}}
                             </div>
@@ -75,7 +79,7 @@
                             <div id="archived" class="tab-content">
                                 <h3 class="text-xl">Archived</h3>
                                 {{range .archived_notifications}}
-                                <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 shadow-md hover:shadow-lg transition">
+                                <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 duration-300 transition">
                                     <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
                                     <span class="mt-2 text-base">
                                         {{if eq .Message "like"}}
@@ -89,6 +93,9 @@
                                         {{end}}
                                     </span>
                                     <span class="text-sm text-gray-400 mt-1">Received: {{ .CreatedAt.Format "02-01-2006 15:04"}}</span>
+                                    <div class="w-full flex  mt-2">
+                                        <hr class="w-full h-px bg-slate-500">
+                                    </div>
                                 </div>
                                 {{end}}
                             </div>
@@ -134,5 +141,6 @@
             activeButton.classList.add('active');
         }
     </script>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>

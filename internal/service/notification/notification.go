@@ -53,6 +53,6 @@ func (s *NotificationService) GetArchivedNotifications(user_id int) ([]models.No
 	return notification_list, nil
 }
 
-func (s *NotificationService) MakeNotificationIsRead(user_id int) error {
-	return s.repo.MakeNotificationIsRead(user_id)
+func (s *NotificationService) MakeNotificationIsRead(user_id, post_id int) error {
+	return s.repo.MakeNotificationIsRead(user_id, post_id)
 }

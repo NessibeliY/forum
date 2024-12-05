@@ -156,7 +156,7 @@ func (r *NotificationRepository) GetArchivedNotifications(ctx context.Context, u
 	return notifications, nil
 }
 
-func (r *NotificationRepository) MakeNotificationIsRead(user_id int) error {
+func (r *NotificationRepository) MakeNotificationIsRead(user_id, post_id int) error {
 	query := `
 		UPDATE notifications
 		SET is_read = TRUE
@@ -164,11 +164,11 @@ func (r *NotificationRepository) MakeNotificationIsRead(user_id int) error {
             SELECT n.id
             FROM notifications n
             JOIN post p ON p.id = n.post_id
-            WHERE p.author_id = $1
-        )
+            WHERE p.author_id = $1 AND n.post_id = $2
+        );
 	`
 
-	if _, err := r.db.Exec(query, user_id); err != nil {
+	if _, err := r.db.Exec(query, user_id, post_id); err != nil {
 		return fmt.Errorf("failed to mark notifications as read: %w", err)
 	}
 

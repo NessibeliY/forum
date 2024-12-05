@@ -84,16 +84,32 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// check postid
+	checkPostID, err := h.service.PostService.GetPostByID(postID)
+	if err != nil {
+		h.logger.Error("check post id:", err.Error())
+		h.serverError(w, err)
+		return
+	}
+
+	if checkPostID == nil {
+		h.logger.Error("check post id bad request:", err.Error())
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+
 	notificationRequst := &models.NotificationRequest{
 		PostID:  postID,
 		Message: reaction,
 	}
 
-	_, err = h.service.NotificationService.CreateNotification(notificationRequst)
-	if err != nil {
-		h.logger.Error("create post notification:", err.Error())
-		h.serverError(w, err)
-		return
+	if checkPostID != nil {
+		_, err = h.service.NotificationService.CreateNotification(notificationRequst)
+		if err != nil {
+			h.logger.Error("create post notification:", err.Error())
+			h.serverError(w, err)
+			return
+		}
 	}
 
 	http.Redirect(w, r, redirectTo, http.StatusSeeOther)

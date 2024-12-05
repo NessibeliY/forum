@@ -53,20 +53,32 @@
         {{end}}
         <ul>
             {{ if .authenticated_user }}
-                <li><a href="/" class="text-xl hover:text-blue-500 transition duration-300">Home</a></li>
-                <li><a href="/myposts" class="text-xl hover:text-blue-500 transition duration-300">My posts</a></li>
-                <li><a href="/likedposts" class="text-xl hover:text-blue-500 transition duration-300">Liked posts</a></li>
-                <li><a href="/post/create" class="text-xl">Create Post</a></li>
+                <li><a href="/" class="text-xl hover:text-blue-500 transition duration-300"><i class="fas fa-home mr-2"></i>Home</a></li>
+                <li><a href="/myposts" class="text-xl hover:text-blue-500 transition duration-300"><i class="fas fa-user-edit mr-2"></i>My posts</a></li>
+                <li><a href="/likedposts" class="text-xl hover:text-blue-500 transition duration-300"><i class="fas fa-thumbs-up mr-2"></i>Liked posts</a></li>
+                <li><a href="/post/create" class="text-xl hover:text-blue-500 transition duration-300"><i class="fas fa-plus-circle mr-2"></i>Create Post</a></li>
+                <li>
+                    <a href="/notifications" class="text-xl hover:text-blue-500 transition duration-300">
+                    <i class="fas fa-bell mr-2"></i>Notifications 
+                        {{ if gt .count_notification 0 }}
+                        <span class="ml-1 bg-indigo-500 text-white rounded-full py-1 px-2">
+                            {{ .count_notification }}
+                        </span>
+                        {{ else }}
+                        <span class="hidden"></span>
+                        {{ end }}
+                    </a>
+                </li>
             {{end}}
             {{if not .authenticated_user}}
-            <li><a href="/login" class="text-xl">Sign In</a></li>
-            <li><a href="/signup" class="text-xl">Sign Up</a></li>
+                <li><a href="/login" class="text-xl">Sign In</a></li>
+                <li><a href="/signup" class="text-xl">Sign Up</a></li>
             {{end}}
 
             {{ if .authenticated_user }}
             <form method="POST" action="/logout" class="flex items-center justify-start" style="padding: 10px;">
-                <button class="flex items-center justify-center" type="submit">
-                   Sign-out
+                <button class="flex items-center justify-center text-xl" type="submit">
+                    <i class="fas fa-sign-out-alt mr-2"></i> Sign-out
                 </button>
             </form>
             {{end}}
