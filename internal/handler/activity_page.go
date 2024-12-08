@@ -31,6 +31,7 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 	var archivedNotifications []models.Notification
 	var userPosts []models.Post
 	var likedDislikedPosts []models.UserReactionPost
+	var commentPosts []models.Post
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -67,6 +68,13 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
+		commentPosts, err = h.service.CommentService.GetUserCommentedPosts(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get archived notifications:", err)
+			h.serverError(w, err)
+			return
+		}
+
 	}
 
 	h.Render(w, "activity_page.page.html", http.StatusOK, H{
@@ -77,5 +85,6 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 		"archived_notifications": archivedNotifications,
 		"user_posts":             userPosts,
 		"likes_dislikes_post":    likedDislikedPosts,
+		"comment_posts":          commentPosts,
 	})
 }

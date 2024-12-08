@@ -31,6 +31,7 @@ type CommentService interface {
 	CreateComment(createCommentRequest *CreateCommentRequest) error
 	DeleteComment(deleteCommentRequest *DeleteCommentRequest) error
 	GetCommentByID(id int) (*Comment, error)
+	GetUserCommentedPosts(author_id int) ([]Post, error)
 }
 
 type CommentRepository interface {
@@ -38,4 +39,5 @@ type CommentRepository interface {
 	AddComment(comment *Comment) error
 	DeleteComment(id int) error
 	GetCommentByID(ctx context.Context, id int) (*Comment, error)
+	GetUserCommentedPosts(сtx context.Context, author_id int) ([]Post, error)
 }

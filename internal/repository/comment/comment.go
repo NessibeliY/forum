@@ -102,3 +102,71 @@ func (r *CommentRepository) GetCommentByID(ctx context.Context, id int) (*models
 
 	return comment, nil
 }
+
+func (r *CommentRepository) GetUserCommentedPosts(сtx context.Context, author_id int) ([]models.Post, error) {
+	query := `
+		SELECT p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at, u.username
+		FROM post p
+		JOIN comment c ON c.post_id = p.id
+		JOIN users u ON p.author_id = u.id 
+		WHERE c.author_id = $1
+		GROUP BY p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at, u.username
+		ORDER BY p.id DESC;
+	`
+
+	rows, err := r.db.QueryContext(сtx, query, author_id)
+	if err != nil {
+		return nil, fmt.Errorf("query: %w", err)
+	}
+
+	defer rows.Close()
+
+	var posts []models.Post
+	var currentPost *models.Post
+
+	for rows.Next() {
+		var postID, authorID int
+		var title, content, authorName string
+		var createdAt, updatedAt time.Time
+
+		err := rows.Scan(
+			&postID,
+			&title,
+			&content,
+			&authorID,
+			&createdAt,
+			&updatedAt,
+			&authorName,
+		)
+		if err != nil {
+			return nil, fmt.Errorf("row scan: %w", err)
+		}
+
+		if currentPost == nil || currentPost.ID != postID {
+			if currentPost != nil {
+				posts = append(posts, *currentPost)
+			}
+			currentPost = &models.Post{
+				ID:         postID,
+				Title:      title,
+				Content:    content,
+				AuthorID:   authorID,
+				AuthorName: authorName,
+				CreatedAt:  createdAt,
+				UpdatedAt:  updatedAt,
+			}
+		}
+
+	}
+
+	if currentPost != nil {
+		posts = append(posts, *currentPost)
+	}
+
+	err = rows.Err()
+	if err != nil {
+		return nil, fmt.Errorf("rows scan: %w", err)
+	}
+
+	return posts, nil
+}

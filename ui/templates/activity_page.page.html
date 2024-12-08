@@ -59,11 +59,11 @@
                                         {{ .CreatedAt.Format "02-01-2006 15:04"}}
                                     </span>
                                 </div>
-                                <div class="w-3/5 flex flex-col">
-                                    <a href="/post?id={{ .ID }}" class="text-2xl text-blue-500 font-semibold hover:text-blue-600 transition duration-300 cursor-pointer">
+                                <div class="w-2/5 flex flex-col">
+                                    <a href="/post?id={{ .ID }}" class="text-2xl text-blue-500 font-semibold hover:text-blue-600 transition duration-300 cursor-pointer break-words overflow-wrap-break-word">
                                         {{.Title}}
                                     </a>
-                                    <span class="text-xl text-blue-500 ">
+                                    <span class="text-xl text-blue-500 break-words overflow-wrap-break-word">
                                         {{.Content}}
                                     </span>
                                 </div>
@@ -90,16 +90,16 @@
                                         {{ .CreatedAt.Format "02-01-2006 15:04"}}
                                     </span>
                                 </div>
-                                <div class="w-3/5 flex flex-col">
-                                    <a href="/post?id={{ .ID }}" class="text-2xl text-blue-500 font-semibold hover:text-blue-600 transition duration-300 cursor-pointer">
+                                <div class="w-2/5 flex flex-col">
+                                    <a href="/post?id={{ .ID }}" class="text-2xl text-blue-500 font-semibold hover:text-blue-600 transition duration-300 cursor-pointer break-words overflow-wrap-break-word">
                                         {{.Title}}
                                     </a>
-                                    <span class="text-xl text-blue-500 ">
+                                    <span class="text-xl text-blue-500 break-words overflow-wrap-break-word">
                                         {{.Content}}
                                     </span>
                                 </div>
 
-                                <span class="text-base mt-2">
+                                <span class="text-base mt-2 w-1/4">
                                     {{if eq .UserReaction "like"}} 
                                         You liked this post
                                     {{else}} 
@@ -114,7 +114,34 @@
 
                     <div id="Comments" class="tab-content">
                         <span class="text-xl my-3">Comments</span>
-                       
+                        {{range .comment_posts}}
+                        <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 duration-300 transition bg-white">
+                            <div class="flex w-full items-center justify-between">
+                                <div class="user_icon post_icon ">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="flex flex-col ml-2 w-1/4">
+                                    <span class="text-base text-slate-400 font-extralight italic mb-1">
+                                        {{ .AuthorName }}
+                                    </span>
+                                    <span class="text-base text-slate-400 font-extralight italic mt-1s">
+                                        {{ .CreatedAt.Format "02-01-2006 15:04"}}
+                                    </span>
+                                </div>
+                                <div class="w-3/5 flex flex-col">
+                                    <a href="/post?id={{ .ID }}" class="text-2xl text-blue-500 font-semibold hover:text-blue-600 transition duration-300 cursor-pointer break-words overflow-wrap-break-word">
+                                        {{.Title}}
+                                    </a>
+                                    <span class="text-xl text-blue-500 break-words overflow-wrap-break-word ">
+                                        {{.Content}}
+                                    </span>
+                                </div>
+                                <span class="text-base mt-2 w-1/4">
+                                    You commented this post
+                                </span>
+                            </div>
+                        </div>
+                        {{end}}
                     </div>
 
                 </div>
