@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../static/images/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>FORUM</title>
+</head>
+</head>
+<body>
+    {{ template "header" .}}
+    <main class="main_container">
+           <div class="offset">
+                <!--LIST OF TAGS  -->
+                <div class="tags card bg-white">
+                    <h3 class="font-semibold">Tags</h3>
+                    <form class="flex flex-col" action="/showposts" method="GET">
+                            {{range .categories}}
+                            <div class="flex items-center w-full cursor-pointer transition duration-300 hover:text-blue-400 duration-300 transition categories">
+                                <input type="checkbox" id="category--{{.Name}}" class="cursor-pointer" name="category" value="{{.Name}}"/>
+                                <label for="category--{{.Name}}" class="ml-2 cursor-pointer w-full">{{.Name}}</label>
+                            </div>
+                            {{end}}
+                            <button class="bg-indigo-600 py-2 px-2 rounded-lg mt-2 text-white">search</button>
+                    </form>
+                </div>
+        
+                <div class="middleContainer">
+                    <div class="create_container flex flex-col">
+                        <div class="flex items-center justify-between w-full">
+                            <span class="text-bold text-2xl">UPDATE POST</span>
+                        </div>
+
+                        <form class="create_form" action="/update/post" method="POST" id="postForm">
+                            <div class="mt-2 w-full flex flex-col">
+                                <label for="" class="block text-base mb-2">TITLE</label>
+                                <input 
+                                    id="title"
+                                    type="text"
+                                    class="px-2 py-2 border border-neutral-500 my-2 rounded" 
+                                    placeholder="title"
+                                    name="title"
+                                    value="{{.post.Title}}"
+                                    />
+                                <label class="text-red-600 my-2"> {{ .errors.title}}</label>
+                            </div>
+                            <div class="w-full flex flex-col">
+                                <p class="my-2 text text-base">TAGS</p>
+                                {{range .categories}} 
+                                <div class="flex mr-2">
+                                    <input 
+                                        type="checkbox" 
+                                        class="rounded-lg cursor-pointer mr-2" 
+                                        name="categories" 
+                                        value="{{.Name}}" 
+                                        id="{{.Name}}"
+                                        {{if contains .Name (pluck . $.post.Categories)}}checked{{end}}
+                                    />
+                                    <label for="{{.Name}}" class="cursor-pointer">{{.Name}}</label>
+                                </div>
+                                {{end}}
+                                <label class="text-red-600 my-2"> {{ .errors.categories}}</label>
+                            </div>
+                            <div class="mt-2 w-full flex flex-col">
+                                <label for="description" class="block text-base mb-2">DESCRIPTION</label>
+                                <textarea  
+                                    class="border border-neutral-500 my-2 rounded py-2 px-2" 
+                                    placeholder="description"
+                                    id="description"
+                                    name="content"
+                                    value="{{.post.Content}}"
+                                    >{{ .post.Content }}</textarea>
+                                <label class="text-red-600 my-2"> {{ .errors.content }}</label>
+                            </div>
+                            <div style="display: flex; justify-content: start;">
+                                <a href="/" class="btn_create btn_auth bg-red-500">cancel</a>
+                                <button class="btn_create btn_auth bg-green-500 " type="submit">update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        
+            {{if .authenticated_user }}
+            <div class="rSide">
+                <div class="welcome card">
+                    <div>
+                        <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, {{.authenticated_user.Username}}</h2>
+                        <span style="font-size: larger;">Glad to see you!</span>
+                        <a href="/post/create" class="createButton bg-green-600 hover:bg-green-700 transition duration-300" id="openModalBtn">
+                            <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
+                        </a>
+                    </div>
+                </div>
+                <div class="userInfo card">
+                    {{ template "user_info" .}}
+                </div>
+            </div>
+            {{end}}
+            </div>
+    </main>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

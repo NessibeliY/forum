@@ -261,6 +261,8 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+
+
 	comments, err := h.service.CommentService.GetAllCommentsByPostID(postID)
 	if err != nil {
 		h.logger.Error("get all comments by post_id:", err.Error())
