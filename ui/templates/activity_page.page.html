@@ -33,27 +33,90 @@
                 </div>
                 <!-- IF USER AUTH SHOW THIS BLOCK -->
                 <div class="middleContainer">
-                    <div class="flex flex-col w-full border-b border-indigo-600 py-3 px-2">
+                    <div class="flex flex-col w-full border-b border-indigo-600 py-3 px-2 mb-2">
                         <span class="text-2xl font-bold">Activity</span>
                         <!-- Tab buttons -->
                         <div class="tabs flex space-x-4 mt-4 mb-2 px-2 py-2">
-                            <button class="tab-button active" onclick="showTab('current')"  data-index="0">Posts</button>
-                            <button class="tab-button" onclick="showTab('archived')"  data-index="1">Likes and Dislikes</button>
-                            <button class="tab-button" onclick="showTab('archived')"  data-index="1">Comments</button>
+                            <button class="tab-button active" onclick="showTab('Posts')"  data-index="0">Posts</button>
+                            <button class="tab-button" onclick="showTab('LikesDislikes')"  data-index="1">Likes and Dislikes</button>
+                            <button class="tab-button" onclick="showTab('Comments')"  data-index="2">Comments</button>
                         </div>
                     </div>
 
-                    <div  class="flex w-full flex-col">
+                    <div  id="Posts" class="flex w-full flex-col tab-content active">
                         {{range .user_posts}}
+                        <span class="text-xl my-3">My posts</span>
                         <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 duration-300 transition bg-white">
                             <div class="flex w-full items-center justify-between">
-                                <a href="/post?id={{ .ID }}" class="text-blue-500 underline font-semibold">
-                                    {{.Title}}
-                                </a>
+                                <div class="user_icon post_icon ">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="flex flex-col ml-2 w-1/4">
+                                    <span class="text-base text-slate-400 font-extralight italic mb-1">
+                                        {{ .AuthorName }}
+                                    </span>
+                                    <span class="text-base text-slate-400 font-extralight italic mt-1s">
+                                        {{ .CreatedAt.Format "02-01-2006 15:04"}}
+                                    </span>
+                                </div>
+                                <div class="w-3/5 flex flex-col">
+                                    <a href="/post?id={{ .ID }}" class="text-2xl text-blue-500 font-semibold hover:text-blue-600 transition duration-300 cursor-pointer">
+                                        {{.Title}}
+                                    </a>
+                                    <span class="text-xl text-blue-500 ">
+                                        {{.Content}}
+                                    </span>
+                                </div>
+                                
                             </div>
                         </div>
                         {{end}}
                     </div>
+
+
+                    <div id="LikesDislikes" class="tab-content">
+                        <span class="text-xl my-3">Likes and Dislikes</span>
+                        {{range .likes_dislikes_post}}
+                        <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 duration-300 transition bg-white">
+                            <div class="flex w-full items-center justify-between">
+                                <div class="user_icon post_icon ">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="flex flex-col ml-2 w-1/4">
+                                    <span class="text-base text-slate-400 font-extralight italic mb-1">
+                                        {{ .AuthorName }}
+                                    </span>
+                                    <span class="text-base text-slate-400 font-extralight italic mt-1s">
+                                        {{ .CreatedAt.Format "02-01-2006 15:04"}}
+                                    </span>
+                                </div>
+                                <div class="w-3/5 flex flex-col">
+                                    <a href="/post?id={{ .ID }}" class="text-2xl text-blue-500 font-semibold hover:text-blue-600 transition duration-300 cursor-pointer">
+                                        {{.Title}}
+                                    </a>
+                                    <span class="text-xl text-blue-500 ">
+                                        {{.Content}}
+                                    </span>
+                                </div>
+
+                                <span class="text-base mt-2">
+                                    {{if eq .UserReaction "like"}} 
+                                        You liked this post
+                                    {{else}} 
+                                        You disliked this post
+                                    {{end}}
+                                </span>
+                                
+                            </div>
+                        </div>
+                        {{end}}                    
+                    </div>
+
+                    <div id="Comments" class="tab-content">
+                        <span class="text-xl my-3">Comments</span>
+                       
+                    </div>
+
                 </div>
         
             {{if .authenticated_user }}
@@ -74,6 +137,24 @@
             {{end}}
             </div>
     </main>
+    <script>
+        function showTab(tabName) {
+              // Скрыть все вкладки
+              const tabs = document.querySelectorAll('.tab-content');
+              tabs.forEach(tab => tab.classList.remove('active'));
+  
+              // Убрать класс active с всех кнопок
+              const buttons = document.querySelectorAll('.tab-button');
+              buttons.forEach(button => button.classList.remove('active'));
+  
+              // Показать выбранную вкладку
+              document.getElementById(tabName).classList.add('active');
+  
+              // Выделить активную кнопку
+              const activeButton = document.querySelector(`.tab-button[onclick="showTab('${tabName}')"]`);
+              activeButton.classList.add('active');
+          }
+      </script>
     <script src="/static/js/script.js"></script>
 </body>
 </html>

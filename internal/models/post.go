@@ -20,6 +20,22 @@ type Post struct {
 	CommentsCount int
 }
 
+type UserReactionPost struct {
+	ID            int
+	Title         string
+	Content       string
+	AuthorID      int
+	AuthorName    string
+	CreatedAt     time.Time
+	UpdatedAt     time.Time
+	Categories    []*Category
+	Comments      []Comment
+	LikesCount    int
+	DislikesCount int
+	CommentsCount int
+	UserReaction  string
+}
+
 type CreatePostRequest struct {
 	Title      string      `json:"title"`
 	Content    string      `json:"content"`

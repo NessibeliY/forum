@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
@@ -31,6 +30,7 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 	var currentNotifications []models.Notification
 	var archivedNotifications []models.Notification
 	var userPosts []models.Post
+	var likedDislikedPosts []models.UserReactionPost
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -60,7 +60,13 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		fmt.Println(userPosts[0].ID)
+		likedDislikedPosts, err = h.service.PostReactionService.GetUserReactionPosts(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get archived notifications:", err)
+			h.serverError(w, err)
+			return
+		}
+
 	}
 
 	h.Render(w, "activity_page.page.html", http.StatusOK, H{
@@ -70,5 +76,6 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 		"current_notifications":  currentNotifications,
 		"archived_notifications": archivedNotifications,
 		"user_posts":             userPosts,
+		"likes_dislikes_post":    likedDislikedPosts,
 	})
 }

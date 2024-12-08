@@ -76,3 +76,15 @@ func (s *PostReactionService) CreatePostReaction(request *models.CreatePostReact
 
 	return nil
 }
+
+func (s *PostReactionService) GetUserReactionPosts(author_id int) ([]models.UserReactionPost, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	posts, err := s.repo.GetUserReactionPosts(ctx, author_id)
+	if err != nil {
+		return []models.UserReactionPost{}, fmt.Errorf("get user reaction posts: %s", err.Error())
+	}
+
+	return posts, nil
+}
