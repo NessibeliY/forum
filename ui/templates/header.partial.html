@@ -19,21 +19,33 @@
                 <a href="/notifications" class="text-2xl flex items-center justify-center mx-2 bg-indigo-500 py-2 px-2 rounded-lg cursor-pointer hover:text-white duration-300 transition">
                     <i class="fa-solid fa-bell"></i>
                     {{ if gt .count_notification 0 }}
-                    <span class="absolute top-0 right-16 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    <span class="absolute top-0 right-14 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                         {{ .count_notification }}
                     </span>
                     {{ else }}
                     <span class="hidden"></span>
                     {{ end }}
                 </a>
-                <div class="flex items-center justify-center mx-2">
-                    <i class="fa fa-user-circle text-2xl hover:text-red-600  cursor-pointer transition duration-300"></i>
-                </div>
-                <form method="POST" action="/logout" class="flex items-center justify-center ml-2">
-                    <button class="flex items-center justify-center text-2xl hover:text-red-600  transition duration-300" type="submit">
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </button>
-                </form>
+                <div class="flex items-center justify-center mx-2 group relative bg-indigo-500 py-2 px-2 rounded-lg">
+                    <i class="fa fa-user-circle text-2xl hover:text-red-600 cursor-pointer transition duration-300"></i>
+                    <div class="flex flex-col absolute top-12  w-40 h-44 opacity-0 rounded-lg group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-full flex flex-col bg-blue-600 py-7 px-5 rounded-t-lg">
+                            <span class="text-4xl text-white">{{.authenticated_user.Username}}</span>
+                        </div>
+                        <div class="w-full flex flex-col  bg-white">
+                            <ul class="flex flex-col items-center justify-start">
+                                <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-xl" href="/activity-page">Activity page</a>
+                                <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer">
+                                    <form method="POST" action="/logout" class="flex items-center justify-start  hover:text-indigo-500 duration-300 transition cursor-pointer">
+                                        <button class="flex items-center justify-start text-xl hover:text-indigo-500  transition duration-300" type="submit">
+                                            Log Out
+                                        </button>
+                                    </form>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>                         
             </div>
             {{else}}
             <div class="auth_bnts">

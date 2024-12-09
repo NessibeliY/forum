@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../static/images/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>FORUM</title>
+</head>
+</head>
+<body>
+    {{ template "header" .}}
+    <main class="main_container">
+           <div class="offset">
+                <!--LIST OF TAGS  -->
+                <div class="tags card bg-white">
+                    <h3 class="font-semibold">Tags</h3>
+                    <form class="flex flex-col" action="/showposts" method="GET">
+                            {{range .categories}}
+                            <div class="flex items-center w-full cursor-pointer transition duration-300 hover:text-blue-400 duration-300 transition categories">
+                                <input type="checkbox" id="category--{{.Name}}" class="cursor-pointer" name="category" value="{{.Name}}"/>
+                                <label for="category--{{.Name}}" class="ml-2 cursor-pointer w-full">{{.Name}}</label>
+                            </div>
+                            {{end}}
+                            <button class="bg-indigo-600 py-2 px-2 rounded-lg mt-2 text-white">search</button>
+                    </form>
+                </div>
+                <!-- IF USER AUTH SHOW THIS BLOCK -->
+                <div class="middleContainer">
+                    <div class="flex flex-col w-full border-b border-indigo-600 py-3 px-2">
+                        <span class="text-2xl font-bold">Activity</span>
+                        <!-- Tab buttons -->
+                        <div class="tabs flex space-x-4 mt-4 mb-2 px-2 py-2">
+                            <button class="tab-button active" onclick="showTab('current')"  data-index="0">Posts</button>
+                            <button class="tab-button" onclick="showTab('archived')"  data-index="1">Likes and Dislikes</button>
+                            <button class="tab-button" onclick="showTab('archived')"  data-index="1">Comments</button>
+                        </div>
+                    </div>
+
+                    <div  class="flex w-full flex-col">
+                        {{range .user_posts}}
+                        <div class="flex w-full flex-col rounded-lg py-3 px-4 mt-3 duration-300 transition bg-white">
+                            <div class="flex w-full items-center justify-between">
+                                <a href="/post?id={{ .ID }}" class="text-blue-500 underline font-semibold">
+                                    {{.Title}}
+                                </a>
+                            </div>
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+        
+            {{if .authenticated_user }}
+            <div class="rSide">
+                <div class="welcome card">
+                    <div>
+                        <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, {{.authenticated_user.Username}}</h2>
+                        <span style="font-size: larger;">Glad to see you!</span>
+                        <a href="/post/create" class="createButton bg-green-600 hover:bg-green-700 transition duration-300" id="openModalBtn">
+                            <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
+                        </a>
+                    </div>
+                </div>
+                <div class="userInfo card">
+                    {{ template "user_info" .}}
+                </div>
+            </div>
+            {{end}}
+            </div>
+    </main>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

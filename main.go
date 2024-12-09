@@ -88,6 +88,8 @@ func main() {
 	mux.Handle("/notifications", handler.RequireAuthentication(http.HandlerFunc(handler.Notification)))
 	mux.Handle("/notifications/read", handler.RequireAuthentication(http.HandlerFunc(handler.MakeNotificationIsRead)))
 
+	mux.Handle("/activity-page", handler.RequireAuthentication(http.HandlerFunc(handler.ActivityPage)))
+
 	finalHandler := handler.SecureHeaders(
 		handler.RecoverPanic(
 			handler.LogRequest(
