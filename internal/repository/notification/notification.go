@@ -29,7 +29,7 @@ func (r *NotificationRepository) AddNotification(notification *models.Notificati
 	return notification.ID, nil
 }
 
-func (r *NotificationRepository) GetCountNotifications(user_id int) (int, error) {
+func (r *NotificationRepository) GetCountNotifications(userID int) (int, error) {
 	var count int
 	query := `
         SELECT COUNT(n.id)
@@ -40,7 +40,7 @@ func (r *NotificationRepository) GetCountNotifications(user_id int) (int, error)
 		ORDER BY n.created_at DESC;
     `
 
-	err := r.db.QueryRow(query, user_id).Scan(&count)
+	err := r.db.QueryRow(query, userID).Scan(&count)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return 0, nil
@@ -50,7 +50,7 @@ func (r *NotificationRepository) GetCountNotifications(user_id int) (int, error)
 	return count, nil
 }
 
-func (r *NotificationRepository) GetCurrentNotifications(ctx context.Context, user_id int) ([]models.Notification, error) {
+func (r *NotificationRepository) GetCurrentNotifications(ctx context.Context, userID int) ([]models.Notification, error) {
 	query := `
 	SELECT 
 		n.id,n.post_id,n.message,n.is_read,n.created_at 
@@ -60,7 +60,7 @@ func (r *NotificationRepository) GetCurrentNotifications(ctx context.Context, us
 	WHERE u.id = $1 AND n.is_read = 0
 	ORDER BY n.created_at DESC;
 	`
-	rows, err := r.db.QueryContext(ctx, query, user_id)
+	rows, err := r.db.QueryContext(ctx, query, userID)
 	if err != nil {
 		return nil, fmt.Errorf("query context: %w", err)
 	}
@@ -103,7 +103,7 @@ func (r *NotificationRepository) GetCurrentNotifications(ctx context.Context, us
 	return notifications, nil
 }
 
-func (r *NotificationRepository) GetArchivedNotifications(ctx context.Context, user_id int) ([]models.Notification, error) {
+func (r *NotificationRepository) GetArchivedNotifications(ctx context.Context, userID int) ([]models.Notification, error) {
 	query := `
 	SELECT 
 		n.id,n.post_id,n.message,n.is_read,n.created_at 
@@ -113,7 +113,7 @@ func (r *NotificationRepository) GetArchivedNotifications(ctx context.Context, u
 	WHERE u.id = $1 AND  n.is_read = 1
 	ORDER BY n.created_at DESC;
 	`
-	rows, err := r.db.QueryContext(ctx, query, user_id)
+	rows, err := r.db.QueryContext(ctx, query, userID)
 	if err != nil {
 		return nil, fmt.Errorf("query context: %w", err)
 	}
@@ -156,7 +156,7 @@ func (r *NotificationRepository) GetArchivedNotifications(ctx context.Context, u
 	return notifications, nil
 }
 
-func (r *NotificationRepository) MakeNotificationIsRead(user_id, notification_id int) error {
+func (r *NotificationRepository) MakeNotificationIsRead(userID, notificationID int) error {
 	query := `
 		UPDATE notifications
 		SET is_read = TRUE
@@ -168,14 +168,14 @@ func (r *NotificationRepository) MakeNotificationIsRead(user_id, notification_id
         );
 	`
 
-	if _, err := r.db.Exec(query, user_id, notification_id); err != nil {
+	if _, err := r.db.Exec(query, userID, notificationID); err != nil {
 		return fmt.Errorf("failed to mark notifications as read: %w", err)
 	}
 
 	return nil
 }
 
-func (r *NotificationRepository) RemoveNotificationFromPost(postID int) error {
+func (r *NotificationRepository) DeleteNotificationsByPostID(postID int) error {
 	query := `DELETE FROM notifications WHERE post_id = $1`
 
 	result, err := r.db.Exec(query, postID)

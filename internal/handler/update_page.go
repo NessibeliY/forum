@@ -37,16 +37,6 @@ func (h *Handler) UpdatePageMethodGet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var countNotification int
-	if h.getUserFromContext(r) != nil {
-		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
-		if err != nil {
-			h.logger.Info("get countNotification:", err)
-			h.serverError(w, err)
-			return
-		}
-	}
-
 	query, err := url.ParseQuery(r.URL.RawQuery)
 	if err != nil {
 		h.logger.Error("parse query:", err.Error())
@@ -80,6 +70,16 @@ func (h *Handler) UpdatePageMethodGet(w http.ResponseWriter, r *http.Request) {
 		h.logger.Error("post nil")
 		h.clientError(w, http.StatusNotFound)
 		return
+	}
+
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
 	}
 
 	h.Render(w, "update_page.page.html", http.StatusOK, H{
@@ -95,18 +95,6 @@ func (h *Handler) UpdatePostMethodPost(w http.ResponseWriter, r *http.Request) {
 	content := strings.TrimSpace(r.PostFormValue("content"))
 	categoryNames := r.PostForm["categories"]
 
-	var countNotification int
-	var err error
-	if h.getUserFromContext(r) != nil {
-		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
-		if err != nil {
-			h.logger.Info("get countNotification:", err)
-			h.serverError(w, err)
-			return
-		}
-
-	}
-
 	query, err := url.ParseQuery(r.URL.RawQuery)
 	if err != nil {
 		h.logger.Error("parse query:", err.Error())
@@ -140,6 +128,17 @@ func (h *Handler) UpdatePostMethodPost(w http.ResponseWriter, r *http.Request) {
 		h.logger.Error("post nil")
 		h.clientError(w, http.StatusNotFound)
 		return
+	}
+
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+
 	}
 
 	validationsErrMap := validateCreatePostForm(title, content, categoryNames)

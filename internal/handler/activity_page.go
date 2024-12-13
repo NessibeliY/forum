@@ -19,19 +19,13 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	categories, err := h.service.CategoryService.GetAllCategories()
-	if err != nil {
-		h.logger.Info("get all categories:", err)
-		h.serverError(w, err)
-		return
-	}
-
 	var countNotification int
 	var currentNotifications []models.Notification
 	var archivedNotifications []models.Notification
 	var userPosts []models.Post
 	var likedDislikedPosts []models.UserReactionPost
 	var commentPosts []models.Post
+	var err error
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -75,6 +69,13 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
+	}
+
+	categories, err := h.service.CategoryService.GetAllCategories()
+	if err != nil {
+		h.logger.Info("get all categories:", err)
+		h.serverError(w, err)
+		return
 	}
 
 	h.Render(w, "activity_page.page.html", http.StatusOK, H{

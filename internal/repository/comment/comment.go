@@ -103,7 +103,7 @@ func (r *CommentRepository) GetCommentByID(ctx context.Context, id int) (*models
 	return comment, nil
 }
 
-func (r *CommentRepository) GetUserCommentedPosts(сtx context.Context, author_id int) ([]models.Post, error) {
+func (r *CommentRepository) GetUserCommentedPosts(сtx context.Context, authorID int) ([]models.Post, error) {
 	query := `
 		SELECT p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at, u.username
 		FROM post p
@@ -114,7 +114,7 @@ func (r *CommentRepository) GetUserCommentedPosts(сtx context.Context, author_i
 		ORDER BY p.id DESC;
 	`
 
-	rows, err := r.db.QueryContext(сtx, query, author_id)
+	rows, err := r.db.QueryContext(сtx, query, authorID)
 	if err != nil {
 		return nil, fmt.Errorf("query: %w", err)
 	}

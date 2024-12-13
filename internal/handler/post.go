@@ -203,13 +203,11 @@ func (h *Handler) DeletePost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if post != nil {
-		err := h.service.NotificationService.RemoveNotificationFromPost(postID)
-		if err != nil {
-			h.logger.Error("delete notifications for post:", err.Error())
-			h.serverError(w, err)
-			return
-		}
+	err = h.service.NotificationService.RemoveNotificationFromPost(postID)
+	if err != nil {
+		h.logger.Error("delete notifications for post:", err.Error())
+		h.serverError(w, err)
+		return
 	}
 
 	deletePostRequest := &models.DeletePostRequest{

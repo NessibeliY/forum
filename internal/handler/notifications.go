@@ -2,10 +2,10 @@ package handler
 
 import (
 	"net/http"
-	"strconv"
 	"strings"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
+	"01.alem.school/git/nyeltay/forum/pkg/utils"
 )
 
 func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
@@ -21,16 +21,10 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	categories, err := h.service.CategoryService.GetAllCategories()
-	if err != nil {
-		h.logger.Info("get all categories:", err)
-		h.serverError(w, err)
-		return
-	}
-
 	var countNotification int
 	var currentNotifications []models.Notification
 	var archivedNotifications []models.Notification
+	var err error
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -52,6 +46,13 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 			h.serverError(w, err)
 			return
 		}
+	}
+
+	categories, err := h.service.CategoryService.GetAllCategories()
+	if err != nil {
+		h.logger.Info("get all categories:", err)
+		h.serverError(w, err)
+		return
 	}
 
 	h.Render(w, "notification.page.html", http.StatusOK, H{
@@ -84,7 +85,7 @@ func (h *Handler) MakeNotificationIsRead(w http.ResponseWriter, r *http.Request)
 	}
 
 	notificationIDstr := strings.TrimSpace(r.PostFormValue("notification_id"))
-	notificationID, err := strconv.Atoi(notificationIDstr)
+	notificationID, err := utils.ParsePositiveIntID(notificationIDstr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
 		h.clientError(w, http.StatusBadRequest)

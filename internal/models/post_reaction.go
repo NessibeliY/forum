@@ -19,7 +19,7 @@ type CreatePostReactionRequest struct {
 type PostReactionService interface {
 	GetPostLikesAndDislikesByID(postID int) (int, int, error)
 	CreatePostReaction(request *CreatePostReactionRequest) error
-	GetUserReactionPosts(author_id int) ([]UserReactionPost, error)
+	GetUserReactionPosts(authorID int) ([]UserReactionPost, error)
 }
 
 type PostReactionRepository interface {
@@ -28,5 +28,5 @@ type PostReactionRepository interface {
 	AddPostReaction(postReaction *PostReaction) error
 	UpdatePostReaction(postReaction *PostReaction) error
 	DeletePostReaction(postReaction *PostReaction) error
-	GetUserReactionPosts(ctx context.Context, author_id int) ([]UserReactionPost, error)
+	GetUserReactionPosts(ctx context.Context, authorID int) ([]UserReactionPost, error)
 }

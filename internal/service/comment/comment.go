@@ -45,9 +45,9 @@ func (s *CommentService) GetCommentByID(id int) (*models.Comment, error) {
 	return s.repo.GetCommentByID(ctx, id)
 }
 
-func (s *CommentService) GetUserCommentedPosts(author_id int) ([]models.Post, error) {
+func (s *CommentService) GetUserCommentedPosts(authorID int) ([]models.Post, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
-	return s.repo.GetUserCommentedPosts(ctx, author_id)
+	return s.repo.GetUserCommentedPosts(ctx, authorID)
 }

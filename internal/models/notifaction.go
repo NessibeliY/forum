@@ -20,11 +20,11 @@ type NotificationRequest struct {
 
 type NotificationService interface {
 	CreateNotification(notification *NotificationRequest) (int, error)
-	GetCountNotifications(user_id int) (int, error)
-	GetCurrentNotifications(user_id int) ([]Notification, error)
-	MakeNotificationIsRead(user_id, notification_id int) error
-	GetArchivedNotifications(user_id int) ([]Notification, error)
-	RemoveNotificationFromPost(post_id int) error
+	GetCountNotifications(userID int) (int, error)
+	GetCurrentNotifications(userID int) ([]Notification, error)
+	MakeNotificationIsRead(userID, notificationID int) error
+	GetArchivedNotifications(userID int) ([]Notification, error)
+	RemoveNotificationFromPost(postID int) error
 	GetNotificationByID(id int) (*Notification, error)
 }
 
@@ -32,8 +32,8 @@ type NotificationRepository interface {
 	AddNotification(notification *Notification) (int, error)
 	GetCountNotifications(user_id int) (int, error)
 	GetCurrentNotifications(ctx context.Context, user_id int) ([]Notification, error)
-	MakeNotificationIsRead(user_id, notification_id int) error
-	GetArchivedNotifications(ctx context.Context, user_id int) ([]Notification, error)
-	RemoveNotificationFromPost(post_id int) error
+	MakeNotificationIsRead(userID, notificationID int) error
+	GetArchivedNotifications(ctx context.Context, userID int) ([]Notification, error)
+	DeleteNotificationsByPostID(postID int) error
 	GetNotificationByID(id int) (*Notification, error)
 }

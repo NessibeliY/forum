@@ -89,41 +89,18 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// check postid
-	checkPostID, err := h.service.PostService.GetPostByID(postID)
-	if err != nil {
-		h.logger.Error("check post id:", err.Error())
-		h.serverError(w, err)
+	currentUser := h.getUserFromContext(r)
+	if currentUser == nil {
+		h.logger.Error("user not authenticated")
+		h.clientError(w, http.StatusUnauthorized)
 		return
 	}
 
-	if checkPostID == nil {
-		h.logger.Error("check post id bad request:", err.Error())
-		h.clientError(w, http.StatusBadRequest)
-		return
-	}
-
-	if h.getUserFromContext(r) != nil {
-		posts, err := h.service.PostService.GetPostsByAuthorID(h.getUserFromContext(r).ID)
-		if err != nil {
-			h.logger.Error("get posts by author id:", err.Error())
-			h.serverError(w, err)
-			return
+	if post.AuthorID != currentUser.ID {
+		notificationRequst := &models.NotificationRequest{
+			PostID:  postID,
+			Message: "commented",
 		}
-		for _, el := range posts {
-			if el.AuthorID == h.getUserFromContext(r).ID {
-				http.Redirect(w, r, fmt.Sprintf("/post?id=%d", postID), http.StatusSeeOther)
-				return
-			}
-		}
-	}
-
-	notificationRequst := &models.NotificationRequest{
-		PostID:  postID,
-		Message: "commented",
-	}
-
-	if checkPostID != nil {
 		_, err = h.service.NotificationService.CreateNotification(notificationRequst)
 		if err != nil {
 			h.logger.Error("create notifications:", err.Error())

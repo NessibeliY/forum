@@ -25,15 +25,15 @@ func (s *NotificationService) CreateNotification(notificationRequest *models.Not
 	return s.repo.AddNotification(&notification)
 }
 
-func (s *NotificationService) GetCountNotifications(user_id int) (int, error) {
-	return s.repo.GetCountNotifications(user_id)
+func (s *NotificationService) GetCountNotifications(userID int) (int, error) {
+	return s.repo.GetCountNotifications(userID)
 }
 
-func (s *NotificationService) GetCurrentNotifications(user_id int) ([]models.Notification, error) {
+func (s *NotificationService) GetCurrentNotifications(userID int) ([]models.Notification, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
-	current_notification_list, err := s.repo.GetCurrentNotifications(ctx, user_id)
+	current_notification_list, err := s.repo.GetCurrentNotifications(ctx, userID)
 	if err != nil {
 		return []models.Notification{}, err
 	}
@@ -41,11 +41,11 @@ func (s *NotificationService) GetCurrentNotifications(user_id int) ([]models.Not
 	return current_notification_list, nil
 }
 
-func (s *NotificationService) GetArchivedNotifications(user_id int) ([]models.Notification, error) {
+func (s *NotificationService) GetArchivedNotifications(userID int) ([]models.Notification, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
-	notification_list, err := s.repo.GetArchivedNotifications(ctx, user_id)
+	notification_list, err := s.repo.GetArchivedNotifications(ctx, userID)
 	if err != nil {
 		return []models.Notification{}, err
 	}
@@ -53,12 +53,12 @@ func (s *NotificationService) GetArchivedNotifications(user_id int) ([]models.No
 	return notification_list, nil
 }
 
-func (s *NotificationService) MakeNotificationIsRead(user_id, notification_id int) error {
-	return s.repo.MakeNotificationIsRead(user_id, notification_id)
+func (s *NotificationService) MakeNotificationIsRead(userID, notificationID int) error {
+	return s.repo.MakeNotificationIsRead(userID, notificationID)
 }
 
-func (s *NotificationService) RemoveNotificationFromPost(post_id int) error {
-	return s.repo.RemoveNotificationFromPost(post_id)
+func (s *NotificationService) RemoveNotificationFromPost(postID int) error {
+	return s.repo.DeleteNotificationsByPostID(postID)
 }
 
 func (s *NotificationService) GetNotificationByID(id int) (*models.Notification, error) {

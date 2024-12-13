@@ -106,7 +106,7 @@ func (r *PostReactionRepository) AddPostReaction(postReaction *models.PostReacti
 	return err
 }
 
-func (r *PostReactionRepository) GetUserReactionPosts(ctx context.Context, author_id int) ([]models.UserReactionPost, error) {
+func (r *PostReactionRepository) GetUserReactionPosts(ctx context.Context, authorID int) ([]models.UserReactionPost, error) {
 	query := `
 		SELECT
     p.id, p.title, p.content, p.author_id, u.username AS author_name, p.created_at, p.updated_at,
@@ -114,7 +114,7 @@ func (r *PostReactionRepository) GetUserReactionPosts(ctx context.Context, autho
     (SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'like') AS likes_count,
     (SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'dislike') AS dislikes_count,
     (SELECT COUNT(*) FROM comment co WHERE co.post_id = p.id) AS comments_count,
-    (SELECT reaction FROM post_reaction pr WHERE pr.post_id = p.id AND pr.author_id = $1 LIMIT 1) AS user_reaction
+    (SELECT reaction FROM post_reaction pr WHERE pr.post_id = p.id AND pr.author_id = $1) AS user_reaction
 FROM
     post p
 LEFT JOIN
@@ -141,7 +141,7 @@ ORDER BY p.id DESC
 
 	`
 
-	rows, err := r.db.QueryContext(ctx, query, author_id)
+	rows, err := r.db.QueryContext(ctx, query, authorID)
 	if err != nil {
 		return nil, fmt.Errorf("query context: %w", err)
 	}
