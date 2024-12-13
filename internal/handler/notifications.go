@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 	"strconv"
 	"strings"
@@ -84,30 +83,29 @@ func (h *Handler) MakeNotificationIsRead(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
-	postIDStr := strings.TrimSpace(r.PostFormValue("postID"))
-	postID, err := strconv.Atoi(postIDStr)
+	notificationIDstr := strings.TrimSpace(r.PostFormValue("notification_id"))
+	notificationID, err := strconv.Atoi(notificationIDstr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
 		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 
-	checkPostID, err := h.service.PostService.GetPostByID(postID)
+	notification, err := h.service.NotificationService.GetNotificationByID(notificationID)
 	if err != nil {
-		h.logger.Errorf("check post id: %s", err.Error())
-		fmt.Println("here 1", err.Error())
-		h.clientError(w, http.StatusInternalServerError)
+		h.logger.Info("get Notification:", err)
+		h.serverError(w, err)
 		return
 	}
 
-	if checkPostID == nil {
-		h.logger.Error("post not found for id:", postID)
+	if notification == nil {
+		h.logger.Error("get notification by id", err.Error())
 		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 
-	if h.getUserFromContext(r) != nil && checkPostID != nil {
-		err := h.service.NotificationService.MakeNotificationIsRead(h.getUserFromContext(r).ID, postID)
+	if h.getUserFromContext(r) != nil {
+		err = h.service.NotificationService.MakeNotificationIsRead(h.getUserFromContext(r).ID, notificationID)
 		if err != nil {
 			h.logger.Errorf("make notifications is read: %s", err.Error())
 			h.clientError(w, http.StatusInternalServerError)

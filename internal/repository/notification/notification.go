@@ -156,7 +156,7 @@ func (r *NotificationRepository) GetArchivedNotifications(ctx context.Context, u
 	return notifications, nil
 }
 
-func (r *NotificationRepository) MakeNotificationIsRead(user_id, post_id int) error {
+func (r *NotificationRepository) MakeNotificationIsRead(user_id, notification_id int) error {
 	query := `
 		UPDATE notifications
 		SET is_read = TRUE
@@ -164,11 +164,11 @@ func (r *NotificationRepository) MakeNotificationIsRead(user_id, post_id int) er
             SELECT n.id
             FROM notifications n
             JOIN post p ON p.id = n.post_id
-            WHERE p.author_id = $1 AND n.post_id = $2
+            WHERE p.author_id = $1 AND n.id = $2
         );
 	`
 
-	if _, err := r.db.Exec(query, user_id, post_id); err != nil {
+	if _, err := r.db.Exec(query, user_id, notification_id); err != nil {
 		return fmt.Errorf("failed to mark notifications as read: %w", err)
 	}
 
@@ -193,4 +193,29 @@ func (r *NotificationRepository) RemoveNotificationFromPost(postID int) error {
 	}
 
 	return nil
+}
+
+func (r *NotificationRepository) GetNotificationByID(id int) (*models.Notification, error) {
+	query := `
+		SELECT id, post_id, message, is_read, created_at
+		FROM notifications
+		WHERE id = $1
+	`
+
+	var notification models.Notification
+	err := r.db.QueryRow(query, id).Scan(
+		&notification.ID,
+		&notification.PostID,
+		&notification.Message,
+		&notification.IsRead,
+		&notification.CreatedAt,
+	)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, fmt.Errorf("failed to get notification by ID: %w", err)
+	}
+
+	return &notification, nil
 }

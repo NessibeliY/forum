@@ -98,28 +98,20 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if h.getUserFromContext(r) != nil {
-		posts, err := h.service.PostService.GetPostsByAuthorID(h.getUserFromContext(r).ID)
-		if err != nil {
-			h.logger.Error("get posts by author id:", err.Error())
-			h.serverError(w, err)
-			return
-		}
-		for _, el := range posts {
-			if el.AuthorID == h.getUserFromContext(r).ID {
-				http.Redirect(w, r, redirectTo, http.StatusSeeOther)
-				return
-			}
-		}
+	currentUser := h.getUserFromContext(r)
+	if currentUser == nil {
+		h.logger.Error("user not authenticated")
+		h.clientError(w, http.StatusUnauthorized)
+		return
 	}
 
-	notificationRequst := &models.NotificationRequest{
-		PostID:  postID,
-		Message: reaction,
-	}
+	if post.AuthorID != currentUser.ID {
+		notificationRequest := &models.NotificationRequest{
+			PostID:  postID,
+			Message: reaction,
+		}
 
-	if checkPostID != nil {
-		_, err = h.service.NotificationService.CreateNotification(notificationRequst)
+		_, err = h.service.NotificationService.CreateNotification(notificationRequest)
 		if err != nil {
 			h.logger.Error("create post notification:", err.Error())
 			h.serverError(w, err)

@@ -59,6 +59,17 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 	content := strings.TrimSpace(r.PostFormValue("content"))
 	categoryNames := r.PostForm["categories"]
 
+	var countNotification int
+	var err error
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+	}
+
 	validationsErrMap := validateCreatePostForm(title, content, categoryNames)
 	if len(validationsErrMap) > 0 {
 		h.logger.Error("validate create post form:", validationsErrMap)
@@ -74,6 +85,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 			"errors":             validationsErrMap,
 			"categories":         categories,
 			"authenticated_user": h.getUserFromContext(r),
+			"count_notification": countNotification,
 		})
 		return
 	}
@@ -101,6 +113,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 				"errors":             validationsErrMap,
 				"categories":         categories,
 				"authenticated_user": h.getUserFromContext(r),
+				"count_notification": countNotification,
 			})
 			return
 		}
@@ -260,8 +273,6 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 		h.clientError(w, http.StatusNotFound)
 		return
 	}
-
-
 
 	comments, err := h.service.CommentService.GetAllCommentsByPostID(postID)
 	if err != nil {

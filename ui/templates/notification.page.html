@@ -51,6 +51,7 @@
                                     <div class="flex w-full items-center justify-between">
                                         <a href="/post?id={{ .PostID }}" class="text-blue-500 underline font-semibold">View post</a>
                                         <form class="flex items-center justify-center" action="/notifications/read" method="POST">
+                                            <input name="notification_id" value="{{.ID}}" type="hidden"/>
                                             <button type="submit" class="flex items-center justify-center">
                                                 <input type="hidden" name="postID" value="{{.PostID}}"/>
                                                 <i class="fa-solid fa-square-xmark text-xl hover:text-red-600 duration-300 transition cursor-pointer"></i>
