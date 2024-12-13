@@ -4473,3 +4473,278 @@ INFO: C:/Users/Wave/Desktop/GOLANG/forum_advenced_features/forum/main.go:56 2024
 INFO: C:/Users/Wave/Desktop/GOLANG/forum_advenced_features/forum/internal/handler/middleware.go:54 2024/12/08 21:44:32 logger.go:39: [::1]:50762 - HTTP/1.1 GET /post/update?id=15
 INFO: C:/Users/Wave/Desktop/GOLANG/forum_advenced_features/forum/main.go:120 2024/12/08 21:44:36 logger.go:39: shutting down server...
 INFO: C:/Users/Wave/Desktop/GOLANG/forum_advenced_features/forum/main.go:129 2024/12/08 21:44:38 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 12:58:16 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 12:58:16 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:22 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:58:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:22 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:58:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:22 logger.go:39: 127.0.0.1:47286 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:58:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:23 logger.go:39: 127.0.0.1:47286 - HTTP/1.1 GET /static/images/logo.png
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:58:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:23 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /login
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:58:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:24 logger.go:39: 127.0.0.1:47286 - HTTP/1.1 GET /favicon.ico
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:58:24 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:28 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 POST /login
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:58:28 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:28 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:32 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /activity-page
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:34 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:35 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:36 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /myposts
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:37 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:37 logger.go:39: 127.0.0.1:47286 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:39 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:43 logger.go:39: 127.0.0.1:47284 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:58:43 logger.go:39: 127.0.0.1:47286 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:59:09 logger.go:39: 127.0.0.1:47288 - HTTP/1.1 GET /
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:59:09 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:59:09 logger.go:39: 127.0.0.1:47288 - HTTP/1.1 GET /static/css/style.css
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:59:09 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 12:59:09 logger.go:39: 127.0.0.1:47290 - HTTP/1.1 GET /static/js/script.js
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 12:59:09 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:04:14 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:04:14 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:05:01 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:05:01 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:25:27 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:25:27 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:25:28 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:25:28 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:25:41 logger.go:39: 127.0.0.1:47292 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:25:41 logger.go:39: 127.0.0.1:47292 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:25:41 logger.go:39: 127.0.0.1:47294 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:25:44 logger.go:39: 127.0.0.1:47292 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:26:22 logger.go:39: 127.0.0.1:47292 - HTTP/1.1 POST /update/post
+ERROR: /home/student/forum_last/forum/internal/handler/home.go:9 2024/12/13 13:26:22 logger.go:39: url path: /update/post
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:26:24 logger.go:39: 127.0.0.1:47292 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:28:46 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:28:46 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:28:47 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:28:47 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:28:49 logger.go:39: 127.0.0.1:47298 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:28:49 logger.go:39: 127.0.0.1:47298 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:28:49 logger.go:39: 127.0.0.1:47300 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:28:50 logger.go:39: 127.0.0.1:47298 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:29:26 logger.go:39: 127.0.0.1:47298 - HTTP/1.1 POST /post/update
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:148 2024/12/13 13:29:26 logger.go:39: get query for post_id
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:30:18 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:30:18 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:30:19 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:30:19 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:30:23 logger.go:39: 127.0.0.1:47304 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:30:23 logger.go:39: 127.0.0.1:47304 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:30:23 logger.go:39: 127.0.0.1:47306 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:30:25 logger.go:39: 127.0.0.1:47306 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:30:33 logger.go:39: 127.0.0.1:47304 - HTTP/1.1 POST /post/update
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:150 2024/12/13 13:30:33 logger.go:39: get query for post_id
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:32:11 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:32:11 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:32:13 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:32:13 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:32:16 logger.go:39: 127.0.0.1:47308 - HTTP/1.1 POST /post/update
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:151 2024/12/13 13:32:16 logger.go:39: get query for post_id
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:32:31 logger.go:39: 127.0.0.1:47308 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:32:32 logger.go:39: 127.0.0.1:47308 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:32:39 logger.go:39: 127.0.0.1:47308 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:32:44 logger.go:39: 127.0.0.1:47308 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:33:30 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:33:30 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:33:32 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:33:32 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:33:36 logger.go:39: 127.0.0.1:47310 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:34:00 logger.go:39: 127.0.0.1:47310 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:185 2024/12/13 13:34:00 logger.go:39: update post: add post categories: insert post_category: FOREIGN KEY constraint failed
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:34:00 logger.go:39: 127.0.0.1:47310 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:37:36 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:37:36 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:37:37 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:37:37 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:40 logger.go:39: 127.0.0.1:47312 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:41 logger.go:39: 127.0.0.1:47314 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:41 logger.go:39: 127.0.0.1:47314 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:41 logger.go:39: 127.0.0.1:47316 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:42 logger.go:39: 127.0.0.1:47316 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:44 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:44 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:44 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:45 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:37:46 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:38:02 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:38:05 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:38:24 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:185 2024/12/13 13:38:24 logger.go:39: update post: add post categories: insert post_category: FOREIGN KEY constraint failed
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:38:38 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:38:40 logger.go:39: 127.0.0.1:47318 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:40:13 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:40:13 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:40:14 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:40:14 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:40:15 logger.go:39: 127.0.0.1:47320 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:40:17 logger.go:39: 127.0.0.1:47322 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:40:17 logger.go:39: 127.0.0.1:47322 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:40:17 logger.go:39: 127.0.0.1:47324 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:40:17 logger.go:39: 127.0.0.1:47324 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:40:33 logger.go:39: 127.0.0.1:47322 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:185 2024/12/13 13:40:33 logger.go:39: update post: add post categories: insert post_category: FOREIGN KEY constraint failed
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:44:13 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:44:13 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:44:14 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:44:14 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:44:17 logger.go:39: 127.0.0.1:47326 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:44:18 logger.go:39: 127.0.0.1:47328 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:44:18 logger.go:39: 127.0.0.1:47328 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:44:18 logger.go:39: 127.0.0.1:47332 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:44:20 logger.go:39: 127.0.0.1:47332 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:44:35 logger.go:39: 127.0.0.1:47328 - HTTP/1.1 POST /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:44:35 logger.go:39: 127.0.0.1:47328 - HTTP/1.1 GET /post/update?id=0
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:67 2024/12/13 13:44:35 logger.go:39: parse positive int: match string: 0
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:44:55 logger.go:39: 127.0.0.1:47328 - HTTP/1.1 POST /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:44:55 logger.go:39: 127.0.0.1:47328 - HTTP/1.1 GET /post/update?id=0
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:67 2024/12/13 13:44:55 logger.go:39: parse positive int: match string: 0
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:45:11 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:45:11 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:45:13 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:45:13 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:14 logger.go:39: 127.0.0.1:47334 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:14 logger.go:39: 127.0.0.1:47334 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:14 logger.go:39: 127.0.0.1:47336 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:15 logger.go:39: 127.0.0.1:47336 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:19 logger.go:39: 127.0.0.1:47334 - HTTP/1.1 POST /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:19 logger.go:39: 127.0.0.1:47334 - HTTP/1.1 GET /post/update?id=0
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:67 2024/12/13 13:45:19 logger.go:39: parse positive int: match string: 0
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:45:28 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:45:28 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:45:30 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:45:30 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:32 logger.go:39: 127.0.0.1:47340 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:32 logger.go:39: 127.0.0.1:47340 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:32 logger.go:39: 127.0.0.1:47342 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:33 logger.go:39: 127.0.0.1:47342 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:34 logger.go:39: 127.0.0.1:47340 - HTTP/1.1 POST /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:45:34 logger.go:39: 127.0.0.1:47340 - HTTP/1.1 GET /post/update?id=0
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:67 2024/12/13 13:45:34 logger.go:39: parse positive int: match string: 0
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:47:42 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:47:42 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:47:43 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:47:43 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:47:59 logger.go:39: 127.0.0.1:47344 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:185 2024/12/13 13:47:59 logger.go:39: update post: no rows updated, post with author_id 6 not found
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:51:29 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:51:29 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:51:30 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:51:30 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:51:33 logger.go:39: 127.0.0.1:47346 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:51:34 logger.go:39: 127.0.0.1:47348 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:51:34 logger.go:39: 127.0.0.1:47348 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:51:34 logger.go:39: 127.0.0.1:47350 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:51:35 logger.go:39: 127.0.0.1:47350 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:51:46 logger.go:39: 127.0.0.1:47348 - HTTP/1.1 POST /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:51:46 logger.go:39: 127.0.0.1:47348 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:53:23 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:53:23 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:53:24 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:53:24 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:53:27 logger.go:39: 127.0.0.1:47352 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:53:27 logger.go:39: 127.0.0.1:47352 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:53:27 logger.go:39: 127.0.0.1:47356 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:53:27 logger.go:39: 127.0.0.1:47356 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:53:47 logger.go:39: 127.0.0.1:47352 - HTTP/1.1 POST /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:53:47 logger.go:39: 127.0.0.1:47352 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:54:56 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:54:56 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:54:57 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:54:57 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:55:02 logger.go:39: 127.0.0.1:47358 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:55:13 logger.go:39: 127.0.0.1:47358 - HTTP/1.1 POST /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:55:13 logger.go:39: 127.0.0.1:47358 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 13:56:19 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 13:56:19 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 13:56:21 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 13:56:21 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:56:24 logger.go:39: 127.0.0.1:47360 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:56:24 logger.go:39: 127.0.0.1:47360 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:56:24 logger.go:39: 127.0.0.1:47362 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:56:26 logger.go:39: 127.0.0.1:47362 - HTTP/1.1 GET /static/images/logo.png
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:56:26 logger.go:39: 127.0.0.1:47360 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:56:44 logger.go:39: 127.0.0.1:47360 - HTTP/1.1 POST /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:56:44 logger.go:39: 127.0.0.1:47360 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:56:51 logger.go:39: 127.0.0.1:47360 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 13:57:39 logger.go:39: 127.0.0.1:47360 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:129 2024/12/13 13:57:39 logger.go:39: category not found: <nil>
+ERROR: /home/student/forum_last/forum/internal/handler/helper.go:20 2024/12/13 13:57:39 logger.go:39: execute template: template: header.partial.html:21:26: executing "header" at <gt .count_notification 0>: error calling gt: invalid type for comparison
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 14:01:43 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 14:01:43 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 14:01:44 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 14:01:44 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:01:45 logger.go:39: 127.0.0.1:47368 - HTTP/1.1 GET /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 14:01:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:01:45 logger.go:39: 127.0.0.1:47368 - HTTP/1.1 GET /login
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 14:01:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:01:47 logger.go:39: 127.0.0.1:47368 - HTTP/1.1 GET /login
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 14:01:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:01:53 logger.go:39: 127.0.0.1:47368 - HTTP/1.1 POST /login
+ERROR: /home/student/forum_last/forum/internal/handler/middleware.go:26 2024/12/13 14:01:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:01:53 logger.go:39: 127.0.0.1:47368 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:01:54 logger.go:39: 127.0.0.1:47368 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:01:56 logger.go:39: 127.0.0.1:47368 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:02:20 logger.go:39: 127.0.0.1:47368 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:127 2024/12/13 14:02:20 logger.go:39: category not found: <nil>
+ERROR: /home/student/forum_last/forum/internal/handler/helper.go:20 2024/12/13 14:02:20 logger.go:39: execute template: template: header.partial.html:21:26: executing "header" at <gt .count_notification 0>: error calling gt: invalid type for comparison
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 14:03:51 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 14:03:51 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 14:03:52 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 14:03:52 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:03:53 logger.go:39: 127.0.0.1:47370 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:04:01 logger.go:39: 127.0.0.1:47370 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:139 2024/12/13 14:04:01 logger.go:39: category not found: <nil>
+ERROR: /home/student/forum_last/forum/internal/handler/helper.go:20 2024/12/13 14:04:01 logger.go:39: execute template: template: header.partial.html:21:26: executing "header" at <gt .count_notification 0>: error calling gt: invalid type for comparison
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:04:01 logger.go:39: 127.0.0.1:47370 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 14:04:34 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 14:04:34 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 14:04:35 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 14:04:35 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:04:36 logger.go:39: 127.0.0.1:47372 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:04:42 logger.go:39: 127.0.0.1:47372 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:141 2024/12/13 14:04:42 logger.go:39: category not found: <nil>
+ERROR: /home/student/forum_last/forum/internal/handler/helper.go:20 2024/12/13 14:04:42 logger.go:39: execute template: template: header.partial.html:21:26: executing "header" at <gt .count_notification 0>: error calling gt: invalid type for comparison
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 14:06:20 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 14:06:20 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 14:06:21 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 14:06:21 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:06:24 logger.go:39: 127.0.0.1:47374 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:06:30 logger.go:39: 127.0.0.1:47374 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:140 2024/12/13 14:06:30 logger.go:39: category not found: <nil>
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:06:30 logger.go:39: 127.0.0.1:47374 - HTTP/1.1 GET /static/js/script.js
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 14:11:51 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 14:11:51 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 14:11:52 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 14:11:52 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:11:53 logger.go:39: 127.0.0.1:47376 - HTTP/1.1 GET /
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:11:53 logger.go:39: 127.0.0.1:47376 - HTTP/1.1 GET /static/css/style.css
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:11:54 logger.go:39: 127.0.0.1:47376 - HTTP/1.1 GET /post?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:11:56 logger.go:39: 127.0.0.1:47376 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:12:06 logger.go:39: 127.0.0.1:47376 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:176 2024/12/13 14:12:06 logger.go:39: category not found: <nil>
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 14:12:22 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 14:12:22 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 14:12:23 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 14:12:23 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:12:24 logger.go:39: 127.0.0.1:47380 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:12:30 logger.go:39: 127.0.0.1:47380 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:177 2024/12/13 14:12:30 logger.go:39: category not found: <nil>
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 14:13:03 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 14:13:03 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 14:13:04 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 14:13:04 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:13:06 logger.go:39: 127.0.0.1:47384 - HTTP/1.1 GET /post/update?id=15
+INFO: /home/student/forum_last/forum/internal/handler/middleware.go:54 2024/12/13 14:13:16 logger.go:39: 127.0.0.1:47384 - HTTP/1.1 POST /post/update?id=15
+ERROR: /home/student/forum_last/forum/internal/handler/update_page.go:176 2024/12/13 14:13:16 logger.go:39: category not found: <nil>
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 14:13:24 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 14:13:24 logger.go:39: server stopped gracefully
+INFO: /home/student/forum_last/forum/main.go:45 2024/12/13 14:13:25 logger.go:39: connected to db
+INFO: /home/student/forum_last/forum/main.go:56 2024/12/13 14:13:25 logger.go:39: server is running on http://localhost:8080
+INFO: /home/student/forum_last/forum/main.go:120 2024/12/13 14:13:26 logger.go:39: shutting down server...
+INFO: /home/student/forum_last/forum/main.go:129 2024/12/13 14:13:26 logger.go:39: server stopped gracefully

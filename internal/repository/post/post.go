@@ -139,10 +139,59 @@ func (r *PostRepository) AddPost(post *models.Post) (int, error) {
 	return post.ID, nil
 }
 
+func (r *PostRepository) UpdatePost(post *models.Post) (int, error) {
+	query := `
+		UPDATE post
+		SET title = $1, content = $2, updated_at = $3
+		WHERE author_id = $4
+		RETURNING id;
+	`
+
+	err := r.db.QueryRow(query, post.Title, post.Content, time.Now(), post.AuthorID).Scan(&post.ID)
+	if err != nil {
+		return 0, fmt.Errorf("update post: %w", err)
+	}
+
+	if post.ID == 0 {
+		return 0, fmt.Errorf("no rows updated, post with author_id %d not found", post.AuthorID)
+	}
+
+	err = r.updateCategories(post.ID, post.Categories)
+	if err != nil {
+		return 0, fmt.Errorf("update post categories: %w", err)
+	}
+
+	return post.ID, nil
+}
+
 func (r *PostRepository) addPostCategories(postID int, categories []*models.Category) error {
 	for _, category := range categories {
 		query := `INSERT INTO post_category (post_id, category_id) VALUES ($1, $2)`
 		_, err := r.db.Exec(query, postID, category.ID)
+		if err != nil {
+			return fmt.Errorf("insert post_category: %w", err)
+		}
+	}
+
+	return nil
+}
+
+func (r *PostRepository) updateCategories(postID int, categories []*models.Category) error {
+	deleteQuery := `DELETE FROM post_category WHERE post_id = $1`
+	_, err := r.db.Exec(deleteQuery, postID)
+	if err != nil {
+		return fmt.Errorf("delete old post categories: %w", err)
+	}
+
+	for _, category := range categories {
+		insertQuery := `
+			INSERT INTO post_category (post_id, category_id) 
+			VALUES ($1, $2)
+			ON CONFLICT (post_id, category_id) 
+			DO NOTHING
+		`
+
+		_, err := r.db.Exec(insertQuery, postID, category.ID)
 		if err != nil {
 			return fmt.Errorf("insert post_category: %w", err)
 		}

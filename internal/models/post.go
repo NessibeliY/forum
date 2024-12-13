@@ -46,6 +46,7 @@ type CreatePostRequest struct {
 type UpdatePostRequest struct {
 	Title      string      `json:"title"`
 	Content    string      `json:"content"`
+	AuthorID   int         `json:"author_id"`
 	Categories []*Category `json:"categories"`
 }
 
@@ -61,6 +62,7 @@ type PostService interface {
 	GetLikedPosts(userID int) ([]Post, error)
 	GetPostsByCategories(categories []string) ([]Post, error)
 	DeletePost(request *DeletePostRequest) error
+	UpdatePost(request *UpdatePostRequest) (int, error)
 }
 
 type PostRepository interface {
@@ -71,4 +73,5 @@ type PostRepository interface {
 	GetLikedPosts(ctx context.Context, userID int) ([]Post, error)
 	GetPostsByCategories(ctx context.Context, categories []string) ([]Post, error)
 	DeletePost(id int) error
+	UpdatePost(post *Post) (int, error)
 }

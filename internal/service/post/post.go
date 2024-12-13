@@ -40,6 +40,17 @@ func (s *PostService) CreatePost(createPostRequest *models.CreatePostRequest) (i
 	return s.repo.AddPost(post)
 }
 
+func (s *PostService) UpdatePost(request *models.UpdatePostRequest) (int, error) {
+	post := &models.Post{
+		Title:      request.Title,
+		Content:    request.Content,
+		AuthorID:   request.AuthorID,
+		Categories: request.Categories,
+	}
+
+	return s.repo.UpdatePost(post)
+}
+
 func (s *PostService) GetPostByID(id int) (*models.Post, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
