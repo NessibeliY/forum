@@ -6,3 +6,6 @@ DROP TABLE IF EXISTS comment;
 DROP TABLE IF EXISTS post_reaction;
 DROP TABLE IF EXISTS comment_reaction;
 DROP TABLE IF EXISTS post_category;
+DROP TABLE IF EXISTS image;
+DROP TABLE IF EXISTS moderated_post;
+DROP TABLE IF EXISTS new_role_request;

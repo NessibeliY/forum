@@ -9,6 +9,48 @@ import (
 	"01.alem.school/git/nyeltay/forum/pkg/cookies"
 )
 
+const (
+	moderatorRole = "moderator"
+	adminRole     = "admin"
+	userRole      = "user"
+)
+
+func (h *Handler) IsModerator(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		user := h.getUserFromContext(r)
+		if user == nil || user.Role != moderatorRole {
+			h.clientError(w, http.StatusForbidden)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
+
+func (h *Handler) IsAdmin(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		user := h.getUserFromContext(r)
+		if user == nil || user.Role != adminRole {
+			h.clientError(w, http.StatusForbidden)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
+
+func (h *Handler) IsUser(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		user := h.getUserFromContext(r)
+		if user == nil || user.Role != userRole {
+			h.clientError(w, http.StatusForbidden)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
+
 func (h *Handler) RequireAuthentication(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		user := h.getUserFromContext(r)

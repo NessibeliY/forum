@@ -34,6 +34,13 @@ type DeletePostRequest struct {
 	ID int `json:"id"`
 }
 
+type SendReportRequest struct {
+	PostID      int
+	Reason      string
+	IsModerated bool
+	ModeratorID int
+}
+
 type PostService interface {
 	GetAllPosts() ([]Post, error)
 	CreatePost(request *CreatePostRequest) (int, error)
