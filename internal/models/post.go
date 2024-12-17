@@ -41,6 +41,21 @@ type SendReportRequest struct {
 	ModeratorID int
 }
 
+type ModerationReport struct {
+	ID          int
+	PostID      int
+	ModeratorID int
+	Reason      string
+	AdminAnswer string
+	IsModerated bool
+	Post        *Post
+	Moderator   *User
+}
+
+type ModeratorRequest struct {
+	UserID int
+}
+
 type PostService interface {
 	GetAllPosts() ([]Post, error)
 	CreatePost(request *CreatePostRequest) (int, error)
@@ -50,6 +65,7 @@ type PostService interface {
 	GetLikedPosts(userID int) ([]Post, error)
 	GetPostsByCategories(categories []string) ([]Post, error)
 	DeletePost(request *DeletePostRequest) error
+	SendReport(request *SendReportRequest) error
 }
 
 type PostRepository interface {
@@ -62,4 +78,11 @@ type PostRepository interface {
 	GetPostsByCategories(ctx context.Context, categories []string) ([]Post, error)
 	DeletePost(id int) error
 	DeletePostWithImage(id int) error
+}
+
+type ModerationRepository interface {
+	AddModerationReport(report *ModerationReport) error
+	UpdateModerationReport(report *ModerationReport) error
+	GetModeratedPostsByModeratorID(moderatorID int) ([]ModerationReport, error)
+	GetAllModeratedPosts(ctx context.Context) ([]ModerationReport, error)
 }

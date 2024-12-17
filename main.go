@@ -86,7 +86,8 @@ func main() {
 	mux.Handle("/likedposts", handler.RequireAuthentication(http.HandlerFunc(handler.ShowLikedPosts)))
 	mux.HandleFunc("/showposts", handler.ShowPostsByCategory)
 
-	mux.Handle("/report", handler.RequireAuthentication(handler.IsModerator(handler.SendReport)))
+	mux.Handle("/report", handler.RequireAuthentication(handler.IsModerator(http.HandlerFunc(handler.SendReport))))
+	mux.Handle("/moderator-request", handler.RequireAuthentication(handler.IsUser(http.HandlerFunc(handler.SendModeratorRequest))))
 
 	rateLimiter := handler.NewRateLimiter(5, 10, 1*time.Minute)
 	finalHandler := rateLimiter.Limit(handler.SecureHeaders(

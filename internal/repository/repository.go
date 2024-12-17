@@ -7,6 +7,7 @@ import (
 	"01.alem.school/git/nyeltay/forum/internal/repository/category"
 	"01.alem.school/git/nyeltay/forum/internal/repository/comment"
 	"01.alem.school/git/nyeltay/forum/internal/repository/comment_reaction"
+	"01.alem.school/git/nyeltay/forum/internal/repository/moderation"
 	"01.alem.school/git/nyeltay/forum/internal/repository/post"
 	"01.alem.school/git/nyeltay/forum/internal/repository/post_reaction"
 	"01.alem.school/git/nyeltay/forum/internal/repository/session"
@@ -21,6 +22,7 @@ type Repository struct {
 	PostReactionRepo    models.PostReactionRepository
 	SessionRepo         models.SessionRepository
 	UserRepo            models.UserRepository
+	ModerationRepo      models.ModerationRepository
 }
 
 func NewRepository(db *sql.DB) *Repository {
@@ -32,5 +34,6 @@ func NewRepository(db *sql.DB) *Repository {
 		PostReactionRepo:    post_reaction.NewPostReactionRepository(db),
 		SessionRepo:         session.NewSessionRepository(db),
 		UserRepo:            user.NewUserRepository(db),
+		ModerationRepo:      moderation.NewModerationRepository(db),
 	}
 }

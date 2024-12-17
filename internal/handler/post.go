@@ -607,7 +607,7 @@ func (h *Handler) sendReportMethodPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = h.service.PostService.SendReport(models.SendReportRequest{
+	err = h.service.PostService.SendReport(&models.SendReportRequest{
 		PostID:      postID,
 		Reason:      reason,
 		ModeratorID: h.getUserFromContext(r).ID,
@@ -629,4 +629,19 @@ func validateReportText(reportText string) error {
 	}
 
 	return nil
+}
+
+func (h *Handler) SendModeratorRequest(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/moderator-request" {
+		h.logger.Error("url path:", r.URL.Path)
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	if r.Method != http.MethodPost {
+		h.logger.Errorf("method not allowed: %s", r.Method)
+		h.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
 }

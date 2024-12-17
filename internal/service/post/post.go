@@ -14,7 +14,8 @@ import (
 )
 
 type PostService struct {
-	repo models.PostRepository
+	repo           models.PostRepository
+	moderationRepo models.ModerationRepository
 }
 
 func NewPostService(repo models.PostRepository) *PostService {
@@ -128,4 +129,14 @@ func (s *PostService) GetPostsByCategories(categories []string) ([]models.Post, 
 
 func (s *PostService) DeletePost(request *models.DeletePostRequest) error {
 	return s.repo.DeletePost(request.ID)
+}
+
+func (s *PostService) SendReport(request *models.SendReportRequest) error {
+	moderationReport := &models.ModerationReport{
+		PostID:      request.PostID,
+		Reason:      request.Reason,
+		IsModerated: request.IsModerated,
+		ModeratorID: request.ModeratorID,
+	}
+	return s.moderationRepo.AddModerationReport(moderationReport)
 }
