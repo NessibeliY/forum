@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 	"strings"
 
@@ -54,6 +55,8 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 		h.serverError(w, err)
 		return
 	}
+
+	fmt.Println("current_notifications", currentNotifications)
 
 	h.Render(w, "notification.page.html", http.StatusOK, H{
 		"categories":             categories,

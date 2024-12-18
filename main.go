@@ -94,7 +94,6 @@ func main() {
 
 	rateLimiter := handler.NewRateLimiter(5, 10, 1*time.Minute)
 	finalHandler := rateLimiter.Limit(handler.SecureHeaders(
-
 		handler.RecoverPanic(
 			handler.LogRequest(
 				handler.Authenticate(mux),

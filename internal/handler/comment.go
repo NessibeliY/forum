@@ -99,7 +99,7 @@ func (h *Handler) CreateComment(w http.ResponseWriter, r *http.Request) {
 	if post.AuthorID != currentUser.ID {
 		notificationRequst := &models.NotificationRequest{
 			PostID:  postID,
-			Message: "commented",
+			Message: content,
 		}
 		_, err = h.service.NotificationService.CreateNotification(notificationRequst)
 		if err != nil {
