@@ -26,12 +26,19 @@ type DeleteCommentRequest struct {
 	ID int `json:"id"`
 }
 
+type UpdateCommentRequest struct {
+	ID        int    `json:"id"`
+	Content   string `json:"content"`
+	CreatedAt string `json:"created_at"`
+}
+
 type CommentService interface {
 	GetAllCommentsByPostID(postID int) ([]*Comment, error)
 	CreateComment(createCommentRequest *CreateCommentRequest) error
 	DeleteComment(deleteCommentRequest *DeleteCommentRequest) error
 	GetCommentByID(id int) (*Comment, error)
 	GetUserCommentedPosts(authorID int) ([]Post, error)
+	UpdateComment(updateCommentRequest *UpdateCommentRequest) error
 }
 
 type CommentRepository interface {
@@ -40,4 +47,5 @@ type CommentRepository interface {
 	DeleteComment(id int) error
 	GetCommentByID(ctx context.Context, id int) (*Comment, error)
 	GetUserCommentedPosts(сtx context.Context, authorID int) ([]Post, error)
+	UpdateComment(updateCommentRequest *UpdateCommentRequest) error
 }

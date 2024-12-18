@@ -6047,3 +6047,269 @@ INFO: /home/student/forum_finish/forum/internal/handler/middleware.go:56 2024/12
 INFO: /home/student/forum_finish/forum/internal/handler/middleware.go:56 2024/12/18 13:37:30 logger.go:39: 127.0.0.1:50066 - HTTP/2.0 GET /post?id=17
 INFO: /home/student/forum_finish/forum/main.go:131 2024/12/18 13:43:52 logger.go:39: shutting down server...
 INFO: /home/student/forum_finish/forum/main.go:140 2024/12/18 13:43:52 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 13:50:26 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 13:50:26 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:31 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 POST /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:28 2024/12/18 13:50:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:31 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:31 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:31 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:36 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /post?id=15
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:36 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:38 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:38 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:39 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /post?id=17
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2024/12/18 13:50:39 logger.go:39: execute template: template: post.page.html:153:84: executing "post.page.html" at <.post.ID>: can't evaluate field post in type *models.Comment
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:43 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:43 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:50:45 logger.go:39: 127.0.0.1:42520 - HTTP/2.0 GET /post?id=17
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2024/12/18 13:50:45 logger.go:39: execute template: template: post.page.html:153:84: executing "post.page.html" at <.post.ID>: can't evaluate field post in type *models.Comment
+INFO: /home/student/1/forum/main.go:131 2024/12/18 13:50:58 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 13:50:58 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 13:50:59 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 13:50:59 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:51:00 logger.go:39: 127.0.0.1:42522 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:51:00 logger.go:39: 127.0.0.1:42522 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:51:00 logger.go:39: 127.0.0.1:42522 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:51:01 logger.go:39: 127.0.0.1:42522 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 13:51:20 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 13:51:20 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 13:51:21 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 13:51:21 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:51:21 logger.go:39: 127.0.0.1:42524 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:51:21 logger.go:39: 127.0.0.1:42524 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:51:21 logger.go:39: 127.0.0.1:42524 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:51:22 logger.go:39: 127.0.0.1:42524 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:55:27 logger.go:39: 127.0.0.1:42526 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:55:27 logger.go:39: 127.0.0.1:42526 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:55:27 logger.go:39: 127.0.0.1:42526 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:55:27 logger.go:39: 127.0.0.1:42526 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:55:28 logger.go:39: 127.0.0.1:42526 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:55:30 logger.go:39: 127.0.0.1:42526 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:55:34 logger.go:39: 127.0.0.1:42526 - HTTP/2.0 GET /post?id=15
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:55:34 logger.go:39: 127.0.0.1:42526 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/main.go:131 2024/12/18 13:55:42 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 13:55:42 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 13:56:50 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 13:56:50 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:56:51 logger.go:39: 127.0.0.1:42540 - HTTP/2.0 GET /post?id=15
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2024/12/18 13:56:51 logger.go:39: execute template: html/template:post.page.html: "\"" in attribute name: "\">&times;</span>\n               "
+INFO: /home/student/1/forum/main.go:131 2024/12/18 13:57:57 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 13:57:57 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 13:57:58 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 13:57:58 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:58:04 logger.go:39: 127.0.0.1:42544 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:58:04 logger.go:39: 127.0.0.1:42544 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:58:04 logger.go:39: 127.0.0.1:42544 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:58:04 logger.go:39: 127.0.0.1:42544 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:58:05 logger.go:39: 127.0.0.1:42544 - HTTP/2.0 GET /post?id=17
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2024/12/18 13:58:05 logger.go:39: execute template: html/template:post.page.html: "\"" in attribute name: "\">&times;</span>\n               "
+INFO: /home/student/1/forum/main.go:131 2024/12/18 13:58:26 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 13:58:26 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 13:58:27 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 13:58:27 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:58:27 logger.go:39: 127.0.0.1:42546 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:58:27 logger.go:39: 127.0.0.1:42546 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:58:27 logger.go:39: 127.0.0.1:42546 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 13:58:28 logger.go:39: 127.0.0.1:42546 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:00:27 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:00:27 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:00:28 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:00:28 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:00:29 logger.go:39: 127.0.0.1:42548 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:00:29 logger.go:39: 127.0.0.1:42548 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:00:29 logger.go:39: 127.0.0.1:42548 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:00:30 logger.go:39: 127.0.0.1:42548 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:01:09 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:01:09 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:01:10 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:01:10 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:01:11 logger.go:39: 127.0.0.1:42550 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:01:11 logger.go:39: 127.0.0.1:42550 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:01:11 logger.go:39: 127.0.0.1:42550 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:01:11 logger.go:39: 127.0.0.1:42550 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:03:30 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:03:30 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:03:31 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:03:31 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:03:32 logger.go:39: 127.0.0.1:42552 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:03:32 logger.go:39: 127.0.0.1:42552 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:03:32 logger.go:39: 127.0.0.1:42552 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:03:33 logger.go:39: 127.0.0.1:42552 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:04:07 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:04:07 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:04:09 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:04:09 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:09 logger.go:39: 127.0.0.1:42554 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:09 logger.go:39: 127.0.0.1:42554 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:09 logger.go:39: 127.0.0.1:42554 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:10 logger.go:39: 127.0.0.1:42554 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:04:31 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:04:31 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:04:32 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:04:32 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:32 logger.go:39: 127.0.0.1:42556 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:32 logger.go:39: 127.0.0.1:42556 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:32 logger.go:39: 127.0.0.1:42556 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:33 logger.go:39: 127.0.0.1:42556 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:43 logger.go:39: 127.0.0.1:42556 - HTTP/2.0 GET /notifications
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:04:44 logger.go:39: 127.0.0.1:42556 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:05:01 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:05:01 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:05:02 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:05:02 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:04 logger.go:39: 127.0.0.1:42560 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:04 logger.go:39: 127.0.0.1:42560 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:06 logger.go:39: 127.0.0.1:42560 - HTTP/2.0 GET /post?id=15
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:07 logger.go:39: 127.0.0.1:42560 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:08 logger.go:39: 127.0.0.1:42560 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:05:27 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:05:27 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:05:29 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:05:29 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:29 logger.go:39: 127.0.0.1:42562 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:29 logger.go:39: 127.0.0.1:42562 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:29 logger.go:39: 127.0.0.1:42562 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:30 logger.go:39: 127.0.0.1:42562 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:05:53 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:05:53 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:05:54 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:05:54 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:54 logger.go:39: 127.0.0.1:42564 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:54 logger.go:39: 127.0.0.1:42564 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:54 logger.go:39: 127.0.0.1:42564 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:05:55 logger.go:39: 127.0.0.1:42564 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:06:04 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:06:04 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:06:05 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:06:05 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:06:05 logger.go:39: 127.0.0.1:42566 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:06:05 logger.go:39: 127.0.0.1:42566 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:06:05 logger.go:39: 127.0.0.1:42566 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:06:06 logger.go:39: 127.0.0.1:42566 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:11:25 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:11:25 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:11:26 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:11:27 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:11:34 logger.go:39: 127.0.0.1:42568 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:11:34 logger.go:39: 127.0.0.1:42568 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:11:34 logger.go:39: 127.0.0.1:42568 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:11:34 logger.go:39: 127.0.0.1:42568 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:16:08 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:16:08 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:16:10 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:16:10 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:16:11 logger.go:39: 127.0.0.1:42570 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:16:11 logger.go:39: 127.0.0.1:42570 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:16:11 logger.go:39: 127.0.0.1:42570 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:16:12 logger.go:39: 127.0.0.1:42570 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:16:16 logger.go:39: 127.0.0.1:42572 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:16:16 logger.go:39: 127.0.0.1:42572 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:16:16 logger.go:39: 127.0.0.1:42572 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:16:17 logger.go:39: 127.0.0.1:42572 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:17:07 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:17:07 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:17:08 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:17:08 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:17:10 logger.go:39: 127.0.0.1:42574 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:17:10 logger.go:39: 127.0.0.1:42574 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:17:10 logger.go:39: 127.0.0.1:42574 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:17:11 logger.go:39: 127.0.0.1:42574 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:45:37 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:45:37 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:45:38 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:45:38 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/main.go:131 2024/12/18 14:46:14 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:140 2024/12/18 14:46:14 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:46:15 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:46:15 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:46:33 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:46:33 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:46:38 logger.go:39: 127.0.0.1:42576 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:46:38 logger.go:39: 127.0.0.1:42576 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:46:38 logger.go:39: 127.0.0.1:42576 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:46:39 logger.go:39: 127.0.0.1:42576 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:46:45 logger.go:39: 127.0.0.1:42576 - HTTP/2.0 POST /post?id=17
+ERROR: /home/student/1/forum/internal/handler/post.go:314 2024/12/18 14:46:45 logger.go:39: method not allowed: POST
+INFO: /home/student/1/forum/main.go:132 2024/12/18 14:46:59 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:141 2024/12/18 14:46:59 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 14:47:00 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 14:47:00 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:47:01 logger.go:39: 127.0.0.1:42578 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:47:07 logger.go:39: 127.0.0.1:42578 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:47:10 logger.go:39: 127.0.0.1:42580 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:47:11 logger.go:39: 127.0.0.1:42580 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:47:11 logger.go:39: 127.0.0.1:42580 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:47:11 logger.go:39: 127.0.0.1:42580 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 14:47:16 logger.go:39: 127.0.0.1:42580 - HTTP/2.0 POST /comment/update
+INFO: /home/student/1/forum/main.go:132 2024/12/18 16:32:06 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:141 2024/12/18 16:32:06 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 16:32:09 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 16:32:09 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:17 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /post?id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:28 2024/12/18 16:32:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:17 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:28 2024/12/18 16:32:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:17 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:28 2024/12/18 16:32:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:19 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:28 2024/12/18 16:32:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:20 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:28 2024/12/18 16:32:20 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:21 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /post?id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:28 2024/12/18 16:32:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:22 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:28 2024/12/18 16:32:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:29 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 POST /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:28 2024/12/18 16:32:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:29 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:32 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /post?id=15
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:34 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:35 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:32:56 logger.go:39: 127.0.0.1:42584 - HTTP/2.0 POST /comment/update
+ERROR: /home/student/1/forum/internal/handler/middleware.go:67 2024/12/18 16:32:56 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:33:39 logger.go:39: 127.0.0.1:42586 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:33:41 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:33:41 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:33:41 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:33:42 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:33:47 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 POST /comment/update
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:33:47 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:33:51 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:35:11 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 POST /comment/update
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:35:11 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:35:12 logger.go:39: 127.0.0.1:42588 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/main.go:132 2024/12/18 16:35:49 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:141 2024/12/18 16:35:49 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 16:35:50 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 16:35:50 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:35:52 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:35:52 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:35:52 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:35:53 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:35:59 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 POST /comment/update
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:35:59 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:36:00 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:36:08 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 POST /comment/update
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:36:08 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:36:09 logger.go:39: 127.0.0.1:42590 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/main.go:132 2024/12/18 16:58:06 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:141 2024/12/18 16:58:06 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2024/12/18 16:58:44 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2024/12/18 16:58:44 logger.go:39: server is running on https://localhost:8080
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:58:45 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:58:45 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:58:45 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:58:53 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 POST /comment/update
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:58:53 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:58:55 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:59:04 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 POST /comment/update
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:59:04 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:59:05 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:59:13 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 POST /comment/update
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:59:13 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:59:15 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:56 2024/12/18 16:59:34 logger.go:39: 127.0.0.1:42600 - HTTP/2.0 POST /comment/update
+ERROR: /home/student/1/forum/internal/handler/middleware.go:67 2024/12/18 16:59:34 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:132 2024/12/18 16:59:59 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:141 2024/12/18 16:59:59 logger.go:39: server stopped gracefully

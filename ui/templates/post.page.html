@@ -149,13 +149,30 @@
                                                 <li class="option del_btn_modal" data-modal="delete_comm_{{.ID}}">
                                                     Delete                                         
                                                 </li>
-                                                <li class="option">
-                                                    <a href="/post/update?id={{.post.ID }}">Update</a>
-                                                 </li>
+                                                <li class="option update_btn_modal" data-modal="update_comm_{{.ID}}">
+                                                    Update
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
 
+
+                                    <!-- UPDATE COMMENT -->
+                                    <div class="modal" id="update_comm_{{.ID}}">
+                                        <div class="modal-content delete_form_modal">
+                                            <div class="flex items-center justify-between w-full">
+                                                <span class="text-bold text-2xl">Update comment</span>
+                                                <span class="close" data-close="update_comm_{{.ID}}">&times;</span>
+                                            </div>
+                                            <form action="/comment/update" method="POST" class="flex flex-col items-center justify-center w-full mt-3">
+                                                <input type="hidden" value="{{.ID}}" name="comment_id"/>
+                                                <input name="content" value="{{.Content}}" class="w-full px-2 py-2 border border-neutral-500 my-2 rounded"/>
+                                                <button type="submit" class="bg-green-500 py-2 px-2 w-full rounded-lg mt-2 hover:bg-green-600 transition duration-300 text-white">update</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- DELETE COMMENT -->
                                     <div class="modal" id="delete_comm_{{.ID}}">
                                         <div class="modal-content delete_form_modal">
                                             <div class="flex items-center justify-between w-full">

@@ -51,3 +51,7 @@ func (s *CommentService) GetUserCommentedPosts(authorID int) ([]models.Post, err
 
 	return s.repo.GetUserCommentedPosts(ctx, authorID)
 }
+
+func (s *CommentService) UpdateComment(updateCommentRequest *models.UpdateCommentRequest) error {
+	return s.repo.UpdateComment(updateCommentRequest)
+}

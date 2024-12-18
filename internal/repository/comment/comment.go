@@ -170,3 +170,27 @@ func (r *CommentRepository) GetUserCommentedPosts(сtx context.Context, authorID
 
 	return posts, nil
 }
+
+func (r *CommentRepository) UpdateComment(updateCommentRequest *models.UpdateCommentRequest) error {
+	query := `
+	UPDATE comment
+	SET content = $1, created_at = $2
+	WHERE id = $3
+	`
+
+	result, err := r.db.Exec(query, updateCommentRequest.Content, time.Now(), updateCommentRequest.ID)
+	if err != nil {
+		return fmt.Errorf("exec: %w", err)
+	}
+
+	rowsAffected, err := result.RowsAffected()
+	if err != nil {
+		return fmt.Errorf("rows affected: %w", err)
+	}
+
+	if rowsAffected == 0 {
+		return nil
+	}
+
+	return nil
+}

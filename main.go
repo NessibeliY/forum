@@ -91,8 +91,9 @@ func main() {
 
 	mux.Handle("/activity-page", handler.RequireAuthentication(http.HandlerFunc(handler.ActivityPage)))
 	mux.Handle("/post/update", handler.RequireAuthentication(http.HandlerFunc(handler.UpdatePage)))
+	mux.Handle("/comment/update", handler.RequireAuthentication(http.HandlerFunc(handler.UpdateComment)))
 
-	rateLimiter := handler.NewRateLimiter(5, 10, 1*time.Minute)
+	rateLimiter := handler.NewRateLimiter(15, 25, 1*time.Minute)
 	finalHandler := rateLimiter.Limit(handler.SecureHeaders(
 		handler.RecoverPanic(
 			handler.LogRequest(

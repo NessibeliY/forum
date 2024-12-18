@@ -177,3 +177,61 @@ func (h *Handler) DeleteComment(w http.ResponseWriter, r *http.Request) {
 
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
+
+func (h *Handler) UpdateComment(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/comment/update" {
+		h.logger.Error("url path:", r.URL.Path)
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	if r.Method != http.MethodPost {
+		h.logger.Errorf("method not allowed: %s", r.Method)
+		h.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
+	err := r.ParseForm()
+	if err != nil {
+		h.logger.Error("parse form:", err.Error())
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+
+	content := strings.TrimSpace(r.PostFormValue("content"))
+	commentIDStr := strings.TrimSpace(r.PostFormValue("comment_id"))
+
+	commentID, err := utils.ParsePositiveIntID(commentIDStr)
+	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	checkCommentID, err := h.service.CommentService.GetCommentByID(commentID)
+	if err != nil {
+		h.logger.Error("get comment id:", err.Error())
+		h.serverError(w, err)
+		return
+	}
+
+	if checkCommentID == nil {
+		h.logger.Error("check comment id:", err.Error())
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+
+	updateCommentReq := &models.UpdateCommentRequest{
+		ID:      commentID,
+		Content: content,
+	}
+
+	err = h.service.CommentService.UpdateComment(updateCommentReq)
+	if err != nil {
+		h.logger.Error("update comment:", err.Error())
+		h.serverError(w, err)
+		return
+	}
+
+	http.Redirect(w, r, "/", http.StatusSeeOther)
+}
