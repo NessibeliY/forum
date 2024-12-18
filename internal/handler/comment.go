@@ -201,6 +201,29 @@ func (h *Handler) UpdateComment(w http.ResponseWriter, r *http.Request) {
 	content := strings.TrimSpace(r.PostFormValue("content"))
 	commentIDStr := strings.TrimSpace(r.PostFormValue("comment_id"))
 
+	postIDStr := r.URL.Query().Get("id")
+	if postIDStr == "" {
+		h.logger.Error("get query for post_id")
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+
+	validationsErrMap := validateCreateCommentForm(content, postIDStr)
+	if len(validationsErrMap) > 0 {
+		h.logger.Error("validate create comment form:", validationsErrMap)
+		errorsJSON, err := json.Marshal(validationsErrMap)
+		if err != nil {
+			h.logger.Error("marshal:", err.Error())
+			h.serverError(w, err)
+			return
+		}
+
+		cookies.SetCookie(w, errorsMapCookieName, string(errorsJSON), 300)
+
+		http.Redirect(w, r, fmt.Sprintf("/post?id=%s", postIDStr), http.StatusSeeOther)
+		return
+	}
+
 	commentID, err := utils.ParsePositiveIntID(commentIDStr)
 	if err != nil {
 		h.logger.Error("parse positive int:", err.Error())
@@ -216,7 +239,7 @@ func (h *Handler) UpdateComment(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if checkCommentID == nil {
-		h.logger.Error("check comment id:", err.Error())
+		h.logger.Error("check comment id:", "bad request")
 		h.clientError(w, http.StatusBadRequest)
 		return
 	}
