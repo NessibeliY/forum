@@ -38,7 +38,7 @@
                                 <div class="flex items-center justify-between w-full">
                                     <span class="text-bold text-2xl">CREATE POST</span>
                                 </div>
-                                <form class="create_form" action="/post/create" method="POST" id="postForm">
+                                <form class="create_form" action="/post/create" method="POST" id="postForm" enctype="multipart/form-data">
                                     <div class="mt-2 w-full flex flex-col">
                                         <label for="" class="block text-base mb-2">TITLE</label>
                                         <input 
@@ -67,6 +67,11 @@
                                         <label class="text-red-600 my-2"> {{ .errors.categories}}</label>
                                     </div>
                                     <div class="mt-2 w-full flex flex-col">
+                                        <label for="description" class="block text-base mb-2">IMAGE</label>
+                                        <input type="file" accept="image/png,image/gif,image/jpeg,image/jpg" name="image" class="cursor-pointer"/>
+                                        <label class="text-red-600 my-2"> {{ .errors.image}}</label>
+                                    </div>
+                                    <div class="mt-2 w-full flex flex-col">
                                         <label for="description" class="block text-base mb-2">DESCRIPTION</label>
                                         <textarea  
                                             class="border border-neutral-500 my-2 rounded py-2 px-2" 
@@ -79,8 +84,7 @@
                                         <a href="/" class="btn_create btn_auth bg-red-500">cancel</a>
                                         <button class="btn_create btn_auth bg-green-500 " type="submit">create</button>
                                     </div>
-                                </form>
-                       
+                                </form>                       
                         </div>                      
                 </div>
                 {{if .authenticated_user}}

@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/tls"
 	"log"
 	"net/http"
 	"os"
@@ -53,7 +54,7 @@ func main() {
 
 	handler := handler.NewHandler(service, templateCache, l, config.GoogleConfig, config.GithubConfig)
 
-	l.Infof("server is running on http://localhost%s", config.Port)
+	l.Infof("server is running on https://localhost%s", config.Port)
 
 	mux := http.NewServeMux()
 
@@ -66,9 +67,9 @@ func main() {
 	mux.HandleFunc("/login", handler.Login)
 	mux.Handle("POST /logout", handler.RequireAuthentication(http.HandlerFunc(handler.Logout)))
 
-	mux.HandleFunc("/signup/google/callback", handler.GoogleCallback)
+	mux.HandleFunc("/google/callback", handler.GoogleCallback)
 	mux.HandleFunc("/login/google/callback", handler.GoogleLogin)
-	mux.HandleFunc("/signup/github/callback", handler.GithubCallback)
+	mux.HandleFunc("/github/callback", handler.GithubCallback)
 	mux.HandleFunc("/login/github/callback", handler.GithubLogin)
 
 	mux.Handle("/post/create", handler.RequireAuthentication(http.HandlerFunc(handler.CreatePost)))
@@ -91,17 +92,28 @@ func main() {
 	mux.Handle("/activity-page", handler.RequireAuthentication(http.HandlerFunc(handler.ActivityPage)))
 	mux.Handle("/post/update", handler.RequireAuthentication(http.HandlerFunc(handler.UpdatePage)))
 
-	finalHandler := handler.SecureHeaders(
+	rateLimiter := handler.NewRateLimiter(5, 10, 1*time.Minute)
+	finalHandler := rateLimiter.Limit(handler.SecureHeaders(
+
 		handler.RecoverPanic(
 			handler.LogRequest(
 				handler.Authenticate(mux),
 			),
 		),
-	)
+	))
+
+	tlsConfig := &tls.Config{
+		PreferServerCipherSuites: true,
+		CurvePreferences: []tls.CurveID{
+			tls.CurveP256,
+			tls.CurveP384,
+		},
+	}
 
 	server := &http.Server{
 		Addr:         config.Port,
 		Handler:      finalHandler,
+		TLSConfig:    tlsConfig,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
 		IdleTimeout:  120 * time.Second,
@@ -111,7 +123,7 @@ func main() {
 	signal.Notify(stop, os.Interrupt, syscall.SIGTERM)
 
 	go func() {
-		if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		if err := server.ListenAndServeTLS("./tls/cert.pem", "./tls/key.pem"); err != nil && err != http.ErrServerClosed {
 			l.Fatal(err)
 		}
 	}()

@@ -3,7 +3,9 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
+	"net/url"
 	"strings"
 	"time"
 
@@ -18,8 +20,8 @@ var (
 )
 
 type githubUserInfo struct {
-	name   string `json:"name"`
-	nodeID string `json:"node_id"`
+	Name   string `json:"login"`
+	NodeID string `json:"node_id"`
 }
 
 func (h *Handler) GithubLogin(w http.ResponseWriter, r *http.Request) {
@@ -44,14 +46,15 @@ func (h *Handler) GithubCallback(w http.ResponseWriter, r *http.Request) {
 	}
 	defer resp.Body.Close()
 
-	tokenResp := &tokenResp{}
+	body, err := io.ReadAll(resp.Body)
 
-	err = json.NewDecoder(resp.Body).Decode(tokenResp)
+	params, err := url.ParseQuery(string(body))
 	if err != nil {
-		h.logger.Error("decode token response:", err)
+		h.logger.Error("parse query:", err)
 		h.serverError(w, err)
 		return
 	}
+	accessToken := params.Get("access_token")
 
 	req, err := http.NewRequest(http.MethodGet, githubUserInfoEndpoint, nil)
 	if err != nil {
@@ -59,7 +62,7 @@ func (h *Handler) GithubCallback(w http.ResponseWriter, r *http.Request) {
 		h.serverError(w, err)
 		return
 	}
-	req.Header.Set("Authorization", "Bearer "+tokenResp.AccessToken)
+	req.Header.Set("Authorization", "Bearer "+accessToken)
 	req.Header.Set("Accept", "application/json")
 
 	client := &http.Client{}
@@ -71,15 +74,17 @@ func (h *Handler) GithubCallback(w http.ResponseWriter, r *http.Request) {
 	}
 	defer resp.Body.Close()
 
+	body, err = io.ReadAll(resp.Body)
+
 	githubUserInfo := githubUserInfo{}
-	err = json.NewDecoder(resp.Body).Decode(&githubUserInfo)
+	err = json.Unmarshal(body, &githubUserInfo)
 	if err != nil {
-		h.logger.Error("decode google user info:", err)
+		h.logger.Error("unmarshal github user info:", err)
 		h.serverError(w, err)
 		return
 	}
 
-	user, err := h.service.UserService.GetUserByEmail(githubUserInfo.nodeID)
+	user, err := h.service.UserService.GetUserByEmail(githubUserInfo.NodeID)
 	if err != nil {
 		h.logger.Error("get user by email:", err)
 		h.serverError(w, err)
@@ -87,9 +92,9 @@ func (h *Handler) GithubCallback(w http.ResponseWriter, r *http.Request) {
 	}
 	if user == nil {
 		signupRequest := &models.SignupRequest{
-			Username: githubUserInfo.name,
-			Email:    githubUserInfo.nodeID,
-			Password: githubUserInfo.nodeID,
+			Username: githubUserInfo.Name,
+			Email:    githubUserInfo.NodeID,
+			Password: githubUserInfo.NodeID,
 		}
 
 		err = h.service.UserService.SignupUser(signupRequest)
@@ -101,8 +106,8 @@ func (h *Handler) GithubCallback(w http.ResponseWriter, r *http.Request) {
 	}
 
 	loginRequest := &models.LoginRequest{
-		Email:    githubUserInfo.nodeID,
-		Password: githubUserInfo.nodeID,
+		Email:    githubUserInfo.NodeID,
+		Password: githubUserInfo.NodeID,
 	}
 
 	userID, err := h.service.UserService.LoginUser(loginRequest)

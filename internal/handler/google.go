@@ -22,9 +22,9 @@ type tokenResp struct {
 }
 
 type googleUserInfo struct {
-	email string `json:"email"`
-	name  string `json:"name"`
-	sub   string `json:"sub"`
+	Email string `json:"email"`
+	Name  string `json:"name"`
+	Sub   string `json:"sub"`
 }
 
 func (h *Handler) GoogleLogin(w http.ResponseWriter, r *http.Request) {
@@ -84,7 +84,7 @@ func (h *Handler) GoogleCallback(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	user, err := h.service.UserService.GetUserByEmail(googleUserInfo.email)
+	user, err := h.service.UserService.GetUserByEmail(googleUserInfo.Email)
 	if err != nil {
 		h.logger.Error("get user by email:", err)
 		h.serverError(w, err)
@@ -92,9 +92,9 @@ func (h *Handler) GoogleCallback(w http.ResponseWriter, r *http.Request) {
 	}
 	if user == nil {
 		signupRequest := &models.SignupRequest{
-			Username: googleUserInfo.name,
-			Email:    googleUserInfo.email,
-			Password: googleUserInfo.sub,
+			Username: googleUserInfo.Name,
+			Email:    googleUserInfo.Email,
+			Password: googleUserInfo.Sub,
 		}
 
 		err = h.service.UserService.SignupUser(signupRequest)
@@ -106,8 +106,8 @@ func (h *Handler) GoogleCallback(w http.ResponseWriter, r *http.Request) {
 	}
 
 	loginRequest := &models.LoginRequest{
-		Email:    googleUserInfo.email,
-		Password: googleUserInfo.sub,
+		Email:    googleUserInfo.Email,
+		Password: googleUserInfo.Sub,
 	}
 
 	userID, err := h.service.UserService.LoginUser(loginRequest)

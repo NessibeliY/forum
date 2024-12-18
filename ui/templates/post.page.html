@@ -35,7 +35,13 @@
             <div class="middleContainer">
                 <div class="flex w-full flex-col break-words">
                     <h2 class="text-4xl break-words">{{.post.Title}}</h2>
-                    <span class="postDescription">{{.post.Content}}</span>                    
+                    <span class="postDescription">{{.post.Content}}</span>
+                    {{if eq (len .post.ImagePath) 0 }}
+                    {{else}}
+                    <div class="post-img">
+                        <img class="post-img_source" src="{{.post.ImagePath}}" alt="image">
+                    </div>
+                    {{end}}
                 </div>
                 <div class="flex flex-wrap w-full my-2 break-words">
                     {{range .post.Categories}}
