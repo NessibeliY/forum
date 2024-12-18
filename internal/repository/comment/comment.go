@@ -103,40 +103,53 @@ func (r *CommentRepository) GetCommentByID(ctx context.Context, id int) (*models
 	return comment, nil
 }
 
-func (r *CommentRepository) GetUserCommentedPosts(сtx context.Context, authorID int) ([]models.Post, error) {
+func (r *CommentRepository) GetUserCommentedPosts(ctx context.Context, authorID int) ([]models.Post, error) {
 	query := `
-		SELECT p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at, u.username
+		SELECT 
+			p.id AS post_id, 
+			p.title, 
+			p.content, 
+			p.author_id AS post_author_id, 
+			p.created_at AS post_created_at, 
+			p.updated_at AS post_updated_at, 
+			u.username AS post_author_name,
+			c.id AS comment_id, 
+			c.content AS comment_content, 
+			c.author_id AS comment_author_id
 		FROM post p
 		JOIN comment c ON c.post_id = p.id
-		JOIN users u ON p.author_id = u.id 
+		JOIN users u ON p.author_id = u.id
 		WHERE c.author_id = $1
-		GROUP BY p.id, p.title, p.content, p.author_id, p.created_at, p.updated_at, u.username
-		ORDER BY p.id DESC;
+		ORDER BY p.id DESC, c.created_at ASC;
 	`
 
-	rows, err := r.db.QueryContext(сtx, query, authorID)
+	rows, err := r.db.QueryContext(ctx, query, authorID)
 	if err != nil {
 		return nil, fmt.Errorf("query: %w", err)
 	}
-
 	defer rows.Close()
 
 	var posts []models.Post
 	var currentPost *models.Post
 
 	for rows.Next() {
-		var postID, authorID int
-		var title, content, authorName string
-		var createdAt, updatedAt time.Time
+		var (
+			postID, postAuthorID, commentID, commentAuthorID       int
+			postTitle, postContent, postAuthorName, commentContent string
+			postCreatedAt, postUpdatedAt                           time.Time
+		)
 
 		err := rows.Scan(
 			&postID,
-			&title,
-			&content,
-			&authorID,
-			&createdAt,
-			&updatedAt,
-			&authorName,
+			&postTitle,
+			&postContent,
+			&postAuthorID,
+			&postCreatedAt,
+			&postUpdatedAt,
+			&postAuthorName,
+			&commentID,
+			&commentContent,
+			&commentAuthorID,
 		)
 		if err != nil {
 			return nil, fmt.Errorf("row scan: %w", err)
@@ -148,17 +161,25 @@ func (r *CommentRepository) GetUserCommentedPosts(сtx context.Context, authorID
 			}
 			currentPost = &models.Post{
 				ID:         postID,
-				Title:      title,
-				Content:    content,
-				AuthorID:   authorID,
-				AuthorName: authorName,
-				CreatedAt:  createdAt,
-				UpdatedAt:  updatedAt,
+				Title:      postTitle,
+				Content:    postContent,
+				AuthorID:   postAuthorID,
+				AuthorName: postAuthorName,
+				CreatedAt:  postCreatedAt,
+				UpdatedAt:  postUpdatedAt,
+				Comments:   []models.Comment{}, // Инициализируем список комментариев
 			}
 		}
 
+		// Добавляем комментарий к текущему посту
+		currentPost.Comments = append(currentPost.Comments, models.Comment{
+			ID:       commentID,
+			Content:  commentContent,
+			AuthorID: commentAuthorID,
+		})
 	}
 
+	// Добавляем последний пост в список
 	if currentPost != nil {
 		posts = append(posts, *currentPost)
 	}
