@@ -10,6 +10,7 @@ import (
 	"01.alem.school/git/nyeltay/forum/internal/repository/moderation"
 	"01.alem.school/git/nyeltay/forum/internal/repository/post"
 	"01.alem.school/git/nyeltay/forum/internal/repository/post_reaction"
+	"01.alem.school/git/nyeltay/forum/internal/repository/role"
 	"01.alem.school/git/nyeltay/forum/internal/repository/session"
 	"01.alem.school/git/nyeltay/forum/internal/repository/user"
 )
@@ -23,6 +24,7 @@ type Repository struct {
 	SessionRepo         models.SessionRepository
 	UserRepo            models.UserRepository
 	ModerationRepo      models.ModerationRepository
+	RoleRepo            models.RoleRepository
 }
 
 func NewRepository(db *sql.DB) *Repository {
@@ -35,5 +37,6 @@ func NewRepository(db *sql.DB) *Repository {
 		SessionRepo:         session.NewSessionRepository(db),
 		UserRepo:            user.NewUserRepository(db),
 		ModerationRepo:      moderation.NewModerationRepository(db),
+		RoleRepo:            role.NewRoleRepository(db),
 	}
 }

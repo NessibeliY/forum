@@ -30,6 +30,6 @@ func NewService(repo *repository.Repository) *Service {
 		PostService:            post.NewPostService(repo.PostRepo),
 		PostReactionService:    post_reaction.NewPostReactionService(repo.PostReactionRepo),
 		SessionService:         session.NewSessionService(repo.SessionRepo),
-		UserService:            user.NewUserService(repo.UserRepo),
+		UserService:            user.NewUserService(repo.UserRepo, repo.RoleRepo),
 	}
 }

@@ -23,10 +23,11 @@ type LoginRequest struct {
 	Password string `json:"password"`
 }
 
-type UpdateUserRequest struct {
-	Username string `json:"username"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
+type UpdateRoleRequest struct {
+	ID        int
+	UserID    int
+	AdminID   int
+	Processed bool
 }
 
 type UserService interface {
@@ -34,10 +35,14 @@ type UserService interface {
 	LoginUser(user *LoginRequest) (int, error)
 	GetUserByID(id int) (*User, error)
 	GetUserByEmail(email string) (*User, error)
+	SendModeratorRequest(userID int) error
 }
 
 type UserRepository interface {
 	AddUser(user *User) error
 	GetUserByEmail(email string) (*User, error)
 	GetUserByID(id int) (*User, error)
+}
+type RoleRepository interface {
+	AddRoleRequest(request *UpdateRoleRequest) error
 }

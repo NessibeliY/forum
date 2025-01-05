@@ -9,12 +9,14 @@ import (
 )
 
 type UserService struct {
-	repo models.UserRepository
+	userRepo models.UserRepository
+	roleRepo models.RoleRepository
 }
 
-func NewUserService(repo models.UserRepository) *UserService {
+func NewUserService(userRepo models.UserRepository, roleRepo models.RoleRepository) *UserService {
 	return &UserService{
-		repo: repo,
+		userRepo: userRepo,
+		roleRepo: roleRepo,
 	}
 }
 
@@ -30,7 +32,7 @@ func (s *UserService) SignupUser(signupRequest *models.SignupRequest) error {
 		Email:          signupRequest.Email,
 	}
 
-	err = s.repo.AddUser(user)
+	err = s.userRepo.AddUser(user)
 	if err != nil {
 		return fmt.Errorf("add user: %w", err)
 	}
@@ -39,7 +41,7 @@ func (s *UserService) SignupUser(signupRequest *models.SignupRequest) error {
 }
 
 func (s *UserService) LoginUser(loginRequest *models.LoginRequest) (int, error) {
-	user, err := s.repo.GetUserByEmail(loginRequest.Email)
+	user, err := s.userRepo.GetUserByEmail(loginRequest.Email)
 	if err != nil {
 		return 0, fmt.Errorf("get user by email: %w", err)
 	}
@@ -56,9 +58,17 @@ func (s *UserService) LoginUser(loginRequest *models.LoginRequest) (int, error) 
 }
 
 func (s *UserService) GetUserByID(id int) (*models.User, error) {
-	return s.repo.GetUserByID(id)
+	return s.userRepo.GetUserByID(id)
 }
 
 func (s *UserService) GetUserByEmail(email string) (*models.User, error) {
-	return s.repo.GetUserByEmail(email)
+	return s.userRepo.GetUserByEmail(email)
+}
+
+func (s *UserService) SendModeratorRequest(userID int) error {
+	request := &models.UpdateRoleRequest{
+		UserID:    userID,
+		Processed: false,
+	}
+	return s.roleRepo.AddRoleRequest(request)
 }
