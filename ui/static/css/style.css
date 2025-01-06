@@ -463,6 +463,7 @@ h2 {
     margin: 0 4%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 2%;
 }
 
 .comments {
