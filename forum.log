@@ -6793,3 +6793,243 @@ INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:49
 INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:49:24 logger.go:39: server is running on https://localhost:8080
 INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:50:57 logger.go:39: shutting down server...
 INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:50:57 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:56:30 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:56:30 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:57:54 logger.go:39: [::1]:52324 - HTTP/2.0 GET /post?id=17
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:57:54 logger.go:39: [::1]:52324 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:57:54 logger.go:39: [::1]:52324 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:05:02 logger.go:39: [::1]:52547 - HTTP/2.0 GET /likedposts
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:05:02 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:05:02 logger.go:39: [::1]:52547 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:05:02 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:05:02 logger.go:39: [::1]:52547 - HTTP/2.0 GET /static/css/style.css
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:05:02 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:05:02 logger.go:39: [::1]:52547 - HTTP/2.0 GET /static/js/script.js
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:05:02 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:05:03 logger.go:39: [::1]:52547 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:05:03 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:05:07 logger.go:39: [::1]:52547 - HTTP/2.0 POST /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:05:07 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:05:07 logger.go:39: [::1]:52547 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:14:32 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:14:32 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:14:36 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:14:36 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:14:45 logger.go:39: [::1]:52785 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:14:45 logger.go:39: [::1]:52785 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:14:45 logger.go:39: [::1]:52785 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:14:46 logger.go:39: [::1]:52785 - HTTP/2.0 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:14:55 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:14:55 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:14:59 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:14:59 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:15:03 logger.go:39: [::1]:52789 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:15:03 logger.go:39: [::1]:52789 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:15:03 logger.go:39: [::1]:52789 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:15:03 logger.go:39: [::1]:52789 - HTTP/2.0 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:16:08 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:16:08 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:16:12 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:16:12 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:16:18 logger.go:39: [::1]:52801 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:16:19 logger.go:39: [::1]:52801 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:16:19 logger.go:39: [::1]:52801 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:16:19 logger.go:39: [::1]:52801 - HTTP/2.0 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:19:13 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:19:13 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:19:17 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:19:17 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:19:51 logger.go:39: [::1]:52829 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:19:51 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:19:51 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:19:52 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:19:52 logger.go:39: [::1]:52829 - HTTP/2.0 POST /moderator-request
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:19:52 logger.go:39: [::1]:52829 - HTTP/2.0 GET /favicon.ico
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:20 logger.go:39: [::1]:52829 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:20 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:21 logger.go:39: [::1]:52829 - HTTP/2.0 POST /moderator-request
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:24 logger.go:39: [::1]:52829 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:26 logger.go:39: [::1]:52829 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:26 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:26 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:26 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:27 logger.go:39: [::1]:52829 - HTTP/2.0 POST /moderator-request
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:27 logger.go:39: [::1]:52829 - HTTP/2.0 GET /favicon.ico
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:29 logger.go:39: [::1]:52829 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:31 logger.go:39: [::1]:52829 - HTTP/2.0 GET /post/create
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:45 logger.go:39: [::1]:52829 - HTTP/2.0 POST /post/create
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:45 logger.go:39: [::1]:52829 - HTTP/2.0 GET /post?id=18
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:45 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/img/f895b017-3118-46a6-815e-54a9c12874e9
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:45 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:52 logger.go:39: [::1]:52829 - HTTP/2.0 POST /post/delete?id=18
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:287 2025/01/06 15:21:52 logger.go:39: delete notifications for post: no notifications found for post 18 to delete
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:54 logger.go:39: [::1]:52829 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:55 logger.go:39: [::1]:52829 - HTTP/2.0 GET /post?id=18
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:55 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/img/f895b017-3118-46a6-815e-54a9c12874e9
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:21:59 logger.go:39: [::1]:52829 - HTTP/2.0 POST /post/delete?id=18
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:287 2025/01/06 15:21:59 logger.go:39: delete notifications for post: no notifications found for post 18 to delete
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:22:00 logger.go:39: [::1]:52829 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:22:00 logger.go:39: [::1]:52829 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:22:04 logger.go:39: [::1]:52829 - HTTP/2.0 GET /myposts
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:22:05 logger.go:39: [::1]:52829 - HTTP/2.0 GET /likedposts
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:22:52 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:22:52 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:22:57 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:22:57 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:22:57 logger.go:39: [::1]:52841 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:22:57 logger.go:39: [::1]:52841 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:22:57 logger.go:39: [::1]:52841 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:22:57 logger.go:39: [::1]:52841 - HTTP/2.0 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:00 logger.go:39: [::1]:52841 - HTTP/2.0 GET /post?id=18
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:00 logger.go:39: [::1]:52841 - HTTP/2.0 GET /static/img/f895b017-3118-46a6-815e-54a9c12874e9
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:04 logger.go:39: [::1]:52841 - HTTP/2.0 POST /post/delete?id=18
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:287 2025/01/06 15:23:04 logger.go:39: delete notifications for post: no notifications found for post 18 to delete
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:04 logger.go:39: [::1]:52841 - HTTP/2.0 GET /favicon.ico
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:11 logger.go:39: [::1]:52841 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:13 logger.go:39: [::1]:52841 - HTTP/2.0 GET /myposts
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:15 logger.go:39: [::1]:52841 - HTTP/2.0 GET /post?id=15
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:19 logger.go:39: [::1]:52841 - HTTP/2.0 POST /post/delete?id=15
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:19 logger.go:39: [::1]:52841 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:21 logger.go:39: [::1]:52841 - HTTP/2.0 GET /myposts
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:21 logger.go:39: [::1]:52841 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:22 logger.go:39: [::1]:52841 - HTTP/2.0 GET /post?id=18
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:22 logger.go:39: [::1]:52841 - HTTP/2.0 GET /static/img/f895b017-3118-46a6-815e-54a9c12874e9
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:23:25 logger.go:39: [::1]:52841 - HTTP/2.0 POST /post/delete?id=18
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:287 2025/01/06 15:23:25 logger.go:39: delete notifications for post: no notifications found for post 18 to delete
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:34:51 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:34:51 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:34:56 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:34:56 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:35:00 logger.go:39: [::1]:52876 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:35:00 logger.go:39: [::1]:52876 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:35:00 logger.go:39: [::1]:52876 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:35:01 logger.go:39: [::1]:52876 - HTTP/2.0 GET /post?id=18
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:35:01 logger.go:39: [::1]:52876 - HTTP/2.0 GET /static/img/f895b017-3118-46a6-815e-54a9c12874e9
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:35:04 logger.go:39: [::1]:52876 - HTTP/2.0 POST /post/delete?id=18
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:296 2025/01/06 15:35:04 logger.go:39: delete notifications for post: no notifications found for post 18 to delete
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:35:51 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:35:51 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:35:55 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:35:55 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:41:38 logger.go:39: [::1]:52956 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:41:38 logger.go:39: [::1]:52956 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:41:39 logger.go:39: [::1]:52956 - HTTP/2.0 GET /post?id=18
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:41:39 logger.go:39: [::1]:52956 - HTTP/2.0 GET /static/img/f895b017-3118-46a6-815e-54a9c12874e9
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:41:42 logger.go:39: [::1]:52956 - HTTP/2.0 POST /post/delete?id=18
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:41:42 logger.go:39: [::1]:52956 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:41:43 logger.go:39: [::1]:52956 - HTTP/2.0 GET /myposts
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:41:44 logger.go:39: [::1]:52956 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:41:48 logger.go:39: [::1]:52956 - HTTP/2.0 POST /moderator-request
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:33 logger.go:39: [::1]:52970 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:33 logger.go:39: [::1]:52970 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:33 logger.go:39: [::1]:52970 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:37 logger.go:39: [::1]:52970 - HTTP/2.0 POST /logout
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:37 logger.go:39: [::1]:52970 - HTTP/2.0 GET /
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:45:37 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:38 logger.go:39: [::1]:52970 - HTTP/2.0 GET /signup
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:45:38 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:48 logger.go:39: [::1]:52970 - HTTP/2.0 POST /signup
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:45:48 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:48 logger.go:39: [::1]:52970 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:45:48 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:57 logger.go:39: [::1]:52970 - HTTP/2.0 POST /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:45:57 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:45:57 logger.go:39: [::1]:52970 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:47:03 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:47:03 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:47:14 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:47:14 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:47:19 logger.go:39: [::1]:52978 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:47:19 logger.go:39: [::1]:52978 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:47:19 logger.go:39: [::1]:52978 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:47:19 logger.go:39: [::1]:52978 - HTTP/2.0 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:48:07 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:48:07 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:48:24 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:48:25 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:48:31 logger.go:39: [::1]:52983 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:48:31 logger.go:39: [::1]:52983 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:48:31 logger.go:39: [::1]:52983 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:48:32 logger.go:39: [::1]:52983 - HTTP/2.0 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:50:28 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:50:28 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:50:32 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:50:32 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:50:32 logger.go:39: [::1]:52993 - HTTP/2.0 POST /logout
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:85 2025/01/06 15:50:32 logger.go:39: get user by id:  sql: expected 6 destination arguments in Scan, not 7
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:50:32 logger.go:39: [::1]:52993 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:50:32 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:50:32 logger.go:39: [::1]:52993 - HTTP/2.0 GET /favicon.ico
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:50:32 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:51:11 logger.go:39: [::1]:52993 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:51:11 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:51:12 logger.go:39: [::1]:52993 - HTTP/2.0 GET /signup
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:51:12 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:51:25 logger.go:39: [::1]:52993 - HTTP/2.0 POST /signup
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:51:25 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:51:48 logger.go:39: [::1]:52993 - HTTP/2.0 GET /signup
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:51:48 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:51:50 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:51:50 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:51:54 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:51:54 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:51:56 logger.go:39: [::1]:53001 - HTTP/2.0 GET /signup
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:51:56 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:51:56 logger.go:39: [::1]:53001 - HTTP/2.0 GET /static/js/script.js
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:51:56 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:52:03 logger.go:39: [::1]:53001 - HTTP/2.0 POST /signup
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:52:03 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:52:03 logger.go:39: [::1]:53001 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:52:03 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:53:25 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:53:25 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:54:01 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:54:01 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:54:17 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:54:17 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:54:21 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:54:21 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:54:34 logger.go:39: [::1]:53009 - HTTP/2.0 POST /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:54:34 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:54:34 logger.go:39: [::1]:53009 - HTTP/2.0 GET /
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:85 2025/01/06 15:54:34 logger.go:39: get user by id:  sql: expected 6 destination arguments in Scan, not 7
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:54:36 logger.go:39: [::1]:53009 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:54:36 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:54:39 logger.go:39: [::1]:53009 - HTTP/2.0 GET /
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:54:39 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:54:45 logger.go:39: [::1]:53009 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:54:45 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:54:50 logger.go:39: [::1]:53009 - HTTP/2.0 POST /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:54:50 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:54:50 logger.go:39: [::1]:53009 - HTTP/2.0 GET /
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:85 2025/01/06 15:54:50 logger.go:39: get user by id:  sql: expected 6 destination arguments in Scan, not 7
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 15:54:59 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 15:54:59 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 15:55:03 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 15:55:03 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:55:13 logger.go:39: [::1]:53013 - HTTP/2.0 GET /
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:55:13 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:55:13 logger.go:39: [::1]:53013 - HTTP/2.0 GET /static/js/script.js
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:55:13 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:55:13 logger.go:39: [::1]:53013 - HTTP/2.0 GET /static/css/style.css
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:55:13 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:55:14 logger.go:39: [::1]:53013 - HTTP/2.0 GET /static/images/logo.png
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:55:14 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:55:14 logger.go:39: [::1]:53013 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:55:14 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:55:14 logger.go:39: [::1]:53013 - HTTP/2.0 GET /favicon.ico
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:55:14 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:55:19 logger.go:39: [::1]:53013 - HTTP/2.0 POST /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:55:19 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:55:19 logger.go:39: [::1]:53013 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:58:06 logger.go:39: [::1]:53021 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:58:08 logger.go:39: [::1]:53021 - HTTP/2.0 POST /logout
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:58:08 logger.go:39: [::1]:53021 - HTTP/2.0 GET /
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:58:08 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:58:09 logger.go:39: [::1]:53021 - HTTP/2.0 GET /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:58:09 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:58:14 logger.go:39: [::1]:53021 - HTTP/2.0 POST /login
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:70 2025/01/06 15:58:14 logger.go:39: get cookie: http: named cookie not present
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 15:58:14 logger.go:39: [::1]:53021 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 16:00:32 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 16:00:32 logger.go:39: server stopped gracefully

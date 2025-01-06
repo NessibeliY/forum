@@ -149,3 +149,23 @@ function toggleMenu() {
   const menu = document.querySelector('.mobile_menu');
   menu.classList.toggle('active');
 }
+
+// apply moderation modals
+document.getElementById('moderatorForm').addEventListener('submit', function(event) {
+  event.preventDefault();  // Остановить отправку формы
+
+  // Показываем модальное окно
+  document.getElementById('confirmationModal').classList.remove('hidden');
+
+  // Переход на другую страницу через 2 секунды (для имитации отправки)
+  setTimeout(function() {
+      // Если нужно отправить форму, можно это сделать с помощью:
+      // event.target.submit();
+      window.location.href = '/thank-you'; // Здесь нужно указать страницу для благодарности или другую
+  }, 2000);
+});
+
+// Закрыть модальное окно
+document.getElementById('closeModal').addEventListener('click', function() {
+  document.getElementById('confirmationModal').classList.add('hidden');
+});

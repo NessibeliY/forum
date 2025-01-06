@@ -26,6 +26,7 @@ type NotificationService interface {
 	GetArchivedNotifications(userID int) ([]Notification, error)
 	RemoveNotificationFromPost(postID int) error
 	GetNotificationByID(id int) (*Notification, error)
+	GetNotificationsForPost(postID int) ([]Notification, error)
 }
 
 type NotificationRepository interface {
@@ -36,4 +37,5 @@ type NotificationRepository interface {
 	GetArchivedNotifications(ctx context.Context, userID int) ([]Notification, error)
 	DeleteNotificationsByPostID(postID int) error
 	GetNotificationByID(id int) (*Notification, error)
+	GetNotificationsForPost(ctx context.Context, postID int) ([]Notification, error)
 }

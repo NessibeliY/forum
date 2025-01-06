@@ -219,3 +219,53 @@ func (r *NotificationRepository) GetNotificationByID(id int) (*models.Notificati
 
 	return &notification, nil
 }
+
+func (r *NotificationRepository) GetNotificationsForPost(ctx context.Context, postID int) ([]models.Notification, error) {
+	query := `
+	SELECT 
+		id,post_id,message,is_read,created_at 
+	FROM notifications 
+	WHERE  post_id = $1
+	`
+	rows, err := r.db.QueryContext(ctx, query, postID)
+	if err != nil {
+		return nil, fmt.Errorf("query context: %w", err)
+	}
+	defer rows.Close()
+
+	var notifications []models.Notification
+
+	for rows.Next() {
+		var id, postID int
+		var message string
+		var isRead bool
+		var createdAt time.Time
+
+		err := rows.Scan(
+			&id,
+			&postID,
+			&message,
+			&isRead,
+			&createdAt,
+		)
+		if err != nil {
+			return nil, fmt.Errorf("row scan: %w", err)
+		}
+
+		notification := models.Notification{
+			ID:        id,
+			PostID:    postID,
+			Message:   message,
+			IsRead:    isRead,
+			CreatedAt: createdAt,
+		}
+		notifications = append(notifications, notification)
+	}
+
+	err = rows.Err()
+	if err != nil {
+		return nil, fmt.Errorf("rows scan: %w", err)
+	}
+
+	return notifications, nil
+}

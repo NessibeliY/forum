@@ -64,3 +64,10 @@ func (s *NotificationService) RemoveNotificationFromPost(postID int) error {
 func (s *NotificationService) GetNotificationByID(id int) (*models.Notification, error) {
 	return s.repo.GetNotificationByID(id)
 }
+
+func (s *NotificationService) GetNotificationsForPost(postID int) ([]models.Notification, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	return s.repo.GetNotificationsForPost(ctx, postID)
+}
