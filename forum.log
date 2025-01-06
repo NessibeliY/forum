@@ -5802,6 +5802,7 @@ ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.g
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/05 20:58:26 logger.go:39: 127.0.0.1:64927 - HTTP/2.0 GET /
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:125 2024/12/05 20:59:31 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:134 2024/12/05 20:59:31 logger.go:39: server stopped gracefully
+<<<<<<< HEAD
 >>>>>>> b31dd840265d1e8bddf859a6c2661d77ab6493e6
 INFO: /home/student/forum_finish/forum/main.go:46 2024/12/18 13:08:29 logger.go:39: connected to db
 INFO: /home/student/forum_finish/forum/main.go:57 2024/12/18 13:08:29 logger.go:39: server is running on https://localhost:8080
@@ -6674,3 +6675,121 @@ INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware
 INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:56 2025/01/06 14:15:24 logger.go:39: [::1]:50985 - HTTP/2.0 GET /likedposts
 INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:132 2025/01/06 14:15:27 logger.go:39: shutting down server...
 INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:141 2025/01/06 14:15:27 logger.go:39: server stopped gracefully
+=======
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2024/12/18 18:01:47 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2024/12/18 18:01:47 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/18 18:01:53 logger.go:39: [::1]:56606 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/18 18:01:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/18 18:01:53 logger.go:39: [::1]:56606 - HTTP/2.0 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/18 18:01:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/18 18:01:53 logger.go:39: [::1]:56606 - HTTP/2.0 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/18 18:01:53 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/18 18:01:55 logger.go:39: [::1]:56606 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/18 18:01:55 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/18 18:01:58 logger.go:39: [::1]:56606 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/18 18:01:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/18 18:01:58 logger.go:39: [::1]:56606 - HTTP/2.0 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/18 18:01:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/18 18:01:58 logger.go:39: [::1]:56606 - HTTP/2.0 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/18 18:01:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:56 2024/12/18 18:01:59 logger.go:39: [::1]:56606 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/18 18:01:59 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:125 2024/12/18 18:02:43 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:134 2024/12/18 18:02:43 logger.go:39: server stopped gracefully
+>>>>>>> feature/moderation
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:28:53 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:28:53 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:00 logger.go:39: [::1]:51406 - HTTP/2.0 GET /likedposts
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:00 logger.go:39: [::1]:51406 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:00 logger.go:39: [::1]:51406 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:02 logger.go:39: [::1]:51406 - HTTP/2.0 GET /likedposts
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:02 logger.go:39: [::1]:51406 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:02 logger.go:39: [::1]:51406 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:02 logger.go:39: [::1]:51406 - HTTP/2.0 GET /static/images/logo.png
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:03 logger.go:39: [::1]:51406 - HTTP/2.0 GET /activity-page
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:07 logger.go:39: [::1]:51406 - HTTP/2.0 GET /myposts
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:07 logger.go:39: [::1]:51406 - HTTP/2.0 GET /likedposts
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:08 logger.go:39: [::1]:51406 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:10 logger.go:39: [::1]:51406 - HTTP/2.0 GET /showposts?category=Music&category=Cinema
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:531 2025/01/06 14:29:10 logger.go:39: get posts by categories: query context: near "(": syntax error
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:10 logger.go:39: [::1]:51406 - HTTP/2.0 GET /favicon.ico
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:15 logger.go:39: [::1]:51406 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:29:18 logger.go:39: [::1]:51406 - HTTP/2.0 GET /showposts?category=Music&category=Cinema
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:531 2025/01/06 14:29:18 logger.go:39: get posts by categories: query context: near "(": syntax error
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:30:07 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:30:07 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:30:11 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:30:11 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:30:17 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:30:17 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:30:22 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:30:22 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:30:23 logger.go:39: [::1]:51461 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:30:23 logger.go:39: [::1]:51461 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:30:23 logger.go:39: [::1]:51461 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:30:35 logger.go:39: [::1]:51461 - HTTP/2.0 GET /showposts?category=Music&category=Cinema
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:532 2025/01/06 14:30:35 logger.go:39: get posts by categories: query context: near "(": syntax error
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:31:50 logger.go:39: [::1]:51461 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:31:51 logger.go:39: [::1]:51461 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:31:51 logger.go:39: [::1]:51461 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:33:16 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:33:16 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:33:21 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:33:21 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:33:27 logger.go:39: [::1]:51562 - HTTP/2.0 GET /showposts?category=Art&category=Music&category=Cinema
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:532 2025/01/06 14:33:27 logger.go:39: get posts by categories: query context: near "(": syntax error
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:33:27 logger.go:39: [::1]:51562 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:34:39 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:34:39 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:34:43 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:34:43 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:34:44 logger.go:39: [::1]:51602 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:34:44 logger.go:39: [::1]:51602 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:34:44 logger.go:39: [::1]:51602 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:35:21 logger.go:39: [::1]:51602 - HTTP/2.0 GET /showposts?category=Art&category=Music
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:531 2025/01/06 14:35:21 logger.go:39: get posts by categories: query context: near "(": syntax error
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:37:46 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:37:46 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:37:50 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:37:50 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:37:54 logger.go:39: [::1]:51702 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:37:54 logger.go:39: [::1]:51702 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:37:54 logger.go:39: [::1]:51702 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:37:56 logger.go:39: [::1]:51702 - HTTP/2.0 GET /showposts?category=Art&category=Music
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:531 2025/01/06 14:37:56 logger.go:39: get posts by categories: query context: not enough args to execute query: want 3 got 2
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:38:01 logger.go:39: [::1]:51702 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:40:04 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:40:04 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:40:19 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:40:19 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:40:19 logger.go:39: [::1]:51782 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:40:19 logger.go:39: [::1]:51782 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:40:19 logger.go:39: [::1]:51782 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:40:24 logger.go:39: [::1]:51782 - HTTP/2.0 GET /showposts?category=Art&category=Music
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:531 2025/01/06 14:40:24 logger.go:39: get posts by categories: query context: not enough args to execute query: want 3 got 2
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:42:54 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:42:54 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:42:58 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:42:58 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:43:04 logger.go:39: [::1]:51870 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:43:04 logger.go:39: [::1]:51870 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:43:04 logger.go:39: [::1]:51870 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:43:06 logger.go:39: [::1]:51870 - HTTP/2.0 GET /showposts?category=Art&category=Music
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:43:10 logger.go:39: [::1]:51870 - HTTP/2.0 GET /showposts?category=Life
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:43:12 logger.go:39: [::1]:51870 - HTTP/2.0 GET /showposts?category=IT
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:48:54 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:48:54 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:48:59 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:48:59 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:49:04 logger.go:39: [::1]:52049 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:49:04 logger.go:39: [::1]:52049 - HTTP/2.0 GET /static/css/style.css
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:49:04 logger.go:39: [::1]:52049 - HTTP/2.0 GET /static/js/script.js
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:49:12 logger.go:39: [::1]:52049 - HTTP/2.0 GET /showposts?category=Dance
+ERROR: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/post.go:531 2025/01/06 14:49:12 logger.go:39: get posts by categories: query context: near "FROM": syntax error
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/internal/handler/middleware.go:98 2025/01/06 14:49:14 logger.go:39: [::1]:52049 - HTTP/2.0 GET /
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:49:20 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:49:20 logger.go:39: server stopped gracefully
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:46 2025/01/06 14:49:24 logger.go:39: connected to db
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:57 2025/01/06 14:49:24 logger.go:39: server is running on https://localhost:8080
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:136 2025/01/06 14:50:57 logger.go:39: shutting down server...
+INFO: C:/Users/Wave/Desktop/GOLANG/final_forum/forum/main.go:145 2025/01/06 14:50:57 logger.go:39: server stopped gracefully

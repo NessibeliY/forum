@@ -529,6 +529,7 @@ func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
 	posts, err := h.service.PostService.GetPostsByCategories(categories)
 	if err != nil {
 		h.logger.Error("get posts by categories:", err.Error())
+		fmt.Println("err", err)
 		h.serverError(w, err)
 		return
 	}

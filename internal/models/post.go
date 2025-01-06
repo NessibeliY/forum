@@ -57,6 +57,28 @@ type DeletePostRequest struct {
 	ID int `json:"id"`
 }
 
+type SendReportRequest struct {
+	PostID      int
+	Reason      string
+	IsModerated bool
+	ModeratorID int
+}
+
+type ModerationReport struct {
+	ID          int
+	PostID      int
+	ModeratorID int
+	Reason      string
+	AdminAnswer string
+	IsModerated bool
+	Post        *Post
+	Moderator   *User
+}
+
+type ModeratorRequest struct {
+	UserID int
+}
+
 type PostService interface {
 	GetAllPosts() ([]Post, error)
 	CreatePost(request *CreatePostRequest) (int, error)
@@ -67,6 +89,7 @@ type PostService interface {
 	GetPostsByCategories(categories []string) ([]Post, error)
 	DeletePost(request *DeletePostRequest) error
 	UpdatePost(request *UpdatePostRequest) (int, error)
+	SendReport(request *SendReportRequest) error
 }
 
 type PostRepository interface {
@@ -80,4 +103,11 @@ type PostRepository interface {
 	DeletePost(id int) error
 	UpdatePost(post *Post) (int, error)
 	DeletePostWithImage(id int) error
+}
+
+type ModerationRepository interface {
+	AddModerationReport(report *ModerationReport) error
+	UpdateModerationReport(report *ModerationReport) error
+	GetModeratedPostsByModeratorID(moderatorID int) ([]ModerationReport, error)
+	GetAllModeratedPosts(ctx context.Context) ([]ModerationReport, error)
 }

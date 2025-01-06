@@ -67,7 +67,7 @@ func (h *Handler) CreatePostReaction(w http.ResponseWriter, r *http.Request) {
 	err = validateCreatePostReactionForm(reaction)
 	if err != nil {
 		h.logger.Error("validate create post reaction form:", err.Error())
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 

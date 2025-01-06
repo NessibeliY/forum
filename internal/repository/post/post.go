@@ -546,7 +546,6 @@ func (r *PostRepository) GetPostsByCategories(ctx context.Context, categories []
 		(SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'like') AS likes_count,
 		(SELECT COUNT(*) FROM post_reaction pr WHERE pr.post_id = p.id AND pr.reaction = 'dislike') AS dislikes_count,
 		(SELECT COUNT(*) FROM comment co WHERE co.post_id = p.id) AS comments_count
-		(SELECT reaction FROM post_reaction pr WHERE pr.post_id = p.id AND pr.author_id = $1 LIMIT 1) AS user_reaction
 	FROM
 		post p
 	LEFT JOIN
