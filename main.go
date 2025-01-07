@@ -89,6 +89,7 @@ func main() {
 	mux.Handle("/report", handler.RequireAuthentication(handler.IsModerator(http.HandlerFunc(handler.SendReport))))
 	mux.Handle("/moderator-request", handler.RequireAuthentication(handler.IsUser(http.HandlerFunc(handler.SendModeratorRequest))))
 	mux.Handle("/view/moderator-requests", handler.RequireAuthentication(handler.IsAdmin(http.HandlerFunc(handler.ViewModeratorRequests))))
+	mux.Handle("/moderator-decision", handler.RequireAuthentication(handler.IsAdmin(http.HandlerFunc(handler.SetNewRole))))
 
 	rateLimiter := handler.NewRateLimiter(5, 10, 1*time.Minute)
 	finalHandler := rateLimiter.Limit(handler.SecureHeaders(

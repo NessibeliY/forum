@@ -1807,3 +1807,19 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/08 00:36:31
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/08 00:36:31 logger.go:39: server is running on https://localhost:8080
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:129 2025/01/08 00:36:46 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:138 2025/01/08 00:36:46 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/08 01:28:47 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/08 01:28:47 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:130 2025/01/08 01:28:50 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:139 2025/01/08 01:28:50 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/08 01:29:03 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/08 01:29:03 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:130 2025/01/08 01:29:07 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:139 2025/01/08 01:29:07 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/08 01:29:47 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/08 01:29:47 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:130 2025/01/08 01:29:51 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:139 2025/01/08 01:29:51 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/08 01:30:54 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/08 01:30:54 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:130 2025/01/08 01:30:56 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:139 2025/01/08 01:30:56 logger.go:39: server stopped gracefully

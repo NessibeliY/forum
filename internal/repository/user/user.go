@@ -74,3 +74,9 @@ func (r *UserRepository) GetUserByID(id int) (user *models.User, err error) {
 
 	return user, nil
 }
+
+func (r *UserRepository) UpdateRole(userID int, role string) error {
+	query := `UPDATE users SET role = ? WHERE id = ?`
+	_, err := r.db.Exec(query, role, userID)
+	return err
+}

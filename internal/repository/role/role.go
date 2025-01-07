@@ -23,6 +23,18 @@ func (r *RoleRepository) AddRoleRequest(request *models.UpdateRoleRequest) error
 	return err
 }
 
+func (r *RoleRepository) UpdateRoleRequest(request *models.UpdateRoleRequest) error {
+	query := `UPDATE new_role_request SET admin_id = ?, processed = ? WHERE user_id = ?`
+	_, err := r.db.Exec(query, request.AdminID, request.Processed, request.UserID)
+	return err
+}
+
+func (r *RoleRepository) DeleteRoleRequestByUsedID(usedID int) error {
+	query := `DELETE FROM new_role_request WHERE user_id = ?`
+	_, err := r.db.Exec(query, usedID)
+	return err
+}
+
 func (r *RoleRepository) GetModeratorRequests() ([]models.ModeratorRequest, error) {
 	query := `
 SELECT u.username, n.user_id

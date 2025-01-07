@@ -1,6 +1,14 @@
 package models
 
-import "time"
+import (
+	"time"
+)
+
+const (
+	ModeratorRole = "moderator"
+	AdminRole     = "admin"
+	UserRole      = "user"
+)
 
 type User struct {
 	ID             int
@@ -42,14 +50,18 @@ type UserService interface {
 	GetUserByEmail(email string) (*User, error)
 	SendModeratorRequest(userID int) error
 	GetModeratorRequests() ([]ModeratorRequest, error)
+	SetNewRole(request *UpdateRoleRequest) error
 }
 
 type UserRepository interface {
 	AddUser(user *User) error
 	GetUserByEmail(email string) (*User, error)
 	GetUserByID(id int) (*User, error)
+	UpdateRole(userID int, role string) error
 }
 type RoleRepository interface {
 	AddRoleRequest(request *UpdateRoleRequest) error
 	GetModeratorRequests() ([]ModeratorRequest, error)
+	UpdateRoleRequest(request *UpdateRoleRequest) error
+	DeleteRoleRequestByUsedID(usedID int) error
 }

@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"database/sql"
 	"errors"
 	"net/http"
 	"strings"
@@ -208,4 +209,61 @@ func (h *Handler) ViewModeratorRequests(w http.ResponseWriter, r *http.Request) 
 		"requests":           requests,
 		"authenticated_user": h.getUserFromContext(r),
 	})
+}
+
+func (h *Handler) SetNewRole(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/moderator-decision" {
+		h.logger.Error("url path:", r.URL.Path)
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	if r.Method != http.MethodGet {
+		h.logger.Errorf("method not allowed: %s", r.Method)
+		h.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
+	userIDStr := r.URL.Query().Get("user_id")
+	if userIDStr == "" {
+		h.logger.Error("user id is required")
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+	userID, err := utils.ParsePositiveIntID(userIDStr)
+	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	var decision bool
+	switch r.URL.Query().Get("decision") {
+	case "1":
+		decision = true
+	case "0":
+		decision = false
+	default:
+		h.logger.Error("decision must be 0 or 1:", r.URL.Query().Get("decision"))
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+
+	request := &models.UpdateRoleRequest{
+		UserID:    userID,
+		AdminID:   h.getUserFromContext(r).ID,
+		Processed: decision,
+	}
+	err = h.service.UserService.SetNewRole(request)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			h.logger.Error("user not found", err)
+			h.clientError(w, http.StatusBadRequest)
+			return
+		}
+		h.serverError(w, err)
+		return
+	}
+
+	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
