@@ -177,9 +177,35 @@ func (h *Handler) SendModeratorRequest(w http.ResponseWriter, r *http.Request) {
 	err := h.service.UserService.SendModeratorRequest(h.getUserFromContext(r).ID)
 	if err != nil {
 		h.logger.Error("send moderator request:", err)
-		h.clientError(w, http.StatusBadRequest)
+		h.serverError(w, err)
 		return
 	}
 
 	http.Redirect(w, r, "/", http.StatusSeeOther)
+}
+
+func (h *Handler) ViewModeratorRequests(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/view/moderator-requests" {
+		h.logger.Error("url path:", r.URL.Path)
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	if r.Method != http.MethodGet {
+		h.logger.Errorf("method not allowed: %s", r.Method)
+		h.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
+	requests, err := h.service.UserService.GetModeratorRequests()
+	if err != nil {
+		h.logger.Error("get moderator requests:", err)
+		h.serverError(w, err)
+		return
+	}
+
+	h.Render(w, "moderator_requests.page.html", http.StatusOK, H{
+		"requests":           requests,
+		"authenticated_user": h.getUserFromContext(r),
+	})
 }

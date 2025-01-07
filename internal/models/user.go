@@ -30,12 +30,18 @@ type UpdateRoleRequest struct {
 	Processed bool
 }
 
+type ModeratorRequest struct {
+	UserID   int
+	Username string
+}
+
 type UserService interface {
 	SignupUser(user *SignupRequest) error
 	LoginUser(user *LoginRequest) (int, error)
 	GetUserByID(id int) (*User, error)
 	GetUserByEmail(email string) (*User, error)
 	SendModeratorRequest(userID int) error
+	GetModeratorRequests() ([]ModeratorRequest, error)
 }
 
 type UserRepository interface {
@@ -45,4 +51,5 @@ type UserRepository interface {
 }
 type RoleRepository interface {
 	AddRoleRequest(request *UpdateRoleRequest) error
+	GetModeratorRequests() ([]ModeratorRequest, error)
 }

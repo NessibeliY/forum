@@ -1803,3 +1803,7 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go
 ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:28 2024/12/18 18:01:59 logger.go:39: get cookie: http: named cookie not present
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:125 2024/12/18 18:02:43 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:134 2024/12/18 18:02:43 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/08 00:36:31 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/08 00:36:31 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:129 2025/01/08 00:36:46 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:138 2025/01/08 00:36:46 logger.go:39: server stopped gracefully

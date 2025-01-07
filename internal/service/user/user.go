@@ -72,3 +72,7 @@ func (s *UserService) SendModeratorRequest(userID int) error {
 	}
 	return s.roleRepo.AddRoleRequest(request)
 }
+
+func (s *UserService) GetModeratorRequests() ([]models.ModeratorRequest, error) {
+	return s.roleRepo.GetModeratorRequests()
+}
