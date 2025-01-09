@@ -25,6 +25,7 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 	var countNotification int
 	var currentNotifications []models.Notification
 	var archivedNotifications []models.Notification
+	var checkModeratorRequest bool
 	var err error
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
@@ -47,6 +48,14 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 			h.serverError(w, err)
 			return
 		}
+
+		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
+		if err != nil {
+			fmt.Println("err", err)
+			h.logger.Info("get check moderator request:", err)
+			h.serverError(w, err)
+			return
+		}
 	}
 
 	categories, err := h.service.CategoryService.GetAllCategories()
@@ -56,14 +65,13 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Println("current_notifications", currentNotifications)
-
 	h.Render(w, "notification.page.html", http.StatusOK, H{
-		"categories":             categories,
-		"authenticated_user":     h.getUserFromContext(r),
-		"count_notification":     countNotification,
-		"current_notifications":  currentNotifications,
-		"archived_notifications": archivedNotifications,
+		"categories":              categories,
+		"authenticated_user":      h.getUserFromContext(r),
+		"count_notification":      countNotification,
+		"current_notifications":   currentNotifications,
+		"archived_notifications":  archivedNotifications,
+		"check_moderator_request": checkModeratorRequest,
 	})
 }
 

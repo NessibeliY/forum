@@ -40,6 +40,7 @@ func (h *Handler) createPostMethodGet(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var countNotification int
+	var checkModeratorRequest bool
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -47,12 +48,21 @@ func (h *Handler) createPostMethodGet(w http.ResponseWriter, r *http.Request) {
 			h.serverError(w, err)
 			return
 		}
+
+		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
+		if err != nil {
+			fmt.Println("err", err)
+			h.logger.Info("get check moderator request:", err)
+			h.serverError(w, err)
+			return
+		}
 	}
 
 	h.Render(w, "create_post.page.html", http.StatusOK, H{
-		"categories":         categories,
-		"authenticated_user": h.getUserFromContext(r),
-		"count_notification": countNotification,
+		"categories":              categories,
+		"authenticated_user":      h.getUserFromContext(r),
+		"count_notification":      countNotification,
+		"check_moderator_request": checkModeratorRequest,
 	})
 }
 
@@ -391,6 +401,7 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var countNotification int
+	var checkModeratorRequest bool
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -399,14 +410,23 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
+		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
+		if err != nil {
+			fmt.Println("err", err)
+			h.logger.Info("get check moderator request:", err)
+			h.serverError(w, err)
+			return
+		}
+
 	}
 
 	h.Render(w, "post.page.html", http.StatusOK, H{
-		"post":               post,
-		"comments":           comments,
-		"categories":         categories,
-		"authenticated_user": h.getUserFromContext(r),
-		"count_notification": countNotification,
+		"post":                    post,
+		"comments":                comments,
+		"categories":              categories,
+		"authenticated_user":      h.getUserFromContext(r),
+		"count_notification":      countNotification,
+		"check_moderator_request": checkModeratorRequest,
 	})
 }
 
@@ -438,6 +458,7 @@ func (h *Handler) ShowMyPosts(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var countNotification int
+	var checkModeratorRequest bool
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -445,13 +466,22 @@ func (h *Handler) ShowMyPosts(w http.ResponseWriter, r *http.Request) {
 			h.serverError(w, err)
 			return
 		}
+
+		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
+		if err != nil {
+			fmt.Println("err", err)
+			h.logger.Info("get check moderator request:", err)
+			h.serverError(w, err)
+			return
+		}
 	}
 
 	h.Render(w, "index.page.html", http.StatusOK, H{
-		"posts":              posts,
-		"categories":         categories,
-		"authenticated_user": h.getUserFromContext(r),
-		"count_notification": countNotification,
+		"posts":                   posts,
+		"categories":              categories,
+		"authenticated_user":      h.getUserFromContext(r),
+		"count_notification":      countNotification,
+		"check_moderator_request": checkModeratorRequest,
 	})
 }
 
@@ -483,6 +513,7 @@ func (h *Handler) ShowLikedPosts(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var countNotification int
+	var checkModeratorRequest bool
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -490,13 +521,21 @@ func (h *Handler) ShowLikedPosts(w http.ResponseWriter, r *http.Request) {
 			h.serverError(w, err)
 			return
 		}
+		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
+		if err != nil {
+			fmt.Println("err", err)
+			h.logger.Info("get check moderator request:", err)
+			h.serverError(w, err)
+			return
+		}
 	}
 
 	h.Render(w, "index.page.html", http.StatusOK, H{
-		"posts":              posts,
-		"categories":         categories,
-		"authenticated_user": h.getUserFromContext(r),
-		"count_notification": countNotification,
+		"posts":                   posts,
+		"categories":              categories,
+		"authenticated_user":      h.getUserFromContext(r),
+		"count_notification":      countNotification,
+		"check_moderator_request": checkModeratorRequest,
 	})
 }
 
@@ -551,6 +590,7 @@ func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var countNotification int
+	var checkModeratorRequest bool
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
@@ -558,12 +598,20 @@ func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
 			h.serverError(w, err)
 			return
 		}
+		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
+		if err != nil {
+			fmt.Println("err", err)
+			h.logger.Info("get check moderator request:", err)
+			h.serverError(w, err)
+			return
+		}
 	}
 
 	h.Render(w, "index.page.html", http.StatusOK, H{
-		"posts":              posts,
-		"categories":         allCategories,
-		"authenticated_user": h.getUserFromContext(r),
-		"count_notification": countNotification,
+		"posts":                   posts,
+		"categories":              allCategories,
+		"authenticated_user":      h.getUserFromContext(r),
+		"count_notification":      countNotification,
+		"check_moderator_request": checkModeratorRequest,
 	})
 }

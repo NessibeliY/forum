@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../static/images/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>FORUM</title>
+</head>
+<body> 
+    {{ template "header" .}}
+    <main class="main_container">
+           <div class="offset">
+                <!-- IF USER AUTH SHOW THIS BLOCK -->
+                <div class="middleContainer">
+                    <div class="flex flex-col w-full border-b border-indigo-600 py-3 px-2 mb-2">
+                        <span class="text-2xl font-bold">Manage requests</span>
+                    </div>
+                    <div class="flex w-full flex-col">
+                            <table class="min-w-full table-auto border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th class="border px-4 py-2">User ID</th>
+                                        <th class="border px-4 py-2">Username</th>
+                                        <th class="border px-4 py-2">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{range .requests}}
+                                        <tr>
+                                            <td class="border px-4 py-2">{{.UserID}}</td>
+                                            <td class="border px-4 py-2">{{.Username}}</td>
+                                            <td class="border px-4 py-2 flex">
+                                                <form action="/moderator-decision?user_id={{.UserID}}&decision=1" method="POST">
+                                                    <button type="submit" name="action" value="approve_{{.UserID}}" class="bg-green-500 hover:bg-green-600 transition duration-300  px-4 py-2 rounded mx-2 text-white">Approve</button>
+                                                </form>  
+                                                <form action="/moderator-decision?user_id={{.UserID}}?decision=0" method="POST">
+                                                    <button type="submit" name="action" value="approve_{{.UserID}}" class="bg-red-500 hover:bg-red-600  transition duration-300   text-white px-4 py-2 rounded mx-2 text-white">Reject</button>
+                                                </form>    
+                                            </td>
+                                        </tr>
+                                    {{end}}
+                                </tbody>
+                            </table>
+                    </div>
+                    
+                </div>
+                {{if .authenticated_user }}
+                <div class="rSide">
+                    <div class="welcome card">
+                        <div>
+                            <h2 class="welcome_text" style="font-weight: 600; font-size: xx-large;">Hi, {{.authenticated_user.Username}}</h2>
+                            <span style="font-size: larger;">Glad to see you!</span>
+                            <a href="/post/create" class="createButton bg-green-600 hover:bg-green-700 transition duration-300" id="openModalBtn">
+                                <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {{end}}
+        </div>
+    </main>
+</body>
+<script src="/static/js/script.js"></script>
+</html>

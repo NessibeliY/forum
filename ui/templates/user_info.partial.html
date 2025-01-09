@@ -10,6 +10,7 @@
                 <span style="font-weight: 500; font-size: 1.25rem;">{{ .authenticated_user.Username}}</span>
             {{end}}
 
+            {{if eq .authenticated_user.Role "user"}}
             {{if .check_moderator_request }}
                 <div class="flex items-center justify-center w-full bg-green-100 p-4 rounded-lg border border-green-200">
                     <i class="fas fa-check-circle text-green-500 mr-2"></i>
@@ -21,6 +22,7 @@
                     <i class="fas fa-user-shield"></i> Apply for Moderator
                 </button>
             </form>
+            {{end}}
             {{end}}
 
         </div>

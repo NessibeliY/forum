@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
@@ -25,6 +26,7 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 	var userPosts []models.Post
 	var likedDislikedPosts []models.UserReactionPost
 	var commentPosts []models.Post
+	var checkModeratorRequest bool
 	var err error
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
@@ -78,14 +80,23 @@ func (h *Handler) ActivityPage(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
+	if err != nil {
+		fmt.Println("err", err)
+		h.logger.Info("get check moderator request:", err)
+		h.serverError(w, err)
+		return
+	}
+
 	h.Render(w, "activity_page.page.html", http.StatusOK, H{
-		"categories":             categories,
-		"authenticated_user":     h.getUserFromContext(r),
-		"count_notification":     countNotification,
-		"current_notifications":  currentNotifications,
-		"archived_notifications": archivedNotifications,
-		"user_posts":             userPosts,
-		"likes_dislikes_post":    likedDislikedPosts,
-		"comment_posts":          commentPosts,
+		"categories":              categories,
+		"authenticated_user":      h.getUserFromContext(r),
+		"count_notification":      countNotification,
+		"current_notifications":   currentNotifications,
+		"archived_notifications":  archivedNotifications,
+		"user_posts":              userPosts,
+		"likes_dislikes_post":     likedDislikedPosts,
+		"comment_posts":           commentPosts,
+		"check_moderator_request": checkModeratorRequest,
 	})
 }

@@ -49,11 +49,11 @@ func (r *RoleRepository) DeleteRoleRequestByUsedID(usedID int) error {
 
 func (r *RoleRepository) GetModeratorRequests() ([]models.ModeratorRequest, error) {
 	query := `
-SELECT u.username, n.user_id
-FROM users u
-JOIN new_role_request n ON n.user_id = u.id
-WHERE n.processed = ?`
-	rows, err := r.db.Query(query, "false")
+	SELECT u.username, n.user_id
+	FROM users u
+	JOIN new_role_request n ON n.user_id = u.id
+	WHERE n.processed = ?`
+	rows, err := r.db.Query(query, "0")
 	if err != nil {
 		return nil, fmt.Errorf("query: %w", err)
 	}

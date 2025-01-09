@@ -179,10 +179,6 @@ func (h *Handler) SendModeratorRequest(w http.ResponseWriter, r *http.Request) {
 	err := h.service.UserService.SendModeratorRequest(h.getUserFromContext(r).ID)
 	if err != nil {
 		h.logger.Error("send moderator request:", err)
-<<<<<<< HEAD
-		fmt.Println("userID", h.getUserFromContext(r).ID)
-		fmt.Println("ERROR", err)
-=======
 		h.serverError(w, err)
 		return
 	}
@@ -210,9 +206,20 @@ func (h *Handler) ViewModeratorRequests(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+	}
+
 	h.Render(w, "moderator_requests.page.html", http.StatusOK, H{
 		"requests":           requests,
 		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
 	})
 }
 
@@ -223,13 +230,14 @@ func (h *Handler) SetNewRole(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if r.Method != http.MethodGet {
+	if r.Method != http.MethodPost {
 		h.logger.Errorf("method not allowed: %s", r.Method)
 		h.clientError(w, http.StatusMethodNotAllowed)
 		return
 	}
 
 	userIDStr := r.URL.Query().Get("user_id")
+
 	if userIDStr == "" {
 		h.logger.Error("user id is required")
 		h.clientError(w, http.StatusBadRequest)
@@ -250,10 +258,11 @@ func (h *Handler) SetNewRole(w http.ResponseWriter, r *http.Request) {
 		decision = false
 	default:
 		h.logger.Error("decision must be 0 or 1:", r.URL.Query().Get("decision"))
->>>>>>> feature/moderation
 		h.clientError(w, http.StatusBadRequest)
 		return
 	}
+
+	fmt.Println("decision", decision)
 
 	request := &models.UpdateRoleRequest{
 		UserID:    userID,
