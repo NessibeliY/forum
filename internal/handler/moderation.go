@@ -2,6 +2,7 @@ package handler
 
 import (
 	"errors"
+	"fmt"
 	"net/http"
 	"strings"
 
@@ -177,6 +178,8 @@ func (h *Handler) SendModeratorRequest(w http.ResponseWriter, r *http.Request) {
 	err := h.service.UserService.SendModeratorRequest(h.getUserFromContext(r).ID)
 	if err != nil {
 		h.logger.Error("send moderator request:", err)
+		fmt.Println("userID", h.getUserFromContext(r).ID)
+		fmt.Println("ERROR", err)
 		h.clientError(w, http.StatusBadRequest)
 		return
 	}
