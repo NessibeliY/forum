@@ -141,16 +141,20 @@
                       
                                       
                                     {{if $.authenticated_user}}
-                                    {{if eq  $.authenticated_user.ID .AuthorID}}        
+                                    {{if or (eq $.authenticated_user.ID .AuthorID) (eq $.authenticated_user.Role "admin")}}              
                                     <div class="text-xl dropdown">
                                         <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
                                         <div class="select_menu" id="dropdown-{{.ID}}">
                                             <ul class="options card">
+                                                {{if eq $.authenticated_user.ID .AuthorID}}  
+                                                    
+                                                    <li class="option update_btn_modal" data-modal="update_comm_{{.ID}}">
+                                                        Update
+                                                    </li>
+                                                {{end}}
+                            
                                                 <li class="option del_btn_modal" data-modal="delete_comm_{{.ID}}">
                                                     Delete                                         
-                                                </li>
-                                                <li class="option update_btn_modal" data-modal="update_comm_{{.ID}}">
-                                                    Update
                                                 </li>
                                             </ul>
                                         </div>

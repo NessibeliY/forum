@@ -7734,3 +7734,133 @@ INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:12:3
 INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:12:35 logger.go:39: [::1]:37170 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
 INFO: /home/student/1/forum/main.go:138 2025/01/09 16:13:09 logger.go:39: shutting down server...
 INFO: /home/student/1/forum/main.go:147 2025/01/09 16:13:09 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:14:06 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:14:06 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:14:16 logger.go:39: 127.0.0.1:47304 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:14:17 logger.go:39: 127.0.0.1:47304 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:14:17 logger.go:39: 127.0.0.1:47304 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/main.go:138 2025/01/09 16:26:53 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:147 2025/01/09 16:26:53 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:26:55 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:26:55 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:26:57 logger.go:39: 127.0.0.1:47310 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:26:57 logger.go:39: 127.0.0.1:47310 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:26:57 logger.go:39: 127.0.0.1:47310 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:26:57 logger.go:39: 127.0.0.1:47310 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:21 logger.go:39: [::1]:37178 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:21 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:21 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:21 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:23 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:24 logger.go:39: [::1]:37178 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:24 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:24 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:24 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:25 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:31 logger.go:39: [::1]:37178 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:31 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:33 logger.go:39: [::1]:37178 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:27:33 logger.go:39: [::1]:37178 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:38:40 logger.go:39: 127.0.0.1:47312 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:38:40 logger.go:39: 127.0.0.1:47312 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:38:40 logger.go:39: 127.0.0.1:47312 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:38:40 logger.go:39: 127.0.0.1:47312 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:38:40 logger.go:39: 127.0.0.1:47312 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:39:15 logger.go:39: [::1]:37186 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:39:15 logger.go:39: [::1]:37186 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:39:15 logger.go:39: [::1]:37186 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:39:47 logger.go:39: [::1]:37186 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:39:48 logger.go:39: [::1]:37186 - HTTP/2.0 GET /likedposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:39:55 logger.go:39: 127.0.0.1:47312 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:39:55 logger.go:39: 127.0.0.1:47312 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:39:57 logger.go:39: 127.0.0.1:47312 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/main.go:138 2025/01/09 16:43:02 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:147 2025/01/09 16:43:02 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:43:03 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:43:03 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:44:20 logger.go:39: [::1]:37192 - HTTP/2.0 GET /likedposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:44:20 logger.go:39: [::1]:37192 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:44:20 logger.go:39: [::1]:37192 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:44:21 logger.go:39: [::1]:37192 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:44:25 logger.go:39: 127.0.0.1:47314 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:44:25 logger.go:39: 127.0.0.1:47314 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:44:25 logger.go:39: 127.0.0.1:47314 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:44:26 logger.go:39: 127.0.0.1:47314 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:138 2025/01/09 16:45:54 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:147 2025/01/09 16:45:54 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:45:56 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:45:56 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:45:57 logger.go:39: [::1]:37196 - HTTP/2.0 GET /likedposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:45:57 logger.go:39: [::1]:37196 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:45:57 logger.go:39: [::1]:37196 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:45:58 logger.go:39: [::1]:37196 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:00 logger.go:39: [::1]:37196 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:02 logger.go:39: [::1]:37196 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:17 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:17 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:17 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:18 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:28 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:29 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:29 logger.go:39: 127.0.0.1:47318 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/09 16:46:29 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:35 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:36 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:52 logger.go:39: [::1]:37196 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:52 logger.go:39: [::1]:37196 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:54 logger.go:39: [::1]:37196 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:54 logger.go:39: [::1]:37196 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:46:56 logger.go:39: [::1]:37196 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:00 logger.go:39: [::1]:37196 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:02 logger.go:39: [::1]:37196 - HTTP/2.0 POST /comment/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:02 logger.go:39: [::1]:37196 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:04 logger.go:39: [::1]:37196 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:07 logger.go:39: [::1]:37196 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:08 logger.go:39: [::1]:37196 - HTTP/2.0 POST /comment/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:08 logger.go:39: [::1]:37196 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:10 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:12 logger.go:39: 127.0.0.1:47316 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/main.go:138 2025/01/09 16:47:52 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:147 2025/01/09 16:47:52 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:47:54 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:47:54 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:56 logger.go:39: 127.0.0.1:47320 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:56 logger.go:39: 127.0.0.1:47320 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:56 logger.go:39: 127.0.0.1:47320 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:47:57 logger.go:39: 127.0.0.1:47320 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:138 2025/01/09 16:48:11 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:147 2025/01/09 16:48:11 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:48:12 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:48:12 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:48:14 logger.go:39: 127.0.0.1:47322 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:48:14 logger.go:39: 127.0.0.1:47322 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:48:14 logger.go:39: 127.0.0.1:47322 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:48:15 logger.go:39: 127.0.0.1:47322 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:48:16 logger.go:39: 127.0.0.1:47326 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:48:16 logger.go:39: 127.0.0.1:47326 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:48:16 logger.go:39: 127.0.0.1:47326 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:48:17 logger.go:39: 127.0.0.1:47326 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:138 2025/01/09 16:48:27 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:147 2025/01/09 16:48:27 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:48:28 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:48:28 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/main.go:138 2025/01/09 16:49:48 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:147 2025/01/09 16:49:48 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:49:49 logger.go:39: connected to db
+FATAL: /home/student/1/forum/main.go:52 2025/01/09 16:49:49 logger.go:39: parse post.page.html: template: post.page.html:224: unexpected {{end}}
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:51:29 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:51:29 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:32 logger.go:39: [::1]:37200 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:32 logger.go:39: [::1]:37200 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:32 logger.go:39: [::1]:37200 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:32 logger.go:39: [::1]:37200 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:37 logger.go:39: 127.0.0.1:47328 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:37 logger.go:39: 127.0.0.1:47328 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:37 logger.go:39: 127.0.0.1:47328 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:38 logger.go:39: 127.0.0.1:47328 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:46 logger.go:39: 127.0.0.1:47328 - HTTP/2.0 POST /comment/delete?comment_id=42
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:46 logger.go:39: 127.0.0.1:47328 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:48 logger.go:39: 127.0.0.1:47328 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:53 logger.go:39: [::1]:37200 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/main.go:138 2025/01/09 16:52:59 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:147 2025/01/09 16:52:59 logger.go:39: server stopped gracefully
