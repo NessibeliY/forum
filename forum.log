@@ -7864,3 +7864,46 @@ INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:4
 INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:51:53 logger.go:39: [::1]:37200 - HTTP/2.0 GET /post?id=13
 INFO: /home/student/1/forum/main.go:138 2025/01/09 16:52:59 logger.go:39: shutting down server...
 INFO: /home/student/1/forum/main.go:147 2025/01/09 16:52:59 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:53:45 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:53:45 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:49 logger.go:39: 127.0.0.1:47336 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:49 logger.go:39: 127.0.0.1:47336 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:49 logger.go:39: 127.0.0.1:47336 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:49 logger.go:39: 127.0.0.1:47336 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:52 logger.go:39: [::1]:37210 - HTTP/2.0 GET /post?id=13
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:52 logger.go:39: [::1]:37210 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:52 logger.go:39: [::1]:37210 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:52 logger.go:39: [::1]:37210 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:53 logger.go:39: [::1]:37210 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:54 logger.go:39: [::1]:37210 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:54 logger.go:39: [::1]:37210 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:53:59 logger.go:39: 127.0.0.1:47336 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:54:00 logger.go:39: 127.0.0.1:47336 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/main.go:137 2025/01/09 16:56:58 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/09 16:56:58 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/09 16:57:00 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/09 16:57:00 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:02 logger.go:39: [::1]:37216 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:02 logger.go:39: [::1]:37216 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:02 logger.go:39: [::1]:37216 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:02 logger.go:39: [::1]:37216 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:03 logger.go:39: [::1]:37216 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:06 logger.go:39: 127.0.0.1:47338 - HTTP/2.0 GET /post?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:06 logger.go:39: 127.0.0.1:47338 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:06 logger.go:39: 127.0.0.1:47338 - HTTP/2.0 GET /static/img/f76049f2-6186-4079-a980-c4041e6a6e7f
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:06 logger.go:39: 127.0.0.1:47338 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:07 logger.go:39: 127.0.0.1:47338 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:12 logger.go:39: 127.0.0.1:47338 - HTTP/2.0 POST /post/delete?id=19
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:12 logger.go:39: 127.0.0.1:47338 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:15 logger.go:39: [::1]:37216 - HTTP/2.0 GET /post?id=19
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/09 16:57:15 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:15 logger.go:39: [::1]:37222 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:21 logger.go:39: [::1]:37222 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:21 logger.go:39: [::1]:37222 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:23 logger.go:39: [::1]:37222 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:24 logger.go:39: [::1]:37222 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:24 logger.go:39: [::1]:37222 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:24 logger.go:39: [::1]:37222 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:25 logger.go:39: [::1]:37222 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/main.go:137 2025/01/09 16:57:30 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/09 16:57:30 logger.go:39: server stopped gracefully

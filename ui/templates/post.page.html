@@ -69,17 +69,19 @@
                     </div>
                      <!-- CHECK IF USER IS OWNER -->
                      {{if $.authenticated_user}}
-                     {{if eq $.authenticated_user.ID  .post.AuthorID  }}
+                     {{if  or  (eq $.authenticated_user.ID  .post.AuthorID) (eq $.authenticated_user.Role "admin") }}
                      <div class="text-xl dropdown">
                          <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
                          <div class="select_menu " id="dropdown-{{.ID}}">
                              <ul class="options card">
-                                 <li class="option del_btn_modal" data-modal="delete_modal_{{.ID}}">
-                                     Delete
-                                 </li>
+                                {{if eq  $.authenticated_user.ID  .post.AuthorID}} 
                                  <li class="option">
                                     <a href="/post/update?id={{.post.ID }}">Update</a>
                                  </li>
+                                 {{end}}
+                                 <li class="option del_btn_modal" data-modal="delete_modal_{{.ID}}">
+                                    Delete
+                                </li>
                              </ul>
                          </div>
                      </div>
@@ -146,8 +148,7 @@
                                         <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
                                         <div class="select_menu" id="dropdown-{{.ID}}">
                                             <ul class="options card">
-                                                {{if eq $.authenticated_user.ID .AuthorID}}  
-                                                    
+                                                {{if eq $.authenticated_user.ID .AuthorID}}          
                                                     <li class="option update_btn_modal" data-modal="update_comm_{{.ID}}">
                                                         Update
                                                     </li>
