@@ -75,10 +75,6 @@ type ModerationReport struct {
 	Moderator   *User
 }
 
-type ModeratorRequest struct {
-	UserID int
-}
-
 type PostService interface {
 	GetAllPosts() ([]Post, error)
 	CreatePost(request *CreatePostRequest) (int, error)

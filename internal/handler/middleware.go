@@ -6,19 +6,14 @@ import (
 	"sync"
 	"time"
 
+	"01.alem.school/git/nyeltay/forum/internal/models"
 	"01.alem.school/git/nyeltay/forum/pkg/cookies"
-)
-
-const (
-	moderatorRole = "moderator"
-	adminRole     = "admin"
-	userRole      = "user"
 )
 
 func (h *Handler) IsModerator(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		user := h.getUserFromContext(r)
-		if user == nil || user.Role != moderatorRole {
+		if user == nil || user.Role != models.ModeratorRole {
 			h.clientError(w, http.StatusForbidden)
 			return
 		}
@@ -30,7 +25,7 @@ func (h *Handler) IsModerator(next http.Handler) http.Handler {
 func (h *Handler) IsAdmin(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		user := h.getUserFromContext(r)
-		if user == nil || user.Role != adminRole {
+		if user == nil || user.Role != models.AdminRole {
 			h.clientError(w, http.StatusForbidden)
 			return
 		}
@@ -42,7 +37,7 @@ func (h *Handler) IsAdmin(next http.Handler) http.Handler {
 func (h *Handler) IsUser(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		user := h.getUserFromContext(r)
-		if user == nil || user.Role != userRole {
+		if user == nil || user.Role != models.UserRole {
 			h.clientError(w, http.StatusForbidden)
 			return
 		}

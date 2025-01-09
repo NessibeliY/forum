@@ -76,3 +76,29 @@ func (s *UserService) SendModeratorRequest(userID int) error {
 func (s *UserService) CheckModeratorRequestStatus(userID int) (bool, error) {
 	return s.roleRepo.ExistsByUserAndRole(userID)
 }
+
+func (s *UserService) GetModeratorRequests() ([]models.ModeratorRequest, error) {
+	return s.roleRepo.GetModeratorRequests()
+}
+
+func (s *UserService) SetNewRole(request *models.UpdateRoleRequest) error {
+	var err error
+	switch request.Processed {
+	case true:
+		err = s.roleRepo.UpdateRoleRequest(request)
+	case false:
+		err = s.roleRepo.DeleteRoleRequestByUsedID(request.UserID)
+	}
+	if err != nil {
+		return fmt.Errorf("update role request: %w", err)
+	}
+
+	if request.Processed {
+		err = s.userRepo.UpdateRole(request.UserID, models.ModeratorRole)
+		if err != nil {
+			return fmt.Errorf("update user role: %w", err)
+		}
+	}
+
+	return nil
+}
