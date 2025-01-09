@@ -72,3 +72,7 @@ func (s *UserService) SendModeratorRequest(userID int) error {
 	}
 	return s.roleRepo.AddRoleRequest(request)
 }
+
+func (s *UserService) CheckModeratorRequestStatus(userID int) (bool, error) {
+	return s.roleRepo.ExistsByUserAndRole(userID)
+}

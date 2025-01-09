@@ -44,7 +44,7 @@ func (r *UserRepository) AddUser(user *models.User) error {
 
 func (r *UserRepository) GetUserByEmail(email string) (*models.User, error) {
 	var user models.User
-	err := r.db.QueryRow("SELECT * FROM users WHERE email = $1", email).Scan(&user.ID, &user.Username, &user.HashedPassword, &user.Email, &user.CreatedAt, &user.UpdatedAt)
+	err := r.db.QueryRow("SELECT * FROM users WHERE email = $1", email).Scan(&user.ID, &user.Username, &user.HashedPassword, &user.Email, &user.CreatedAt, &user.UpdatedAt, &user.Role)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return nil, nil
@@ -64,7 +64,8 @@ func (r *UserRepository) GetUserByID(id int) (user *models.User, err error) {
 		&user.HashedPassword,
 		&user.Email,
 		&user.CreatedAt,
-		&user.UpdatedAt)
+		&user.UpdatedAt,
+		&user.Role)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return nil, nil

@@ -21,3 +21,15 @@ func (r *RoleRepository) AddRoleRequest(request *models.UpdateRoleRequest) error
 	_, err := r.db.Exec(query, request.UserID, request.Processed)
 	return err
 }
+
+func (r *RoleRepository) ExistsByUserAndRole(userID int) (bool, error) {
+	query := `SELECT COUNT(*) FROM new_role_request WHERE user_id = $1 AND processed = 0`
+
+	var count int
+	err := r.db.QueryRow(query, userID).Scan(&count)
+	if err != nil {
+		return false, err
+	}
+
+	return count > 0, nil
+}

@@ -36,6 +36,7 @@ type UserService interface {
 	GetUserByID(id int) (*User, error)
 	GetUserByEmail(email string) (*User, error)
 	SendModeratorRequest(userID int) error
+	CheckModeratorRequestStatus(userID int) (bool, error)
 }
 
 type UserRepository interface {
@@ -45,4 +46,5 @@ type UserRepository interface {
 }
 type RoleRepository interface {
 	AddRoleRequest(request *UpdateRoleRequest) error
+	ExistsByUserAndRole(userID int) (bool, error)
 }
