@@ -364,7 +364,7 @@ func (h *Handler) ReportModerationGet(w http.ResponseWriter, r *http.Request) {
 	}
 
 	for _, el := range moderatedList {
-		fmt.Println(el)
+		fmt.Println(el.Post.AuthorID)
 	}
 
 	h.Render(w, "report_moderation.page.html", http.StatusOK, H{
