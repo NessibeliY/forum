@@ -2,8 +2,6 @@ package handler
 
 import (
 	"database/sql"
-	"errors"
-	"fmt"
 	"net/http"
 	"strings"
 
@@ -77,20 +75,53 @@ func (h *Handler) sendReportMethodGet(w http.ResponseWriter, r *http.Request) {
 		h.serverError(w, err)
 		return
 	}
+
 	if post == nil {
 		h.logger.Info("post nil")
 		h.clientError(w, http.StatusNotFound)
 		return
 	}
 
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+	}
+
 	h.Render(w, "report.page.html", http.StatusOK, H{
 		"reported_user":      user,
 		"reported_post":      post,
 		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
 	})
 }
 
 func (h *Handler) sendReportMethodPost(w http.ResponseWriter, r *http.Request) {
+	userIDStr := r.URL.Query().Get("user_id")
+	if userIDStr == "" {
+		h.logger.Error("get query for user_id")
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+
+	userID, err := utils.ParsePositiveIntID(userIDStr)
+	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	user, err := h.service.UserService.GetUserByID(userID)
+	if err != nil {
+		h.logger.Error("get user by id:", err.Error())
+		h.serverError(w, err)
+		return
+	}
+
 	postIDStr := r.URL.Query().Get("post_id")
 	if postIDStr == "" {
 		h.logger.Error("get query for post_id")
@@ -111,36 +142,46 @@ func (h *Handler) sendReportMethodPost(w http.ResponseWriter, r *http.Request) {
 		h.serverError(w, err)
 		return
 	}
+
 	if post == nil {
-		h.logger.Info("post nil")
-		h.clientError(w, http.StatusNotFound)
+		h.logger.Error("get post by id")
+		h.clientError(w, http.StatusBadRequest)
 		return
 	}
 
 	reason := strings.TrimSpace(r.PostFormValue("report_text"))
-	err = validateReportText(reason)
-	if err != nil {
+	validateReason := validateReportText(reason)
+
+	if len(validateReason) > 0 {
 		h.logger.Error("validate report text:", err)
 
-		categories, err := h.service.CategoryService.GetAllCategories()
-		if err != nil {
-			h.logger.Error("get all categories:", err.Error())
-			h.serverError(w, err)
-			return
+		var countNotification int
+		if h.getUserFromContext(r) != nil {
+			countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+			if err != nil {
+				h.logger.Info("get countNotification:", err)
+				h.serverError(w, err)
+				return
+			}
 		}
 
 		h.Render(w, "report.page.html", http.StatusBadRequest, H{
-			"error":              err,
-			"categories":         categories,
+			"error":              validateReason,
+			"reported_user":      user,
+			"reported_post":      post,
+			"count_notification": countNotification,
 			"authenticated_user": h.getUserFromContext(r),
 		})
 		return
+
 	}
 
 	err = h.service.PostService.SendReport(&models.SendReportRequest{
 		PostID:      postID,
 		Reason:      reason,
 		ModeratorID: h.getUserFromContext(r).ID,
+		Post:        post,
+		Moderator:   user,
 	})
 	if err != nil {
 		h.logger.Error("get post by id:", err.Error())
@@ -151,16 +192,18 @@ func (h *Handler) sendReportMethodPost(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
-func validateReportText(reportText string) error {
+func validateReportText(reportText string) map[string]string {
+	errors := make(map[string]string)
+
 	if reportText == "" {
-		return errors.New("report text is empty")
+		errors["report_text"] = "report text is empty"
 	}
 
 	if len(reportText) > 1000 {
-		return errors.New("report text is too long")
+		errors["report_text"] = "report text is too long"
 	}
 
-	return nil
+	return errors
 }
 
 func (h *Handler) SendModeratorRequest(w http.ResponseWriter, r *http.Request) {
@@ -261,8 +304,6 @@ func (h *Handler) SetNewRole(w http.ResponseWriter, r *http.Request) {
 		h.clientError(w, http.StatusBadRequest)
 		return
 	}
-
-	fmt.Println("decision", decision)
 
 	request := &models.UpdateRoleRequest{
 		UserID:    userID,

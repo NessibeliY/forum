@@ -18,9 +18,10 @@ type PostService struct {
 	moderationRepo models.ModerationRepository
 }
 
-func NewPostService(repo models.PostRepository) *PostService {
+func NewPostService(postRepo models.PostRepository, moderationRepo models.ModerationRepository) *PostService {
 	return &PostService{
-		repo: repo,
+		repo:           postRepo,
+		moderationRepo: moderationRepo,
 	}
 }
 
@@ -43,6 +44,7 @@ func (s *PostService) CreatePost(createPostRequest *models.CreatePostRequest) (i
 		AuthorID:   createPostRequest.AuthorID,
 		Categories: createPostRequest.Categories,
 	}
+
 	return s.repo.AddPost(post)
 }
 
@@ -84,6 +86,8 @@ func (s *PostService) CreatePostWithImage(request *models.CreatePostRequest) (in
 		}
 		return 0, fmt.Errorf("write file: %w", err)
 	}
+
+	fmt.Println("post", post)
 
 	return id, nil
 }
@@ -148,6 +152,34 @@ func (s *PostService) SendReport(request *models.SendReportRequest) error {
 		Reason:      request.Reason,
 		IsModerated: request.IsModerated,
 		ModeratorID: request.ModeratorID,
+		AdminAnswer: "",
+		Post:        request.Post,
+		Moderator:   request.Moderator,
 	}
+
+	fmt.Printf("SendReportRequest:\n")
+	fmt.Printf("PostID: %d\n", request.PostID)
+	fmt.Printf("Reason: %s\n", request.Reason)
+	fmt.Printf("IsModerated: %v\n", request.IsModerated)
+	fmt.Printf("ModeratorID: %d\n", request.ModeratorID)
+
+	if request.Post != nil {
+		fmt.Printf("Post:\n")
+		fmt.Printf("\tID: %d\n", request.Post.ID)
+		fmt.Printf("\tTitle: %s\n", request.Post.Title)
+		fmt.Printf("\tContent: %s\n", request.Post.Content)
+		fmt.Printf("\tAuthorID: %d\n", request.Post.AuthorID)
+		fmt.Printf("\tAuthorName: %s\n", request.Post.AuthorName)
+		fmt.Printf("\tCreatedAt: %s\n", request.Post.CreatedAt)
+		fmt.Printf("\tUpdatedAt: %s\n", request.Post.UpdatedAt)
+	}
+
+	if request.Moderator != nil {
+		fmt.Printf("Moderator:\n")
+		fmt.Printf("\tID: %d\n", request.Moderator.ID)
+		fmt.Printf("\tUsername: %s\n", request.Moderator.Username)
+		fmt.Printf("\tRole: %s\n", request.Moderator.Role)
+	}
+
 	return s.moderationRepo.AddModerationReport(moderationReport)
 }

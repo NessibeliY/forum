@@ -143,8 +143,7 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		createPostRequest.ImageFile = nil
 		if errors.Is(err, http.ErrMissingFile) ||
-			err == io.EOF ||
-			(err.Error() == "http: no such file") ||
+			err == io.EOF || (err.Error() == "http: no such file") ||
 			strings.Contains(err.Error(), "multipart") {
 			categories, err := h.service.CategoryService.GetAllCategories()
 			if err != nil {

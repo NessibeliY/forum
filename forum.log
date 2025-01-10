@@ -7907,3 +7907,1403 @@ INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:2
 INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/09 16:57:25 logger.go:39: [::1]:37222 - HTTP/2.0 GET /
 INFO: /home/student/1/forum/main.go:137 2025/01/09 16:57:30 logger.go:39: shutting down server...
 INFO: /home/student/1/forum/main.go:146 2025/01/09 16:57:30 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:12:10 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:12:10 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:12:42 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 13:12:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:12:42 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 13:12:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:12:42 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 13:12:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:12:43 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 13:12:43 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:12:58 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 13:12:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:12:58 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 13:12:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:12:58 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 13:12:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:12:58 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 13:12:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:13:17 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 POST /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 13:13:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:13:17 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:13:17 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:13:17 logger.go:39: 127.0.0.1:58728 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:19:45 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:19:45 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:19:46 logger.go:39: connected to db
+FATAL: /home/student/1/forum/main.go:52 2025/01/10 13:19:46 logger.go:39: parse activity_page.page.html: template: posts.partial.html:50: function "AuthorID" not defined
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:19:56 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:19:56 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:19:58 logger.go:39: 127.0.0.1:58734 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:19:58 logger.go:39: 127.0.0.1:58734 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:19:58 logger.go:39: 127.0.0.1:58734 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:19:59 logger.go:39: 127.0.0.1:58734 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:20:01 logger.go:39: 127.0.0.1:58734 - HTTP/2.0 GET /report?=7&=post_id17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:36 2025/01/10 13:20:01 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:20:36 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:20:36 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:20:37 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:20:37 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:20:51 logger.go:39: 127.0.0.1:58736 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:20:54 logger.go:39: 127.0.0.1:58736 - HTTP/2.0 GET /report?=7&=post_id17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:36 2025/01/10 13:20:54 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:21:01 logger.go:39: 127.0.0.1:58736 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:21:01 logger.go:39: 127.0.0.1:58736 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:21:01 logger.go:39: 127.0.0.1:58736 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:21:14 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:21:14 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:21:15 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:21:15 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:21:17 logger.go:39: 127.0.0.1:58738 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:21:17 logger.go:39: 127.0.0.1:58738 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:21:17 logger.go:39: 127.0.0.1:58738 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:21:17 logger.go:39: 127.0.0.1:58738 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:21:18 logger.go:39: 127.0.0.1:58738 - HTTP/2.0 GET /report
+ERROR: /home/student/1/forum/internal/handler/moderation.go:36 2025/01/10 13:21:18 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:21:20 logger.go:39: 127.0.0.1:58738 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:22:17 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:22:17 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:22:18 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:22:18 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:22:19 logger.go:39: 127.0.0.1:58742 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:22:19 logger.go:39: 127.0.0.1:58742 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:22:19 logger.go:39: 127.0.0.1:58742 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:22:20 logger.go:39: 127.0.0.1:58742 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:22:21 logger.go:39: 127.0.0.1:58742 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:23:14 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:23:14 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:23:15 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:23:15 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:23:16 logger.go:39: 127.0.0.1:58744 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:23:17 logger.go:39: 127.0.0.1:58744 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:23:17 logger.go:39: 127.0.0.1:58744 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:23:17 logger.go:39: 127.0.0.1:58744 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:23:18 logger.go:39: 127.0.0.1:58744 - HTTP/2.0 GET /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 13:23:18 logger.go:39: execute template: template: header.partial.html:21:26: executing "header" at <gt .count_notification 0>: error calling gt: invalid type for comparison
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:24:25 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:24:25 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:24:26 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:24:26 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:24:28 logger.go:39: 127.0.0.1:58746 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:24:28 logger.go:39: 127.0.0.1:58746 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:24:28 logger.go:39: 127.0.0.1:58746 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:24:29 logger.go:39: 127.0.0.1:58746 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:24:49 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:24:49 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:24:51 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:24:51 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:24:53 logger.go:39: 127.0.0.1:58752 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:24:53 logger.go:39: 127.0.0.1:58752 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:24:53 logger.go:39: 127.0.0.1:58752 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:24:54 logger.go:39: 127.0.0.1:58752 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:25:46 logger.go:39: 127.0.0.1:58752 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:26:13 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:26:13 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:26:14 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:26:14 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:26:14 logger.go:39: 127.0.0.1:58754 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:26:14 logger.go:39: 127.0.0.1:58754 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:26:14 logger.go:39: 127.0.0.1:58754 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:26:15 logger.go:39: 127.0.0.1:58754 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:26:30 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:26:30 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:26:32 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:26:32 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:26:46 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:26:46 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:26:48 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:26:48 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:26:49 logger.go:39: 127.0.0.1:58760 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:26:50 logger.go:39: 127.0.0.1:58760 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:26:50 logger.go:39: 127.0.0.1:58760 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:26:50 logger.go:39: 127.0.0.1:58760 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:27:12 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:27:12 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:27:13 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:27:13 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:27:13 logger.go:39: 127.0.0.1:58762 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:27:13 logger.go:39: 127.0.0.1:58762 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:27:13 logger.go:39: 127.0.0.1:58762 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:27:14 logger.go:39: 127.0.0.1:58762 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:27:21 logger.go:39: 127.0.0.1:58762 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:30:35 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:30:35 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:30:36 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:30:36 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:30:39 logger.go:39: 127.0.0.1:58764 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:30:39 logger.go:39: 127.0.0.1:58764 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:30:39 logger.go:39: 127.0.0.1:58764 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:30:40 logger.go:39: 127.0.0.1:58764 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:31:27 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:31:27 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:31:28 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:31:28 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:31:29 logger.go:39: 127.0.0.1:58766 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:31:29 logger.go:39: 127.0.0.1:58766 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:31:29 logger.go:39: 127.0.0.1:58766 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:31:30 logger.go:39: 127.0.0.1:58766 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:31:49 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:31:49 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:31:50 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:31:50 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:31:52 logger.go:39: 127.0.0.1:58772 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:31:52 logger.go:39: 127.0.0.1:58772 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:31:52 logger.go:39: 127.0.0.1:58772 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:31:53 logger.go:39: 127.0.0.1:58772 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:32:02 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:32:02 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:32:03 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:32:03 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:32:04 logger.go:39: 127.0.0.1:58782 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:32:16 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:32:16 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:32:17 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:32:17 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:32:19 logger.go:39: 127.0.0.1:58784 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:32:19 logger.go:39: 127.0.0.1:58784 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:32:19 logger.go:39: 127.0.0.1:58784 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:32:20 logger.go:39: 127.0.0.1:58784 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:32:55 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:32:55 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:32:57 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:32:57 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:32:59 logger.go:39: 127.0.0.1:58796 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:32:59 logger.go:39: 127.0.0.1:58796 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:32:59 logger.go:39: 127.0.0.1:58796 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:32:59 logger.go:39: 127.0.0.1:58796 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:33:20 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:33:20 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:33:21 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:33:21 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:33:25 logger.go:39: 127.0.0.1:58798 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:33:25 logger.go:39: 127.0.0.1:58798 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:33:25 logger.go:39: 127.0.0.1:58798 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:33:25 logger.go:39: 127.0.0.1:58798 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:33:38 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:33:38 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:33:39 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:33:39 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:33:40 logger.go:39: 127.0.0.1:58806 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:36:07 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:36:07 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:36:08 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:36:08 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:10 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:10 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:10 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:10 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:15 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /activity-page
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:20 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /likedposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:20 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:21 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /likedposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:21 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:24 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:25 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:36:26 logger.go:39: 127.0.0.1:58810 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:38:51 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:38:51 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:38:52 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:38:52 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:38:55 logger.go:39: 127.0.0.1:58812 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:38:55 logger.go:39: 127.0.0.1:58812 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:38:55 logger.go:39: 127.0.0.1:58812 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:38:56 logger.go:39: 127.0.0.1:58812 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:39:03 logger.go:39: 127.0.0.1:58812 - HTTP/2.0 POST /report?post_id=%7b17%20POST%20MY%20TEST%20USER%21%21%21%20TEST%21%21%21%207%20%202024-12-13%2014%3a37%3a32.65655797%20%2b0500%20%2b0500%202024-12-13%2014%3a37%3a32.65655797%20%2b0500%20%2b0500%20%5b0xc0002a6378%5d%20%5b%5d%200%200%200%20%7d
+ERROR: /home/student/1/forum/internal/handler/moderation.go:115 2025/01/10 13:39:03 logger.go:39: parse positive int: match string: {17 POST MY TEST USER!!! TEST!!! 7  2024-12-13 14:37:32.65655797 +0500 +0500 2024-12-13 14:37:32.65655797 +0500 +0500 [0xc0002a6378] [] 0 0 0 }
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:41:24 logger.go:39: 127.0.0.1:58814 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:41:27 logger.go:39: 127.0.0.1:58814 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:41:30 logger.go:39: 127.0.0.1:58814 - HTTP/2.0 POST /report?post_id=%7b17%20POST%20MY%20TEST%20USER%21%21%21%20TEST%21%21%21%207%20%202024-12-13%2014%3a37%3a32.65655797%20%2b0500%20%2b0500%202024-12-13%2014%3a37%3a32.65655797%20%2b0500%20%2b0500%20%5b0xc0003021e0%5d%20%5b%5d%200%200%200%20%7d
+ERROR: /home/student/1/forum/internal/handler/moderation.go:115 2025/01/10 13:41:30 logger.go:39: parse positive int: match string: {17 POST MY TEST USER!!! TEST!!! 7  2024-12-13 14:37:32.65655797 +0500 +0500 2024-12-13 14:37:32.65655797 +0500 +0500 [0xc0003021e0] [] 0 0 0 }
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:42:30 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:42:30 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:42:33 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:42:33 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:42:40 logger.go:39: 127.0.0.1:58816 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:42:40 logger.go:39: 127.0.0.1:58816 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:42:40 logger.go:39: 127.0.0.1:58816 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:42:41 logger.go:39: 127.0.0.1:58816 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:42:43 logger.go:39: 127.0.0.1:58816 - HTTP/2.0 POST /report?post_id=%7b17%20POST%20MY%20TEST%20USER%21%21%21%20TEST%21%21%21%207%20%202024-12-13%2014%3a37%3a32.65655797%20%2b0500%20%2b0500%202024-12-13%2014%3a37%3a32.65655797%20%2b0500%20%2b0500%20%5b0xc0004bb170%5d%20%5b%5d%200%200%200%20%7d
+ERROR: /home/student/1/forum/internal/handler/moderation.go:115 2025/01/10 13:42:43 logger.go:39: parse positive int: match string: {17 POST MY TEST USER!!! TEST!!! 7  2024-12-13 14:37:32.65655797 +0500 +0500 2024-12-13 14:37:32.65655797 +0500 +0500 [0xc0004bb170] [] 0 0 0 }
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:44:00 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:44:00 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:44:01 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:44:01 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:02 logger.go:39: 127.0.0.1:58818 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:03 logger.go:39: 127.0.0.1:58820 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:03 logger.go:39: 127.0.0.1:58820 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:03 logger.go:39: 127.0.0.1:58820 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:04 logger.go:39: 127.0.0.1:58820 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:04 logger.go:39: 127.0.0.1:58820 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:07 logger.go:39: 127.0.0.1:58820 - HTTP/2.0 POST /report?post_id=%7b17%20POST%20MY%20TEST%20USER%21%21%21%20TEST%21%21%21%207%20%202024-12-13%2014%3a37%3a32.65655797%20%2b0500%20%2b0500%202024-12-13%2014%3a37%3a32.65655797%20%2b0500%20%2b0500%20%5b0xc0002ea270%5d%20%5b%5d%200%200%200%20%7d
+ERROR: /home/student/1/forum/internal/handler/moderation.go:115 2025/01/10 13:44:07 logger.go:39: parse positive int: match string: {17 POST MY TEST USER!!! TEST!!! 7  2024-12-13 14:37:32.65655797 +0500 +0500 2024-12-13 14:37:32.65655797 +0500 +0500 [0xc0002ea270] [] 0 0 0 }
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:44:38 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:44:38 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:44:39 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:44:39 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:42 logger.go:39: 127.0.0.1:58822 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:42 logger.go:39: 127.0.0.1:58822 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:42 logger.go:39: 127.0.0.1:58822 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:43 logger.go:39: 127.0.0.1:58822 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:44:47 logger.go:39: 127.0.0.1:58822 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 13:44:47 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:47:07 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:47:07 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:47:07 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:47:07 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:13 logger.go:39: 127.0.0.1:58824 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:13 logger.go:39: 127.0.0.1:58824 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:13 logger.go:39: 127.0.0.1:58824 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:14 logger.go:39: 127.0.0.1:58824 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:17 logger.go:39: 127.0.0.1:58824 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 13:47:17 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:47:48 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:47:48 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:47:49 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:47:49 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:50 logger.go:39: 127.0.0.1:58826 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:51 logger.go:39: 127.0.0.1:58826 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:51 logger.go:39: 127.0.0.1:58826 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:52 logger.go:39: 127.0.0.1:58826 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:47:53 logger.go:39: 127.0.0.1:58826 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 13:47:53 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:48:28 logger.go:39: 127.0.0.1:58828 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:48:28 logger.go:39: 127.0.0.1:58828 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:48:28 logger.go:39: 127.0.0.1:58828 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:48:29 logger.go:39: 127.0.0.1:58828 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:48:29 logger.go:39: 127.0.0.1:58828 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:48:30 logger.go:39: 127.0.0.1:58828 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:48:30 logger.go:39: 127.0.0.1:58828 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:48:33 logger.go:39: 127.0.0.1:58828 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 13:48:33 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:52:08 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:52:08 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:52:10 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:52:10 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:52:17 logger.go:39: 127.0.0.1:58830 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 13:52:17 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:55:34 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:55:34 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:55:35 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:55:35 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:55:38 logger.go:39: 127.0.0.1:58834 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:55:38 logger.go:39: 127.0.0.1:58834 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:55:38 logger.go:39: 127.0.0.1:58834 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:55:39 logger.go:39: 127.0.0.1:58834 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:55:41 logger.go:39: 127.0.0.1:58834 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 13:55:41 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:56:59 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:56:59 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:57:00 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:57:00 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:57:08 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:57:08 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:57:09 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:57:09 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:14 logger.go:39: 127.0.0.1:58838 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:14 logger.go:39: 127.0.0.1:58838 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:14 logger.go:39: 127.0.0.1:58838 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:15 logger.go:39: 127.0.0.1:58838 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:17 logger.go:39: 127.0.0.1:58838 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 13:57:17 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 13:57:36 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 13:57:36 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 13:57:38 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 13:57:38 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:39 logger.go:39: 127.0.0.1:58842 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:39 logger.go:39: 127.0.0.1:58842 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:39 logger.go:39: 127.0.0.1:58842 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:40 logger.go:39: 127.0.0.1:58842 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 13:57:42 logger.go:39: 127.0.0.1:58842 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 13:57:42 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:00:58 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:00:58 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:00:59 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:00:59 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:01:07 logger.go:39: 127.0.0.1:58850 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:01:07 logger.go:39: 127.0.0.1:58850 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:01:07 logger.go:39: 127.0.0.1:58850 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:01:08 logger.go:39: 127.0.0.1:58850 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:01:09 logger.go:39: 127.0.0.1:58850 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:01:09 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:01:36 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:01:36 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:01:38 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:01:38 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:01:40 logger.go:39: 127.0.0.1:58852 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:01:40 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:11:01 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:11:01 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:11:02 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:11:02 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:09 logger.go:39: 127.0.0.1:58856 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:09 logger.go:39: 127.0.0.1:58856 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:09 logger.go:39: 127.0.0.1:58856 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:10 logger.go:39: 127.0.0.1:58856 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:14 logger.go:39: 127.0.0.1:58856 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:11:14 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:11:23 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:11:23 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:11:24 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:11:24 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:27 logger.go:39: 127.0.0.1:58858 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:27 logger.go:39: 127.0.0.1:58858 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:27 logger.go:39: 127.0.0.1:58858 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:28 logger.go:39: 127.0.0.1:58858 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:30 logger.go:39: 127.0.0.1:58858 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:11:30 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:11:47 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:11:47 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:11:48 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:11:48 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:50 logger.go:39: 127.0.0.1:58862 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:50 logger.go:39: 127.0.0.1:58862 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:50 logger.go:39: 127.0.0.1:58862 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:51 logger.go:39: 127.0.0.1:58862 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:11:52 logger.go:39: 127.0.0.1:58862 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:11:52 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:12:17 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:12:17 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:12:18 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:12:18 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:12:19 logger.go:39: 127.0.0.1:58864 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:12:19 logger.go:39: 127.0.0.1:58864 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:12:19 logger.go:39: 127.0.0.1:58864 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:12:20 logger.go:39: 127.0.0.1:58864 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:12:22 logger.go:39: 127.0.0.1:58864 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:12:22 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:13:39 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:13:39 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:13:41 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:13:41 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:42 logger.go:39: 127.0.0.1:58866 - HTTP/2.0 GET /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 14:13:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:42 logger.go:39: 127.0.0.1:58868 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 14:13:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:42 logger.go:39: 127.0.0.1:58868 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 14:13:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:42 logger.go:39: 127.0.0.1:58868 - HTTP/2.0 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 14:13:42 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:43 logger.go:39: 127.0.0.1:58868 - HTTP/2.0 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 14:13:43 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:44 logger.go:39: 127.0.0.1:58868 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 14:13:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:48 logger.go:39: 127.0.0.1:58868 - HTTP/2.0 POST /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 14:13:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:48 logger.go:39: 127.0.0.1:58868 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:51 logger.go:39: 127.0.0.1:58868 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:13:52 logger.go:39: 127.0.0.1:58868 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:13:52 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:14:24 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:14:24 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:14:25 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:14:25 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:14:27 logger.go:39: 127.0.0.1:58870 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:14:27 logger.go:39: 127.0.0.1:58870 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:14:27 logger.go:39: 127.0.0.1:58870 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:14:27 logger.go:39: 127.0.0.1:58870 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:14:29 logger.go:39: 127.0.0.1:58870 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:14:29 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:15:56 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:15:56 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:15:57 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:15:57 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:15:59 logger.go:39: 127.0.0.1:58874 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:15:59 logger.go:39: 127.0.0.1:58874 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:15:59 logger.go:39: 127.0.0.1:58874 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:16:00 logger.go:39: 127.0.0.1:58874 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:16:01 logger.go:39: 127.0.0.1:58874 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:16:01 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:17:18 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:17:18 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:17:19 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:17:19 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:17:29 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:17:29 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:17:48 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:17:48 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:17:50 logger.go:39: 127.0.0.1:58906 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:17:50 logger.go:39: 127.0.0.1:58906 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:17:50 logger.go:39: 127.0.0.1:58906 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:17:51 logger.go:39: 127.0.0.1:58906 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:17:52 logger.go:39: 127.0.0.1:58906 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:17:54 logger.go:39: 127.0.0.1:58906 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:17:54 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:23:33 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:23:33 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:28:20 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:28:20 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:28:26 logger.go:39: 127.0.0.1:58908 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:28:26 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:28:55 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:28:55 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:28:56 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:28:56 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:28:59 logger.go:39: 127.0.0.1:58910 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:28:59 logger.go:39: 127.0.0.1:58910 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:28:59 logger.go:39: 127.0.0.1:58910 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:29:00 logger.go:39: 127.0.0.1:58910 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:29:01 logger.go:39: 127.0.0.1:58910 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:29:01 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:31:53 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:31:53 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:31:54 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:31:54 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:31:59 logger.go:39: 127.0.0.1:58912 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:31:59 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 14:31:59 logger.go:39: execute template: template: header.partial.html:21:26: executing "header" at <gt .count_notification 0>: error calling gt: invalid type for comparison
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:32:03 logger.go:39: 127.0.0.1:58916 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:32:03 logger.go:39: 127.0.0.1:58916 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:32:03 logger.go:39: 127.0.0.1:58916 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:32:04 logger.go:39: 127.0.0.1:58916 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:32:05 logger.go:39: 127.0.0.1:58916 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 14:32:05 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:32:22 logger.go:39: 127.0.0.1:58918 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:32:22 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 14:32:22 logger.go:39: execute template: template: header.partial.html:21:26: executing "header" at <gt .count_notification 0>: error calling gt: invalid type for comparison
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:32:57 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:32:57 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:32:58 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:32:58 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:02 logger.go:39: 127.0.0.1:58920 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:33:02 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:03 logger.go:39: 127.0.0.1:58920 - HTTP/2.0 POST /report?post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:33:03 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:05 logger.go:39: 127.0.0.1:58920 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:07 logger.go:39: 127.0.0.1:58920 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:09 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:09 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:09 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:10 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:11 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:33:11 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:12 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 POST /report?post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:33:12 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:16 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:17 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:19 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:21 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:23 logger.go:39: 127.0.0.1:58922 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:33:23 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:33:51 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:33:51 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:33:53 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:33:53 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:55 logger.go:39: 127.0.0.1:58924 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:57 logger.go:39: 127.0.0.1:58924 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:33:58 logger.go:39: 127.0.0.1:58924 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:33:58 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:34:16 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:34:16 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:34:18 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:34:18 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:34:21 logger.go:39: 127.0.0.1:58926 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:34:22 logger.go:39: 127.0.0.1:58926 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:34:23 logger.go:39: 127.0.0.1:58926 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:147 2025/01/10 14:34:23 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:34:54 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:34:54 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:34:56 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:34:56 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:34:57 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:34:57 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:34:57 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:34:57 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:34:58 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:34:58 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 POST /report?post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:34:58 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:35:02 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:35:03 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:35:04 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:35:04 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:35:29 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:35:30 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:35:34 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:35:34 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:36:44 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:36:44 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:38:03 logger.go:39: 127.0.0.1:58930 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:146 2025/01/10 14:38:03 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:40:58 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:40:58 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:40:59 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:40:59 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:41:02 logger.go:39: 127.0.0.1:58932 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:41:03 logger.go:39: 127.0.0.1:58932 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:41:04 logger.go:39: 127.0.0.1:58932 - HTTP/2.0 POST /report?user_id=6&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:129 2025/01/10 14:41:04 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:42:07 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:42:07 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:42:09 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:42:09 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:42:10 logger.go:39: 127.0.0.1:58934 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:42:10 logger.go:39: 127.0.0.1:58934 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:42:10 logger.go:39: 127.0.0.1:58934 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:42:11 logger.go:39: 127.0.0.1:58934 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:42:11 logger.go:39: 127.0.0.1:58934 - HTTP/2.0 POST /report?user_id=6&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:129 2025/01/10 14:42:11 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:42:13 logger.go:39: 127.0.0.1:58934 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 14:42:13 logger.go:39: execute template: template: posts.partial.html:51:77: executing "posts" at <.post_id>: can't evaluate field post_id in type models.Post
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:42:16 logger.go:39: 127.0.0.1:58934 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 14:42:16 logger.go:39: execute template: template: posts.partial.html:51:77: executing "posts" at <.post_id>: can't evaluate field post_id in type models.Post
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:42:17 logger.go:39: 127.0.0.1:58934 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 14:42:17 logger.go:39: execute template: template: posts.partial.html:51:77: executing "posts" at <.post_id>: can't evaluate field post_id in type models.Post
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:43:13 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:43:13 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:43:14 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:43:14 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:43:16 logger.go:39: 127.0.0.1:58940 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:43:29 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:43:29 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:43:30 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:43:30 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:43:31 logger.go:39: 127.0.0.1:58942 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:43:31 logger.go:39: 127.0.0.1:58942 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:43:31 logger.go:39: 127.0.0.1:58942 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:43:32 logger.go:39: 127.0.0.1:58942 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:43:33 logger.go:39: 127.0.0.1:58942 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:43:34 logger.go:39: 127.0.0.1:58942 - HTTP/2.0 POST /report?user_id=6&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:129 2025/01/10 14:43:34 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:44:38 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:44:38 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:44:39 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:44:39 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:44:39 logger.go:39: 127.0.0.1:58946 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:44:40 logger.go:39: 127.0.0.1:58948 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:44:40 logger.go:39: 127.0.0.1:58948 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:44:40 logger.go:39: 127.0.0.1:58948 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:44:41 logger.go:39: 127.0.0.1:58948 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:44:42 logger.go:39: 127.0.0.1:58948 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:44:45 logger.go:39: 127.0.0.1:58948 - HTTP/2.0 POST /report?user_id=6&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:129 2025/01/10 14:44:45 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:45:18 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:45:18 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:45:19 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:45:19 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:45:20 logger.go:39: 127.0.0.1:58950 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:45:22 logger.go:39: 127.0.0.1:58950 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:45:23 logger.go:39: 127.0.0.1:58950 - HTTP/2.0 POST /report?user_id=6&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:129 2025/01/10 14:45:23 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:45:25 logger.go:39: 127.0.0.1:58950 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:45:26 logger.go:39: 127.0.0.1:58950 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:45:28 logger.go:39: 127.0.0.1:58950 - HTTP/2.0 POST /report?user_id=6&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:129 2025/01/10 14:45:28 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:47:31 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:47:31 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:47:32 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:47:32 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:47:35 logger.go:39: 127.0.0.1:58952 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:47:36 logger.go:39: 127.0.0.1:58952 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:47:38 logger.go:39: 127.0.0.1:58952 - HTTP/2.0 POST /report?user_id=6&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:129 2025/01/10 14:47:38 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:48:08 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:48:08 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:48:09 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:48:09 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:48:11 logger.go:39: 127.0.0.1:58954 - HTTP/2.0 POST /report?user_id=6&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:129 2025/01/10 14:48:11 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:48:57 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:48:57 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:48:58 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:48:58 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:49:00 logger.go:39: 127.0.0.1:58956 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:49:01 logger.go:39: 127.0.0.1:58956 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:49:02 logger.go:39: 127.0.0.1:58956 - HTTP/2.0 POST /report?user_id=6&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:129 2025/01/10 14:49:02 logger.go:39: get query for post_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:49:04 logger.go:39: 127.0.0.1:58956 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:50:19 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:50:19 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:50:20 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:50:20 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:50:22 logger.go:39: 127.0.0.1:58958 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:50:22 logger.go:39: 127.0.0.1:58958 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:50:22 logger.go:39: 127.0.0.1:58958 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:50:23 logger.go:39: 127.0.0.1:58958 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:50:23 logger.go:39: 127.0.0.1:58958 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:50:25 logger.go:39: 127.0.0.1:58958 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:50:25 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:50:25 logger.go:39: 127.0.0.1:58958 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:50:28 logger.go:39: 127.0.0.1:58958 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:54:53 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:54:53 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:54:54 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:54:54 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:55:02 logger.go:39: 127.0.0.1:58960 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:55:03 logger.go:39: 127.0.0.1:58960 - HTTP/2.0 POST /report?post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:55:03 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:55:43 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:55:44 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:55:44 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:55:44 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:55:48 logger.go:39: 127.0.0.1:58962 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:55:48 logger.go:39: 127.0.0.1:58962 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:55:48 logger.go:39: 127.0.0.1:58962 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:55:50 logger.go:39: 127.0.0.1:58962 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:55:51 logger.go:39: 127.0.0.1:58962 - HTTP/2.0 POST /report?user_id=&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:55:51 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:56:23 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:56:23 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:56:23 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:56:23 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:56:26 logger.go:39: 127.0.0.1:58964 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:56:26 logger.go:39: 127.0.0.1:58964 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:56:26 logger.go:39: 127.0.0.1:58964 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:56:27 logger.go:39: 127.0.0.1:58964 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:56:27 logger.go:39: 127.0.0.1:58964 - HTTP/2.0 POST /report?user_id=&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:56:27 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:57:33 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:57:33 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:57:34 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:57:34 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:57:42 logger.go:39: 127.0.0.1:58966 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:57:42 logger.go:39: 127.0.0.1:58966 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:57:42 logger.go:39: 127.0.0.1:58966 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:57:43 logger.go:39: 127.0.0.1:58966 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:57:43 logger.go:39: 127.0.0.1:58966 - HTTP/2.0 POST /report?user_id=&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:57:43 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/main.go:137 2025/01/10 14:59:17 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 14:59:17 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 14:59:18 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 14:59:18 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:20 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:20 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:20 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:21 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:21 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 14:59:21 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:23 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 POST /report?user_id=&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:59:23 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:30 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 POST /report?user_id=&post_id=
+ERROR: /home/student/1/forum/internal/handler/moderation.go:108 2025/01/10 14:59:30 logger.go:39: get query for user_id
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:33 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:34 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 14:59:36 logger.go:39: 127.0.0.1:58968 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 14:59:36 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:00:04 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:00:04 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:00:05 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:00:05 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:08 logger.go:39: 127.0.0.1:58970 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:00:08 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:08 logger.go:39: 127.0.0.1:58970 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:08 logger.go:39: 127.0.0.1:58970 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:09 logger.go:39: 127.0.0.1:58970 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:10 logger.go:39: 127.0.0.1:58970 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:00:10 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:11 logger.go:39: 127.0.0.1:58970 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:00:11 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:13 logger.go:39: 127.0.0.1:58970 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:00:13 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:14 logger.go:39: 127.0.0.1:58970 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:00:14 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:14 logger.go:39: 127.0.0.1:58970 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:00:14 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:00:26 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:00:26 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:00:27 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:00:27 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:30 logger.go:39: 127.0.0.1:58972 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:00:30 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:30 logger.go:39: 127.0.0.1:58972 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:30 logger.go:39: 127.0.0.1:58972 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:31 logger.go:39: 127.0.0.1:58972 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:31 logger.go:39: 127.0.0.1:58972 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:00:31 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:00:31 logger.go:39: 127.0.0.1:58972 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:00:58 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:00:58 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:00:59 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:00:59 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:02 logger.go:39: 127.0.0.1:58974 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:01:02 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:02 logger.go:39: 127.0.0.1:58974 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:02 logger.go:39: 127.0.0.1:58974 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:02 logger.go:39: 127.0.0.1:58974 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:03 logger.go:39: 127.0.0.1:58974 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:01:03 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:05 logger.go:39: 127.0.0.1:58974 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:01:05 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:06 logger.go:39: 127.0.0.1:58974 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:01:06 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:01:51 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:01:51 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:01:53 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:01:53 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:54 logger.go:39: 127.0.0.1:58976 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:01:54 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:54 logger.go:39: 127.0.0.1:58976 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:54 logger.go:39: 127.0.0.1:58976 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:01:54 logger.go:39: 127.0.0.1:58976 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:01:54 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:02:01 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:02:01 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:02:03 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:02:03 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:04 logger.go:39: 127.0.0.1:58978 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:02:04 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:02:04 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:04 logger.go:39: 127.0.0.1:58980 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:08 logger.go:39: 127.0.0.1:58980 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:09 logger.go:39: 127.0.0.1:58980 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:09 logger.go:39: 127.0.0.1:58980 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:02:09 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:02:09 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:02:34 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:02:34 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:02:35 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:02:35 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:36 logger.go:39: 127.0.0.1:58988 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:36 logger.go:39: 127.0.0.1:58988 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:36 logger.go:39: 127.0.0.1:58988 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:37 logger.go:39: 127.0.0.1:58988 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:38 logger.go:39: 127.0.0.1:58988 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:158 2025/01/10 15:02:38 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:02:44 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:02:44 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:02:46 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:02:46 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:47 logger.go:39: 127.0.0.1:58990 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:158 2025/01/10 15:02:47 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:47 logger.go:39: 127.0.0.1:58990 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:47 logger.go:39: 127.0.0.1:58990 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:48 logger.go:39: 127.0.0.1:58990 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:49 logger.go:39: 127.0.0.1:58990 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:158 2025/01/10 15:02:49 logger.go:39: validate report text: report text is empty
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:02:56 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:02:56 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:02:57 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:02:57 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:02:59 logger.go:39: 127.0.0.1:58994 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:02:59 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:02:59 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:28 logger.go:39: 127.0.0.1:58998 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:03:28 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:03:28 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:28 logger.go:39: 127.0.0.1:59000 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:32 logger.go:39: 127.0.0.1:59002 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:03:32 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:03:32 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:32 logger.go:39: 127.0.0.1:59004 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:35 logger.go:39: 127.0.0.1:59004 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:03:35 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:03:35 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:36 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:37 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:38 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:39 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:39 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:40 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:40 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:40 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:41 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:03:41 logger.go:39: 127.0.0.1:59006 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:03:41 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:03:41 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:05:09 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:05:09 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:05:10 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:05:10 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:13 logger.go:39: 127.0.0.1:59008 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:14 logger.go:39: 127.0.0.1:59008 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:14 logger.go:39: 127.0.0.1:59010 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:14 logger.go:39: 127.0.0.1:59010 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:14 logger.go:39: 127.0.0.1:59010 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:16 logger.go:39: 127.0.0.1:59010 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:17 logger.go:39: 127.0.0.1:59010 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:05:17 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:05:17 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:05:37 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:05:37 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:05:39 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:05:39 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:43 logger.go:39: 127.0.0.1:59012 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:05:43 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:05:43 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:43 logger.go:39: 127.0.0.1:59014 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:44 logger.go:39: 127.0.0.1:59014 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:45 logger.go:39: 127.0.0.1:59014 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:46 logger.go:39: 127.0.0.1:59014 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:48 logger.go:39: 127.0.0.1:59014 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:05:48 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:05:48 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:50 logger.go:39: 127.0.0.1:59016 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:52 logger.go:39: 127.0.0.1:59016 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:05:52 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:53 logger.go:39: 127.0.0.1:59018 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:05:56 logger.go:39: 127.0.0.1:59018 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:05:56 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:05:56 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:06:15 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:06:15 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:06:16 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:06:16 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:06:17 logger.go:39: 127.0.0.1:59020 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:06:17 logger.go:39: 127.0.0.1:59022 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:06:18 logger.go:39: 127.0.0.1:59022 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:06:18 logger.go:39: 127.0.0.1:59022 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:06:18 logger.go:39: 127.0.0.1:59022 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:06:19 logger.go:39: 127.0.0.1:59022 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:06:19 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:06:19 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:06:44 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:06:44 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:06:46 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:06:46 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:06:47 logger.go:39: 127.0.0.1:59028 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:06:49 logger.go:39: 127.0.0.1:59028 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:06:49 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:06:49 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:07:13 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:07:13 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:07:15 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:07:15 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:16 logger.go:39: 127.0.0.1:59030 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:07:16 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:07:16 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:16 logger.go:39: 127.0.0.1:59032 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:17 logger.go:39: 127.0.0.1:59032 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:18 logger.go:39: 127.0.0.1:59032 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:07:18 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:07:18 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:07:29 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:07:29 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:07:31 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:07:31 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:32 logger.go:39: 127.0.0.1:59034 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:33 logger.go:39: 127.0.0.1:59034 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:07:33 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:07:33 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:07:51 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:07:51 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:07:53 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:07:53 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:53 logger.go:39: 127.0.0.1:59036 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:54 logger.go:39: 127.0.0.1:59038 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:54 logger.go:39: 127.0.0.1:59038 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:54 logger.go:39: 127.0.0.1:59038 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:55 logger.go:39: 127.0.0.1:59038 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:07:55 logger.go:39: 127.0.0.1:59038 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:07:55 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:07:55 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:08:16 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:08:16 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:08:18 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:08:18 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:18 logger.go:39: 127.0.0.1:59040 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:19 logger.go:39: 127.0.0.1:59042 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:19 logger.go:39: 127.0.0.1:59042 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:19 logger.go:39: 127.0.0.1:59042 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:19 logger.go:39: 127.0.0.1:59042 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:20 logger.go:39: 127.0.0.1:59042 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:08:20 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:08:20 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:36 logger.go:39: 127.0.0.1:59046 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:08:50 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:39 logger.go:39: 127.0.0.1:59046 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:48 logger.go:39: 127.0.0.1:59046 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:48 logger.go:39: 127.0.0.1:59046 - HTTP/2.0 GET /post/create
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 15:08:50 logger.go:39: execute template: http2: stream closed
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 15:08:50 logger.go:39: execute template: http2: stream closed
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 15:08:50 logger.go:39: execute template: http2: stream closed
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:08:50 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:08:51 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:08:51 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:53 logger.go:39: 127.0.0.1:59050 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:55 logger.go:39: 127.0.0.1:59050 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:56 logger.go:39: 127.0.0.1:59050 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:08:57 logger.go:39: 127.0.0.1:59050 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/post.go:87 2025/01/10 15:08:57 logger.go:39: validate create post form: map[categories:at least one category must be selected content:content is required title:title is required]
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:09:00 logger.go:39: 127.0.0.1:59050 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:09:00 logger.go:39: 127.0.0.1:59050 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:09:03 logger.go:39: 127.0.0.1:59050 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:09:07 logger.go:39: 127.0.0.1:59050 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:09:07 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:09:07 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:09:12 logger.go:39: 127.0.0.1:59052 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:09:26 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:09:26 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:09:28 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:09:28 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:09:29 logger.go:39: 127.0.0.1:59058 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:09:30 logger.go:39: 127.0.0.1:59058 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:09:30 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:09:30 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:12:32 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:12:32 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:12:32 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:12:32 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:12:36 logger.go:39: 127.0.0.1:59060 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:12:36 logger.go:39: 127.0.0.1:59060 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:12:37 logger.go:39: 127.0.0.1:59062 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:12:37 logger.go:39: 127.0.0.1:59062 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:12:37 logger.go:39: 127.0.0.1:59062 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:12:38 logger.go:39: 127.0.0.1:59062 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:12:40 logger.go:39: 127.0.0.1:59062 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:12:40 logger.go:39: validate report text: report text is empty
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:12:40 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:14:36 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:14:36 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:14:37 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:14:37 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:15:17 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:15:17 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:15:18 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:15:18 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:21 logger.go:39: 127.0.0.1:59064 - HTTP/2.0 GET /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:15:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:21 logger.go:39: 127.0.0.1:59064 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:15:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:22 logger.go:39: 127.0.0.1:59066 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:15:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:22 logger.go:39: 127.0.0.1:59066 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:15:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:22 logger.go:39: 127.0.0.1:59066 - HTTP/2.0 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:15:22 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:23 logger.go:39: 127.0.0.1:59066 - HTTP/2.0 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:15:23 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:27 logger.go:39: 127.0.0.1:59066 - HTTP/2.0 POST /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:15:27 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:27 logger.go:39: 127.0.0.1:59066 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:29 logger.go:39: 127.0.0.1:59066 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:15:30 logger.go:39: 127.0.0.1:59066 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:15:30 logger.go:39: validate report text: <nil>
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:16:04 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:16:04 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:16:05 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:16:05 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:16:08 logger.go:39: 127.0.0.1:59068 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:16:08 logger.go:39: validate report text: <nil>
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:16:11 logger.go:39: 127.0.0.1:59070 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:16:11 logger.go:39: validate report text: <nil>
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:16:11 logger.go:39: 127.0.0.1:59070 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:16:11 logger.go:39: 127.0.0.1:59070 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:16:12 logger.go:39: 127.0.0.1:59070 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:16:13 logger.go:39: 127.0.0.1:59070 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:16:14 logger.go:39: 127.0.0.1:59070 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:16:15 logger.go:39: 127.0.0.1:59070 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/moderation.go:157 2025/01/10 15:16:15 logger.go:39: validate report text: <nil>
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:16:19 logger.go:39: 127.0.0.1:59070 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:16:19 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:20:21 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:20:21 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:20:24 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:20:24 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:20:28 logger.go:39: 127.0.0.1:59072 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:20:29 logger.go:39: 127.0.0.1:59072 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:20:36 logger.go:39: 127.0.0.1:59072 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:20:36 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:21:23 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:21:23 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:21:25 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:21:25 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:21:27 logger.go:39: 127.0.0.1:59074 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:21:31 logger.go:39: 127.0.0.1:59074 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:21:33 logger.go:39: 127.0.0.1:59074 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:21:38 logger.go:39: 127.0.0.1:59074 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:21:38 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:21:56 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:21:56 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:21:58 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:21:58 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:21:58 logger.go:39: 127.0.0.1:59076 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:21:59 logger.go:39: 127.0.0.1:59078 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:21:59 logger.go:39: 127.0.0.1:59078 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:21:59 logger.go:39: 127.0.0.1:59078 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:22:00 logger.go:39: 127.0.0.1:59078 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:22:04 logger.go:39: 127.0.0.1:59078 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:22:04 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:23:07 logger.go:39: 127.0.0.1:59080 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:23:54 logger.go:39: 127.0.0.1:59080 - HTTP/2.0 POST /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:23:54 logger.go:39: 127.0.0.1:59080 - HTTP/2.0 GET /post?id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:23:54 logger.go:39: 127.0.0.1:59080 - HTTP/2.0 GET /static/img/116a406a-8773-4066-885a-7b7f5c007e2e
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:23:54 logger.go:39: 127.0.0.1:59080 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:23:57 logger.go:39: 127.0.0.1:59080 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:23:57 logger.go:39: 127.0.0.1:59080 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:24:00 logger.go:39: 127.0.0.1:59082 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:24:00 logger.go:39: 127.0.0.1:59082 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:24:00 logger.go:39: 127.0.0.1:59082 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:24:00 logger.go:39: 127.0.0.1:59082 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:24:01 logger.go:39: 127.0.0.1:59082 - HTTP/2.0 GET /post?id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:24:01 logger.go:39: 127.0.0.1:59082 - HTTP/2.0 GET /static/img/116a406a-8773-4066-885a-7b7f5c007e2e
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:24:09 logger.go:39: 127.0.0.1:59082 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:24:12 logger.go:39: 127.0.0.1:59082 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:24:13 logger.go:39: 127.0.0.1:59082 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:25:12 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:25:12 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:25:14 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:25:14 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:25:44 logger.go:39: [::1]:33412 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:25:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:25:44 logger.go:39: [::1]:33412 - HTTP/2.0 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:25:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:25:44 logger.go:39: [::1]:33412 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:25:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:25:45 logger.go:39: [::1]:33412 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:25:45 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:25:46 logger.go:39: [::1]:33412 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:25:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:25:46 logger.go:39: [::1]:33412 - HTTP/2.0 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:25:46 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:26:08 logger.go:39: [::1]:33412 - HTTP/2.0 POST /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:26:08 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:26:08 logger.go:39: [::1]:33412 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:26:11 logger.go:39: [::1]:33412 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:26:16 logger.go:39: [::1]:33412 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:26:16 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:27:01 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:27:01 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:27:02 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:27:02 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:03 logger.go:39: [::1]:33418 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:04 logger.go:39: [::1]:33418 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:04 logger.go:39: [::1]:33418 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:04 logger.go:39: [::1]:33418 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:05 logger.go:39: [::1]:33418 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:09 logger.go:39: [::1]:33418 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:27:09 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:09 logger.go:39: [::1]:33426 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:29 logger.go:39: [::1]:33426 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:31 logger.go:39: [::1]:33426 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:32 logger.go:39: [::1]:33426 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:35 logger.go:39: [::1]:33426 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:37 logger.go:39: [::1]:33426 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:27:41 logger.go:39: [::1]:33426 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:28:24 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:28:24 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:28:25 logger.go:39: connected to db
+FATAL: /home/student/1/forum/main.go:52 2025/01/10 15:28:25 logger.go:39: parse activity_page.page.html: template: posts.partial.html:51: function "authenticated_user" not defined
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:28:39 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:28:39 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:28:40 logger.go:39: [::1]:33448 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:28:40 logger.go:39: [::1]:33448 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:28:40 logger.go:39: [::1]:33448 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:28:41 logger.go:39: [::1]:33448 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:28:43 logger.go:39: [::1]:33448 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:28:49 logger.go:39: [::1]:33448 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:28:49 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:28:49 logger.go:39: [::1]:33454 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:28:51 logger.go:39: [::1]:33454 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:30:08 logger.go:39: [::1]:33460 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:30:25 logger.go:39: 127.0.0.1:59100 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:30:29 logger.go:39: 127.0.0.1:59100 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:30:30 logger.go:39: 127.0.0.1:59100 - HTTP/2.0 POST /report?user_id=6&post_id=20
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:30:30 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:30:32 logger.go:39: 127.0.0.1:59104 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:30:35 logger.go:39: 127.0.0.1:59104 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:30:36 logger.go:39: 127.0.0.1:59104 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:30:41 logger.go:39: 127.0.0.1:59104 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:30:41 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:38:54 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:38:54 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:40:36 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:40:36 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:40:39 logger.go:39: [::1]:33478 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:72 2025/01/10 15:40:39 logger.go:39: get session:  <nil>
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 15:40:39 logger.go:39: execute template: template: posts.partial.html:51:37: executing "posts" at <$.authenticated_user.Role>: nil pointer evaluating interface {}.Role
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:40:39 logger.go:39: [::1]:33478 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:40:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:40:40 logger.go:39: [::1]:33478 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:40:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:40:41 logger.go:39: [::1]:33478 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:40:41 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 15:40:41 logger.go:39: execute template: template: posts.partial.html:51:37: executing "posts" at <$.authenticated_user.Role>: nil pointer evaluating interface {}.Role
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:40:52 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:40:52 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:40:53 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:40:53 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:40:54 logger.go:39: [::1]:33482 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:40:54 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 15:40:54 logger.go:39: execute template: template: posts.partial.html:51:37: executing "posts" at <$.authenticated_user.Role>: nil pointer evaluating interface {}.Role
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:40:54 logger.go:39: [::1]:33482 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:40:54 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:40:54 logger.go:39: [::1]:33482 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:40:54 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:40:56 logger.go:39: [::1]:33482 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:40:56 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 15:40:56 logger.go:39: execute template: template: posts.partial.html:51:37: executing "posts" at <$.authenticated_user.Role>: nil pointer evaluating interface {}.Role
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:41:34 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:41:34 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:41:35 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:41:35 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:36 logger.go:39: [::1]:33486 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:36 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/helper.go:20 2025/01/10 15:41:36 logger.go:39: execute template: template: posts.partial.html:51:33: executing "posts" at <.authenticated_user>: can't evaluate field authenticated_user in type models.Post
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:36 logger.go:39: [::1]:33486 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:36 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:36 logger.go:39: [::1]:33486 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:36 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:41:45 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:41:45 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:41:46 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:41:46 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:47 logger.go:39: [::1]:33490 - HTTP/2.0 GET /
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:47 logger.go:39: [::1]:33490 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:47 logger.go:39: [::1]:33490 - HTTP/2.0 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:47 logger.go:39: [::1]:33490 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:47 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:48 logger.go:39: [::1]:33490 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:49 logger.go:39: [::1]:33490 - HTTP/2.0 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:56 logger.go:39: [::1]:33490 - HTTP/2.0 POST /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 15:41:56 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:56 logger.go:39: [::1]:33490 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:41:57 logger.go:39: [::1]:33490 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:42:01 logger.go:39: [::1]:33490 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:42:01 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:42:02 logger.go:39: [::1]:33496 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:45:34 logger.go:39: 127.0.0.1:59118 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:45:35 logger.go:39: 127.0.0.1:59118 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:45:35 logger.go:39: 127.0.0.1:59118 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:45:35 logger.go:39: 127.0.0.1:59118 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:45:37 logger.go:39: 127.0.0.1:59118 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:45:37 logger.go:39: 127.0.0.1:59118 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:45:39 logger.go:39: 127.0.0.1:59118 - HTTP/2.0 POST /report?user_id=6&post_id=20
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:45:39 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:46:55 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:46:55 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:46:56 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:46:56 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:46:57 logger.go:39: 127.0.0.1:59120 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:46:58 logger.go:39: 127.0.0.1:59124 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:46:58 logger.go:39: 127.0.0.1:59124 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:46:58 logger.go:39: 127.0.0.1:59124 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:46:59 logger.go:39: 127.0.0.1:59124 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:47:01 logger.go:39: 127.0.0.1:59124 - HTTP/2.0 POST /report?user_id=6&post_id=20
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:47:01 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:47:17 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:47:17 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:47:18 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:47:18 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:47:22 logger.go:39: 127.0.0.1:59126 - HTTP/2.0 POST /report?user_id=6&post_id=20
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:47:22 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:47:22 logger.go:39: 127.0.0.1:59128 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:47:23 logger.go:39: 127.0.0.1:59128 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:47:24 logger.go:39: 127.0.0.1:59128 - HTTP/2.0 POST /report?user_id=6&post_id=20
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:47:24 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:49:24 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:49:24 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:49:25 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:49:25 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:49:29 logger.go:39: 127.0.0.1:59130 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:49:30 logger.go:39: 127.0.0.1:59132 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:49:30 logger.go:39: 127.0.0.1:59132 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:49:30 logger.go:39: 127.0.0.1:59132 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:49:30 logger.go:39: 127.0.0.1:59132 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:49:32 logger.go:39: 127.0.0.1:59132 - HTTP/2.0 POST /report?user_id=6&post_id=20
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:49:32 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:50:09 logger.go:39: 127.0.0.1:59134 - HTTP/2.0 GET /report?user_id=6&post_id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:50:10 logger.go:39: 127.0.0.1:59134 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:50:11 logger.go:39: 127.0.0.1:59134 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:50:18 logger.go:39: 127.0.0.1:59134 - HTTP/2.0 POST /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:50:18 logger.go:39: 127.0.0.1:59134 - HTTP/2.0 GET /post?id=21
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:50:18 logger.go:39: 127.0.0.1:59134 - HTTP/2.0 GET /static/img/91f9a854-bf88-4632-962d-536c789ef348
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:51:30 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:51:30 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:51:31 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:51:31 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:51:34 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:51:41 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:51:49 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 POST /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:51:49 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 GET /post?id=22
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:51:49 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 GET /static/img/d5b85fcb-dceb-4a3e-8d1a-1a020154cbea
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:52:39 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 POST /post/delete?id=22
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:52:39 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:52:40 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 GET /post?id=21
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:52:40 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 GET /static/img/91f9a854-bf88-4632-962d-536c789ef348
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:52:44 logger.go:39: 127.0.0.1:59136 - HTTP/2.0 POST /post/delete?id=21
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:54:45 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:54:45 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:54:46 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:54:46 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:54:49 logger.go:39: 127.0.0.1:59138 - HTTP/2.0 POST /post/delete?id=21
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:54:49 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:54:54 logger.go:39: 127.0.0.1:59140 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:54:56 logger.go:39: 127.0.0.1:59140 - HTTP/2.0 GET /post?id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:54:56 logger.go:39: 127.0.0.1:59140 - HTTP/2.0 GET /static/img/116a406a-8773-4066-885a-7b7f5c007e2e
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:54:59 logger.go:39: 127.0.0.1:59140 - HTTP/2.0 POST /post/delete?id=20
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:54:59 logger.go:39: 127.0.0.1:59140 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:55:03 logger.go:39: 127.0.0.1:59140 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:55:08 logger.go:39: 127.0.0.1:59140 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:55:08 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 15:56:41 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 15:56:41 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 15:56:42 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 15:56:42 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:56:43 logger.go:39: 127.0.0.1:59142 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:56:45 logger.go:39: 127.0.0.1:59142 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 15:56:48 logger.go:39: 127.0.0.1:59142 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 15:56:48 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:01:48 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:01:48 logger.go:39: server is running on https://localhost:8081
+FATAL: /home/student/1/forum/main.go:132 2025/01/10 16:01:48 logger.go:39: listen tcp :8081: bind: address already in use
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:01:53 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:01:53 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:01:55 logger.go:39: [::1]:33500 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:01:55 logger.go:39: [::1]:33500 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:01:55 logger.go:39: [::1]:33500 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:01:56 logger.go:39: [::1]:33500 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:01:57 logger.go:39: [::1]:33500 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:02:01 logger.go:39: 127.0.0.1:59144 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:02:02 logger.go:39: 127.0.0.1:59146 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:02:02 logger.go:39: 127.0.0.1:59146 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:02:02 logger.go:39: 127.0.0.1:59146 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:02:03 logger.go:39: 127.0.0.1:59146 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:02:05 logger.go:39: 127.0.0.1:59146 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:02:05 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:02:48 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:02:48 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:02:49 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:02:49 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:02:52 logger.go:39: 127.0.0.1:59148 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:02:53 logger.go:39: 127.0.0.1:59148 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:02:53 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:03:54 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:03:54 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:03:54 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:03:54 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:03:57 logger.go:39: 127.0.0.1:59150 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:03:58 logger.go:39: 127.0.0.1:59150 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:03:58 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:06:14 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:06:14 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:06:15 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:06:15 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:06:17 logger.go:39: 127.0.0.1:59152 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:06:21 logger.go:39: 127.0.0.1:59152 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:06:21 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:06:46 logger.go:39: 127.0.0.1:59154 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:06:50 logger.go:39: 127.0.0.1:59154 - HTTP/2.0 GET /post?id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:06:53 logger.go:39: 127.0.0.1:59154 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:06:54 logger.go:39: 127.0.0.1:59154 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:07:00 logger.go:39: 127.0.0.1:59154 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:07:00 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:09:34 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:09:34 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:09:35 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:09:35 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:37 logger.go:39: 127.0.0.1:59156 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:38 logger.go:39: 127.0.0.1:59158 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:38 logger.go:39: 127.0.0.1:59158 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:38 logger.go:39: 127.0.0.1:59158 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:38 logger.go:39: 127.0.0.1:59158 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:40 logger.go:39: 127.0.0.1:59158 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:09:40 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:09:52 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:09:52 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:09:54 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:09:54 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:54 logger.go:39: 127.0.0.1:59160 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:55 logger.go:39: 127.0.0.1:59162 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:55 logger.go:39: 127.0.0.1:59162 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:55 logger.go:39: 127.0.0.1:59162 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:56 logger.go:39: 127.0.0.1:59162 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:09:57 logger.go:39: 127.0.0.1:59162 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:09:57 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:10:33 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:10:33 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:10:34 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:10:34 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:10:40 logger.go:39: 127.0.0.1:59164 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:10:44 logger.go:39: 127.0.0.1:59164 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:10:44 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:10:52 logger.go:39: 127.0.0.1:59166 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:11:25 logger.go:39: 127.0.0.1:59166 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:11:25 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:13:51 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:13:51 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:13:53 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:13:53 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:13:54 logger.go:39: 127.0.0.1:59172 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:13:57 logger.go:39: 127.0.0.1:59172 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:13:57 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:15:14 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:15:14 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:15:15 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:15:15 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:17 logger.go:39: 127.0.0.1:59174 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:19 logger.go:39: 127.0.0.1:59176 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:19 logger.go:39: 127.0.0.1:59176 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:19 logger.go:39: 127.0.0.1:59176 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:19 logger.go:39: 127.0.0.1:59176 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:21 logger.go:39: 127.0.0.1:59176 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:15:21 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:15:39 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:15:39 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:15:41 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:15:41 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:43 logger.go:39: 127.0.0.1:59180 - HTTP/2.0 GET /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:15:43 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:43 logger.go:39: 127.0.0.1:59180 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:15:43 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:43 logger.go:39: 127.0.0.1:59182 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:15:43 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:44 logger.go:39: 127.0.0.1:59182 - HTTP/2.0 GET /static/css/style.css
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:15:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:44 logger.go:39: 127.0.0.1:59182 - HTTP/2.0 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:15:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:44 logger.go:39: 127.0.0.1:59182 - HTTP/2.0 GET /favicon.ico
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:15:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:44 logger.go:39: 127.0.0.1:59182 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:15:44 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:48 logger.go:39: 127.0.0.1:59182 - HTTP/2.0 POST /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:15:48 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:48 logger.go:39: 127.0.0.1:59182 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:50 logger.go:39: 127.0.0.1:59182 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:15:52 logger.go:39: 127.0.0.1:59182 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:15:52 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:18:20 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:18:20 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:18:21 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:18:21 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:18:22 logger.go:39: 127.0.0.1:59184 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:18:24 logger.go:39: 127.0.0.1:59186 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:18:24 logger.go:39: 127.0.0.1:59186 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:18:24 logger.go:39: 127.0.0.1:59186 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:18:24 logger.go:39: 127.0.0.1:59186 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:18:26 logger.go:39: 127.0.0.1:59186 - HTTP/2.0 POST /report?user_id=7&post_id=17
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:18:26 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/main.go:137 2025/01/10 16:21:33 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 16:21:33 logger.go:39: server stopped gracefully
+INFO: /home/student/1/forum/main.go:46 2025/01/10 16:23:42 logger.go:39: connected to db
+INFO: /home/student/1/forum/main.go:57 2025/01/10 16:23:42 logger.go:39: server is running on https://localhost:8081
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:23:45 logger.go:39: 127.0.0.1:59188 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:23:46 logger.go:39: 127.0.0.1:59190 - HTTP/2.0 GET /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:23:46 logger.go:39: 127.0.0.1:59190 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:23:46 logger.go:39: 127.0.0.1:59190 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:23:47 logger.go:39: 127.0.0.1:59190 - HTTP/2.0 GET /static/images/logo.png
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:23:48 logger.go:39: 127.0.0.1:59190 - HTTP/2.0 POST /report?user_id=7&post_id=17
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:23:48 logger.go:39: 127.0.0.1:59190 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:36:05 logger.go:39: [::1]:33512 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:36:05 logger.go:39: [::1]:33512 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:36:05 logger.go:39: [::1]:33512 - HTTP/2.0 GET /static/js/script.js
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:36:09 logger.go:39: [::1]:33512 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:36:09 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:36:09 logger.go:39: [::1]:33518 - HTTP/2.0 GET /favicon.ico
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:36:11 logger.go:39: [::1]:33518 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:36:13 logger.go:39: [::1]:33518 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:37:40 logger.go:39: 127.0.0.1:59192 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:37:46 logger.go:39: 127.0.0.1:59192 - HTTP/2.0 POST /post/create
+ERROR: /home/student/1/forum/internal/handler/middleware.go:104 2025/01/10 16:37:46 logger.go:39: recover: runtime error: invalid memory address or nil pointer dereference
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:37:49 logger.go:39: 127.0.0.1:59194 - HTTP/2.0 GET /post/create
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:38:39 logger.go:39: 127.0.0.1:59194 - HTTP/2.0 GET /myposts
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:38:41 logger.go:39: 127.0.0.1:59194 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:58:31 logger.go:39: [::1]:33526 - HTTP/2.0 POST /logout
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:58:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:58:31 logger.go:39: [::1]:33526 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:58:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:58:32 logger.go:39: [::1]:33526 - HTTP/2.0 GET /static/css/style.css
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:58:32 logger.go:39: [::1]:33526 - HTTP/2.0 GET /static/js/script.js
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:58:32 logger.go:39: get cookie: http: named cookie not present
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:58:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:58:32 logger.go:39: [::1]:33526 - HTTP/2.0 GET /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:58:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:58:40 logger.go:39: [::1]:33526 - HTTP/2.0 POST /login
+ERROR: /home/student/1/forum/internal/handler/middleware.go:65 2025/01/10 16:58:40 logger.go:39: get cookie: http: named cookie not present
+INFO: /home/student/1/forum/internal/handler/middleware.go:93 2025/01/10 16:58:40 logger.go:39: [::1]:33526 - HTTP/2.0 GET /
+INFO: /home/student/1/forum/main.go:137 2025/01/10 17:02:55 logger.go:39: shutting down server...
+INFO: /home/student/1/forum/main.go:146 2025/01/10 17:02:55 logger.go:39: server stopped gracefully

@@ -29,7 +29,7 @@ func NewService(repo *repository.Repository) *Service {
 		CategoryService:        category.NewCategoryService(repo.CategoryRepo),
 		CommentService:         comment.NewCommentService(repo.CommentRepo),
 		CommentReactionService: comment_reaction.NewCommentReactionService(repo.CommentReactionRepo),
-		PostService:            post.NewPostService(repo.PostRepo),
+		PostService:            post.NewPostService(repo.PostRepo, repo.ModerationRepo),
 		PostReactionService:    post_reaction.NewPostReactionService(repo.PostReactionRepo),
 		SessionService:         session.NewSessionService(repo.SessionRepo),
 		NotificationService:    notification.NewNotificationService(repo.NotificationRepo),

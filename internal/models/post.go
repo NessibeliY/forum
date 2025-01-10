@@ -62,6 +62,8 @@ type SendReportRequest struct {
 	Reason      string
 	IsModerated bool
 	ModeratorID int
+	Post        *Post
+	Moderator   *User
 }
 
 type ModerationReport struct {
