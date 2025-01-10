@@ -88,6 +88,18 @@
                         {{ end }}
                     </a>
                 </li>
+                {{if eq $.authenticated_user.Role "admin"}}
+                <li>
+                    <a href="/activity-page" class="text-xl hover:text-blue-500 transition duration-300">
+                        <i class="fas fa-list-alt mr-2"></i>Activity Page
+                    </a>
+                </li>
+                <li>
+                    <a href="/reports/moderation" class="text-xl hover:text-blue-500 transition duration-300">
+                        <i class="fas fa-clipboard-list mr-2"></i>Reports
+                    </a>
+                </li>                
+                {{end}}
             {{end}}
             {{if not .authenticated_user}}
                 <li><a href="/login" class="text-xl">Sign In</a></li>

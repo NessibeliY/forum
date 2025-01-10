@@ -22,6 +22,35 @@
                     <div class="flex flex-col w-full border-b border-indigo-600 py-3 px-2 mb-2">
                         <span class="text-2xl font-bold">Reports moderation list</span>
                     </div>
+                    <div class="flex w-full flex-col">
+                        <table class="min-w-full table-auto border-collapse">
+                            <thead>
+                                <tr>
+                                    <th class="border px-4 py-2">ID</th>
+                                    <th class="border px-4 py-2">Report Text</th>
+                                    <th class="border px-4 py-2">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{range .moderated_list}}
+                                    <tr>
+                                        <td class="border px-4 py-2">{{.ID}}</td>
+                                        <td class="border px-4 py-2">{{.Reason}}</td>
+                                        <td class="border px-4 py-2 flex items-center justify-center">
+                                            <form class="mx-2">
+                                                <button class="py-1 px-1 bg-green-500 rounded-lg hover:bg-green-600 transition duration-300 text-white">approve</button>
+                                            </form>
+                                            <span class="text-2xl">/</span>
+                                            <form class="mx-2">
+                                                <button class="py-1 px-1 bg-red-500 rounded-lg hover:bg-red-600 transition duration-300 text-white">reject</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                {{end}}
+                            </tbody>
+                        </table>
+                        
+                </div>
                 </div>
                 {{if .authenticated_user }}
                     <div class="rSide">
