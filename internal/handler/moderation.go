@@ -2,6 +2,7 @@ package handler
 
 import (
 	"database/sql"
+	"fmt"
 	"net/http"
 	"strings"
 
@@ -322,4 +323,53 @@ func (h *Handler) SetNewRole(w http.ResponseWriter, r *http.Request) {
 	}
 
 	http.Redirect(w, r, "/", http.StatusSeeOther)
+}
+
+func (h *Handler) ReportModeration(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/reports/moderation" {
+		h.logger.Error("url path:", r.URL.Path)
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	switch r.Method {
+	case http.MethodGet:
+		h.ReportModerationGet(w, r)
+	case http.MethodPost:
+
+	default:
+		h.logger.Errorf("method not allowed: %s", r.Method)
+		h.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+}
+
+func (h *Handler) ReportModerationGet(w http.ResponseWriter, r *http.Request) {
+	var countNotification int
+	var err error
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+	}
+
+	moderatedList, err := h.service.PostService.GetAllModeratedPosts()
+	if err != nil {
+		h.logger.Error("get moderated posts")
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+
+	for _, el := range moderatedList {
+		fmt.Println(el)
+	}
+
+	h.Render(w, "report_moderation.page.html", http.StatusOK, H{
+		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
+		"moderated_list":     moderatedList,
+	})
 }

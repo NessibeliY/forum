@@ -158,6 +158,7 @@ func (r *ModerationRepository) GetAllModeratedPosts(ctx context.Context) ([]mode
 		var report models.ModerationReport
 		var post models.Post
 		var moderator models.User
+		var adminAnswer sql.NullString
 
 		err := rows.Scan(
 			&report.ID,
@@ -171,11 +172,17 @@ func (r *ModerationRepository) GetAllModeratedPosts(ctx context.Context) ([]mode
 			&report.ModeratorID,
 			&moderator.Username,
 			&report.Reason,
-			&report.AdminAnswer,
+			&adminAnswer,
 			&report.IsModerated,
 		)
 		if err != nil {
 			return nil, fmt.Errorf("row scan: %w", err)
+		}
+
+		if adminAnswer.Valid {
+			report.AdminAnswer = adminAnswer.String
+		} else {
+			report.AdminAnswer = ""
 		}
 
 		report.Post = &post

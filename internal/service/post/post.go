@@ -157,29 +157,12 @@ func (s *PostService) SendReport(request *models.SendReportRequest) error {
 		Moderator:   request.Moderator,
 	}
 
-	fmt.Printf("SendReportRequest:\n")
-	fmt.Printf("PostID: %d\n", request.PostID)
-	fmt.Printf("Reason: %s\n", request.Reason)
-	fmt.Printf("IsModerated: %v\n", request.IsModerated)
-	fmt.Printf("ModeratorID: %d\n", request.ModeratorID)
-
-	if request.Post != nil {
-		fmt.Printf("Post:\n")
-		fmt.Printf("\tID: %d\n", request.Post.ID)
-		fmt.Printf("\tTitle: %s\n", request.Post.Title)
-		fmt.Printf("\tContent: %s\n", request.Post.Content)
-		fmt.Printf("\tAuthorID: %d\n", request.Post.AuthorID)
-		fmt.Printf("\tAuthorName: %s\n", request.Post.AuthorName)
-		fmt.Printf("\tCreatedAt: %s\n", request.Post.CreatedAt)
-		fmt.Printf("\tUpdatedAt: %s\n", request.Post.UpdatedAt)
-	}
-
-	if request.Moderator != nil {
-		fmt.Printf("Moderator:\n")
-		fmt.Printf("\tID: %d\n", request.Moderator.ID)
-		fmt.Printf("\tUsername: %s\n", request.Moderator.Username)
-		fmt.Printf("\tRole: %s\n", request.Moderator.Role)
-	}
-
 	return s.moderationRepo.AddModerationReport(moderationReport)
+}
+
+func (s *PostService) GetAllModeratedPosts() ([]models.ModerationReport, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	return s.moderationRepo.GetAllModeratedPosts(ctx)
 }

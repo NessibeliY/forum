@@ -20,24 +20,8 @@
                 <!-- IF USER AUTH SHOW THIS BLOCK -->
                 <div class="middleContainer">
                     <div class="flex flex-col w-full border-b border-indigo-600 py-3 px-2 mb-2">
-                        <span class="text-2xl font-bold">Report post</span>
+                        <span class="text-2xl font-bold">Reports moderation list</span>
                     </div>
-                    <div class="flex w-full">
-                        <form class="flex flex-col w-full" action="/report?user_id={{.reported_user.ID}}&post_id={{.reported_post.ID}}" method="POST">
-                            <div class="mt-3">
-                                <label for="email" class="block text-lg mb-2">Reason report text</label>
-                                <input 
-                                    id="email"
-                                    type="text"
-                                    class="py-4 px-4 border border-neutral-500 my-2 rounded-md w-full"
-                                    placeholder="report text"
-                                    name="report_text"
-                                    />
-                                    <label class="text-red-600 mt-2 mb-2"> {{ .error.report_text }}</label>
-                            </div>
-                            <button class="bg-green-500 py-2 px-2 hover:bg-green-600 transition duration-300 w-40 text-white rounded-lg">Send report</button>
-                        </form>
-                    </div>        
                 </div>
                 {{if .authenticated_user }}
                     <div class="rSide">
@@ -52,14 +36,5 @@
         </div>
     </main>
 </body>
-<script>
-    document.querySelector("form").addEventListener("submit", function(event) {
-        var reportText = document.querySelector("input[name='report_text']").value.trim();
-        if (reportText === "") {
-            event.preventDefault(); // Отменяем отправку формы
-            alert("Please provide a reason for the report.");
-        }
-    });
-    </script>
-    <script src="/static/js/script.js"></script>
+<script src="/static/js/script.js"></script>
 </html>

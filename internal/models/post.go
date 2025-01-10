@@ -88,6 +88,7 @@ type PostService interface {
 	DeletePost(request *DeletePostRequest) error
 	UpdatePost(request *UpdatePostRequest) (int, error)
 	SendReport(request *SendReportRequest) error
+	GetAllModeratedPosts() ([]ModerationReport, error)
 }
 
 type PostRepository interface {
