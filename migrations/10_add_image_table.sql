@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS image (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    post_id INTEGER,
+    post_id INTEGER UNIQUE,
     image_path TEXT UNIQUE,
     FOREIGN KEY (post_id) REFERENCES post(id) ON DELETE CASCADE
 )
