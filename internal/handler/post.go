@@ -1,9 +1,8 @@
 package handler
 
 import (
-	"errors"
 	"fmt"
-	"io"
+	"mime/multipart"
 	"net/http"
 	"net/url"
 	"strings"
@@ -132,82 +131,23 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 		categories = append(categories, c)
 	}
 
+	image, err := h.handleImageUpload(r)
+	if err != nil {
+		h.logger.Error("handle image upload:", err.Error())
+		if strings.Contains(err.Error(), "not an image") || strings.Contains(err.Error(), "image too big") {
+			h.clientError(w, http.StatusBadRequest)
+			return
+		}
+		h.serverError(w, err)
+		return
+	}
+
 	createPostRequest := &models.CreatePostRequest{
 		Title:      title,
 		Content:    content,
 		AuthorID:   h.getUserFromContext(r).ID,
 		Categories: categories,
-	}
-
-	file, fileHeader, err := r.FormFile("image")
-	if err != nil {
-		createPostRequest.ImageFile = nil
-		if errors.Is(err, http.ErrMissingFile) ||
-			err == io.EOF || (err.Error() == "http: no such file") ||
-			strings.Contains(err.Error(), "multipart") {
-			categories, err := h.service.CategoryService.GetAllCategories()
-			if err != nil {
-				h.logger.Error("get all categories:", err.Error())
-				h.serverError(w, err)
-				return
-			}
-
-			validationsErrMap["image"] = err.Error()
-			h.logger.Error("form file client error:", err.Error())
-
-			h.Render(w, "create_post.page.html", http.StatusBadRequest, H{
-				"errors":             validationsErrMap,
-				"categories":         categories,
-				"authenticated_user": h.getUserFromContext(r),
-			})
-			return
-		}
-
-		h.logger.Error("form file:", err.Error())
-		h.serverError(w, err)
-		return
-	}
-
-	createPostRequest.ImageFile = file
-	defer file.Close()
-
-	fileType := fileHeader.Header.Get("Content-Type")
-	if !isImage(fileType) {
-		categories, err := h.service.CategoryService.GetAllCategories()
-		if err != nil {
-			h.logger.Error("get all categories:", err.Error())
-			h.serverError(w, err)
-			return
-		}
-
-		validationsErrMap["image"] = "file is not an image"
-		h.logger.Error("file is not an image:", fileType)
-
-		h.Render(w, "create_post.page.html", http.StatusBadRequest, H{
-			"errors":             validationsErrMap,
-			"categories":         categories,
-			"authenticated_user": h.getUserFromContext(r),
-		})
-		return
-	}
-
-	if fileHeader.Size > 5*1024*1024 {
-		categories, err := h.service.CategoryService.GetAllCategories()
-		if err != nil {
-			h.logger.Error("get all categories:", err.Error())
-			h.serverError(w, err)
-			return
-		}
-
-		validationsErrMap["image"] = "file is too big"
-		h.logger.Error("file is too big:", fileType)
-
-		h.Render(w, "create_post.page.html", http.StatusBadRequest, H{
-			"errors":             validationsErrMap,
-			"categories":         categories,
-			"authenticated_user": h.getUserFromContext(r),
-		})
-		return
+		ImageFile:  image,
 	}
 
 	id, err := h.service.PostService.CreatePostWithImage(createPostRequest)
@@ -218,6 +158,28 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	http.Redirect(w, r, fmt.Sprintf("/post?id=%d", id), http.StatusSeeOther)
+}
+
+func (h *Handler) handleImageUpload(r *http.Request) (multipart.File, error) {
+	file, fileHeader, err := r.FormFile("image")
+	if err != nil {
+		if err == http.ErrMissingFile {
+			return nil, nil
+		}
+		return nil, fmt.Errorf("get image: %w", err)
+	}
+	defer file.Close()
+
+	fileType := fileHeader.Header.Get("Content-Type")
+	if !isImage(fileType) {
+		return nil, fmt.Errorf("not an image: %s", fileType)
+	}
+
+	if fileHeader.Size > 5*1024*1024 {
+		return nil, fmt.Errorf("image too big: %d", fileHeader.Size)
+	}
+
+	return file, nil
 }
 
 func isImage(fileType string) bool {

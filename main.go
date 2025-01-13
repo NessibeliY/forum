@@ -101,7 +101,7 @@ func main() {
 	mux.Handle("/manage/categories", handler.RequireAuthentication(handler.IsAdmin(http.HandlerFunc(handler.ManageCategories))))
 	mux.Handle("/manage/users", handler.RequireAuthentication(handler.IsAdmin(http.HandlerFunc(handler.ChangeUserRole))))
 
-	rateLimiter := handler.NewRateLimiter(10, 50, 1*time.Minute)
+	rateLimiter := handler.NewRateLimiter(10, 50, 1*time.Second)
 	finalHandler := rateLimiter.Limit(handler.SecureHeaders(
 		handler.RecoverPanic(
 			handler.LogRequest(
