@@ -118,7 +118,7 @@ func (s *UserService) ChangeRole(userID int, role string) error {
 		return fmt.Errorf("check exist user and role")
 	}
 
-	if flag && role == models.ModeratorRole {
+	if flag && role == models.ModeratorRole || !flag && role == models.UserRole {
 		err = s.roleRepo.DeleteRoleRequestByUsedID(userID)
 		if err != nil {
 			return fmt.Errorf("update role request: %w", err)

@@ -87,8 +87,6 @@ func (s *PostService) CreatePostWithImage(request *models.CreatePostRequest) (in
 		return 0, fmt.Errorf("write file: %w", err)
 	}
 
-	fmt.Println("post", post)
-
 	return id, nil
 }
 

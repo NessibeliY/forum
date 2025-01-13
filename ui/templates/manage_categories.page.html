@@ -31,7 +31,6 @@
                     <table class="min-w-full table-auto border-collapse">
                         <thead>
                             <tr>
-                                <th class="border px-4 py-2">ID</th>
                                 <th class="border px-4 py-2">Category Name</th>
                                 <th class="border px-4 py-2">Action</th>
                             </tr>
@@ -39,7 +38,6 @@
                         <tbody>
                             {{range .categories}}
                             <tr>
-                                <td class="border px-4 py-2">{{.ID}}</td>
                                 <td class="border px-4 py-2">{{.Name}}</td>
                                 <td class="border px-4 py-2">
                                     <form class="flex items-center justify-center w-full" action="/manage/categories?category_id={{.ID}}" method="POST">

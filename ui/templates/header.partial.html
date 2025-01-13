@@ -28,11 +28,11 @@
                 </a>
                 <div class="flex items-center justify-center mx-2 group relative bg-indigo-500 py-2 px-2 rounded-lg">
                     <i class="fa fa-user-circle text-2xl hover:text-red-600 cursor-pointer transition duration-300"></i>
-                    <div class="flex flex-col absolute top-12  w-52 h-44 opacity-0 rounded-lg group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="flex flex-col absolute top-12 sm:right-8 md:right-4 lg:right-0 w-52 h-44 opacity-0 rounded-lg group-hover:opacity-100 transition-opacity duration-300">
                         <div class="w-full flex flex-col text-center bg-blue-600 py-7 px-5 rounded-t-lg">
                             <span class="text-4xl text-white">{{.authenticated_user.Username}}</span>
                         </div>
-                        <div class="w-full flex flex-col  bg-white">
+                        <div class="w-full flex flex-col bg-white">
                             <ul class="flex flex-col items-center justify-start">
                                 {{ if eq .authenticated_user.Role "admin" }}
                                     <a href="/reports/moderation" class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-lg text-center">Reports</a>
@@ -93,17 +93,27 @@
                         {{ end }}
                     </a>
                 </li>
-                {{if eq $.authenticated_user.Role "admin"}}
                 <li>
                     <a href="/activity-page" class="text-xl hover:text-blue-500 transition duration-300">
                         <i class="fas fa-list-alt mr-2"></i>Activity Page
                     </a>
                 </li>
+                {{if or (eq $.authenticated_user.Role "admin") (eq $.authenticated_user.Role "moderator")}}
                 <li>
                     <a href="/reports/moderation" class="text-xl hover:text-blue-500 transition duration-300">
                         <i class="fas fa-clipboard-list mr-2"></i>Reports
                     </a>
-                </li>                
+                </li>  
+                <li>
+                    <a href="/manage/categories" class="text-xl hover:text-blue-500 transition duration-300">
+                        <i class="fas fa-cogs mr-2"></i>Manage Categories
+                    </a>
+                </li>
+                <li>
+                    <a href="/manage/users" class="text-xl hover:text-blue-500 transition duration-300">
+                        <i class="fas fa-users mr-2"></i>Users
+                    </a>
+                </li>              
                 {{end}}
             {{end}}
             {{if not .authenticated_user}}

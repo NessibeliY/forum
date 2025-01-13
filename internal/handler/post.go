@@ -50,7 +50,7 @@ func (h *Handler) createPostMethodGet(w http.ResponseWriter, r *http.Request) {
 
 		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
 		if err != nil {
-			fmt.Println("err", err)
+
 			h.logger.Info("get check moderator request:", err)
 			h.serverError(w, err)
 			return
@@ -373,7 +373,6 @@ func (h *Handler) ShowPost(w http.ResponseWriter, r *http.Request) {
 
 		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
 		if err != nil {
-			fmt.Println("err", err)
 			h.logger.Info("get check moderator request:", err)
 			h.serverError(w, err)
 			return
@@ -430,7 +429,6 @@ func (h *Handler) ShowMyPosts(w http.ResponseWriter, r *http.Request) {
 
 		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
 		if err != nil {
-			fmt.Println("err", err)
 			h.logger.Info("get check moderator request:", err)
 			h.serverError(w, err)
 			return
@@ -484,7 +482,7 @@ func (h *Handler) ShowLikedPosts(w http.ResponseWriter, r *http.Request) {
 		}
 		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
 		if err != nil {
-			fmt.Println("err", err)
+
 			h.logger.Info("get check moderator request:", err)
 			h.serverError(w, err)
 			return
@@ -538,7 +536,6 @@ func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
 	posts, err := h.service.PostService.GetPostsByCategories(categories)
 	if err != nil {
 		h.logger.Error("get posts by categories:", err.Error())
-		fmt.Println("err", err)
 		h.serverError(w, err)
 		return
 	}
@@ -561,7 +558,6 @@ func (h *Handler) ShowPostsByCategory(w http.ResponseWriter, r *http.Request) {
 		}
 		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
 		if err != nil {
-			fmt.Println("err", err)
 			h.logger.Info("get check moderator request:", err)
 			h.serverError(w, err)
 			return

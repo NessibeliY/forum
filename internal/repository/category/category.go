@@ -107,15 +107,11 @@ func (r *CategoryRepository) AddCategory(category *models.Category) (int, error)
 		return 0, fmt.Errorf("insert category: %w", err)
 	}
 
-	// Получаем последний вставленный id
 	lastInsertID, err := result.LastInsertId()
 	if err != nil {
 		return 0, fmt.Errorf("get last insert id: %w", err)
 	}
 
-	fmt.Println("lastInsertID", lastInsertID)
-
-	// Возвращаем id новой категории
 	category.ID = int(lastInsertID)
 	return category.ID, nil
 }

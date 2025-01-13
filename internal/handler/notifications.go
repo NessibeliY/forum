@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 	"strings"
 
@@ -51,7 +50,6 @@ func (h *Handler) Notification(w http.ResponseWriter, r *http.Request) {
 
 		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
 		if err != nil {
-			fmt.Println("err", err)
 			h.logger.Info("get check moderator request:", err)
 			h.serverError(w, err)
 			return

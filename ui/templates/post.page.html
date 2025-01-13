@@ -69,7 +69,7 @@
                     </div>
                      <!-- CHECK IF USER IS OWNER -->
                      {{if $.authenticated_user}}
-                     {{if  or  (eq $.authenticated_user.ID  .post.AuthorID) (eq $.authenticated_user.Role "admin") }}
+                     {{if  or  (eq $.authenticated_user.ID  .post.AuthorID) (eq $.authenticated_user.Role "admin") (eq $.authenticated_user.Role "moderator") }}
                      <div class="text-xl dropdown">
                          <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
                          <div class="select_menu " id="dropdown-{{.ID}}">
@@ -143,7 +143,7 @@
                       
                                       
                                     {{if $.authenticated_user}}
-                                    {{if or (eq $.authenticated_user.ID .AuthorID) (eq $.authenticated_user.Role "admin")}}              
+                                    {{if or (eq $.authenticated_user.ID .AuthorID) (eq $.authenticated_user.Role "admin") (eq $.authenticated_user.Role "moderator") }}              
                                     <div class="text-xl dropdown">
                                         <i class="fa-solid fa-bars" data-target="dropdown-{{.ID}}"></i>
                                         <div class="select_menu" id="dropdown-{{.ID}}">
