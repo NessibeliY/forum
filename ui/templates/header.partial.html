@@ -29,7 +29,7 @@
                 <div class="flex items-center justify-center mx-2 group relative bg-indigo-500 py-2 px-2 rounded-lg">
                     <i class="fa fa-user-circle text-2xl hover:text-red-600 cursor-pointer transition duration-300"></i>
                     <div class="flex flex-col absolute top-12  w-52 h-44 opacity-0 rounded-lg group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="w-full flex flex-col bg-blue-600 py-7 px-5 rounded-t-lg">
+                        <div class="w-full flex flex-col text-center bg-blue-600 py-7 px-5 rounded-t-lg">
                             <span class="text-4xl text-white">{{.authenticated_user.Username}}</span>
                         </div>
                         <div class="w-full flex flex-col  bg-white">
@@ -37,6 +37,8 @@
                                 {{ if eq .authenticated_user.Role "admin" }}
                                     <a href="/reports/moderation" class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-lg text-center">Reports</a>
                                     <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-lg text-center" href="/view/moderator-requests">Requests Moderator Role</a>
+                                    <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-lg text-center" href="/manage/categories">Manage Categories</a>
+                                    <div class="w-full h-px bg-gray-300 mt-4"></div>
                                 {{end}}
                                 <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-xl" href="/activity-page">Activity page</a> 
                                 <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer">

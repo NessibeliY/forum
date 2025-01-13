@@ -64,3 +64,58 @@ func (r *CategoryRepository) GetCategoryByName(ctx context.Context, name string)
 	}
 	return &category, nil
 }
+
+func (r *CategoryRepository) DeleteCategory(categoryID int) error {
+	query := `DELETE FROM category WHERE id = $1`
+	result, err := r.db.Exec(query, categoryID)
+	if err != nil {
+		return fmt.Errorf("exec: %w", err)
+	}
+
+	rowsAffected, err := result.RowsAffected()
+	if err != nil {
+		return fmt.Errorf("rows affected: %w", err)
+	}
+
+	if rowsAffected == 0 {
+		return nil
+	}
+
+	return nil
+}
+
+func (r *CategoryRepository) GetCategoryByID(ctx context.Context, categoryID int) (*models.Category, error) {
+	row := r.db.QueryRowContext(ctx, `SELECT id, name FROM category WHERE id = $1`, categoryID)
+	category := models.Category{}
+	err := row.Scan(
+		&category.ID,
+		&category.Name)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, fmt.Errorf("row scan: %w", err)
+	}
+	return &category, nil
+}
+
+func (r *CategoryRepository) AddCategory(category *models.Category) (int, error) {
+	query := `INSERT INTO category (name) VALUES ($1) RETURNING id;`
+
+	result, err := r.db.Exec(query, category.Name)
+	if err != nil {
+		return 0, fmt.Errorf("insert category: %w", err)
+	}
+
+	// Получаем последний вставленный id
+	lastInsertID, err := result.LastInsertId()
+	if err != nil {
+		return 0, fmt.Errorf("get last insert id: %w", err)
+	}
+
+	fmt.Println("lastInsertID", lastInsertID)
+
+	// Возвращаем id новой категории
+	category.ID = int(lastInsertID)
+	return category.ID, nil
+}
