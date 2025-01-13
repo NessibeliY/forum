@@ -225,6 +225,42 @@ func (r *PostRepository) UpdatePost(post *models.Post) (int, error) {
 	return post.ID, nil
 }
 
+func (r *PostRepository) UpdatePostWithImage(post *models.Post) (int, error) {
+	query := `
+		UPDATE post
+		SET title = $1, content = $2, updated_at = $3
+		WHERE author_id = $4
+		RETURNING id;
+	`
+
+	err := r.db.QueryRow(query, post.Title, post.Content, time.Now(), post.AuthorID).Scan(&post.ID)
+	if err != nil {
+		return 0, fmt.Errorf("update post: %w", err)
+	}
+
+	if post.ID == 0 {
+		return 0, fmt.Errorf("no rows updated, post with author_id %d not found", post.AuthorID)
+	}
+
+	err = r.updateCategories(post.ID, post.Categories)
+	if err != nil {
+		return 0, fmt.Errorf("update post categories: %w", err)
+	}
+
+	query = `
+		INSERT INTO image (post_id, image_path)
+		VALUES ($1, $2)
+		ON CONFLICT (post_id)
+		DO UPDATE SET image_path = $2;
+	`
+	_, err = r.db.Exec(query, post.ID, post.ImagePath)
+	if err != nil {
+		return 0, fmt.Errorf("update post image: %w", err)
+	}
+
+	return post.ID, nil
+}
+
 func (r *PostRepository) addPostCategories(postID int, categories []*models.Category) error {
 	for _, category := range categories {
 		query := `INSERT INTO post_category (post_id, category_id) VALUES ($1, $2)`

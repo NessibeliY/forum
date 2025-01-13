@@ -92,6 +92,44 @@ func (s *PostService) CreatePostWithImage(request *models.CreatePostRequest) (in
 	return id, nil
 }
 
+func (s *PostService) UpdatePostWithImage(request *models.UpdatePostRequest) (int, error) {
+	if request.ImageFile == nil {
+		return s.UpdatePost(request)
+	}
+
+	data, err := io.ReadAll(request.ImageFile)
+	if err != nil {
+		return 0, fmt.Errorf("read image file: %w", err)
+	}
+
+	fileName, err := uuid.NewV4()
+	if err != nil {
+		return 0, fmt.Errorf("generate uuid: %w", err)
+	}
+
+	filePath := "ui/static/img/" + fileName.String()
+
+	post := &models.Post{
+		Title:      request.Title,
+		Content:    request.Content,
+		AuthorID:   request.AuthorID,
+		Categories: request.Categories,
+		ImagePath:  filePath,
+	}
+
+	id, err := s.repo.UpdatePostWithImage(post)
+	if err != nil {
+		return 0, fmt.Errorf("add post with image: %w", err)
+	}
+
+	err = os.WriteFile(filePath, data, 0o666)
+	if err != nil {
+		return 0, fmt.Errorf("write file: %w", err)
+	}
+
+	return id, nil
+}
+
 func (s *PostService) UpdatePost(request *models.UpdatePostRequest) (int, error) {
 	post := &models.Post{
 		Title:      request.Title,
@@ -149,7 +187,6 @@ func (s *PostService) DeletePost(request *models.DeletePostRequest) error {
 func (s *PostService) SendReport(request *models.SendReportRequest) error {
 	moderationReport := &models.ModerationReport{
 		PostID:      request.PostID,
-		Reason:      request.Reason,
 		IsModerated: request.IsModerated,
 		ModeratorID: request.ModeratorID,
 		AdminAnswer: "",

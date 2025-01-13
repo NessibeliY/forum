@@ -193,14 +193,26 @@ func (h *Handler) UpdatePostMethodPost(w http.ResponseWriter, r *http.Request) {
 		categories = append(categories, c)
 	}
 
+	image, err := h.handleImageUpload(r)
+	if err != nil {
+		h.logger.Error("handle image upload:", err.Error())
+		if strings.Contains(err.Error(), "not an image") || strings.Contains(err.Error(), "image too big") {
+			h.clientError(w, http.StatusBadRequest)
+			return
+		}
+		h.serverError(w, err)
+		return
+	}
+
 	updatePost := &models.UpdatePostRequest{
 		Title:      title,
 		Content:    content,
 		AuthorID:   h.getUserFromContext(r).ID,
 		Categories: categories,
+		ImageFile:  image,
 	}
 
-	id, err := h.service.PostService.UpdatePost(updatePost)
+	id, err := h.service.PostService.UpdatePostWithImage(updatePost)
 	if err != nil {
 		h.logger.Error("update post:", err.Error())
 		h.serverError(w, err)
