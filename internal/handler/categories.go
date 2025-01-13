@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
@@ -131,10 +130,37 @@ func (h *Handler) ManageCategoriesPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if len(categoryName) < 3 {
+
+		categories, err := h.service.CategoryService.GetAllCategories()
+		if err != nil {
+			h.logger.Info("get all categories:", err)
+			h.serverError(w, err)
+			return
+		}
+
+		var countNotification int
+		if h.getUserFromContext(r) != nil {
+			countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+			if err != nil {
+				h.logger.Info("get countNotification:", err)
+				h.serverError(w, err)
+				return
+			}
+		}
+
+		h.Render(w, "manage_categories.page.html", http.StatusBadRequest, H{
+			"error":              "Category name is too short (min 3 characters)",
+			"count_notification": countNotification,
+			"authenticated_user": h.getUserFromContext(r),
+			"categories":         categories,
+		})
+		return
+	}
+
 	categoryRequest := &models.Category{
 		Name: categoryName,
 	}
-	fmt.Println(categoryRequest)
 
 	_, err = h.service.CategoryService.CreateCategory(categoryRequest)
 	if err != nil {

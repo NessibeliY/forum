@@ -26,7 +26,7 @@
                         </button>
                     </div>
                     {{if .error}}
-                        <span class="text-red-600 text-2xl">{{.error}}</span>
+                        <span class="text-red-600 text-2xl" id="error-message">{{.error}}</span>
                     {{end}}
                     <table class="min-w-full table-auto border-collapse">
                         <thead>
@@ -110,5 +110,13 @@
             newCategoryModal.classList.add('hidden');
         }
     });
+
+
+    setTimeout(function() {
+            var errorMessage = document.getElementById('error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'none';
+            }
+        }, 10000); // 5 секунд
 </script>
 </html>
