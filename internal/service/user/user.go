@@ -1,7 +1,9 @@
 package user
 
 import (
+	"context"
 	"fmt"
+	"time"
 
 	"golang.org/x/crypto/bcrypt"
 
@@ -100,5 +102,32 @@ func (s *UserService) SetNewRole(request *models.UpdateRoleRequest) error {
 		}
 	}
 
+	return nil
+}
+
+func (s *UserService) GetAllUsers() ([]models.User, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	return s.userRepo.GetAllUsers(ctx)
+}
+
+func (s *UserService) ChangeRole(userID int, role string) error {
+	flag, err := s.roleRepo.ExistsByUserAndRole(userID)
+	if err != nil {
+		return fmt.Errorf("check exist user and role")
+	}
+
+	if flag && role == models.ModeratorRole {
+		err = s.roleRepo.DeleteRoleRequestByUsedID(userID)
+		if err != nil {
+			return fmt.Errorf("update role request: %w", err)
+		}
+	}
+
+	err = s.userRepo.UpdateRole(userID, role)
+	if err != nil {
+		return fmt.Errorf("update user role: %w", err)
+	}
 	return nil
 }

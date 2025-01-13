@@ -36,8 +36,11 @@
                             <ul class="flex flex-col items-center justify-start">
                                 {{ if eq .authenticated_user.Role "admin" }}
                                     <a href="/reports/moderation" class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-lg text-center">Reports</a>
-                                    <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-lg text-center" href="/view/moderator-requests">Requests Moderator Role</a>
+                                    <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-lg text-center" href="/view/moderator-requests">
+                                        Requests Moderator Role
+                                    </a>
                                     <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-lg text-center" href="/manage/categories">Manage Categories</a>
+                                    <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-lg text-center" href="/manage/users">Users</a>
                                     <div class="w-full h-px bg-gray-300 mt-4"></div>
                                 {{end}}
                                 <a class="py-2 hover:text-indigo-500 duration-300 transition cursor-pointer text-xl" href="/activity-page">Activity page</a> 

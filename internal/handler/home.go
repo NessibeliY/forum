@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 )
 
@@ -44,11 +43,17 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 
 		checkModeratorRequest, err = h.service.UserService.CheckModeratorRequestStatus(h.getUserFromContext(r).ID)
 		if err != nil {
-			fmt.Println("err", err)
 			h.logger.Info("get check moderator request:", err)
 			h.serverError(w, err)
 			return
 		}
+	}
+
+	reportsCount, err := h.service.PostService.GetAllModeratedPosts()
+	if err != nil {
+		h.logger.Info("get  moderated posts:", err)
+		h.serverError(w, err)
+		return
 	}
 
 	h.Render(w, "index.page.html", http.StatusOK, H{
@@ -57,5 +62,6 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 		"authenticated_user":      h.getUserFromContext(r),
 		"count_notification":      countNotification,
 		"check_moderator_request": checkModeratorRequest,
+		"reports_count":           len(reportsCount),
 	})
 }

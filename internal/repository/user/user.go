@@ -1,7 +1,9 @@
 package user
 
 import (
+	"context"
 	"database/sql"
+	"fmt"
 	"time"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
@@ -80,4 +82,40 @@ func (r *UserRepository) UpdateRole(userID int, role string) error {
 	query := `UPDATE users SET role = ? WHERE id = ?`
 	_, err := r.db.Exec(query, role, userID)
 	return err
+}
+
+func (r *UserRepository) GetAllUsers(ctx context.Context) ([]models.User, error) {
+	query := `SELECT * FROM users`
+	rows, err := r.db.QueryContext(ctx, query)
+	if err != nil {
+		return nil, fmt.Errorf("query context: %w", err)
+	}
+	defer rows.Close()
+
+	var users []models.User
+	for rows.Next() {
+		user := models.User{}
+
+		err := rows.Scan(
+			&user.ID,
+			&user.Username,
+			&user.HashedPassword,
+			&user.Email,
+			&user.CreatedAt,
+			&user.UpdatedAt,
+			&user.Role,
+		)
+		if err != nil {
+			return nil, fmt.Errorf("row scan: %w", err)
+		}
+
+		users = append(users, user)
+	}
+
+	err = rows.Err()
+	if err != nil {
+		return nil, fmt.Errorf("rows scan: %w", err)
+	}
+
+	return users, nil
 }

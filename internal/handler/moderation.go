@@ -2,7 +2,6 @@ package handler
 
 import (
 	"database/sql"
-	"fmt"
 	"net/http"
 	"strings"
 
@@ -350,7 +349,7 @@ func (h *Handler) ReportModerationGet(w http.ResponseWriter, r *http.Request) {
 	if h.getUserFromContext(r) != nil {
 		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
 		if err != nil {
-			h.logger.Info("get countNotification:", err)
+			h.logger.Info("get count notification:", err)
 			h.serverError(w, err)
 			return
 		}
@@ -363,13 +362,90 @@ func (h *Handler) ReportModerationGet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	for _, el := range moderatedList {
-		fmt.Println(el.Post.AuthorID)
-	}
-
 	h.Render(w, "report_moderation.page.html", http.StatusOK, H{
 		"authenticated_user": h.getUserFromContext(r),
 		"count_notification": countNotification,
 		"moderated_list":     moderatedList,
 	})
+}
+
+func (h *Handler) ChangeUserRole(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/manage/users" {
+		h.logger.Error("url path:", r.URL.Path)
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	switch r.Method {
+	case http.MethodGet:
+		h.ChangeUserRoleGet(w, r)
+	case http.MethodPost:
+		h.ChangeUserRolePost(w, r)
+	default:
+		h.logger.Errorf("method not allowed: %s", r.Method)
+		h.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+}
+
+func (h *Handler) ChangeUserRoleGet(w http.ResponseWriter, r *http.Request) {
+	users, err := h.service.UserService.GetAllUsers()
+	if err != nil {
+		h.logger.Info("get all users:", err)
+		h.serverError(w, err)
+		return
+	}
+
+	var countNotification int
+	if h.getUserFromContext(r) != nil {
+		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
+		if err != nil {
+			h.logger.Info("get countNotification:", err)
+			h.serverError(w, err)
+			return
+		}
+	}
+
+	h.Render(w, "users_page.page.html", http.StatusOK, H{
+		"authenticated_user": h.getUserFromContext(r),
+		"count_notification": countNotification,
+		"users":              users,
+	})
+}
+
+func (h *Handler) ChangeUserRolePost(w http.ResponseWriter, r *http.Request) {
+	userIDStr := r.URL.Query().Get("user_id")
+	if userIDStr == "" {
+		h.logger.Error("user id is required")
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+	userID, err := utils.ParsePositiveIntID(userIDStr)
+	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	role := r.URL.Query().Get("role")
+	if role == "" {
+		h.logger.Error("role is required")
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+
+	if role != models.UserRole && role != models.ModeratorRole {
+		h.logger.Error("role is invalid: ", role)
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+
+	err = h.service.UserService.ChangeRole(userID, role)
+	if err != nil {
+		h.logger.Info("change role:", err)
+		h.serverError(w, err)
+		return
+	}
+
+	http.Redirect(w, r, "/manage/users", http.StatusSeeOther)
 }

@@ -1,6 +1,7 @@
 package models
 
 import (
+	"context"
 	"time"
 )
 
@@ -52,6 +53,8 @@ type UserService interface {
 	CheckModeratorRequestStatus(userID int) (bool, error)
 	GetModeratorRequests() ([]ModeratorRequest, error)
 	SetNewRole(request *UpdateRoleRequest) error
+	GetAllUsers() ([]User, error)
+	ChangeRole(userID int, role string) error
 }
 
 type UserRepository interface {
@@ -59,6 +62,7 @@ type UserRepository interface {
 	GetUserByEmail(email string) (*User, error)
 	GetUserByID(id int) (*User, error)
 	UpdateRole(userID int, role string) error
+	GetAllUsers(ctx context.Context) ([]User, error)
 }
 type RoleRepository interface {
 	AddRoleRequest(request *UpdateRoleRequest) error
