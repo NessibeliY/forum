@@ -50,9 +50,9 @@
                         <div class="flex">
                             {{if $.authenticated_user}}
                                 {{if eq $.authenticated_user.Role "moderator"}}
-                                <a href="/report?user_id={{.AuthorID}}&post_id={{.ID}}" class="btn_like">
-                                    <i class="fa-regular fa-flag mx-1 text-2xl"></i>
-                                </a>
+                                <form action="/report?user_id={{.AuthorID}}&post_id={{.ID}}" method="POST">
+                                    <button><i class="fa-regular fa-flag mx-1 text-2xl"></i></button>
+                                </form>
                                 {{end}}
                             {{end}}
                             <a href="/post?id={{ .ID }}" class="btn_like">

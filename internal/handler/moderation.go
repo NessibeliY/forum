@@ -2,7 +2,6 @@ package handler
 
 import (
 	"database/sql"
-	"fmt"
 	"net/http"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
@@ -285,9 +284,6 @@ func (h *Handler) ReportModerationPost(w http.ResponseWriter, r *http.Request) {
 		h.clientError(w, http.StatusNotFound)
 		return
 	}
-
-	fmt.Println("postID", postID)
-	fmt.Println("decision", decision)
 
 	reportRequst := models.ModerationReport{
 		IsModerated: true,

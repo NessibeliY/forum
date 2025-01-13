@@ -19,7 +19,7 @@ func NewModerationRepository(db *sql.DB) *ModerationRepository {
 }
 
 func (r *ModerationRepository) AddModerationReport(report *models.ModerationReport) error {
-	query := `INSERT INTO moderated_post (post_id, moderator_id, moderated) VALUES ($1, $2, $3, $4);`
+	query := `INSERT INTO moderated_post (post_id, moderator_id, moderated) VALUES ($1, $2, $3);`
 	_, err := r.db.Exec(query, report.PostID, report.ModeratorID, report.IsModerated)
 	if err != nil {
 		return err
