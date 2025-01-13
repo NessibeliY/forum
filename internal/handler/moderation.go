@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"fmt"
 	"net/http"
-	"strings"
 
 	"01.alem.school/git/nyeltay/forum/internal/models"
 	"01.alem.school/git/nyeltay/forum/pkg/utils"
@@ -18,8 +17,6 @@ func (h *Handler) SendReport(w http.ResponseWriter, r *http.Request) {
 	}
 
 	switch r.Method {
-	case http.MethodGet:
-		h.sendReportMethodGet(w, r)
 	case http.MethodPost:
 		h.sendReportMethodPost(w, r)
 	default:
@@ -27,78 +24,6 @@ func (h *Handler) SendReport(w http.ResponseWriter, r *http.Request) {
 		h.clientError(w, http.StatusMethodNotAllowed)
 		return
 	}
-}
-
-func (h *Handler) sendReportMethodGet(w http.ResponseWriter, r *http.Request) {
-	userIDStr := r.URL.Query().Get("user_id")
-	if userIDStr == "" {
-		h.logger.Error("get query for user_id")
-		h.clientError(w, http.StatusBadRequest)
-		return
-	}
-
-	userID, err := utils.ParsePositiveIntID(userIDStr)
-	if err != nil {
-		h.logger.Error("parse positive int:", err.Error())
-		h.clientError(w, http.StatusNotFound)
-		return
-	}
-
-	user, err := h.service.UserService.GetUserByID(userID)
-	if err != nil {
-		h.logger.Error("get user by id:", err.Error())
-		h.serverError(w, err)
-		return
-	}
-	if user == nil {
-		h.logger.Info("user nil")
-		h.clientError(w, http.StatusNotFound)
-		return
-	}
-
-	postIDStr := r.URL.Query().Get("post_id")
-	if postIDStr == "" {
-		h.logger.Error("get query for post_id")
-		h.clientError(w, http.StatusBadRequest)
-		return
-	}
-
-	postID, err := utils.ParsePositiveIntID(postIDStr)
-	if err != nil {
-		h.logger.Error("parse positive int:", err.Error())
-		h.clientError(w, http.StatusNotFound)
-		return
-	}
-
-	post, err := h.service.PostService.GetPostByID(postID)
-	if err != nil {
-		h.logger.Error("get post by id:", err.Error())
-		h.serverError(w, err)
-		return
-	}
-
-	if post == nil {
-		h.logger.Info("post nil")
-		h.clientError(w, http.StatusNotFound)
-		return
-	}
-
-	var countNotification int
-	if h.getUserFromContext(r) != nil {
-		countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
-		if err != nil {
-			h.logger.Info("get countNotification:", err)
-			h.serverError(w, err)
-			return
-		}
-	}
-
-	h.Render(w, "report.page.html", http.StatusOK, H{
-		"reported_user":      user,
-		"reported_post":      post,
-		"authenticated_user": h.getUserFromContext(r),
-		"count_notification": countNotification,
-	})
 }
 
 func (h *Handler) sendReportMethodPost(w http.ResponseWriter, r *http.Request) {
@@ -150,36 +75,8 @@ func (h *Handler) sendReportMethodPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	reason := strings.TrimSpace(r.PostFormValue("report_text"))
-	validateReason := validateReportText(reason)
-
-	if len(validateReason) > 0 {
-		h.logger.Error("validate report text:", err)
-
-		var countNotification int
-		if h.getUserFromContext(r) != nil {
-			countNotification, err = h.service.NotificationService.GetCountNotifications(h.getUserFromContext(r).ID)
-			if err != nil {
-				h.logger.Info("get countNotification:", err)
-				h.serverError(w, err)
-				return
-			}
-		}
-
-		h.Render(w, "report.page.html", http.StatusBadRequest, H{
-			"error":              validateReason,
-			"reported_user":      user,
-			"reported_post":      post,
-			"count_notification": countNotification,
-			"authenticated_user": h.getUserFromContext(r),
-		})
-		return
-
-	}
-
 	err = h.service.PostService.SendReport(&models.SendReportRequest{
 		PostID:      postID,
-		Reason:      reason,
 		ModeratorID: h.getUserFromContext(r).ID,
 		Post:        post,
 		Moderator:   user,
@@ -191,20 +88,6 @@ func (h *Handler) sendReportMethodPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	http.Redirect(w, r, "/", http.StatusSeeOther)
-}
-
-func validateReportText(reportText string) map[string]string {
-	errors := make(map[string]string)
-
-	if reportText == "" {
-		errors["report_text"] = "report text is empty"
-	}
-
-	if len(reportText) > 1000 {
-		errors["report_text"] = "report text is too long"
-	}
-
-	return errors
 }
 
 func (h *Handler) SendModeratorRequest(w http.ResponseWriter, r *http.Request) {

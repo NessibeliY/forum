@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"errors"
 	"fmt"
 	"mime/multipart"
 	"net/http"
@@ -163,7 +164,10 @@ func (h *Handler) createPostMethodPost(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) handleImageUpload(r *http.Request) (multipart.File, error) {
 	file, fileHeader, err := r.FormFile("image")
 	if err != nil {
-		if err == http.ErrMissingFile {
+		if errors.Is(err, http.ErrMissingFile) {
+			//err == io.EOF ||
+			//(err.Error() == "http: no such file") ||
+			//strings.Contains(err.Error(), "multipart") {
 			return nil, nil
 		}
 		return nil, fmt.Errorf("get image: %w", err)

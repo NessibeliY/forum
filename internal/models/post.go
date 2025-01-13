@@ -47,10 +47,11 @@ type CreatePostRequest struct {
 }
 
 type UpdatePostRequest struct {
-	Title      string      `json:"title"`
-	Content    string      `json:"content"`
-	AuthorID   int         `json:"author_id"`
-	Categories []*Category `json:"categories"`
+	Title      string         `json:"title"`
+	Content    string         `json:"content"`
+	AuthorID   int            `json:"author_id"`
+	Categories []*Category    `json:"categories"`
+	ImageFile  multipart.File `json:"image_file"`
 }
 
 type DeletePostRequest struct {
@@ -59,7 +60,6 @@ type DeletePostRequest struct {
 
 type SendReportRequest struct {
 	PostID      int
-	Reason      string
 	IsModerated bool
 	ModeratorID int
 	Post        *Post
@@ -70,7 +70,6 @@ type ModerationReport struct {
 	ID          int
 	PostID      int
 	ModeratorID int
-	Reason      string
 	AdminAnswer string
 	IsModerated bool
 	Post        *Post
@@ -87,6 +86,7 @@ type PostService interface {
 	GetPostsByCategories(categories []string) ([]Post, error)
 	DeletePost(request *DeletePostRequest) error
 	UpdatePost(request *UpdatePostRequest) (int, error)
+	UpdatePostWithImage(request *UpdatePostRequest) (int, error)
 	SendReport(request *SendReportRequest) error
 	GetAllModeratedPosts() ([]ModerationReport, error)
 	UpdateModerationReport(report *ModerationReport) error
@@ -102,12 +102,12 @@ type PostRepository interface {
 	GetPostsByCategories(ctx context.Context, categories []string) ([]Post, error)
 	DeletePost(id int) error
 	UpdatePost(post *Post) (int, error)
+	UpdatePostWithImage(post *Post) (int, error)
 	DeletePostWithImage(id int) error
 }
 
 type ModerationRepository interface {
 	AddModerationReport(report *ModerationReport) error
 	UpdateModerationReport(report *ModerationReport) error
-	GetModeratedPostsByModeratorID(moderatorID int) ([]ModerationReport, error)
 	GetAllModeratedPosts(ctx context.Context) ([]ModerationReport, error)
 }
