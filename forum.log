@@ -486,3 +486,11 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/13 22:32:55 logger.go:39: [::1]:58397 - HTTP/2.0 GET /reports/moderation
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/13 22:33:07 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/13 22:33:07 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/13 22:34:34 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/13 22:34:34 logger.go:39: server is running on https://localhost:8081
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/13 22:34:39 logger.go:39: [::1]:58404 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/13 22:34:39 logger.go:39: [::1]:58404 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/13 22:34:39 logger.go:39: [::1]:58404 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/13 22:34:39 logger.go:39: [::1]:58404 - HTTP/2.0 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/13 22:34:46 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/13 22:34:46 logger.go:39: server stopped gracefully
