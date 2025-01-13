@@ -164,3 +164,7 @@ func (s *PostService) GetAllModeratedPosts() ([]models.ModerationReport, error) 
 
 	return s.moderationRepo.GetAllModeratedPosts(ctx)
 }
+
+func (s *PostService) UpdateModerationReport(report *models.ModerationReport) error {
+	return s.moderationRepo.UpdateModerationReport(report)
+}

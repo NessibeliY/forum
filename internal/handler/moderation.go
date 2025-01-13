@@ -2,6 +2,7 @@ package handler
 
 import (
 	"database/sql"
+	"fmt"
 	"net/http"
 	"strings"
 
@@ -280,7 +281,6 @@ func (h *Handler) SetNewRole(w http.ResponseWriter, r *http.Request) {
 	}
 
 	userIDStr := r.URL.Query().Get("user_id")
-
 	if userIDStr == "" {
 		h.logger.Error("user id is required")
 		h.clientError(w, http.StatusBadRequest)
@@ -335,7 +335,7 @@ func (h *Handler) ReportModeration(w http.ResponseWriter, r *http.Request) {
 	case http.MethodGet:
 		h.ReportModerationGet(w, r)
 	case http.MethodPost:
-
+		h.ReportModerationPost(w, r)
 	default:
 		h.logger.Errorf("method not allowed: %s", r.Method)
 		h.clientError(w, http.StatusMethodNotAllowed)
@@ -367,6 +367,59 @@ func (h *Handler) ReportModerationGet(w http.ResponseWriter, r *http.Request) {
 		"count_notification": countNotification,
 		"moderated_list":     moderatedList,
 	})
+}
+
+func (h *Handler) ReportModerationPost(w http.ResponseWriter, r *http.Request) {
+	postIDStr := r.URL.Query().Get("post_id")
+	if postIDStr == "" {
+		h.logger.Error("post id is required")
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+	postID, err := utils.ParsePositiveIntID(postIDStr)
+	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	post, err := h.service.PostService.GetPostByID(postID)
+	if err != nil {
+		h.logger.Info("get post:", err)
+		h.serverError(w, err)
+		return
+	}
+
+	if post == nil {
+		h.logger.Error("post doesn't exist: post nil")
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	decision := r.URL.Query().Get("decision")
+	if decision == "" {
+		h.logger.Error("decision is required")
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	fmt.Println("postID", postID)
+	fmt.Println("decision", decision)
+
+	reportRequst := models.ModerationReport{
+		IsModerated: true,
+		AdminAnswer: decision,
+		PostID:      postID,
+	}
+
+	err = h.service.PostService.UpdateModerationReport(&reportRequst)
+	if err != nil {
+		h.logger.Info("update moderation report:", err)
+		h.serverError(w, err)
+		return
+	}
+
+	http.Redirect(w, r, "/reports/moderation", http.StatusSeeOther)
 }
 
 func (h *Handler) ChangeUserRole(w http.ResponseWriter, r *http.Request) {

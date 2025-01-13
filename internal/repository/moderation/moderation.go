@@ -143,6 +143,8 @@ func (r *ModerationRepository) GetAllModeratedPosts(ctx context.Context) ([]mode
 		users u1 ON p.author_id = u1.id
 	LEFT JOIN
 		users u2 ON mp.moderator_id = u2.id
+	WHERE 
+		mp.moderated = '0'
 	ORDER BY mp.id DESC
 	`
 

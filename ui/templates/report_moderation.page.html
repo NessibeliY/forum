@@ -43,11 +43,11 @@
                                             </a>
                                         </td>
                                         <td class="border px-4 py-2 flex items-center justify-center">
-                                            <form class="mx-2">
+                                            <form class="mx-2" action="/reports/moderation?post_id={{.PostID}}&decision=approve" method="POST">
                                                 <button class="py-1 px-1 bg-green-500 rounded-lg hover:bg-green-600 transition duration-300 text-white">approve</button>
                                             </form>
                                             <span class="text-2xl">/</span>
-                                            <form class="mx-2">
+                                            <form class="mx-2" action="/reports/moderation?post_id={{.PostID}}&decision=reject" method="POST">
                                                 <button class="py-1 px-1 bg-red-500 rounded-lg hover:bg-red-600 transition duration-300 text-white">reject</button>
                                             </form>
                                         </td>
