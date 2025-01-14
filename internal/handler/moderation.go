@@ -203,7 +203,7 @@ func (h *Handler) SetNewRole(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, "/", http.StatusSeeOther)
+	http.Redirect(w, r, "/view/moderator-requests", http.StatusSeeOther)
 }
 
 func (h *Handler) ReportModeration(w http.ResponseWriter, r *http.Request) {

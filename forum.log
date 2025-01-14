@@ -309,3 +309,129 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go
 ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:18:03 logger.go:39: get cookie: http: named cookie not present
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/14 14:18:39 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/14 14:18:39 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/14 14:19:07 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/14 14:19:07 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:19:25 logger.go:39: [::1]:65286 - HTTP/2.0 GET /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:19:25 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/14 14:19:34 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/14 14:19:34 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/14 14:19:36 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/14 14:19:36 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:19:49 logger.go:39: [::1]:65298 - HTTP/2.0 POST /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:19:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:19:49 logger.go:39: [::1]:65298 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:20:49 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:20:58 logger.go:39: [::1]:65298 - HTTP/2.0 POST /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:20:58 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:20:59 logger.go:39: [::1]:65298 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:01 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:02 logger.go:39: [::1]:65298 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:02 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:04 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:04 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:06 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:06 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:08 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:08 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:09 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:09 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:09 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:09 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:10 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:10 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:10 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:10 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:10 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:10 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:10 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:10 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:11 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:11 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:11 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:11 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:11 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:11 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:12 logger.go:39: [::1]:65298 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:12 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:14 logger.go:39: [::1]:65298 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:18 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:21 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post/update?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:33 logger.go:39: [::1]:65298 - HTTP/2.0 POST /post/update?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:33 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:33 logger.go:39: [::1]:65298 - HTTP/2.0 GET /static/img/fb623f2c-45f2-44b0-8968-b85ddcd49082
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:40 logger.go:39: [::1]:65298 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:41 logger.go:39: [::1]:65298 - HTTP/2.0 GET /post?id=5
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:41 logger.go:39: [::1]:65298 - HTTP/2.0 GET /static/img/fb623f2c-45f2-44b0-8968-b85ddcd49082
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:21:45 logger.go:39: [::1]:65298 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:22:37 logger.go:39: [::1]:65298 - HTTP/2.0 POST /moderator-request
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:22:37 logger.go:39: [::1]:65298 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:04 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:04 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:04 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:09 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 POST /logout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:09 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:23:09 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:10 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 GET /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:23:10 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:21 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 POST /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:23:21 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:31 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 POST /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:23:31 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:31 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:35 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 GET /reports/moderation
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:38 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 GET /view/moderator-requests
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:23:40 logger.go:39: 127.0.0.1:65314 - HTTP/2.0 POST /moderator-decision?user_id=4?decision=0
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/moderation.go:173 2025/01/14 14:23:40 logger.go:39: parse positive int: match string: 4?decision=0
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:25:34 logger.go:39: [::1]:65329 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:25:34 logger.go:39: [::1]:65329 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:25:34 logger.go:39: [::1]:65329 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:25:37 logger.go:39: [::1]:65329 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:25:37 logger.go:39: [::1]:65329 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:25:37 logger.go:39: [::1]:65329 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:25:40 logger.go:39: [::1]:65329 - HTTP/2.0 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:25:51 logger.go:39: [::1]:65329 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:27:00 logger.go:39: [::1]:65329 - HTTP/2.0 POST /moderator-request
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:27:00 logger.go:39: [::1]:65329 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:27:16 logger.go:39: 127.0.0.1:65333 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:27:20 logger.go:39: 127.0.0.1:65333 - HTTP/2.0 GET /view/moderator-requests
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:27:23 logger.go:39: 127.0.0.1:65333 - HTTP/2.0 POST /moderator-decision?user_id=4?decision=0
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/moderation.go:173 2025/01/14 14:27:23 logger.go:39: parse positive int: match string: 4?decision=0
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:28:00 logger.go:39: [::1]:65329 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:28:01 logger.go:39: [::1]:65329 - HTTP/2.0 POST /moderator-request
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:28:01 logger.go:39: [::1]:65329 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:28:08 logger.go:39: 127.0.0.1:65333 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:28:11 logger.go:39: 127.0.0.1:65333 - HTTP/2.0 GET /view/moderator-requests
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:28:13 logger.go:39: 127.0.0.1:65333 - HTTP/2.0 POST /moderator-decision?user_id=4?decision=0
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/moderation.go:173 2025/01/14 14:31:11 logger.go:39: parse positive int: match string: 4?decision=0
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/14 14:31:11 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/14 14:31:11 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/14 14:31:13 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/14 14:31:13 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:31:34 logger.go:39: [::1]:65356 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:31:35 logger.go:39: [::1]:65356 - HTTP/2.0 POST /moderator-request
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:31:35 logger.go:39: [::1]:65356 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:31:42 logger.go:39: 127.0.0.1:65358 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:31:42 logger.go:39: 127.0.0.1:65358 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:31:42 logger.go:39: 127.0.0.1:65358 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:31:45 logger.go:39: 127.0.0.1:65358 - HTTP/2.0 GET /view/moderator-requests
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:31:53 logger.go:39: 127.0.0.1:65358 - HTTP/2.0 POST /moderator-decision?user_id=4&decision=0
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:31:53 logger.go:39: 127.0.0.1:65358 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:32:38 logger.go:39: 127.0.0.1:65358 - HTTP/2.0 GET /view/moderator-requests
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/14 14:32:52 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/14 14:32:52 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/14 14:32:57 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/14 14:32:57 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:32:58 logger.go:39: [::1]:65376 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:32:58 logger.go:39: [::1]:65376 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:32:58 logger.go:39: [::1]:65376 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:32:59 logger.go:39: [::1]:65376 - HTTP/2.0 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:33:00 logger.go:39: [::1]:65376 - HTTP/2.0 POST /moderator-request
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:33:00 logger.go:39: [::1]:65376 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:33:05 logger.go:39: 127.0.0.1:65378 - HTTP/2.0 GET /view/moderator-requests
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:33:05 logger.go:39: 127.0.0.1:65378 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:33:05 logger.go:39: 127.0.0.1:65378 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:33:07 logger.go:39: 127.0.0.1:65378 - HTTP/2.0 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:33:08 logger.go:39: 127.0.0.1:65378 - HTTP/2.0 POST /moderator-decision?user_id=4&decision=0
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:33:08 logger.go:39: 127.0.0.1:65378 - HTTP/2.0 GET /view/moderator-requests
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/14 14:33:16 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/14 14:33:16 logger.go:39: server stopped gracefully

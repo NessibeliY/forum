@@ -40,7 +40,7 @@
                                                 <form action="/moderator-decision?user_id={{.UserID}}&decision=1" method="POST">
                                                     <button type="submit" name="action" value="approve_{{.UserID}}" class="bg-green-500 hover:bg-green-600 transition duration-300  px-4 py-2 rounded mx-2 text-white">Approve</button>
                                                 </form>  
-                                                <form action="/moderator-decision?user_id={{.UserID}}?decision=0" method="POST">
+                                                <form action="/moderator-decision?user_id={{.UserID}}&decision=0" method="POST">
                                                     <button type="submit" name="action" value="approve_{{.UserID}}" class="bg-red-500 hover:bg-red-600  transition duration-300   text-white px-4 py-2 rounded mx-2 text-white">Reject</button>
                                                 </form>    
                                             </td>
