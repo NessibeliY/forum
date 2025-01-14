@@ -108,6 +108,7 @@ func (s *PostService) UpdatePostWithImage(request *models.UpdatePostRequest) (in
 	filePath := "ui/static/img/" + fileName.String()
 
 	post := &models.Post{
+		ID:         request.PostID,
 		Title:      request.Title,
 		Content:    request.Content,
 		AuthorID:   request.AuthorID,

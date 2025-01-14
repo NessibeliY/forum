@@ -229,11 +229,11 @@ func (r *PostRepository) UpdatePostWithImage(post *models.Post) (int, error) {
 	query := `
 		UPDATE post
 		SET title = $1, content = $2, updated_at = $3
-		WHERE author_id = $4
+		WHERE id = $4
 		RETURNING id;
 	`
 
-	err := r.db.QueryRow(query, post.Title, post.Content, time.Now(), post.AuthorID).Scan(&post.ID)
+	err := r.db.QueryRow(query, post.Title, post.Content, time.Now(), post.ID).Scan(&post.ID)
 	if err != nil {
 		return 0, fmt.Errorf("update post: %w", err)
 	}

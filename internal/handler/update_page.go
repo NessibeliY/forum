@@ -205,6 +205,7 @@ func (h *Handler) UpdatePostMethodPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	updatePost := &models.UpdatePostRequest{
+		PostID:     postID,
 		Title:      title,
 		Content:    content,
 		AuthorID:   h.getUserFromContext(r).ID,

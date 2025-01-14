@@ -47,6 +47,7 @@ type CreatePostRequest struct {
 }
 
 type UpdatePostRequest struct {
+	PostID     int
 	Title      string         `json:"title"`
 	Content    string         `json:"content"`
 	AuthorID   int            `json:"author_id"`
