@@ -164,3 +164,148 @@ INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:49:36 logger.go:39: [::1]:64953 - HTTP/2.0 GET /reports/moderation
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/14 13:49:42 logger.go:39: shutting down server...
 INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/14 13:49:42 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/14 13:50:33 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/14 13:50:33 logger.go:39: server is running on https://localhost:8081
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:38 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:38 logger.go:39: [::1]:64965 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:38 logger.go:39: [::1]:64965 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:40 logger.go:39: [::1]:64965 - HTTP/2.0 GET /static/images/logo.png
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:42 logger.go:39: [::1]:64965 - HTTP/2.0 POST /report?user_id=4&post_id=3
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:42 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:42 logger.go:39: [::1]:64965 - HTTP/2.0 POST /report?user_id=4&post_id=3
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:42 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:43 logger.go:39: [::1]:64965 - HTTP/2.0 POST /report?user_id=4&post_id=3
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:50:43 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:02 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=1
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:02 logger.go:39: [::1]:64965 - HTTP/2.0 GET /static/img/a60a4e7c-05ea-4d31-a1e0-1588266f5e50
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:32 logger.go:39: [::1]:64965 - HTTP/2.0 POST /logout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:32 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:51:32 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:33 logger.go:39: [::1]:64965 - HTTP/2.0 GET /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:51:33 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:34 logger.go:39: [::1]:64965 - HTTP/2.0 GET /favicon.ico
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:51:34 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:39 logger.go:39: [::1]:64965 - HTTP/2.0 POST /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:51:39 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:39 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:54 logger.go:39: [::1]:64965 - HTTP/2.0 POST /logout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:54 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:51:54 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:51:55 logger.go:39: [::1]:64965 - HTTP/2.0 GET /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:51:55 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:01 logger.go:39: [::1]:64965 - HTTP/2.0 POST /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:52:01 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:01 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:05 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:20 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:20 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:26 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:26 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:32 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:32 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:32 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:32 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:33 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:33 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:33 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:33 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:34 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:34 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:34 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:34 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:35 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:35 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:35 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:35 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:36 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:36 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:38 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:38 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:39 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:39 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:39 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:39 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:40 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:40 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:40 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:40 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:41 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:41 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:41 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:41 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:42 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:42 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:42 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:42 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:43 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:43 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:44 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:44 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:44 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:44 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:45 logger.go:39: [::1]:64965 - HTTP/2.0 POST /comment/reaction/create
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:45 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:52:57 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post/update?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:53:05 logger.go:39: [::1]:64965 - HTTP/2.0 POST /post/update?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:53:05 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=2
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:53:05 logger.go:39: [::1]:64965 - HTTP/2.0 GET /static/img/05df6b11-6b75-4a6b-b155-2cf34f8d25fa
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:54:41 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:54:41 logger.go:39: [::1]:64965 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:54:41 logger.go:39: [::1]:64965 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:54:45 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=4
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:54:51 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:54:52 logger.go:39: [::1]:64965 - HTTP/2.0 GET /post?id=3
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:54:54 logger.go:39: [::1]:64965 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/14 13:57:01 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/14 13:57:01 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/14 13:57:08 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/14 13:57:08 logger.go:39: server is running on https://localhost:8081
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:57:10 logger.go:39: [::1]:64976 - HTTP/2.0 POST /logout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:57:10 logger.go:39: [::1]:64976 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:57:10 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:57:11 logger.go:39: [::1]:64976 - HTTP/2.0 GET /signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:57:11 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 13:57:15 logger.go:39: [::1]:64976 - HTTP/2.0 GET /login/google/callback
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 13:57:15 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/14 14:16:43 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/14 14:16:43 logger.go:39: server stopped gracefully
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:46 2025/01/14 14:16:45 logger.go:39: connected to db
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:57 2025/01/14 14:16:45 logger.go:39: server is running on https://localhost:8080
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:16:58 logger.go:39: [::1]:65273 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:16:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:16:58 logger.go:39: [::1]:65273 - HTTP/2.0 GET /static/js/script.js
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:16:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:16:58 logger.go:39: [::1]:65273 - HTTP/2.0 GET /static/css/style.css
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:16:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:16:58 logger.go:39: [::1]:65273 - HTTP/2.0 GET /static/images/logo.png
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:16:58 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:00 logger.go:39: [::1]:65273 - HTTP/2.0 GET /login
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:17:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:00 logger.go:39: [::1]:65273 - HTTP/2.0 GET /favicon.ico
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:17:00 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:02 logger.go:39: [::1]:65273 - HTTP/2.0 GET /signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:17:02 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:04 logger.go:39: [::1]:65273 - HTTP/2.0 GET /login/google/callback
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:17:04 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:10 logger.go:39: [::1]:65273 - HTTP/2.0 GET /google/callback?code=4%2F0AanRRrsEoI4aIZVRh6gOr5x3mkAwtzHzou353qx-VazdkcK28bRacbcGGNaUc0IqAnnctw&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=consent
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:17:10 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:12 logger.go:39: [::1]:65273 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:12 logger.go:39: [::1]:65273 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:12 logger.go:39: [::1]:65273 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:16 logger.go:39: [::1]:65273 - HTTP/2.0 POST /logout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:16 logger.go:39: [::1]:65273 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:17:16 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:17 logger.go:39: [::1]:65273 - HTTP/2.0 GET /signup
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:17:17 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:19 logger.go:39: [::1]:65273 - HTTP/2.0 GET /login/github/callback
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:17:19 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:49 logger.go:39: [::1]:65273 - HTTP/2.0 GET /github/callback?code=b09bf107b07e5f1272aa
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:17:49 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:51 logger.go:39: [::1]:65273 - HTTP/2.0 GET /
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:51 logger.go:39: [::1]:65273 - HTTP/2.0 GET /static/css/style.css
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:17:51 logger.go:39: [::1]:65273 - HTTP/2.0 GET /static/js/script.js
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:18:03 logger.go:39: [::1]:65273 - HTTP/2.0 POST /logout
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:93 2025/01/14 14:18:03 logger.go:39: [::1]:65273 - HTTP/2.0 GET /
+ERROR: /Users/nessibeliyeltay/Documents/ALEM/forum/internal/handler/middleware.go:65 2025/01/14 14:18:03 logger.go:39: get cookie: http: named cookie not present
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:140 2025/01/14 14:18:39 logger.go:39: shutting down server...
+INFO: /Users/nessibeliyeltay/Documents/ALEM/forum/main.go:149 2025/01/14 14:18:39 logger.go:39: server stopped gracefully

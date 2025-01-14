@@ -1,15 +1,15 @@
 {
-  "port": ":8081",
+  "port": ":8080",
   "dsn": "forum.db?parseTime=true",
   "log_file": "forum.log",
   "google_config": {
     "client_id": "156548444656-2vjop0q87449g2ntjrmd4b1hc1hndm96.apps.googleusercontent.com",
     "client_secret": "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",
-    "redirect_uri": "http://localhost:8080/google/callback"
+    "redirect_uri": "https://localhost:8080/google/callback"
   },
   "github_config": {
-    "client_id": "Ov23liaAbPszwJiOtpAN",
-    "client_secret": "e7c92a8fca5bb4dbd3c3c35962bd567036ae5e4a",
-    "redirect_uri": "http://localhost:8080/github/callback"
+    "client_id": "Ov23lit8D2tXpFT7POiV",
+    "client_secret": "6d1e1acea0e6efeb8c6d280d3c9db4af287d75dc",
+    "redirect_uri": "https://localhost:8080/github/callback"
   }
 }
