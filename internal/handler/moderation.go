@@ -278,6 +278,32 @@ func (h *Handler) ReportModerationPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	moderatorIDStr := r.URL.Query().Get("moderator_id")
+	if moderatorIDStr == "" {
+		h.logger.Error("moderator id is required")
+		h.clientError(w, http.StatusBadRequest)
+		return
+	}
+	moderatorID, err := utils.ParsePositiveIntID(moderatorIDStr)
+	if err != nil {
+		h.logger.Error("parse positive int:", err.Error())
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	user, err := h.service.UserService.GetUserByID(moderatorID)
+	if err != nil {
+		h.logger.Info("get user:", err)
+		h.serverError(w, err)
+		return
+	}
+
+	if user == nil {
+		h.logger.Error("user doesn't exist: user nil")
+		h.clientError(w, http.StatusNotFound)
+		return
+	}
+
 	decision := r.URL.Query().Get("decision")
 	if decision == "" {
 		h.logger.Error("decision is required")
@@ -289,6 +315,7 @@ func (h *Handler) ReportModerationPost(w http.ResponseWriter, r *http.Request) {
 		IsModerated: true,
 		AdminAnswer: decision,
 		PostID:      postID,
+		ModeratorID: moderatorID,
 	}
 
 	err = h.service.PostService.UpdateModerationReport(&reportRequst)

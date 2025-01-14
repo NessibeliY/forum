@@ -108,6 +108,6 @@ type PostRepository interface {
 
 type ModerationRepository interface {
 	AddModerationReport(report *ModerationReport) error
-	UpdateModerationReport(report *ModerationReport) error
+	DeleteModerationReport(report *ModerationReport) error
 	GetAllModeratedPosts(ctx context.Context) ([]ModerationReport, error)
 }

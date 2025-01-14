@@ -19,7 +19,10 @@ func NewModerationRepository(db *sql.DB) *ModerationRepository {
 }
 
 func (r *ModerationRepository) AddModerationReport(report *models.ModerationReport) error {
-	query := `INSERT INTO moderated_post (post_id, moderator_id, moderated) VALUES ($1, $2, $3);`
+	query := `
+		INSERT INTO moderated_post (post_id, moderator_id, moderated) 
+		VALUES ($1, $2, $3)
+		ON CONFLICT (post_id, moderator_id) DO NOTHING;`
 	_, err := r.db.Exec(query, report.PostID, report.ModeratorID, report.IsModerated)
 	if err != nil {
 		return err
@@ -27,9 +30,9 @@ func (r *ModerationRepository) AddModerationReport(report *models.ModerationRepo
 	return nil
 }
 
-func (r *ModerationRepository) UpdateModerationReport(report *models.ModerationReport) error {
-	query := `UPDATE moderated_post SET moderated = ?, admin_answer = ? where post_id = ?;`
-	result, err := r.db.Exec(query, report.IsModerated, report.AdminAnswer, report.PostID)
+func (r *ModerationRepository) DeleteModerationReport(report *models.ModerationReport) error {
+	query := `DELETE FROM moderated_post WHERE post_id = ? AND moderator_id = ?;`
+	result, err := r.db.Exec(query, report.PostID, report.ModeratorID)
 	if err != nil {
 		return fmt.Errorf("exec query: %w", err)
 	}
@@ -68,8 +71,6 @@ func (r *ModerationRepository) GetAllModeratedPosts(ctx context.Context) ([]mode
 		users u1 ON p.author_id = u1.id
 	LEFT JOIN
 		users u2 ON mp.moderator_id = u2.id
-	WHERE 
-		mp.moderated = '0'
 	ORDER BY mp.id DESC
 	`
 

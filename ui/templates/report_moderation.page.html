@@ -45,7 +45,7 @@
                                                 Go to post!
                                             </a>
                                             <span class="text-2xl mx-2">/</span>
-                                            <form class="mx-2" action="/reports/moderation?post_id={{.PostID}}&decision=reject" method="POST">
+                                            <form class="mx-2" action="/reports/moderation?post_id={{.PostID}}&moderator_id={{.ModeratorID}}&decision=reject" method="POST">
                                                 <button class="py-1 px-1 bg-red-500 rounded-lg hover:bg-red-600 transition duration-300 text-white">Ignore</button>
                                             </form>
                                         </td>

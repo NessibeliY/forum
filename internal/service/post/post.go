@@ -203,5 +203,5 @@ func (s *PostService) GetAllModeratedPosts() ([]models.ModerationReport, error) 
 }
 
 func (s *PostService) UpdateModerationReport(report *models.ModerationReport) error {
-	return s.moderationRepo.UpdateModerationReport(report)
+	return s.moderationRepo.DeleteModerationReport(report)
 }
