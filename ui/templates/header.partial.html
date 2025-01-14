@@ -16,6 +16,9 @@
                 </form>
             {{ if .authenticated_user}}
             <div class="flex sign-out">
+                <a href="/post/create" class="createButton bg-green-600 hover:bg-green-700 transition duration-300" >
+                    <i class="fa-solid fa-plus mr-1 text-xl"></i> Create post
+                </a>
                 <a href="/notifications" class="text-2xl flex items-center justify-center mx-2 bg-indigo-500 py-2 px-2 rounded-lg cursor-pointer hover:text-white duration-300 transition">
                     <i class="fa-solid fa-bell"></i>
                     {{ if gt .count_notification 0 }}
